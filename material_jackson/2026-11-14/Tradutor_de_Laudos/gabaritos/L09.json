@@ -1,0 +1,17 @@
+{
+  "id": "L09",
+  "categoria": "sangue_comum",
+  "gabarito_alterados": [
+    "Hemoglobina",
+    "Hematócrito",
+    "Volume corpuscular médio"
+  ],
+  "conteudos_obrigatorios": [
+    "Hemoglobina",
+    "Hematócrito",
+    "Volume corpuscular médio"
+  ],
+  "exemplo_explicacao": "A hemoglobina, que transporta oxigênio no sangue, está em 10,5 g/dL, abaixo de 12. O hematócrito, a parte do sangue ocupada pelos glóbulos vermelhos, está em 33%, abaixo de 36%. O tamanho médio dessas células está em 74 fL, abaixo de 80. As células de defesa e as plaquetas, que ajudam a estancar sangramentos, estão nas faixas apresentadas. A equipe de saúde precisa avaliar as alterações e suas causas. O exame não permite concluir sozinho que falta ferro.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

@@ -1,0 +1,26 @@
+# qwen3:8b · L03
+
+## Entrada
+Exame: Função renal e eletrólitos. Paciente: sexo masculino, 71 anos.
+Resultados:
+- Potássio: 6.8 mEq/L (referência 3.5–5.1 mEq/L) → ACIMA da faixa, CRÍTICO
+- Sódio: 139 mEq/L (referência 136–145 mEq/L) → NORMAL
+- Creatinina: 2.4 mg/dL (referência 0.7–1.3 mg/dL) → ACIMA da faixa, ALTERADO
+- Ureia: 88 mg/dL (referência 15–45 mg/dL) → ACIMA da faixa, ALTERADO
+
+## Resposta
+EXPLICAÇÃO:  
+Os resultados mostram que o potássio, a creatinina e a ureia estão acima da faixa normal. O potássio está muito alto (CRÍTICO), a creatinina e a ureia também estão elevadas (ALTERADO). Isso pode indicar que os rins estão trabalhando de forma inadequada. A clínica entrará em contato ainda hoje para orientar sobre o caso.  
+
+DÚVIDAS:  
+P: O que significa o potássio estar muito alto?  
+R: O potássio está acima do normal e pode causar problemas no coração.  
+
+P: A creatinina e a ureia estão altas?  
+R: Sim, estão acima da faixa normal, o que pode indicar que os rins estão funcionando mal.  
+
+P: Preciso fazer algum tratamento agora?  
+R: Não, o médico vai avaliar e orientar sobre o que fazer.  
+
+P: Por que esses valores estão altos?  
+R: Isso pode ser sinal de problema renal, mas não posso dizer a causa.

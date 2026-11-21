@@ -1,0 +1,663 @@
+{
+ "_aviso": "RASCUNHO do protótipo: definições escritas pelo Gregory com apoio de IA, sem validação clínica. Revisar em grupo antes da avaliação; em produção, cada definição seria aprovada por um profissional. Termos com origem 'Jackson 14/11' vieram do glossário do Jackson (só os que faltavam).",
+ "termos": [
+  {
+   "termo": "Hemoglobina",
+   "padroes": [
+    "hemoglobina"
+   ],
+   "requer": null,
+   "definicao": "a parte das células vermelhas do sangue que leva oxigênio pelo corpo"
+  },
+  {
+   "termo": "Hemoglobina glicada",
+   "padroes": [
+    "hemoglobina glicada",
+    "hba1c"
+   ],
+   "requer": null,
+   "definicao": "exame que mostra a média do açúcar no sangue nos últimos meses"
+  },
+  {
+   "termo": "VCM",
+   "padroes": [
+    "vcm",
+    "volume corpuscular"
+   ],
+   "requer": null,
+   "definicao": "o tamanho médio das células vermelhas do sangue"
+  },
+  {
+   "termo": "Leucócitos",
+   "padroes": [
+    "leucocito"
+   ],
+   "requer": null,
+   "definicao": "células de defesa do corpo"
+  },
+  {
+   "termo": "Plaquetas",
+   "padroes": [
+    "plaqueta"
+   ],
+   "requer": null,
+   "definicao": "células que ajudam o sangue a coagular e a parar sangramentos"
+  },
+  {
+   "termo": "Glicose em jejum",
+   "padroes": [
+    "glicose",
+    "glicemia"
+   ],
+   "requer": null,
+   "definicao": "a quantidade de açúcar no sangue depois de um período sem comer"
+  },
+  {
+   "termo": "Colesterol LDL",
+   "padroes": [
+    "ldl"
+   ],
+   "requer": null,
+   "definicao": "um tipo de gordura do sangue, conhecido como colesterol ruim"
+  },
+  {
+   "termo": "Colesterol HDL",
+   "padroes": [
+    "hdl"
+   ],
+   "requer": null,
+   "definicao": "um tipo de gordura do sangue, conhecido como colesterol bom"
+  },
+  {
+   "termo": "Colesterol total",
+   "padroes": [
+    "colesterol total"
+   ],
+   "requer": null,
+   "definicao": "a soma dos tipos de colesterol do sangue"
+  },
+  {
+   "termo": "Triglicerídeos",
+   "padroes": [
+    "triglicerideo"
+   ],
+   "requer": null,
+   "definicao": "um tipo de gordura do sangue"
+  },
+  {
+   "termo": "TSH",
+   "padroes": [
+    "tsh"
+   ],
+   "requer": null,
+   "definicao": "um hormônio que regula o funcionamento da tireoide"
+  },
+  {
+   "termo": "Potássio",
+   "padroes": [
+    "potassio"
+   ],
+   "requer": null,
+   "definicao": "um sal mineral do sangue, importante para os músculos e o coração"
+  },
+  {
+   "termo": "Sódio",
+   "padroes": [
+    "sodio"
+   ],
+   "requer": null,
+   "definicao": "um sal mineral do sangue que ajuda a controlar a água no corpo"
+  },
+  {
+   "termo": "Creatinina",
+   "padroes": [
+    "creatinina"
+   ],
+   "requer": null,
+   "definicao": "uma substância que os rins filtram do sangue; o exame ajuda a ver como os rins estão funcionando"
+  },
+  {
+   "termo": "Ureia",
+   "padroes": [
+    "ureia"
+   ],
+   "requer": null,
+   "definicao": "uma substância que os rins eliminam pela urina; também ajuda a ver como os rins estão funcionando"
+  },
+  {
+   "termo": "Bilirrubina",
+   "padroes": [
+    "bilirrubina"
+   ],
+   "requer": null,
+   "definicao": "um pigmento amarelo que o corpo produz ao renovar as células vermelhas do sangue"
+  },
+  {
+   "termo": "Bilirrubina indireta",
+   "padroes": [
+    "bilirrubina indireta"
+   ],
+   "requer": null,
+   "definicao": "a parte da bilirrubina que ainda não passou pelo fígado"
+  },
+  {
+   "termo": "Bilirrubina direta",
+   "padroes": [
+    "bilirrubina direta"
+   ],
+   "requer": null,
+   "definicao": "a parte da bilirrubina que já passou pelo fígado"
+  },
+  {
+   "termo": "AST (TGO) e ALT (TGP)",
+   "padroes": [
+    "tgo",
+    "tgp",
+    "ast (",
+    "alt ("
+   ],
+   "requer": null,
+   "definicao": "enzimas (substâncias) do fígado medidas no sangue"
+  },
+  {
+   "termo": "Gama-GT",
+   "padroes": [
+    "gama-gt",
+    "gama gt",
+    "ggt"
+   ],
+   "requer": null,
+   "definicao": "uma enzima do fígado e dos canais da bile medida no sangue"
+  },
+  {
+   "termo": "Tireoide",
+   "padroes": [
+    "tireoide"
+   ],
+   "requer": null,
+   "definicao": "glândula que fica na frente do pescoço"
+  },
+  {
+   "termo": "Lobo direito / lobo esquerdo (tireoide)",
+   "padroes": [
+    "lobo direito",
+    "lobo esquerdo"
+   ],
+   "requer": "tireoide",
+   "definicao": "o lado direito / o lado esquerdo da tireoide"
+  },
+  {
+   "termo": "Istmo (tireoide)",
+   "padroes": [
+    "istmo"
+   ],
+   "requer": "tireoide",
+   "definicao": "a parte que liga os dois lados da tireoide"
+  },
+  {
+   "termo": "Parênquima",
+   "padroes": [
+    "parenquima"
+   ],
+   "requer": null,
+   "definicao": "o tecido do próprio órgão"
+  },
+  {
+   "termo": "Linfonodos",
+   "padroes": [
+    "linfonodo"
+   ],
+   "requer": null,
+   "definicao": "pequenas estruturas de defesa do corpo, também chamadas de gânglios ou ínguas"
+  },
+  {
+   "termo": "Linfonodomegalia",
+   "padroes": [
+    "linfonodomegalia"
+   ],
+   "requer": null,
+   "definicao": "linfonodos (gânglios) aumentados"
+  },
+  {
+   "termo": "Ureter",
+   "padroes": [
+    "ureter"
+   ],
+   "requer": null,
+   "definicao": "o canal que leva a urina do rim até a bexiga"
+  },
+  {
+   "termo": "Terço distal do ureter",
+   "padroes": [
+    "terco distal",
+    "ureter distal"
+   ],
+   "requer": "ureter",
+   "definicao": "a parte final do ureter, a mais perto da bexiga"
+  },
+  {
+   "termo": "Terço proximal do ureter",
+   "padroes": [
+    "terco proximal",
+    "ureter proximal"
+   ],
+   "requer": "ureter",
+   "definicao": "a parte inicial do ureter, a mais perto do rim"
+  },
+  {
+   "termo": "Polo superior / polo inferior (rim)",
+   "padroes": [
+    "polo superior",
+    "polo inferior"
+   ],
+   "requer": "rim",
+   "definicao": "a parte de cima / a parte de baixo do rim"
+  },
+  {
+   "termo": "Adrenais",
+   "padroes": [
+    "adrena"
+   ],
+   "requer": null,
+   "definicao": "pequenas glândulas que ficam em cima dos rins"
+  },
+  {
+   "termo": "Vesícula biliar",
+   "padroes": [
+    "vesicula biliar"
+   ],
+   "requer": null,
+   "definicao": "pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão"
+  },
+  {
+   "termo": "Líquido livre",
+   "padroes": [
+    "liquido livre"
+   ],
+   "requer": null,
+   "definicao": "líquido fora dos órgãos, dentro da barriga"
+  },
+  {
+   "termo": "Nódulo",
+   "padroes": [
+    "nodulo"
+   ],
+   "requer": null,
+   "definicao": "uma pequena área com aspecto diferente do tecido ao redor"
+  },
+  {
+   "termo": "Cisto",
+   "padroes": [
+    "cisto",
+    "cistica"
+   ],
+   "requer": null,
+   "definicao": "uma pequena bolsa com líquido"
+  },
+  {
+   "termo": "Cálculo",
+   "padroes": [
+    "calculo"
+   ],
+   "requer": null,
+   "definicao": "uma pedra formada por sais minerais"
+  },
+  {
+   "termo": "Dilatação a montante",
+   "padroes": [
+    "a montante"
+   ],
+   "requer": null,
+   "definicao": "o trecho antes do cálculo ficou um pouco mais largo"
+  },
+  {
+   "termo": "Hipoecoico",
+   "padroes": [
+    "hipoecoic"
+   ],
+   "requer": null,
+   "definicao": "aparece mais escuro que o tecido ao redor na imagem do ultrassom"
+  },
+  {
+   "termo": "Hiperecoico",
+   "padroes": [
+    "hiperecoic"
+   ],
+   "requer": null,
+   "definicao": "aparece mais claro que o tecido ao redor na imagem do ultrassom"
+  },
+  {
+   "termo": "Ecotextura homogênea",
+   "padroes": [
+    "ecotextura homogenea"
+   ],
+   "requer": null,
+   "definicao": "o tecido tem aspecto uniforme no ultrassom"
+  },
+  {
+   "termo": "Ecogenicidade aumentada (fígado)",
+   "padroes": [
+    "ecogenicidade"
+   ],
+   "requer": "figado",
+   "definicao": "o fígado aparece mais claro no ultrassom"
+  },
+  {
+   "termo": "Esteatose hepática",
+   "padroes": [
+    "esteatose"
+   ],
+   "requer": null,
+   "definicao": "acúmulo de gordura no fígado"
+  },
+  {
+   "termo": "Calcificações",
+   "padroes": [
+    "calcifica"
+   ],
+   "requer": null,
+   "definicao": "pequenos depósitos de cálcio"
+  },
+  {
+   "termo": "Doppler",
+   "padroes": [
+    "doppler"
+   ],
+   "requer": null,
+   "definicao": "parte do ultrassom que mostra a passagem do sangue"
+  },
+  {
+   "termo": "Vascularização periférica",
+   "padroes": [
+    "vascularizacao periferica"
+   ],
+   "requer": null,
+   "definicao": "há vasos sanguíneos ao redor"
+  },
+  {
+   "termo": "Contornos regulares",
+   "padroes": [
+    "contornos regulares"
+   ],
+   "requer": null,
+   "definicao": "bordas lisas e bem definidas"
+  },
+  {
+   "termo": "hematócrito",
+   "padroes": [
+    "hematocrito"
+   ],
+   "requer": null,
+   "definicao": "parte do sangue ocupada pelos glóbulos vermelhos",
+   "origem": "Jackson 14/11"
+  },
+  {
+   "termo": "hemácias",
+   "padroes": [
+    "hemacias"
+   ],
+   "requer": null,
+   "definicao": "glóbulos vermelhos do sangue",
+   "origem": "Jackson 14/11"
+  },
+  {
+   "termo": "T4 livre",
+   "padroes": [
+    "t4 livre"
+   ],
+   "requer": null,
+   "definicao": "hormônio produzido pela tireoide",
+   "origem": "Jackson 14/11"
+  },
+  {
+   "termo": "Osteófito",
+   "padroes": [
+    "osteofito"
+   ],
+   "requer": null,
+   "definicao": "pequena saliência de osso que se forma na borda das vértebras ou das articulações, conhecida popularmente como bico de papagaio",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Espaço discal",
+   "padroes": [
+    "espaco discal"
+   ],
+   "requer": null,
+   "definicao": "o espaço entre duas vértebras, onde fica o disco que funciona como um amortecedor",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Coluna lombar (L1 a L5)",
+   "padroes": [
+    "coluna lombar"
+   ],
+   "requer": null,
+   "definicao": "a parte baixa da coluna, nas costas; as vértebras dessa parte são chamadas de L1 a L5",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Baço acessório",
+   "padroes": [
+    "baco acessorio"
+   ],
+   "requer": null,
+   "definicao": "pequena porção extra de tecido de baço, separada do baço principal; é uma variação que algumas pessoas têm desde o nascimento",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Hilo esplênico",
+   "padroes": [
+    "hilo esplenico"
+   ],
+   "requer": null,
+   "definicao": "a região do baço por onde entram e saem os vasos sanguíneos",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Alterações agudas",
+   "padroes": [
+    "alteracoes abdominais agudas",
+    "alteracoes agudas"
+   ],
+   "requer": null,
+   "definicao": "problemas de início recente, que costumam precisar de atendimento rápido",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Espessamento peribrônquico",
+   "padroes": [
+    "peribronquic"
+   ],
+   "requer": null,
+   "definicao": "as paredes dos brônquios (os tubos que levam o ar dentro dos pulmões) estão mais grossas do que o habitual",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Consolidação (pulmão)",
+   "padroes": [
+    "consolidac"
+   ],
+   "requer": null,
+   "definicao": "área do pulmão em que o ar foi substituído por líquido ou outro material",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Derrame pleural",
+   "padroes": [
+    "derrame pleural"
+   ],
+   "requer": null,
+   "definicao": "acúmulo de líquido entre o pulmão e a parede do tórax",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Lobo superior (pulmão)",
+   "padroes": [
+    "lobo superior"
+   ],
+   "requer": "pulm",
+   "definicao": "a parte de cima do pulmão",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Mediastino",
+   "padroes": [
+    "mediastin"
+   ],
+   "requer": null,
+   "definicao": "a região no centro do peito, entre os dois pulmões",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Silhueta cardíaca",
+   "padroes": [
+    "silhueta cardiaca"
+   ],
+   "requer": null,
+   "definicao": "o contorno do coração visto na radiografia",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Coluna de Bertin",
+   "padroes": [
+    "coluna de bertin"
+   ],
+   "requer": null,
+   "definicao": "uma parte do próprio tecido do rim que avança em direção ao centro do rim; é uma variação do formato normal",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Variante anatômica",
+   "padroes": [
+    "variante anatomica"
+   ],
+   "requer": null,
+   "definicao": "diferença no formato de uma parte do corpo que faz parte da variação normal entre as pessoas",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Córtex / cortical (rim)",
+   "padroes": [
+    "cortex renal",
+    "cortical"
+   ],
+   "requer": "rim",
+   "definicao": "a camada externa do rim",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Hidronefrose",
+   "padroes": [
+    "hidronefrose"
+   ],
+   "requer": null,
+   "definicao": "dilatação da parte interna do rim por acúmulo de urina",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Litíase",
+   "padroes": [
+    "litiase"
+   ],
+   "requer": null,
+   "definicao": "presença de pedras (cálculos)",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Septações",
+   "padroes": [
+    "septac"
+   ],
+   "requer": null,
+   "definicao": "divisões internas",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Anecoico",
+   "padroes": [
+    "anecoic"
+   ],
+   "requer": null,
+   "definicao": "que aparece escuro no ultrassom, como acontece com o líquido",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Focos ecogênicos puntiformes",
+   "padroes": [
+    "focos ecogenicos"
+   ],
+   "requer": null,
+   "definicao": "pequenos pontos brilhantes na imagem do ultrassom",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Atenuação posterior do feixe sonoro",
+   "padroes": [
+    "atenuacao posterior"
+   ],
+   "requer": null,
+   "definicao": "o som do ultrassom atravessa o órgão com mais dificuldade, e a imagem fica mais escura atrás dele",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Segmento (fígado)",
+   "padroes": [
+    "segmento i",
+    "segmento v",
+    "segmento vi",
+    "segmento vii",
+    "segmento viii"
+   ],
+   "requer": "hepat",
+   "definicao": "uma das partes em que os médicos dividem o fígado para dizer onde fica um achado",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Topografia habitual",
+   "padroes": [
+    "topografia habitual"
+   ],
+   "requer": null,
+   "definicao": "no lugar de costume",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Dimensões preservadas",
+   "padroes": [
+    "dimensoes preservadas",
+    "dimensoes normais"
+   ],
+   "requer": null,
+   "definicao": "tamanho dentro do esperado",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Vias biliares",
+   "padroes": [
+    "vias biliares"
+   ],
+   "requer": null,
+   "definicao": "os canais que levam a bile (líquido que ajuda na digestão) do fígado até o intestino",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Aspecto residual",
+   "padroes": [
+    "aspecto residual"
+   ],
+   "requer": null,
+   "definicao": "com aparência de uma marca antiga",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  },
+  {
+   "termo": "Margens regulares",
+   "padroes": [
+    "margens regulares"
+   ],
+   "requer": null,
+   "definicao": "bordas lisas e bem definidas",
+   "origem": "rascunho Gregory 14/11 (etapa 7, rodada 2) — revisar com o grupo"
+  }
+ ]
+}

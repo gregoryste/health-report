@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Tradutor de laudos · vídeo</title>
+<style>
+@font-face{font-family:M;src:url(fontes/Manrope-Light.woff2);font-weight:200 300}
+@font-face{font-family:M;src:url(fontes/Manrope-Regular.woff2);font-weight:400}
+@font-face{font-family:M;src:url(fontes/Manrope-Medium.woff2);font-weight:500}
+@font-face{font-family:M;src:url(fontes/Manrope-SemiBold.woff2);font-weight:600}
+@font-face{font-family:M;src:url(fontes/Manrope-Bold.woff2);font-weight:700}
+:root{--bg:#F6F4FA;--sup:#fff;--sup2:#FBFAFE;--tx:#1B1030;--tx2:#241738;--mut:#5C5170;--rot:#8B7BA8;--lin:#E7E1F2;--lin2:#F0EBFA;
+--foco:#C9B9E8;--ac:#6D28C9;--ac2:#F3EEFC;--actx:#4C1D95;--nevoa:#EDE6FA;--lilas:#A78BFA;--ok:#15803D;--okb:#E9F6EE;--av:#8A6A2F;--avb:#FDF6E9;
+--cr:#A3232B;--crb:#FDECEC;--crl:#F6D5D5;--onink:#E4DCF4;--oninksoft:#C4B8DC;--raised:#2A1650}
+*{box-sizing:border-box;margin:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--bg);font-family:M,system-ui,sans-serif;color:var(--tx);-webkit-font-smoothing:antialiased}
+#palco{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--bg)}
+.camada{position:absolute;inset:0}
+#escuro{background:var(--tx);overflow:hidden}
+#escuro::before,#escuro::after{content:'';position:absolute;border-radius:999px}
+#escuro::before{width:900px;height:900px;right:-330px;top:-380px;background:var(--raised)}
+#escuro::after{width:700px;height:700px;left:-300px;bottom:-380px;background:#241340}
+.el{position:absolute;will-change:transform,opacity;opacity:0}
+/* texto editorial */
+.sobre{font-size:16px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ac)}
+.tit{font-size:54px;font-weight:500;line-height:1.14;letter-spacing:-.035em;color:var(--tx)}
+.corpo{font-size:23px;line-height:1.6;color:var(--mut);max-width:600px}
+.escuro .tit{color:#fff}.escuro .sobre{color:var(--lilas)}.escuro .corpo{color:var(--oninksoft)}
+.hero{font-size:96px;font-weight:200;line-height:1.08;letter-spacing:-.035em;color:#fff}
+.hero b{font-weight:600}
+/* cartões de tela */
+.crop{overflow:hidden;border:1px solid var(--lin);border-radius:6px;background:#fff}
+.crop img{position:absolute;left:0;top:0;transform-origin:0 0}
+.marca{position:absolute;border:2.5px solid var(--ac);border-radius:6px;background:rgba(109,40,201,.06);opacity:0}
+.legenda-crop{position:absolute;font-size:15px;font-weight:500;color:var(--rot);letter-spacing:.12em;text-transform:uppercase}
+/* laudo de papel */
+.papel{width:860px;padding:44px 52px;background:#fff;border:1px solid var(--lin);border-radius:6px;font-size:19px;line-height:1.75;color:var(--tx2)}
+.papel h4{font-size:15px;letter-spacing:.14em;color:var(--rot);font-weight:600;margin-bottom:16px}
+.papel p{margin-bottom:10px}
+.jarg{border-radius:4px;padding:0 3px;transition:none}
+.flesch{display:flex;align-items:baseline;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid var(--lin2);font-size:16px;color:var(--mut)}
+.flesch b{font-size:34px;font-weight:600;color:var(--cr)}
+/* celular */
+#celular{left:1300px;top:70px;width:440px;height:940px;border-radius:58px;background:#120b20;padding:14px}
+#tela{position:relative;width:100%;height:100%;border-radius:46px;overflow:hidden;background:#F1EEF6;display:flex;flex-direction:column}
+.cel-topo{flex:none;height:118px;padding:52px 20px 0;background:#fff;border-bottom:1px solid var(--lin);display:flex;align-items:center;gap:12px}
+.cel-topo .av{width:40px;height:40px;border-radius:999px;background:var(--tx);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px}
+.cel-topo b{display:block;font-size:17px;font-weight:600}.cel-topo small{display:block;font-size:12.5px;color:var(--rot)}
+.cel-corpo{position:relative;flex:1;overflow:hidden}
+#pilha{position:absolute;left:0;right:0;top:0;padding:16px 14px 18px;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:84%;padding:9px 12px 7px;border-radius:12px;font-size:15px;line-height:1.45;color:#1b1b1f;white-space:pre-wrap;opacity:0;box-shadow:0 1px 0 rgba(27,16,48,.06)}
+.msg.in{align-self:flex-start;background:#fff;border-top-left-radius:4px}
+.msg.out{align-self:flex-end;background:#DDF3E3;border-top-right-radius:4px}
+.msg .h{display:block;text-align:right;font-size:11px;color:#8a8794;margin-top:2px}
+.msg em{font-style:italic}.msg strong{font-weight:700}
+.botoes{display:flex;flex-direction:column;gap:5px;margin-top:8px}
+.botoes span{display:block;text-align:center;padding:8px;border-top:1px solid #ece9f2;color:#2563a8;font-weight:600;font-size:14.5px}
+.anexo{display:flex;align-items:center;gap:10px;padding:4px 2px}
+.anexo i{display:inline-flex;width:38px;height:46px;border-radius:5px;background:#E0464E;color:#fff;font-style:normal;font-size:11px;font-weight:700;align-items:flex-end;justify-content:center;padding-bottom:6px}
+/* números */
+.num{width:300px}
+.num b{display:block;font-size:76px;font-weight:600;letter-spacing:-.04em;color:var(--tx);line-height:1}
+.num span{display:block;margin-top:14px;font-size:19px;line-height:1.5;color:var(--mut)}
+.num.ok b{color:var(--ok)}
+.rodape-num{font-size:16px;color:var(--rot)}
+.nomes{font-size:28px;font-weight:500;color:#fff;letter-spacing:-.01em}
+.instit{font-size:17px;letter-spacing:.16em;text-transform:uppercase;color:var(--lilas);font-weight:500}
+.nota-f{font-size:15px;color:#9A8FB5}
+</style></head>
+<body><div id="palco">
+<div class="camada" id="escuro" style="opacity:1"></div>
+
+<!-- 0 · abertura -->
+<div class="el escuro" data-in="0.5" data-out="6.5" style="left:150px;top:300px"><div class="sobre">Protótipo · IA generativa na saúde</div></div>
+<div class="el" data-in="1.1" data-out="6.5" style="left:150px;top:370px"><div class="hero">O laudo continua técnico.</div></div>
+<div class="el" data-in="2.2" data-out="6.5" style="left:150px;top:480px"><div class="hero"><b>A explicação, não.</b></div></div>
+
+<!-- 1 · problema -->
+<div class="el" data-in="7.6" data-out="17.6" style="left:150px;top:300px"><div class="sobre">O problema</div></div>
+<div class="el" data-in="7.75" data-out="17.6" style="left:150px;top:345px;width:640px"><div class="tit">O paciente recebe o laudo antes de entender o que ele diz.</div></div>
+<div class="el" data-in="7.9" data-out="17.6" style="left:150px;top:575px"><div class="corpo">Termos técnicos, valores fora da faixa e dias de espera até a consulta.</div></div>
+<div class="el" data-in="8.2" data-out="17.6" data-mov="direita" style="left:900px;top:150px">
+  <div class="papel"><h4>ULTRASSONOGRAFIA DA TIREOIDE</h4>
+  <p>Técnica: exame realizado com transdutor linear de alta frequência, complementado com <span class="jarg" data-t="10.2">Doppler colorido</span>.</p>
+  <p>Tireoide tópica, de contornos regulares e dimensões normais. Lobo direito: 4,8 x 1,6 x 1,5 cm. Lobo esquerdo: 4,6 x 1,5 x 1,4 cm. <span class="jarg" data-t="10.6">Istmo</span>: 0,3 cm.</p>
+  <p><span class="jarg" data-t="11.0">Parênquima</span> de <span class="jarg" data-t="11.3">ecotextura homogênea</span>.</p>
+  <p>Nódulo sólido, <span class="jarg" data-t="11.7">hipoecoico</span>, de contornos regulares, medindo 0,6 x 0,5 x 0,5 cm no terço médio do lobo direito, sem calcificações, com vascularização periférica ao Doppler (<span class="jarg" data-t="12.1">ACR TI-RADS 4</span>).</p>
+  <p>Ausência de <span class="jarg" data-t="12.5">linfonodomegalias</span> cervicais.</p>
+  <div class="flesch el" data-in="13.2" data-out="17.6" style="position:relative;opacity:0"><span>Legibilidade dos laudos de imagem (índice Flesch)</span><b>22</b><span>muito difícil</span></div>
+  </div></div>
+
+<!-- 2 · rascunho -->
+<div class="el" data-in="18.4" data-out="31.6" style="left:110px;top:290px"><div class="sobre">01 · Rascunho</div></div>
+<div class="el" data-in="18.55" data-out="31.6" style="left:110px;top:335px;width:600px"><div class="tit">A IA escreve a explicação em linguagem simples.</div></div>
+<div class="el" data-in="18.7" data-out="31.6" style="left:110px;top:540px;width:560px"><div class="corpo">Uma regra fixa marca cada valor alterado. Nada fica de fora.</div></div>
+<div class="el crop" data-in="19.0" data-out="31.6" data-mov="direita" data-src="telas/rascunho.png" data-cx="0" data-cy="153" data-cw="1050" data-ch="580" data-s="1.08" style="left:760px;top:200px">
+  <div class="marca" data-x="234" data-y="230" data-w="70" data-h="28" data-t="22.0"></div>
+  <div class="marca" data-x="234" data-y="363" data-w="70" data-h="28" data-t="22.3"></div>
+  <div class="marca" data-x="14" data-y="433" data-w="290" data-h="80" data-t="24.0"></div>
+  <div class="marca" data-x="548" data-y="183" data-w="148" data-h="30" data-t="26.5"></div>
+</div>
+
+<!-- 3 · procedência -->
+<div class="el" data-in="32.4" data-out="45.6" style="left:150px;top:300px"><div class="sobre">02 · Procedência</div></div>
+<div class="el" data-in="32.55" data-out="45.6" style="left:150px;top:345px;width:700px"><div class="tit">Cada frase mostra de onde veio.</div></div>
+<div class="el" data-in="32.7" data-out="45.6" style="left:150px;top:490px;width:640px"><div class="corpo">Do laudo, frase fixa ou sem origem: quem revisa vê tudo antes de aprovar.</div></div>
+<div class="el crop" data-in="33.0" data-out="45.6" data-mov="direita" data-src="telas/rascunho.png" data-cx="1069" data-cy="150" data-cw="371" data-ch="700" data-s="1.32" style="left:1010px;top:80px">
+  <div class="marca" data-x="1084" data-y="578" data-w="339" data-h="82" data-t="38.5"></div>
+  <div class="marca" data-x="1084" data-y="664" data-w="339" data-h="98" data-t="40.5"></div>
+</div>
+
+<!-- 4 · aprovação -->
+<div class="el" data-in="46.4" data-out="57.6" style="left:110px;top:300px"><div class="sobre">03 · Aprovação</div></div>
+<div class="el" data-in="46.55" data-out="57.6" style="left:110px;top:345px;width:560px"><div class="tit">A IA propõe. O profissional decide.</div></div>
+<div class="el" data-in="46.7" data-out="57.6" style="left:110px;top:490px;width:540px"><div class="corpo">Um por um, ordenado por risco. Nada chega ao paciente sem aprovação.</div></div>
+<div class="el legenda-crop" data-in="47.0" data-out="57.6" style="left:780px;top:118px">Revisão de laudos · crítico primeiro</div>
+<div class="el crop" data-in="47.0" data-out="57.6" data-mov="direita" data-src="telas/lista.png" data-cx="264" data-cy="188" data-cw="836" data-ch="246" data-s="1.2" style="left:780px;top:150px">
+  <div class="marca" data-x="268" data-y="224" data-w="828" data-h="70" data-t="48.6"></div>
+</div>
+<div class="el legenda-crop" data-in="50.6" data-out="57.6" style="left:780px;top:478px">Uma ação explícita</div>
+<div class="el crop" data-in="50.6" data-out="57.6" data-mov="direita" data-src="telas/rascunho.png" data-cx="1112" data-cy="68" data-cw="320" data-ch="78" data-s="1.72" style="left:780px;top:510px">
+  <div class="marca" data-x="1268" data-y="84" data-w="151" data-h="40" data-t="51.8"></div>
+</div>
+<div class="el legenda-crop" data-in="53.4" data-out="57.6" style="left:780px;top:700px">Registro de aprovações</div>
+<div class="el crop" data-in="53.4" data-out="57.6" data-mov="direita" data-src="telas/registro.png" data-cx="264" data-cy="188" data-cw="700" data-ch="106" data-s="1.43" style="left:780px;top:732px">
+  <div class="marca" data-x="568" data-y="236" data-w="390" data-h="50" data-t="54.6"></div>
+</div>
+
+<!-- 5–8 · celular -->
+<div class="el" id="celular" data-in="58.4" data-out="119.6" data-mov="direita">
+ <div id="tela">
+  <div class="cel-topo"><span class="av">C</span><div><b>Clínica</b><small>Atendimento de exames</small></div></div>
+  <div class="cel-corpo"><div id="pilha"></div></div>
+ </div>
+</div>
+
+<div class="el" data-in="58.4" data-out="79.6" style="left:150px;top:300px"><div class="sobre">04 · WhatsApp</div></div>
+<div class="el" data-in="58.55" data-out="79.6" style="left:150px;top:345px;width:760px"><div class="tit">O paciente recebe no canal que já usa.</div></div>
+<div class="el" data-in="58.7" data-out="79.6" style="left:150px;top:490px;width:680px"><div class="corpo">CPF, data de nascimento e número cadastrado. O termo vem antes de qualquer dado de saúde.</div></div>
+
+<div class="el" data-in="80.4" data-out="99.6" style="left:150px;top:150px"><div class="sobre">05 · Dúvidas</div></div>
+<div class="el" data-in="80.55" data-out="99.6" style="left:150px;top:195px;width:900px"><div class="tit">Dúvida simples, resposta na hora. Dúvida clínica, a equipe responde.</div></div>
+<div class="el legenda-crop" data-in="87.6" data-out="99.6" style="left:150px;top:500px">Fila de triagem · respondido pelo médico</div>
+<div class="el crop" data-in="87.6" data-out="99.6" data-mov="esquerda" data-src="telas/fila_resposta.png" data-cx="289" data-cy="159" data-cw="1126" data-ch="383" data-s="1.0" style="left:150px;top:532px">
+  <div class="marca" data-x="304" data-y="343" data-w="1094" data-h="96" data-t="89.6"></div>
+  <div class="marca" data-x="304" data-y="491" data-w="447" data-h="42" data-t="92.4"></div>
+</div>
+
+<div class="el" data-in="100.4" data-out="109.6" style="left:150px;top:300px"><div class="sobre">06 · Segurança</div></div>
+<div class="el" data-in="100.55" data-out="109.6" style="left:150px;top:345px;width:760px"><div class="tit">Sinal de alarme não espera.</div></div>
+<div class="el" data-in="100.7" data-out="109.6" style="left:150px;top:425px;width:680px"><div class="corpo">Orientação do SAMU 192 na hora, mesmo antes da identificação, e alerta no painel da equipe.</div></div>
+<div class="el crop" data-in="103.4" data-out="109.6" data-mov="esquerda" data-src="telas/lista.png" data-cx="1110" data-cy="190" data-cw="322" data-ch="152" data-s="1.55" style="left:150px;top:620px"></div>
+
+<div class="el" data-in="110.4" data-out="119.6" style="left:150px;top:300px"><div class="sobre">07 · Foto ou PDF</div></div>
+<div class="el" data-in="110.55" data-out="119.6" style="left:150px;top:345px;width:760px"><div class="tit">O paciente também pode enviar o laudo.</div></div>
+<div class="el" data-in="110.7" data-out="119.6" style="left:150px;top:490px;width:680px"><div class="corpo">Leitura local, que confere o nome e os valores, e um resumo feito sem IA. A explicação completa passa pela equipe.</div></div>
+
+<!-- 9 · avaliação -->
+<div class="el" data-in="120.4" data-out="133.6" style="left:150px;top:190px"><div class="sobre">Avaliação · 20 laudos e 30 perguntas</div></div>
+<div class="el" data-in="120.55" data-out="133.6" style="left:150px;top:235px;width:1300px"><div class="tit">Medido no conjunto de teste do grupo.</div></div>
+<div class="el num ok" data-in="121.6" data-out="133.6" style="left:150px;top:420px"><b>0/20</b><span>explicações com item alterado omitido</span></div>
+<div class="el num ok" data-in="122.2" data-out="133.6" style="left:480px;top:420px"><b>4/4</b><span>valores críticos marcados como prioridade</span></div>
+<div class="el num ok" data-in="122.8" data-out="133.6" style="left:810px;top:420px"><b>0/5</b><span>sinais de alarme perdidos pelo chatbot</span></div>
+<div class="el num ok" data-in="123.4" data-out="133.6" style="left:1140px;top:420px"><b>0/35</b><span>valores lidos errado que chegariam ao paciente</span></div>
+<div class="el num" data-in="124.0" data-out="133.6" style="left:1470px;top:420px;width:320px"><b>22 → 60</b><span>legibilidade dos laudos de imagem (Flesch)</span></div>
+<div class="el rodape-num" data-in="125.0" data-out="133.6" style="left:150px;top:720px">Checagens automáticas do protótipo, 14/11/2026 · fotos simuladas · avaliação humana em andamento.</div>
+
+<!-- 10 · fecho -->
+<div class="el escuro" data-in="134.6" data-out="999" style="left:150px;top:330px;width:1300px"><div class="tit" style="font-size:64px">Linguagem simples, com revisão humana e rastreabilidade.</div></div>
+<div class="el" data-in="135.6" data-out="999" style="left:150px;top:560px"><div class="nomes">Gregory Stein · Jackson Pandolfo · Lucas Toledo</div></div>
+<div class="el" data-in="136.0" data-out="999" style="left:150px;top:620px"><div class="instit">Unisinos · IA generativa</div></div>
+<div class="el" data-in="136.4" data-out="999" style="left:150px;top:900px"><div class="nota-f">Protótipo acadêmico · dados fictícios</div></div>
+</div>
+
+<script>
+const DUR = 142;
+const ease = p => 1 - Math.pow(1 - p, 3);
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const prog = (t, a, d) => clamp((t - a) / d, 0, 1);
+const ENTRADA = 0.74, SAIDA = 0.45;
+
+/* ---------- conversa do celular: textos reais do sistema ---------- */
+const H = n => `09:${String(12 + n).padStart(2, '0')}`;
+const CONVERSA = [
+ [58.9,'in','Há uma nova mensagem da clínica para você: responda OI nesta conversa para ver.'],
+ [60.3,'out','OI'],
+ [61.2,'in','Olá! Este é o atendimento de exames da clínica. Para proteger os seus dados, primeiro preciso confirmar quem é você. Digite o seu CPF (só os números).'],
+ [62.9,'out','00000000434'],
+ [63.8,'in','Obrigado. Agora digite a sua data de nascimento (por exemplo, 25/03/1980).'],
+ [65.2,'out','09/05/1987'],
+ [66.1,'in','Pronto, identidade confirmada.'],
+ [66.9,'in','Para receber aqui a explicação dos seus exames e tirar dúvidas pelo WhatsApp, precisamos da sua autorização.\n\nAs mensagens do WhatsApp passam pelos servidores da Meta (empresa dona do WhatsApp), que podem ficar fora do Brasil, e qualquer pessoa com acesso ao seu celular poderá lê-las. Você pode cancelar quando quiser, respondendo SAIR.\n\nVocê autoriza?', ['Sim, autorizo','Não autorizo']],
+ [70.2,'out','Sim, autorizo'],
+ [71.0,'in','Obrigado! Autorização registrada. Você pode cancelar quando quiser, respondendo SAIR.'],
+ [72.2,'in','*Perfil lipídico*\n_Explicação revisada e aprovada pela equipe da clínica._\n\nO exame de perfil lipídico mostra alguns resultados fora da faixa de referência. O Colesterol LDL, conhecido como colesterol ruim, está em 168 mg/dL. A faixa de referência é de até 130 mg/dL, então o resultado está acima do esperado. Os Triglicerídeos, outro tipo de gordura do sangue, também estão alterados. O resultado foi 190 mg/dL, e a faixa de referência é de até 150 mg/dL. O Colesterol HDL, conhecido como colesterol bom, está dentro da faixa normal, com 52 mg/dL. A faixa de referência é de 40 mg/dL para cima.\n\nConverse com o seu médico sobre estes resultados.\n\nToque em *Ver dúvidas* abaixo ou escreva sua pergunta.\nEm caso de urgência, ligue 192 (SAMU). Para parar de receber pelo WhatsApp, responda SAIR.'],
+ [76.0,'in','O que você quer fazer agora?', ['Ver dúvidas']],
+ [81.0,'out','Pode explicar de novo o colesterol ruim?'],
+ [82.3,'in','O LDL, chamado colesterol ruim, está em 168 mg/dL, acima do limite de 130 informado neste laudo. A equipe de saúde vai avaliar os resultados e definir as metas adequadas.'],
+ [85.0,'out','Com o LDL alto, qual remédio devo tomar?'],
+ [86.2,'in','Sua pergunta foi encaminhada para a equipe da clínica, que vai responder por aqui em até 2 dias úteis. Você vai receber um aviso quando a resposta chegar.'],
+ [95.6,'in','Resposta da equipe da clínica sobre “Com o LDL alto, qual remédio devo tomar?”:\n\nNão indicamos remédio por mensagem. Na consulta, vamos avaliar o seu histórico e decidir com você se é preciso tratamento.'],
+ [101.0,'out','Estou com dor no peito e falta de ar'],
+ [102.1,'in','Pelo que você escreveu, isso pode precisar de atendimento imediato. Procure agora o pronto-socorro mais próximo ou ligue para o SAMU, no 192. A equipe da clínica já foi avisada.'],
+ [110.8,'out','Enviar um laudo'],
+ [111.6,'in','Pode mandar a foto ou o PDF do laudo aqui. Para dar certo:\n• página inteira, sem cortar os valores;\n• boa luz, sem sombra;\n• um laudo por vez.'],
+ [113.0,'out','@anexo'],
+ [113.8,'in','Recebi. Estou lendo o laudo, leva alguns segundos.'],
+ [115.2,'in','*Perfil lipídico*\n_Resumo automático, feito só com o que está escrito no laudo. A explicação da equipe chega depois._\n\n• Colesterol LDL: 168 mg/dL — acima da faixa do laudo (até 130 mg/dL)\n• Colesterol HDL: 52 mg/dL — dentro da faixa do laudo (a partir de 40 mg/dL)\n• Triglicerídeos: 190 mg/dL — acima da faixa do laudo (até 150 mg/dL)\n\nEstar fora da faixa do laudo não é, sozinho, um diagnóstico: o médico avalia junto com a sua história.'],
+ [117.4,'in','A explicação completa vai ser revisada pela equipe da clínica e chega aqui em até 2 dias úteis.'],
+];
+const fmt = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\*([^*\n]+)\*/g,'<strong>$1</strong>').replace(/_([^_\n]+)_/g,'<em>$1</em>');
+const pilha = document.getElementById('pilha');
+const MSGS = CONVERSA.map(([at, lado, txt, bot], i) => {
+  const d = document.createElement('div'); d.className = 'msg ' + lado;
+  d.innerHTML = (txt === '@anexo'
+      ? '<div class="anexo"><i>PDF</i><div><b style="font-weight:600">laudo_perfil_lipidico.pdf</b><br><span style="font-size:12.5px;color:#6b6878">1 página · PDF</span></div></div>'
+      : fmt(txt)) + (bot ? '<div class="botoes">' + bot.map(b => `<span>${b}</span>`).join('') + '</div>' : '') + `<span class="h">${H(i)}</span>`;
+  pilha.appendChild(d); return {at, d};
+});
+let ALVOS = [];
+function medir() {
+  const vis = document.querySelector('.cel-corpo').clientHeight;
+  ALVOS = MSGS.map(m => Math.max(0, m.d.offsetTop + m.d.offsetHeight + 18 - vis));
+}
+function celular(t) {
+  let i = -1; MSGS.forEach((m, k) => { if (t >= m.at) i = k; });
+  MSGS.forEach((m, k) => {
+    const p = ease(prog(t, m.at, 0.4));
+    m.d.style.opacity = p; m.d.style.transform = `translateY(${(1 - p) * 10}px)`;
+  });
+  let y = 0;
+  if (i >= 0) { const prev = i > 0 ? ALVOS[i - 1] : 0; y = prev + (ALVOS[i] - prev) * ease(prog(t, MSGS[i].at, 0.55)); }
+  pilha.style.transform = `translateY(${-y}px)`;
+}
+
+/* ---------- recortes de tela ---------- */
+document.querySelectorAll('.crop').forEach(c => {
+  const s = +c.dataset.s, cx = +c.dataset.cx, cy = +c.dataset.cy;
+  c.style.width = (+c.dataset.cw * s) + 'px'; c.style.height = (+c.dataset.ch * s) + 'px';
+  const img = document.createElement('img'); img.src = c.dataset.src;
+  img.style.width = (1440 * s) + 'px'; img.style.transform = `translate(${-cx * s}px,${-cy * s}px)`;
+  c.prepend(img); c._img = img; c._base = [cx, cy, s];
+  c.querySelectorAll('.marca').forEach(m => {
+    m.style.left = ((+m.dataset.x - cx) * s) + 'px'; m.style.top = ((+m.dataset.y - cy) * s) + 'px';
+    m.style.width = (+m.dataset.w * s) + 'px'; m.style.height = (+m.dataset.h * s) + 'px';
+  });
+});
+
+/* ---------- motor: estado do quadro em função do tempo ---------- */
+const ELS = [...document.querySelectorAll('.el')].map(e => ({e, ti: +e.dataset.in, to: +e.dataset.out, mov: e.dataset.mov || 'texto'}));
+const JARG = [...document.querySelectorAll('.jarg')];
+const MARCAS = [...document.querySelectorAll('.marca')];
+const escuro = document.getElementById('escuro');
+function renderAt(t) {
+  escuro.style.opacity = t < 7.3 ? 1 - ease(prog(t, 6.6, 0.7)) : ease(prog(t, 133.9, 0.7));
+  for (const {e, ti, to, mov} of ELS) {
+    const pi = ease(prog(t, ti, ENTRADA)), po = prog(t, to, SAIDA) ** 2;
+    const dx = mov === 'direita' ? 56 * (1 - pi) : mov === 'esquerda' ? -56 * (1 - pi) : 0;
+    const dy = mov === 'texto' ? 24 * (1 - pi) - 10 * po : -10 * po;
+    const sc = (mov === 'direita' || mov === 'esquerda') ? 0.985 + 0.015 * pi : 1;
+    e.style.opacity = (pi * (1 - po)).toFixed(4);
+    e.style.transform = `translate(${dx}px,${dy}px) scale(${sc})`;
+    if (e._img && e.dataset.zoom) {           // aproximação lenta, quase imperceptível
+      const [cx, cy, s] = e._base, z = 1 + 0.03 * prog(t, ti, to - ti);
+      e._img.style.transform = `translate(${-cx * s * z}px,${-cy * s * z}px) scale(${z})`;
+      e._img.style.transformOrigin = '0 0';
+    }
+  }
+  for (const j of JARG) { const p = ease(prog(t, +j.dataset.t, 0.5)); j.style.background = `rgba(167,139,250,${0.32 * p})`; j.style.boxShadow = `inset 0 -2px 0 rgba(109,40,201,${0.7 * p})`; }
+  for (const m of MARCAS) m.style.opacity = ease(prog(t, +m.dataset.t, 0.5));
+  celular(t);
+}
+window.renderAt = renderAt; window.DUR = DUR;
+window.pronto = Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(() => {}))]).then(() => { medir(); renderAt(0); return true; });
+</script></body></html>

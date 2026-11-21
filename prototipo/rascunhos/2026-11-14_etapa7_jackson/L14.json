@@ -1,0 +1,83 @@
+{
+  "rascunho_id": "L14-20261114-150602",
+  "laudo_id": "L14",
+  "tipo": "laboratorio",
+  "categoria": "sangue_comum",
+  "exame": "Glicose e hemoglobina glicada",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:06:02",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.3,
+  "exemplo_e1": "E01",
+  "explicacao": "Este exame mede o açúcar no sangue. A glicose em jejum (quantidade de açúcar no sangue depois de ficar sem comer) está acima da faixa de referência: o resultado foi 118 mg/dL, e o esperado vai até 99 mg/dL. A hemoglobina glicada (exame que mostra a média do açúcar no sangue nos últimos três meses) também está acima da faixa: 6,1%, quando o esperado vai até 5,6%. Os dois resultados falam sobre o açúcar no sangue e serão vistos juntos pelo médico. A hemoglobina (a parte das células vermelhas do sangue que leva oxigênio pelo corpo) não foi avaliada neste exame.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa hemoglobina glicada?",
+      "resposta": "É um exame que mostra a média do açúcar no sangue nos últimos três meses."
+    },
+    {
+      "pergunta": "A glicose em jejum alta significa que tenho diabetes?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que é glicose em jejum?",
+      "resposta": "É a quantidade de açúcar no sangue depois de um período sem comer."
+    },
+    {
+      "pergunta": "A hemoglobina glicada alta é grave?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que é hemoglobina?",
+      "resposta": "É a parte das células vermelhas do sangue que leva oxigênio pelo corpo."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Glicose em jejum",
+        "origem": "regra",
+        "citado": true
+      },
+      {
+        "nome": "Hemoglobina glicada",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 43.3,
+    "explicacao": 63.9,
+    "palavras": 109
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Hemoglobina",
+      "Hemoglobina glicada",
+      "Glicose em jejum"
+    ],
+    "mensagem_enviada": "Exame: Glicose e hemoglobina glicada. Paciente: sexo masculino, 51 anos.\nResultados:\n- Glicose em jejum: 118 mg/dL (referência 70–99 mg/dL) → ACIMA da faixa, ALTERADO\n- Hemoglobina glicada: 6,1 % (referência 4–5,6 %) → ACIMA da faixa, ALTERADO\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Hemoglobina: a parte das células vermelhas do sangue que leva oxigênio pelo corpo\n- Hemoglobina glicada: exame que mostra a média do açúcar no sangue nos últimos meses\n- Glicose em jejum: a quantidade de açúcar no sangue depois de um período sem comer\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nEste exame mede o açúcar no sangue. A glicose em jejum (quantidade de açúcar no sangue depois de ficar sem comer) está acima da faixa de referência: o resultado foi 132 mg/dL, e o esperado vai até 99 mg/dL. A hemoglobina glicada (exame que mostra a média do açúcar no sangue nos últimos três meses) também está acima da faixa: 7,1%, quando o esperado vai até 5,6%. Os dois resultados falam sobre o açúcar no sangue e serão vistos juntos pelo médico.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nEste exame mede o açúcar no sangue. A glicose em jejum (quantidade de açúcar no sangue depois de ficar sem comer) está acima da faixa de referência: o resultado foi 118 mg/dL, e o esperado vai até 99 mg/dL. A hemoglobina glicada (exame que mostra a média do açúcar no sangue nos últimos três meses) também está acima da faixa: 6,1%, quando o esperado vai até 5,6%. Os dois resultados falam sobre o açúcar no sangue e serão vistos juntos pelo médico. A hemoglobina (a parte das células vermelhas do sangue que leva oxigênio pelo corpo) não foi avaliada neste exame.\n\nDÚVIDAS:\nP: O que significa hemoglobina glicada?\nR: É um exame que mostra a média do açúcar no sangue nos últimos três meses.\nP: A glicose em jejum alta significa que tenho diabetes?\nR: Isso será avaliado pelo médico na consulta.\nP: O que é glicose em jejum?\nR: É a quantidade de açúcar no sangue depois de um período sem comer.\nP: A hemoglobina glicada alta é grave?\nR: Isso será avaliado pelo médico na consulta.\nP: O que é hemoglobina?\nR: É a parte das células vermelhas do sangue que leva oxigênio pelo corpo.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

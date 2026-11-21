@@ -1,0 +1,22 @@
+  L04 ALERTA E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: ldl; hdl; triglicerideos] flesch 77.1→66.7 dúvidas=5 3.2s
+  L05 ALERTA E1=E03  omitidos=[] alertas=[frase sem apoio no laudo (verificador): 1] jargão=[|sem explicação: ] flesch 38.5→58.7 dúvidas=5 3.7s
+  L06 ALERTA E1=-    omitidos=[] alertas=[cita causa] jargão=[|sem explicação: ] flesch 87.6→62.5 dúvidas=4 3.0s
+  L07 ALERTA E1=E03  omitidos=[] alertas=[frase sem apoio no laudo (verificador): 3] jargão=[|sem explicação: ] flesch 38.2→66.6 dúvidas=5 2.8s
+  L08 ALERTA E1=E02  omitidos=[] alertas=[contradiz a regra: Hemoglobina está normal, mas o texto diz alterado] jargão=[|sem explicação: ] flesch 52.6→84.2 dúvidas=5 3.3s
+  L09 OK     E1=E02  omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 30.3→62.2 dúvidas=5 4.1s
+  L10 ALERTA E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: peribronquico] flesch -0.8→72.3 dúvidas=4 3.1s
+  L11 ALERTA E1=-    omitidos=[] alertas=[cita causa] jargão=[|sem explicação: ] flesch 87.6→74.8 dúvidas=4 2.9s
+  L12 ALERTA E1=E03  omitidos=[] alertas=[] jargão=[|sem explicação: ecogenicidade] flesch 30.2→64.8 dúvidas=5 3.8s
+  L13 ALERTA E1=-    omitidos=[] alertas=[frase sem apoio no laudo (verificador): 4] jargão=[|sem explicação: ] flesch 23.3→64.9 dúvidas=5 3.0s
+  L14 OK     E1=E01  omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 43.3→63.9 dúvidas=5 3.3s
+  L15 OK     E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 22.2→48.2 dúvidas=5 3.4s
+  L16 ALERTA E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: sodio] flesch 101.7→70.9 dúvidas=4 2.7s
+  L17 ALERTA E1=-    omitidos=[] alertas=[frase sem apoio no laudo (verificador): 5] jargão=[|sem explicação: ] flesch 26.1→62.2 dúvidas=5 3.2s
+  L18 ALERTA E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: tsh; t4 livre] flesch 112.1→84.5 dúvidas=5 3.2s
+  L19 OK     E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 112.1→71.5 dúvidas=5 3.6s
+  L20 ALERTA E1=-    omitidos=[] alertas=[frase sem apoio no laudo (verificador): 7] jargão=[|sem explicação: osteofito] flesch 26.0→60.9 dúvidas=4 2.9s
+  L21 ALERTA E1=-    omitidos=[] alertas=[cita causa] jargão=[|sem explicação: ] flesch 87.6→72.6 dúvidas=5 3.1s
+  L22 ALERTA E1=E03  omitidos=[] alertas=[frase sem apoio no laudo (verificador): 2] jargão=[|sem explicação: calcificacoes] flesch -4.6→44.6 dúvidas=5 5.1s
+  L23 OK     E1=E02  omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 52.6→78.9 dúvidas=5 3.8s
+
+Rascunhos em rascunhos/2026-11-14_etapa7_jackson

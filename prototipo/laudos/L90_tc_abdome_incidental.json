@@ -1,0 +1,30 @@
+{
+  "id": "L90",
+  "ficticio": true,
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Tomografia computadorizada de abdome e pelve",
+  "paciente": "Paciente Fictício 90",
+  "sexo": "M",
+  "idade": 44,
+  "data_coleta": "2026-11-13",
+  "achado_critico": false,
+  "texto": "TOMOGRAFIA COMPUTADORIZADA DE ABDOME E PELVE SEM CONTRASTE\nIndicação: dor lombar à esquerda.\nTécnica: aquisição helicoidal, sem administração de meio de contraste.\nFígado de dimensões normais e densidade habitual. Vesícula biliar sem cálculos radiopacos. Pâncreas, baço e adrenais sem alterações.\nRim direito de dimensões normais, com imagem cística de 1,8 cm no polo superior, de paredes finas e conteúdo homogêneo (Bosniak I).\nRim esquerdo de dimensões normais, sem cálculos. Ureter esquerdo com cálculo de 0,4 cm no terço distal, determinando discreta dilatação a montante.\nBexiga com paredes regulares. Ausência de líquido livre na cavidade.\nIMPRESSÃO: Cálculo de 0,4 cm no ureter distal esquerdo, com discreta dilatação a montante. Cisto renal simples no polo superior do rim direito (Bosniak I).",
+  "gabarito_alterados": [
+    {
+      "achado": "Cálculo no ureter esquerdo",
+      "apelidos": [
+        "calculo",
+        "pedra",
+        "pedrinha"
+      ]
+    },
+    {
+      "achado": "Cisto no rim direito",
+      "apelidos": [
+        "cisto",
+        "cistic"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8">
+<style>body{margin:0;background:#fff;font-family:Helvetica,Arial,sans-serif}#d{padding:24px;display:inline-block}</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script></head>
+<body><div id="d"><pre class="mermaid" id="src"></pre></div>
+<script>
+const src = decodeURIComponent(location.hash.slice(1));
+document.getElementById('src').textContent = src;
+mermaid.initialize({startOnLoad:false, theme:'base', flowchart:{htmlLabels:true, curve:'basis'},
+  themeVariables:{fontFamily:'Helvetica, Arial, sans-serif', fontSize:'15px', primaryColor:'#ffffff', lineColor:'#555'}});
+mermaid.run({querySelector:'.mermaid'}).then(()=>{const g=document.querySelector('svg');const vb=g.viewBox.baseVal;g.style.maxWidth='none';g.setAttribute('width',vb.width);g.setAttribute('height',vb.height);document.body.setAttribute('data-ok','1')});
+</script></body></html>

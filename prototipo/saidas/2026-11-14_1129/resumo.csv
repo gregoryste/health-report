@@ -1,0 +1,5 @@
+modelo,laudo,prioridade,omitidos,suavizacao,alertas,flesch_pt,palavras,n_duvidas,formato_ok,tempo_s,carga_s,tokens_s,memoria_gb
+interna:gemma3:12b-it-qat,L01,alterado,,,cita causa; não termina no médico,49.8,73,5,True,3.5,0.0,,
+interna:gemma3:12b-it-qat,L02,normal,,,não termina no médico,54.8,56,4,True,2.6,0.0,,
+interna:gemma3:12b-it-qat,L03,critico,,,cita causa; não termina no médico,66.3,90,5,True,3.7,0.0,,
+interna:gemma3:12b-it-qat,L04,alterado,,,não termina no médico,66.4,135,5,True,4.6,0.0,,

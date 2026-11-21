@@ -1,0 +1,24 @@
+{
+  "id": "L11",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "exame": "Glicose plasmática em jejum",
+  "paciente": "Paciente Fictício 11",
+  "sexo": "F",
+  "idade": 61,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Glicose",
+      "valor": 38,
+      "unidade": "mg/dL",
+      "apelidos": [
+        "glicose",
+        "glicemia",
+        "acucar no sangue"
+      ],
+      "ref_min": 70,
+      "ref_max": 99
+    }
+  ]
+}

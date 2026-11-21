@@ -1,0 +1,119 @@
+{
+  "rascunho_id": "L20-20261114-150653",
+  "laudo_id": "L20",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Radiografia de coluna lombar",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:06:53",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 2.9,
+  "exemplo_e1": null,
+  "explicacao": "O exame de raio-x da coluna lombar mostrou alguns achados que precisam ser avaliados. Foram encontrados osteófitos marginais anteriores em L3 e L4. Osteófitos são como pequenos ossos que se formam nas bordas dos ossos da coluna (vértebras). Houve também uma discreta redução do espaço discal em L4-L5. O espaço discal é o espaço entre as vértebras, preenchido por um disco que ajuda a amortecer o impacto. A redução desse espaço pode diminuir o amortecimento. O alinhamento da coluna está normal. Não foram encontradas fraturas.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que são osteófitos?",
+      "resposta": "São pequenos ossos que se formam nas bordas dos ossos da coluna."
+    },
+    {
+      "pergunta": "O que significa \"espaço discal\"?",
+      "resposta": "É o espaço entre as vértebras, preenchido por um disco."
+    },
+    {
+      "pergunta": "A redução do espaço discal é grave?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que é L3, L4 e L5?",
+      "resposta": "São as vértebras da coluna lombar."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "osteófitos marginais anteriores em L3 e L4",
+        "origem": "gabarito (teste)",
+        "citado": true
+      },
+      {
+        "nome": "discreta redução do espaço discal L4-L5",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 7"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "osteofito"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "explicação",
+          "frase": "O exame de raio-x da coluna lombar mostrou alguns achados que precisam ser avaliados.",
+          "motivo": "A frase indica necessidade de avaliação, o laudo apenas descreve achados."
+        },
+        {
+          "onde": "explicação",
+          "frase": "Osteófitos são como pequenos ossos que se formam nas bordas dos ossos da coluna (vértebras).",
+          "motivo": "Não há definição de osteófitos no laudo."
+        },
+        {
+          "onde": "explicação",
+          "frase": "O espaço discal é o espaço entre as vértebras, preenchido por um disco que ajuda a amortecer o impacto.",
+          "motivo": "Não há definição de espaço discal no laudo."
+        },
+        {
+          "onde": "explicação",
+          "frase": "A redução desse espaço pode diminuir o amortecimento.",
+          "motivo": "A frase sobre o efeito da redução do espaço discal não está no laudo."
+        },
+        {
+          "onde": "dúvida: O que são osteófitos?",
+          "frase": "São pequenos ossos que se formam nas bordas dos ossos da coluna.",
+          "motivo": "Não há definição de osteófitos no laudo."
+        },
+        {
+          "onde": "dúvida: O que significa \"espaço discal\"?",
+          "frase": "É o espaço entre as vértebras, preenchido por um disco.",
+          "motivo": "Não há definição de espaço discal no laudo."
+        },
+        {
+          "onde": "dúvida: O que é L3, L4 e L5?",
+          "frase": "São as vértebras da coluna lombar.",
+          "motivo": "O laudo não menciona as vértebras da coluna lombar."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"nao\", \"motivo\": \"A frase indica necessidade de avaliação, o laudo apenas descreve achados.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona 'Osteófitos marginais anteriores em L3 e L4'.\"}, {\"n\": 3, \"apoio\": \"nao\", \"motivo\": \"Não há definição de osteófitos no laudo.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona 'Discreta redução do espaço discal L4-L5'.\"}, {\"n\": 5, \"apoio\": \"nao\", \"motivo\": \"Não há definição de espaço discal no laudo.\"}, {\"n\": 6, \"apoio\": \"nao\", \"motivo\": \"A frase sobre o efeito da redução do espaço discal não está no laudo.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona 'Alinhamento vertebral preservado'.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona 'Ausência de fraturas identificáveis pelo método'.\"}, {\"n\": 9, \"apoio\": \"nao\", \"motivo\": \"Não há definição de osteófitos no laudo.\"}, {\"n\": 10, \"apoio\": \"nao\", \"motivo\": \"Não há definição de espaço discal no laudo.\"}, {\"n\": 11, \"apoio\": \"nao\", \"motivo\": \"O laudo não menciona as vértebras da coluna lombar.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 26.0,
+    "explicacao": 60.9,
+    "palavras": 93
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [],
+    "mensagem_enviada": "Exame: Radiografia de coluna lombar. Paciente: sexo masculino, 63 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nOsteófitos marginais anteriores em L3 e L4. Discreta redução do espaço discal L4-L5. Alinhamento vertebral preservado. Ausência de fraturas identificáveis pelo método.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de raio-x da coluna lombar mostrou alguns achados que precisam ser avaliados. Foram encontrados osteófitos marginais anteriores em L3 e L4. Osteófitos são como pequenos ossos que se formam nas bordas dos ossos da coluna (vértebras). Houve também uma discreta redução do espaço discal em L4-L5. O espaço discal é o espaço entre as vértebras, preenchido por um disco que ajuda a amortecer o impacto. A redução desse espaço pode diminuir o amortecimento. O alinhamento da coluna está normal. Não foram encontradas fraturas.\n\nDÚVIDAS:\nP: O que são osteófitos?\nR: São pequenos ossos que se formam nas bordas dos ossos da coluna.\nP: O que significa \"espaço discal\"?\nR: É o espaço entre as vértebras, preenchido por um disco.\nP: A redução do espaço discal é grave?\nR: Isso será avaliado pelo médico na consulta.\nP: O que é L3, L4 e L5?\nR: São as vértebras da coluna lombar.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

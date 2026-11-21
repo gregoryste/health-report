@@ -1,0 +1,27 @@
+{
+  "rodada": "perguntas do Jackson, 2ª rodada (declarada)",
+  "data": "2026-11-14T15:59",
+  "rodada_anterior": "avaliacao_chatbot/2026-11-14_1519_jackson",
+  "mudancas": [
+    "A: glossário como fonte [G]",
+    "B: outros exames [P] e laudos enviados [E] como fonte; classificador vê esse contexto",
+    "C: base educativa B12–B19 (rascunho)",
+    "D: respondedor v2 (até 6 frases, o que é → como está → próximo passo); classificador: tipo a inclui valores conferidos",
+    "verificador: frase literal de uma fonte não é reprovada",
+    "tipo final: a se usou A/P/E; b se só B/G"
+  ],
+  "prompts_sha256": {
+    "respondedor_sistema.txt": "5302393e1a978095",
+    "classificador_sistema.txt": "aceb29890eaf6433",
+    "verificador_sistema.txt": "1c8c1ceebd796ce8"
+  },
+  "resultado": {
+    "tipo_final": "27/30 (igual à 1ª)",
+    "alarme_perdido": "0/5",
+    "escalonamento_perdido": "1/8 (J15)",
+    "escalonamento_desnecessario": "1/10 (J10: frase inventada pega pelo verificador)",
+    "recusa": "6/7 (J30)",
+    "frases_por_resposta": "2,2 → 3,1",
+    "corrigida": "J05"
+  }
+}

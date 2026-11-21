@@ -1,0 +1,110 @@
+{% extends "base.html" %}{% import "_ui.html" as ui %}
+{% block titulo %}Equipe e acessos · Painel da equipe{% endblock %}
+{% block corpo %}
+{% set ativas = contas|selectattr('ativo')|list %}
+<header class="cabecalho">
+  <div>
+    <h1>Equipe e acessos</h1>
+    <div class="contexto">{{ contas|length }} conta(s) · {{ ativas|length }} ativa(s) · {{ sessoes_abertas|length }} com sessão aberta · só a administração vê esta página</div>
+  </div>
+</header>
+
+<div class="colunas equipe">
+  <aside class="coluna lateral esq">
+    <div class="bloco">
+      <span class="sobrancelha">Funções do sistema</span>
+      {% for chave, rotulo in funcoes.items() %}
+      {% set n = ativas|selectattr('funcao', 'equalto', chave)|list|length %}
+      <div class="papel">
+        <div class="titulo-bloco"><b>{{ rotulo }}</b><span class="contador">{{ n }}</span></div>
+        <p class="nota-pequena">{{ descricoes[chave] }}</p>
+      </div>
+      {% endfor %}
+      <div class="papel">
+        <div class="titulo-bloco"><b>Paciente</b><span class="chip-neutro">WhatsApp</span></div>
+        <p class="nota-pequena">Não tem conta no painel. Entra pela conversa: CPF, data de nascimento e número cadastrado, depois o aceite do termo.</p>
+      </div>
+    </div>
+    <div class="bloco sep">
+      <span class="rotulo">Regras</span>
+      <p class="nota-pequena">Senhas guardadas só como hash. Trocar a senha ou desativar encerra as sessões abertas da conta. Sempre sobra uma conta de administração ativa, e ninguém desativa a própria conta.</p>
+    </div>
+  </aside>
+
+  <section class="coluna centro">
+    {% if ok or erro %}
+    <div class="faixa-aviso">
+      {% if ok %}<div class="sinal sugestao"><p>{{ ui.icone('check', 14) }} {{ ok }}</p></div>{% endif %}
+      {% if erro %}<div class="sinal critico" role="alert"><p>{{ ui.icone('alerta', 14) }} {{ erro }}</p></div>{% endif %}
+    </div>
+    {% endif %}
+    <div class="faixa"><span class="pilula">Administração primeiro, depois por nome</span><span>{{ contas|length }} conta(s)</span></div>
+    <div class="superficie">
+      <table class="dados">
+        <thead><tr><th>Pessoa</th><th>Função</th><th>Situação</th><th>Último acesso</th><th class="dir">Ações</th></tr></thead>
+        <tbody>
+        {% for u in contas %}
+          {% set eu = u.login == s.token %}
+          <tr class="{{ 'inativa' if not u.ativo }}">
+            <td><div class="pessoa"><span class="avatar {{ '' if u.funcao == 'admin' else 'claro' }}">{{ ui.iniciais(u.nome) }}</span>
+              <div><b>{{ u.nome }}{% if eu %} <span class="chip-ia">você</span>{% endif %}</b><span class="sub">{{ u.login }} · criada em {{ ui.data(u.criado_em) }}</span></div></div></td>
+            <td>
+              {% if eu %}<span class="selo {{ 'envio' if u.funcao == 'admin' else 'neutro' }}">{{ funcoes.get(u.funcao, u.funcao) }}</span>
+              {% else %}
+              <form method="post" action="/painel/equipe" class="em-linha">
+                <input type="hidden" name="acao" value="funcao"><input type="hidden" name="login" value="{{ u.login }}">
+                <select name="funcao" aria-label="Função de {{ u.nome }}" onchange="this.form.querySelector('button').hidden=false">
+                  {% for chave, rotulo in funcoes.items() %}<option value="{{ chave }}" {{ 'selected' if u.funcao == chave }}>{{ rotulo }}</option>{% endfor %}
+                </select>
+                <button class="btn pequeno" hidden>Salvar</button>
+              </form>
+              {% endif %}
+            </td>
+            <td>
+              {% if u.ativo %}<span class="selo aprovado">Ativa</span>{% else %}<span class="selo descartado">Desativada</span>{% endif %}
+              {% if u.login in sessoes_abertas %}<span class="sub">sessão aberta</span>{% endif %}
+            </td>
+            <td class="nowrap">{% if u.ultimo_acesso %}{{ ui.data(u.ultimo_acesso) }}<span class="sub">{{ u.ultimo_acesso[11:16] }}</span>{% else %}<span class="meta">nunca entrou</span>{% endif %}</td>
+            <td class="dir">
+              <div class="acoes fim">
+                <details class="menu-senha">
+                  <summary class="btn secundario pequeno">Redefinir senha</summary>
+                  <form method="post" action="/painel/equipe" class="caixa-senha">
+                    <input type="hidden" name="acao" value="senha"><input type="hidden" name="login" value="{{ u.login }}">
+                    <label for="senha_{{ loop.index }}">Nova senha de {{ u.login }}</label>
+                    <input type="password" name="senha" id="senha_{{ loop.index }}" minlength="8" required autocomplete="new-password">
+                    <button class="btn pequeno">Salvar senha</button>
+                  </form>
+                </details>
+                {% if not eu %}
+                <form method="post" action="/painel/equipe">
+                  <input type="hidden" name="login" value="{{ u.login }}">
+                  {% if u.ativo %}<button class="btn pequeno contorno-critico" name="acao" value="desativar" onclick="return confirm('Desativar a conta {{ u.login }}? A pessoa sai na hora.')">Desativar</button>
+                  {% else %}<button class="btn pequeno secundario" name="acao" value="ativar">Reativar</button>{% endif %}
+                </form>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <aside class="coluna lateral dir">
+    <div class="titulo-bloco"><span class="titulo-forte">{{ ui.icone('usuario', 15) }}Nova conta</span></div>
+    <form class="bloco" method="post" action="/painel/equipe" autocomplete="off">
+      <input type="hidden" name="acao" value="criar">
+      <div class="campo"><label for="n_nome">Nome</label><input type="text" name="nome" id="n_nome" required placeholder="Dra. Helena Souza"></div>
+      <div class="campo"><label for="n_login">Usuário</label><input type="text" name="login" id="n_login" required pattern="[a-z0-9._\-]{3,32}" autocapitalize="none" spellcheck="false" placeholder="helena"></div>
+      <div class="campo"><label for="n_funcao">Função</label>
+        <select name="funcao" id="n_funcao">{% for chave, rotulo in funcoes.items() %}<option value="{{ chave }}" {{ 'selected' if chave == 'medico' }}>{{ rotulo }}</option>{% endfor %}</select></div>
+      <div class="campo"><label for="n_senha">Senha inicial</label><input type="password" name="senha" id="n_senha" minlength="8" required autocomplete="new-password"></div>
+      <div class="campo"><label for="n_senha2">Repita a senha</label><input type="password" name="senha2" id="n_senha2" minlength="8" required autocomplete="new-password"></div>
+      <button class="btn largo">Criar conta</button>
+      <p class="nota-pequena">Passe a senha à pessoa por um canal seguro, nunca por grupo. Usuário: 3 a 32 caracteres, só letras minúsculas, números, ponto, hífen e sublinhado.</p>
+    </form>
+  </aside>
+</div>
+{% endblock %}

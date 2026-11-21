@@ -1,0 +1,110 @@
+[
+  {
+    "id": "B01",
+    "titulo": "Jejum e efeito nos exames",
+    "url": "https://medlineplus.gov/lab-tests/fasting-for-a-blood-test/",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "Alimentos e bebidas podem mudar substâncias medidas no sangue. Faça jejum apenas quando orientado. Água pura costuma ser permitida no jejum de exames de sangue. Café e outras bebidas não equivalem a água. Confirme duração e instruções com o laboratório. Se não seguiu o preparo, informe antes da coleta. Não suspenda medicamentos por conta própria.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B02",
+    "titulo": "Preparo geral de exames",
+    "url": "https://medlineplus.gov/lab-tests/how-to-prepare-for-a-lab-test/",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "O preparo varia conforme o exame. Siga as instruções recebidas e informe medicamentos, suplementos e qualquer dificuldade em cumpri-las. Tire dúvidas com o serviço antes da coleta. O portal não deve inventar um preparo quando o pedido e as orientações do laboratório não estão disponíveis.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B03",
+    "titulo": "Como entender resultados e faixas",
+    "url": "https://medlineplus.gov/lab-tests/how-to-understand-your-lab-results/",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "As faixas de referência dependem do laboratório e do método. Compare o resultado com a faixa que acompanha seu próprio laudo. Estar fora da faixa não define sozinho uma doença; estar dentro dela não exclui todos os problemas. A interpretação leva em conta sintomas e histórico.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B04",
+    "titulo": "Hemograma e preparo",
+    "url": "https://medlineplus.gov/lab-tests/complete-blood-count-cbc/",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "O hemograma mede características das células do sangue. Em geral, isoladamente, não exige preparo especial. Outros exames na mesma coleta podem exigir jejum. Confirme as orientações da coleta completa. Um valor alterado não determina sozinho sua causa.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B05",
+    "titulo": "Glicose e modalidades do exame",
+    "url": "https://medlineplus.gov/lab-tests/blood-glucose-test/",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "O exame de glicose mede o açúcar no sangue. Alguns testes usam jejum e outros não. Verifique qual modalidade foi solicitada. O significado do resultado depende do teste, do preparo e do contexto clínico. O portal deve explicar o dado, sem estabelecer um diagnóstico individual.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B06",
+    "titulo": "Hemoglobina glicada",
+    "url": "https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "A hemoglobina glicada ajuda a estimar a média do açúcar no sangue nos últimos dois a três meses. Algumas condições e medicamentos podem influenciar sua interpretação. Informe o que usa à equipe de saúde e não suspenda medicamentos sem orientação. A leitura de um número pelo portal não substitui a avaliação clínica.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B07",
+    "titulo": "Colesterol e perfil lipídico",
+    "url": "https://medlineplus.gov/lab-tests/cholesterol-levels/",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "O perfil lipídico avalia gorduras no sangue. LDL é conhecido como colesterol ruim e HDL como colesterol bom. As orientações de preparo devem ser confirmadas com o serviço. O portal não deve aplicar uma meta individual de colesterol sem avaliação do risco pela equipe de saúde.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B08",
+    "titulo": "TSH e preparo",
+    "url": "https://medlineplus.gov/lab-tests/tsh-thyroid-stimulating-hormone-test/",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "O TSH é um hormônio que estimula a tireoide. Seu resultado ajuda a avaliar o funcionamento dessa glândula, mas não determina sozinho a causa de uma alteração. Informe medicamentos à equipe. Não suspenda nem altere doses por conta própria. Outros exames coletados juntos podem mudar o preparo.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B09",
+    "titulo": "Exame de urina",
+    "url": "https://medlineplus.gov/ency/article/003579.htm",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "O exame avalia características físicas, químicas e microscópicas da urina. Existem diferentes formas de coleta. O laboratório deve informar qual foi solicitada e como realizá-la. Não substituir uma coleta de 24 horas por uma amostra isolada. Informe medicamentos que possam interferir na amostra.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "B10",
+    "titulo": "Preparo do ultrassom",
+    "url": "https://www.radiologyinfo.org/en/info/how-to-prepare-for-us-exam",
+    "fonte": "RadiologyInfo / ACR e RSNA",
+    "texto": "O preparo depende da região e do tipo de ultrassom. Alguns exames pedem jejum; outros, bexiga cheia. Confirme com o serviço antes do exame. O portal não deve escolher uma quantidade de água nem um tempo de jejum sem conhecer as orientações específicas.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "S01",
+    "titulo": "Urgências no Brasil",
+    "url": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192",
+    "fonte": "Ministério da Saúde",
+    "texto": "Dor súbita no peito, problemas importantes de respiração e sinais súbitos como alteração da fala ou perda de força em um lado do corpo podem exigir atendimento de emergência. No Brasil, o SAMU atende pelo 192. O portal deve orientar ajuda imediata sem exigir que a pessoa conclua a conversa.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  },
+  {
+    "id": "S02",
+    "titulo": "Potássio elevado",
+    "url": "https://medlineplus.gov/ency/article/001179.htm",
+    "fonte": "MedlinePlus / National Library of Medicine",
+    "texto": "Potássio muito elevado pode causar problemas graves nos batimentos do coração. A pessoa pode não apresentar sintomas. Uma explicação automática não deve sugerir que a ausência de sintomas torna seguro adiar a avaliação.",
+    "consultado_em": "2026-11-14",
+    "aprovacao_clinica": false
+  }
+]

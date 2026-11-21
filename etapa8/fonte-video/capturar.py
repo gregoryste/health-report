@@ -1,0 +1,30 @@
+import sqlite3, sys, os
+from playwright.sync_api import sync_playwright
+V = sys.argv[1]; B = "http://localhost:8001"; T = os.path.join(V, "telas")
+senha = open(os.path.join(V, "cena", "senha_cena.txt")).read().strip()
+RESPOSTA_MEDICO = ("Não indicamos remédio por mensagem. Na consulta, vamos avaliar o seu histórico "
+                   "e decidir com você se é preciso tratamento.")
+with sync_playwright() as p:
+    nav = p.chromium.launch(channel="chrome", headless=True)
+    pg = nav.new_page(viewport={"width": 1440, "height": 900}, device_scale_factor=2)
+    pg.goto(B + "/painel/login"); pg.wait_for_timeout(600); pg.screenshot(path=f"{T}/login.png")
+    pg.fill("#login", "dra.helena"); pg.fill("#senha", senha); pg.click("button[type=submit]")
+    pg.wait_for_url(B + "/painel"); pg.wait_for_timeout(500); pg.screenshot(path=f"{T}/lista.png")
+    pg.goto(B + "/painel/rascunho/E001-20261114-154607"); pg.wait_for_timeout(500)
+    pg.screenshot(path=f"{T}/rascunho.png")
+    pg.evaluate("document.querySelector('.lateral.dir').scrollTop = 0")
+    pg.click("header .acoes button[value=aprovar]"); pg.wait_for_url("**/painel?publicado=*"); pg.wait_for_timeout(500)
+    pg.screenshot(path=f"{T}/lista_apos.png")
+    pg.goto(B + "/painel/registro"); pg.wait_for_timeout(400); pg.screenshot(path=f"{T}/registro.png")
+    # a pergunta do remédio passa a apontar para o exame recém-publicado (perfil lipídico)
+    db = sqlite3.connect(os.path.join(V, "cena", "p.db"))
+    tok = db.execute("SELECT token FROM publicacoes WHERE laudo_id='E001'").fetchone()[0]
+    db.execute("UPDATE fila SET token=? WHERE status='aguardando'", (tok,)); db.commit()
+    pg.goto(B + "/painel/fila"); pg.wait_for_timeout(400); pg.screenshot(path=f"{T}/fila.png")
+    pg.fill("textarea[name=resposta]", RESPOSTA_MEDICO); pg.select_option("select[name=destino_final]", "medico")
+    pg.wait_for_timeout(300); pg.screenshot(path=f"{T}/fila_resposta.png")
+    pg.click("button[value=responder]"); pg.wait_for_timeout(800)
+    pg.goto(B + f"/painel/publicado/{tok}"); pg.wait_for_timeout(400); pg.screenshot(path=f"{T}/publicado.png")
+    nav.close()
+    for r in db.execute("SELECT status, substr(texto,1,160) FROM avisos ORDER BY id DESC LIMIT 2"): print("aviso:", r)
+    print("registro:", open(os.path.join(V, "cena", "aprovacoes.jsonl")).read()[:200].replace("\n", " "))

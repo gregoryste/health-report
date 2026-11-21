@@ -1,0 +1,93 @@
+{
+  "rascunho_id": "L15-20261114-150608",
+  "laudo_id": "L15",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de abdome superior",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:06:08",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.4,
+  "exemplo_e1": null,
+  "explicacao": "O exame de ultrassom do abdome superior mostrou que o fígado está discretamente aumentado e com a ecogenicidade aumentada (o que significa que ele aparece mais claro no ultrassom). Também foi observada atenuação posterior do feixe sonoro, o que dificulta a visualização de estruturas atrás do fígado. Esses achados sugerem esteatose hepática, que é o acúmulo de gordura no fígado.\n\nA vesícula biliar apresenta um cálculo móvel de 0,8 cm. Um cálculo é uma pedra formada por sais minerais. As vias biliares não estão dilatadas, o que significa que estão com o tamanho normal.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa \"atenuação posterior do feixe sonoro\"?",
+      "resposta": "Significa que a imagem atrás do fígado ficou mais difícil de ver no ultrassom."
+    },
+    {
+      "pergunta": "O que é esteatose hepática?",
+      "resposta": "É o acúmulo de gordura no fígado."
+    },
+    {
+      "pergunta": "O cálculo na vesícula biliar é grave?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O fígado aumentado é um problema?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que é vesícula biliar?",
+      "resposta": "É uma pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "fígado discretamente aumentado",
+        "origem": "gabarito (teste)",
+        "citado": true
+      },
+      {
+        "nome": "achados sugestivos de esteatose hepática",
+        "origem": "gabarito (teste)",
+        "citado": true
+      },
+      {
+        "nome": "cálculo de 0,8 cm na vesícula biliar",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o fígado está discretamente aumentado e com ecogenicidade aumentada, e a definição aprovada confirma o significado de ecogenicidade aumentada.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que há atenuação posterior do feixe sonoro.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo sugere esteatose hepática e a definição aprovada confirma o significado de esteatose hepática.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que a vesícula biliar apresenta um cálculo móvel de 0,8 cm.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"A definição aprovada afirma que um cálculo é uma pedra formada por sais minerais.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que as vias biliares não estão dilatadas.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que há atenuação posterior do feixe sonoro, o que dificulta a visualização de estruturas atrás do fígado.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"O laudo sugere esteatose hepática e a definição aprovada confirma o significado de esteatose hepática.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"A definição aprovada afirma que a vesícula biliar é uma pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 22.2,
+    "explicacao": 48.2,
+    "palavras": 102
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Vesícula biliar",
+      "Cálculo",
+      "Ecogenicidade aumentada (fígado)",
+      "Esteatose hepática"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de abdome superior. Paciente: sexo masculino, 46 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nFígado discretamente aumentado, com aumento difuso da ecogenicidade e atenuação posterior do feixe sonoro, sugestivos de esteatose hepática. Não se observam lesões focais. Vesícula biliar com cálculo móvel de 0,8 cm, sem espessamento parietal. Vias biliares não dilatadas.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Vesícula biliar: pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão\n- Cálculo: uma pedra formada por sais minerais\n- Ecogenicidade aumentada (fígado): o fígado aparece mais claro no ultrassom\n- Esteatose hepática: acúmulo de gordura no fígado",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de ultrassom do abdome superior mostrou que o fígado está discretamente aumentado e com a ecogenicidade aumentada (o que significa que ele aparece mais claro no ultrassom). Também foi observada atenuação posterior do feixe sonoro, o que dificulta a visualização de estruturas atrás do fígado. Esses achados sugerem esteatose hepática, que é o acúmulo de gordura no fígado.\n\nA vesícula biliar apresenta um cálculo móvel de 0,8 cm. Um cálculo é uma pedra formada por sais minerais. As vias biliares não estão dilatadas, o que significa que estão com o tamanho normal.\n\nDÚVIDAS:\nP: O que significa \"atenuação posterior do feixe sonoro\"?\nR: Significa que a imagem atrás do fígado ficou mais difícil de ver no ultrassom.\nP: O que é esteatose hepática?\nR: É o acúmulo de gordura no fígado.\nP: O cálculo na vesícula biliar é grave?\nR: Isso será avaliado pelo médico na consulta.\nP: O fígado aumentado é um problema?\nR: Isso será avaliado pelo médico na consulta.\nP: O que é vesícula biliar?\nR: É uma pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

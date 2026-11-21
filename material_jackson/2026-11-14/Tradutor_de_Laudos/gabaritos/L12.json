@@ -1,0 +1,13 @@
+{
+  "id": "L12",
+  "categoria": "achado_incidental",
+  "gabarito_alterados": [
+    "cisto simples de 0,9 cm no segmento VI do fígado"
+  ],
+  "conteudos_obrigatorios": [
+    "cisto simples de 0,9 cm no segmento VI do fígado"
+  ],
+  "exemplo_explicacao": "O exame descreve um pequeno cisto simples, uma bolsa com líquido, de 0,9 cm em uma região do fígado chamada segmento VI. Ele tem paredes finas e não apresenta divisões internas. O fígado tem tamanho e aparência preservados, não há dilatação dos canais da bile e não foram vistas pedras na vesícula. A equipe avaliará esse achado no seu contexto.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

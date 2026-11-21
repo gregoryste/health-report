@@ -1,0 +1,75 @@
+{
+  "rascunho_id": "L11-20261114-151312",
+  "laudo_id": "L11",
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Glicose plasmática em jejum",
+  "prioridade": "critico",
+  "prazo_revisao": "mesmo dia + ligação",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:13:12",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 2.8,
+  "exemplo_e1": null,
+  "explicacao": "O exame de glicose em jejum mostra que a quantidade de açúcar no sangue está muito baixa. O resultado foi 38 mg/dL, e a faixa de referência é de 70 a 99 mg/dL. Isso significa que a glicose está ABAIXO do valor esperado.\n\nEste resultado é considerado CRÍTICO, o que exige atenção. A glicose em jejum é a quantidade de açúcar no sangue depois de um período sem comer. O resultado abaixo do normal pode ter diversas causas, e será preciso investigar o que está acontecendo. O médico avaliará o resultado e fará uma avaliação completa para entender o que pode estar causando essa alteração.\n\nHá um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa glicose em jejum?",
+      "resposta": "É a quantidade de açúcar no sangue depois de um período sem comer."
+    },
+    {
+      "pergunta": "Por que o resultado é considerado crítico?",
+      "resposta": "Porque o valor está muito abaixo do esperado."
+    },
+    {
+      "pergunta": "O que pode estar causando a glicose baixa?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Preciso fazer algum outro exame?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Glicose",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "cita causa"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 87.6,
+    "explicacao": 63.0,
+    "palavras": 133
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Há um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Glicose em jejum"
+    ],
+    "mensagem_enviada": "Exame: Glicose plasmática em jejum. Paciente: sexo feminino, 61 anos.\nResultados:\n- Glicose: 38 mg/dL (referência 70–99 mg/dL) → ABAIXO da faixa, CRÍTICO\nTom: há um resultado crítico. Seja claro e sério, sem alarmar e sem descrever consequências para a saúde.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Glicose em jejum: a quantidade de açúcar no sangue depois de um período sem comer",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de glicose em jejum mostra que a quantidade de açúcar no sangue está muito baixa. O resultado foi 38 mg/dL, e a faixa de referência é de 70 a 99 mg/dL. Isso significa que a glicose está ABAIXO do valor esperado.\n\nEste resultado é considerado CRÍTICO, o que exige atenção. A glicose em jejum é a quantidade de açúcar no sangue depois de um período sem comer. O resultado abaixo do normal pode ter diversas causas, e será preciso investigar o que está acontecendo. O médico avaliará o resultado e fará uma avaliação completa para entender o que pode estar causando essa alteração.\n\nDÚVIDAS:\nP: O que significa glicose em jejum?\nR: É a quantidade de açúcar no sangue depois de um período sem comer.\nP: Por que o resultado é considerado crítico?\nR: Porque o valor está muito abaixo do esperado.\nP: O que pode estar causando a glicose baixa?\nR: Isso será avaliado pelo médico na consulta.\nP: Preciso fazer algum outro exame?\nR: Isso será avaliado pelo médico na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

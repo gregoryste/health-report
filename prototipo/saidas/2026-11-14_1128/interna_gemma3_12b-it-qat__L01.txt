@@ -1,0 +1,41 @@
+# interna:gemma3:12b-it-qat · L01
+
+## Entrada
+Exame: Hemograma. Paciente: sexo masculino, 54 anos.
+Resultados:
+- Hemoglobina: 10.2 g/dL (referência 13.5–17.5 g/dL) → ABAIXO da faixa, ALTERADO
+- VCM: 72 fL (referência 80–100 fL) → ABAIXO da faixa, ALTERADO
+- Leucócitos: 12800 /mm³ (referência 4000–11000 /mm³) → ACIMA da faixa, ALTERADO
+- Plaquetas: 230000 /mm³ (referência 150000–450000 /mm³) → NORMAL
+
+## Resposta
+EXPLICAÇÃO:
+O exame de hemograma mostra algumas alterações nos seus resultados. A hemoglobina está abaixo do valor esperado, indicando um nível menor do que o normal. O VCM (volume corpuscular médio), que mede o tamanho das células vermelhas do sangue, também está abaixo da faixa de referência. Os leucócitos (glóbulos brancos), que ajudam a combater infecções, estão acima do valor esperado. As plaquetas (células responsáveis pela coagulação do sangue) estão dentro do valor normal.
+
+DÚVIDAS:
+P: O que significa hemoglobina baixa?
+R: Isso será avaliado pelo médico na consulta.
+P: Por que meus leucócitos estão altos?
+R: Isso será avaliado pelo médico na consulta.
+P: Preciso tomar alguma coisa?
+R: Isso será avaliado pelo médico na consulta.
+P: Isso é grave?
+R: Isso será avaliado pelo médico na consulta.
+P: O que é VCM?
+R: É uma medida do tamanho das células vermelhas do sangue, avaliada pelo médico na consulta.
+
+EXPLICAÇÃO:
+O exame de hemograma mostra algumas alterações nos seus resultados. A hemoglobina está abaixo do valor esperado, indicando um nível menor do que o normal. O VCM (volume corpuscular médio), que mede o tamanho das células vermelhas do sangue, também está abaixo da faixa de referência. Os leucócitos (glóbulos brancos), que ajudam a combater infecções, estão acima do valor esperado. As plaquetas (células responsáveis pela coagulação do sangue) estão dentro do valor normal.
+
+DÚVIDAS:
+P: O que significa hemoglobina baixa?
+R: Isso será avaliado pelo médico na consulta.
+P: Por que meus leucócitos estão altos?
+R: Isso será avaliado pelo médico na consulta.
+P: Preciso tomar alguma coisa?
+R: Isso será avaliado pelo médico na consulta.
+P: Isso é grave?
+R: Isso será avaliado pelo médico na consulta.
+P: O que é VCM?
+R: É uma medida do tamanho das células vermelhas do sangue, avaliada pelo médico na consulta.
+

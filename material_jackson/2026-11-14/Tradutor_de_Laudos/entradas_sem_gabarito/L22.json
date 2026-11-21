@@ -1,0 +1,11 @@
+{
+  "id": "L22",
+  "ficticio": true,
+  "tipo": "imagem",
+  "exame": "Tomografia de tórax",
+  "paciente": "Paciente Fictício 22",
+  "sexo": "F",
+  "idade": 66,
+  "data_coleta": "2026-11-14",
+  "texto": "Pequeno nódulo pulmonar de 0,4 cm, inteiramente calcificado, no lobo superior direito, de aspecto residual. Ausência de consolidações, derrame pleural e linfonodomegalias mediastinais."
+}

@@ -1,0 +1,107 @@
+1. Colega: identificação, termo, explicação, dúvida, SAIR
+  ok   oi inicia a triagem: 'triagem iniciada'
+  ok   pede CPF: 'Olá! Este é o atendimento de exames da clínica. Para proteger os seus dados, primeiro preciso confirmar quem é você. Digite o seu CPF (só os números).'
+  ok   CPF curto: 'cpf inválido'
+  ok   dígito verificador errado: 'cpf inválido'
+  ok   CPF ok, no meio da frase: 'pediu nascimento'
+  ok   CPF não fica em texto no registro: '[CPF informado]'
+  ok   data inválida: 'data inválida'
+  ok   data ok, sem consentimento → termo: 'identificado; termo enviado'
+  ok   termo enviado: '[termo de consentimento: Sim / Não]'
+  ok   pergunta antes do aceite não passa: 'termo reenviado'
+  ok   Sim: 'consentimento registrado'
+  ok   explicação saiu: True
+  ok   publicação marcada como lida: True
+  ok   dúvida aprovada pelo menu: 'dúvida aprovada respondida'
+  ok   dúvida livre: 'dúvida tipo a'
+  ok   SAIR revoga: 'revogado'
+  ok   sem consentimento ativo: None
+  ok   depois do SAIR, recomeça: 'triagem iniciada'
+2. Recusa do termo
+  ok   Não: 'termo recusado'
+  ok   texto de recusa: 'Tudo bem. Sem a sua autorização, não enviamos informações de exames pelo WhatsApp. O resultado será explicado na sua consulta, e a recepção da clínica pode ajudar com o que precisar. Se mudar de ideia, é só escrever OI.'
+  ok   nada de saúde foi enviado depois: 'Tudo bem. Sem a sua autorização, não enviamos informações de exames pelo WhatsApp. O resultado será explicado na sua consulta, e a recepção da clínica pode ajudar com o que precisar. Se mudar de ideia, é só escrever OI.'
+3. Número compartilhado: o CPF decide o paciente
+  ok   P02 identificado: 'P02'
+4. CPF e data certos, mas de outro número: não identifica
+  ok   número errado: 'não confere'
+  ok   3ª tentativa bloqueia: 'bloqueado'
+  ok   alerta no painel: True
+  ok   continua bloqueado: 'bloqueado'
+5. Alarme antes da identificação
+  ok   dor no peito: 'urgência'
+  ok   orientação de urgência: 'Pelo que você escreveu, isso pode precisar de atendimento imediato. Procure agora o pronto-socorro mais próximo ou ligue para o SAMU, no 192. A equipe da clínica já foi avisada.'
+  ok   alerta de urgência: True
+6. Sessão expira em 24 h
+  ok   pede de novo: 'triagem iniciada'
+7. Bloqueios do canal
+  ok   aviso sem link: 'aviso'
+  ok   texto livre na triagem: 'bloqueado'
+  ok   regex: sem pontuação: '00000000515'
+  ok   regex: com espaços: '00000000515'
+  ok   sequência repetida é inválida: False
+  ok   CPF some da pergunta: 'meu cpf é [CPF removido], tel 51 99000-0001'
+8. Menu: dúvidas com resposta na hora primeiro
+  ok   seções na ordem: ['Resposta na hora', 'Para ver na consulta', 'Outras opções']
+  ok   na hora, com o id original: ['duv:1', 'duv:3']
+  ok   consulta por último: ['duv:0', 'duv:2']
+  ok   total de linhas ≤ 10: True
+9. Dúvida para a consulta → enviar à equipe
+  ok   dúvida na hora: sem oferta: 'dúvida aprovada respondida'
+  ok   dúvida para a consulta: oferece a equipe: 'dúvida para a consulta; ofereceu enviar à equipe'
+  ok   botões da oferta: '[botões] Enviar à equipe?'
+  ok   entra na fila: True
+  ok   fila: tipo c, médico, aguardando: ('c', 'medico', 'aguardando', 'É grave?')
+  ok   paciente avisado: True
+  ok   2º toque não duplica: True
+  ok   uma só na fila: 1
+10. Vários exames
+  ok   oi com 2 exames → lista: 'lista de exames'
+  ok   lista enviada: True
+  ok   escolhe o perfil: 'exame ativo: L2-P05'
+  ok   exame de outro paciente é recusado: 'exame não encontrado'
+  ok   pergunta sobre o outro exame: 'pergunta sobre outro exame'
+  ok   continuar aqui responde a pendente: 'dúvida tipo a'
+  ok   pergunta do próprio exame vai direto: 'dúvida tipo a'
+  ok   menu tem 'Meus exames': 'lista de exames'
+11. Enviar um laudo (leitura simulada, sem LLM)
+  ok   pede o arquivo: 'aguardando anexo'
+  ok   pedido por texto: 'aguardando anexo'
+  ok   'meus exames' por texto: 'lista de exames'
+  ok   dúvida comum não vira envio: 'dúvida tipo a'
+  ok   áudio é recusado: 'tipo de arquivo não aceito'
+  ok   foto legível → resumo direto, sem conferência: 'resumo imediato enviado; em revisão'
+  ok   nenhuma pergunta de conferência: None
+  ok   resumo: acima da faixa do laudo: True
+  ok   resumo: sem diagnóstico: True
+  ok   rascunho para o painel: ('P05', 'E001', False)
+  ok   painel sabe que não houve conferência: True
+  ok   termina com navegação: '[botões] O que você quer fazer agora?'
+  ok   botão antigo de conferência não reprocessa: 'envio já tratado'
+  ok   valores trocados entre itens são pegos: 'ilegível; pediu outra foto'
+  ok   número que não está no texto é descartado: 'ilegível; pediu outra foto'
+  ok   2ª foto ilegível → equipe: 'ilegível; encaminhado à equipe'
+  ok   alerta de envio no painel: True
+  ok   laudo de outra pessoa: 'laudo de outra pessoa'
+  ok   arquivo apagado: None
+  ok   crítico: equipe avisada já na leitura: True
+  ok   crítico: resumo direto: 'resumo imediato enviado; em revisão'
+  ok   crítico: frase de contato antes do resumo: True
+  ok   laudo de imagem: direto para revisão: 'resumo imediato enviado; em revisão'
+  ok   imagem: resumo só com definições: True
+12. Leitura: decimais e nome (falhas achadas na avaliação de fotos)
+  ok   6.8 não vira 68: [6.8]
+  ok   265.000 pode ser milhar: True
+  ok   nome sem sexo/idade: True
+  ok   nome com * do OCR: True
+  ok   outro paciente continua recusado: False
+  ok   faixa invertida pela LLM é pega: False
+  ok   6.8 lido como 68 é implausível: False
+  ok   valor implausível → equipe, sem resumo: 'valor muito fora da faixa; encaminhado à equipe'
+  ok   linha com trecho ilegível não segue: ['Potássio (linha com trecho ilegível)']
+  ok   wa_id sem o 9 ganha o 9: '5551990000001'
+  ok   número completo não muda: '5551990000002'
+  ok   fixo não ganha 9: '555133334444'
+
+TUDO OK
+exit=0

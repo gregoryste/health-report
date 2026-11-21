@@ -1,0 +1,110 @@
+{
+  "rascunho_id": "L20-20261114-151440",
+  "laudo_id": "L20",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Radiografia de coluna lombar",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:14:40",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.3,
+  "exemplo_e1": null,
+  "explicacao": "A radiografia da coluna lombar mostra alguns achados que estão fora do que consideramos normal. Foram encontradas pequenas saliências ósseas, chamadas osteófitos (bicos de papagaio), nas bordas das vértebras L3 e L4. Também foi notada uma pequena diminuição do espaço discal entre as vértebras L4 e L5. O espaço discal é a região entre as vértebras onde fica o disco que ajuda a proteger a coluna. O alinhamento da coluna está normal. Não foram encontradas fraturas.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que são osteófitos?",
+      "resposta": "São pequenas saliências ósseas que se formam nas bordas das vértebras ou articulações."
+    },
+    {
+      "pergunta": "O que significa \"espaço discal reduzido\"?",
+      "resposta": "Significa que o espaço entre as vértebras L4 e L5 é menor do que o normal."
+    },
+    {
+      "pergunta": "O que é a coluna lombar?",
+      "resposta": "É a parte baixa da coluna, nas costas, entre as vértebras L1 e L5."
+    },
+    {
+      "pergunta": "A coluna está desalinhada?",
+      "resposta": "Não, o alinhamento da coluna está preservado, ou seja, está normal."
+    },
+    {
+      "pergunta": "O que significa \"fratura\"?",
+      "resposta": "É uma quebra no osso."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "osteófitos marginais anteriores em L3 e L4",
+        "origem": "gabarito (teste)",
+        "citado": true
+      },
+      {
+        "nome": "discreta redução do espaço discal L4-L5",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 4"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "explicação",
+          "frase": "A radiografia da coluna lombar mostra alguns achados que estão fora do que consideramos normal.",
+          "motivo": "A frase é uma interpretação geral, não um achado do laudo."
+        },
+        {
+          "onde": "dúvida: O que significa \"espaço discal reduzido\"?",
+          "frase": "Significa que o espaço entre as vértebras L4 e L5 é menor do que o normal.",
+          "motivo": "O laudo apenas menciona uma redução, não que seja menor do que o normal."
+        },
+        {
+          "onde": "dúvida: O que é a coluna lombar?",
+          "frase": "É a parte baixa da coluna, nas costas, entre as vértebras L1 e L5.",
+          "motivo": "A coluna lombar vai de L1 a L5, não L1 a L5."
+        },
+        {
+          "onde": "dúvida: O que significa \"fratura\"?",
+          "frase": "É uma quebra no osso.",
+          "motivo": "O laudo não menciona quebra no osso, apenas ausência de fraturas."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"nao\", \"motivo\": \"A frase é uma interpretação geral, não um achado do laudo.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"Corresponde à descrição de osteófitos marginais anteriores em L3 e L4 e à definição de osteófito.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"Corresponde à descrição de redução do espaço discal L4-L5.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"Corresponde à definição de espaço discal.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"Corresponde à descrição de alinhamento vertebral preservado.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"Corresponde à ausência de fraturas identificáveis.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"Corresponde à definição de osteófito.\"}, {\"n\": 8, \"apoio\": \"nao\", \"motivo\": \"O laudo apenas menciona uma redução, não que seja menor do que o normal.\"}, {\"n\": 9, \"apoio\": \"nao\", \"motivo\": \"A coluna lombar vai de L1 a L5, não L1 a L5.\"}, {\"n\": 10, \"apoio\": \"sim\", \"motivo\": \"Corresponde à descrição de alinhamento vertebral preservado.\"}, {\"n\": 11, \"apoio\": \"nao\", \"motivo\": \"O laudo não menciona quebra no osso, apenas ausência de fraturas.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 26.0,
+    "explicacao": 60.4,
+    "palavras": 84
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Osteófito",
+      "Espaço discal",
+      "Coluna lombar (L1 a L5)"
+    ],
+    "mensagem_enviada": "Exame: Radiografia de coluna lombar. Paciente: sexo masculino, 63 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nOsteófitos marginais anteriores em L3 e L4. Discreta redução do espaço discal L4-L5. Alinhamento vertebral preservado. Ausência de fraturas identificáveis pelo método.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Osteófito: pequena saliência de osso que se forma na borda das vértebras ou das articulações, conhecida popularmente como bico de papagaio\n- Espaço discal: o espaço entre duas vértebras, onde fica o disco que funciona como um amortecedor\n- Coluna lombar (L1 a L5): a parte baixa da coluna, nas costas; as vértebras dessa parte são chamadas de L1 a L5",
+    "resposta_bruta": "EXPLICAÇÃO:\nA radiografia da coluna lombar mostra alguns achados que estão fora do que consideramos normal. Foram encontradas pequenas saliências ósseas, chamadas osteófitos (bicos de papagaio), nas bordas das vértebras L3 e L4. Também foi notada uma pequena diminuição do espaço discal entre as vértebras L4 e L5. O espaço discal é a região entre as vértebras onde fica o disco que ajuda a proteger a coluna. O alinhamento da coluna está normal. Não foram encontradas fraturas.\n\nDÚVIDAS:\nP: O que são osteófitos?\nR: São pequenas saliências ósseas que se formam nas bordas das vértebras ou articulações.\nP: O que significa \"espaço discal reduzido\"?\nR: Significa que o espaço entre as vértebras L4 e L5 é menor do que o normal.\nP: O que é a coluna lombar?\nR: É a parte baixa da coluna, nas costas, entre as vértebras L1 e L5.\nP: A coluna está desalinhada?\nR: Não, o alinhamento da coluna está preservado, ou seja, está normal.\nP: O que significa \"fratura\"?\nR: É uma quebra no osso.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

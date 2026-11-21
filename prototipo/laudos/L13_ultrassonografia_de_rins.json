@@ -1,0 +1,27 @@
+{
+  "id": "L13",
+  "ficticio": true,
+  "tipo": "imagem",
+  "categoria": "normal_que_assusta",
+  "exame": "Ultrassonografia de rins",
+  "paciente": "Paciente Fictício 13",
+  "sexo": "F",
+  "idade": 33,
+  "data_coleta": "2026-11-14",
+  "texto": "Rins com dimensões e espessura do parênquima preservadas. Coluna de Bertin proeminente no rim esquerdo, com continuidade e ecogenicidade semelhantes às do córtex renal, compatível com variante anatômica. Ausência de massas, cálculos e hidronefrose.",
+  "gabarito_alterados": [
+    {
+      "achado": "coluna de Bertin proeminente no rim esquerdo (variante anatômica)",
+      "apelidos": [
+        "coluna de bertin",
+        "variacao",
+        "variante"
+      ]
+    }
+  ],
+  "achado_critico": false,
+  "_origem": "Jackson, Pacote_Tradutor_de_Laudos v1.0 (14/11/2026); original em material_jackson/2026-11-14",
+  "_ajustes_gregory": [
+    "variação normal incluída na checagem de omissão (o README manda citar)"
+  ]
+}

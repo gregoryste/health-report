@@ -1,0 +1,85 @@
+{
+  "rascunho_id": "L13-20261114-151332",
+  "laudo_id": "L13",
+  "tipo": "imagem",
+  "categoria": "normal_que_assusta",
+  "exame": "Ultrassonografia de rins",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:13:32",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.4,
+  "exemplo_e1": null,
+  "explicacao": "O exame de ultrassom dos rins mostra que os rins têm o tamanho e a espessura do tecido normal. O tecido do próprio órgão (parênquima) está normal. Não foram encontradas massas, pedras (cálculos) ou acúmulo de urina (hidronefrose).\n\nNo rim esquerdo, foi vista uma parte do tecido do rim (coluna de Bertin) que se projeta em direção ao centro do rim. Essa coluna tem a mesma aparência e textura do tecido externo do rim (córtex) e é considerada uma variação normal do formato (variante anatômica).\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é a coluna de Bertin?",
+      "resposta": "É uma parte do tecido do rim que avança em direção ao centro do rim. É uma variação normal do formato."
+    },
+    {
+      "pergunta": "O que significa \"variante anatômica\"?",
+      "resposta": "Significa que o formato de uma parte do corpo é diferente do mais comum, mas ainda é considerado normal."
+    },
+    {
+      "pergunta": "O que é o córtex renal?",
+      "resposta": "É a camada externa do rim."
+    },
+    {
+      "pergunta": "O que é parênquima?",
+      "resposta": "É o tecido do próprio órgão."
+    },
+    {
+      "pergunta": "O que é hidronefrose?",
+      "resposta": "É o acúmulo de urina na parte interna do rim, que faz essa parte ficar dilatada."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "coluna de Bertin proeminente no rim esquerdo (variante anatômica)",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que as dimensões e espessura do parênquima estão preservadas, o que implica tamanho e espessura normais.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que as dimensões e espessura do parênquima estão preservadas, o que implica que o tecido do próprio órgão está normal. Parênquima é definido como o tecido do próprio órgão.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma ausência de massas, cálculos e hidronefrose.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve uma coluna de Bertin proeminente no rim esquerdo.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve a coluna de Bertin com ecogenicidade semelhante ao córtex renal e a descreve como compatível com variante anatômica. Variante anatômica é definida como uma diferença no formato de uma parte do corpo que faz parte da variação normal entre as pessoas.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve a coluna de Bertin como uma parte do tecido do rim que avança em direção ao centro do rim e a descreve como compatível com variante anatômica, que é uma variação normal do formato.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"A frase é uma paráfrase da definição de variante anatômica.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"A frase é uma paráfrase da definição de córtex/cortical (rim).\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"A frase é uma paráfrase da definição de parênquima.\"}, {\"n\": 10, \"apoio\": \"sim\", \"motivo\": \"A frase é uma paráfrase da definição de hidronefrose.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 23.3,
+    "explicacao": 63.9,
+    "palavras": 93
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Parênquima",
+      "Cálculo",
+      "Coluna de Bertin",
+      "Variante anatômica",
+      "Córtex / cortical (rim)",
+      "Hidronefrose"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de rins. Paciente: sexo feminino, 33 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nRins com dimensões e espessura do parênquima preservadas. Coluna de Bertin proeminente no rim esquerdo, com continuidade e ecogenicidade semelhantes às do córtex renal, compatível com variante anatômica. Ausência de massas, cálculos e hidronefrose.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Parênquima: o tecido do próprio órgão\n- Cálculo: uma pedra formada por sais minerais\n- Coluna de Bertin: uma parte do próprio tecido do rim que avança em direção ao centro do rim; é uma variação do formato normal\n- Variante anatômica: diferença no formato de uma parte do corpo que faz parte da variação normal entre as pessoas\n- Córtex / cortical (rim): a camada externa do rim\n- Hidronefrose: dilatação da parte interna do rim por acúmulo de urina",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de ultrassom dos rins mostra que os rins têm o tamanho e a espessura do tecido normal. O tecido do próprio órgão (parênquima) está normal. Não foram encontradas massas, pedras (cálculos) ou acúmulo de urina (hidronefrose).\n\nNo rim esquerdo, foi vista uma parte do tecido do rim (coluna de Bertin) que se projeta em direção ao centro do rim. Essa coluna tem a mesma aparência e textura do tecido externo do rim (córtex) e é considerada uma variação normal do formato (variante anatômica).\n\nDÚVIDAS:\nP: O que é a coluna de Bertin?\nR: É uma parte do tecido do rim que avança em direção ao centro do rim. É uma variação normal do formato.\nP: O que significa \"variante anatômica\"?\nR: Significa que o formato de uma parte do corpo é diferente do mais comum, mas ainda é considerado normal.\nP: O que é o córtex renal?\nR: É a camada externa do rim.\nP: O que é parênquima?\nR: É o tecido do próprio órgão.\nP: O que é hidronefrose?\nR: É o acúmulo de urina na parte interna do rim, que faz essa parte ficar dilatada.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

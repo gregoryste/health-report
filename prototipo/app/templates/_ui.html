@@ -1,0 +1,44 @@
+{#- Peças de interface do painel, no padrão visual da referência (sem logo). -#}
+{%- set ROTULOS = {
+  'critico': 'Crítico', 'alterado': 'Alterado', 'normal': 'Normal',
+  'urgencia': 'Urgência', 'contato_ativo': 'Contato ativo', 'prazo_vencido': 'Prazo vencido',
+  'identificacao': 'Identificação', 'envio': 'Laudo enviado',
+  'falha_envio': 'Falha no envio', 'falha_orquestracao': 'Falha de orquestração',
+  'aprovado': 'Aprovado', 'editado': 'Editado', 'descartado': 'Descartado',
+  'simulado': 'Simulado', 'enviado': 'Enviado', 'alta': 'Prioridade alta',
+  'aguardando': 'Aguardando', 'respondido': 'Respondido'
+} -%}
+
+{% macro iniciais(nome) -%}
+{%- set p = (nome or '?').split() -%}{{ (p[0][0] ~ (p[1][0] if p|length > 1 else ''))|upper }}
+{%- endmacro %}
+
+{% macro selo(valor, classe=None) -%}
+<span class="selo {{ classe or valor }}">{{ ROTULOS.get(valor, valor) }}</span>
+{%- endmacro %}
+
+{% macro data(iso) -%}{% if iso %}{{ iso[8:10] }}/{{ iso[5:7] }}/{{ iso[:4] }}{% endif %}{%- endmacro %}
+
+{% macro rotulo(valor) -%}{{ ROTULOS.get(valor, valor) }}{%- endmacro %}
+
+{% macro icone(nome, tam=16) -%}
+<svg class="ic" width="{{ tam }}" height="{{ tam }}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+{%- if nome == 'check' %}<path d="M5 12.5l4.2 4.2L19 7"/>
+{%- elif nome == 'x' %}<path d="M6 6l12 12M18 6L6 18"/>
+{%- elif nome == 'usuario' %}<circle cx="12" cy="8.5" r="3.6"/><path d="M4.8 19.5c1.3-3.3 4-5 7.2-5s5.9 1.7 7.2 5"/>
+{%- elif nome == 'cadeado' %}<rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/>
+{%- elif nome == 'escudo' %}<path d="M12 3.5l7 2.6v5.4c0 4.3-2.9 7.7-7 9-4.1-1.3-7-4.7-7-9V6.1z"/>
+{%- elif nome == 'brilho' %}<path d="M12 3.5l1.9 6.6 6.6 1.9-6.6 1.9L12 20.5l-1.9-6.6L3.5 12l6.6-1.9z"/>
+{%- elif nome == 'alerta' %}<circle cx="12" cy="12" r="8.5"/><path d="M12 7.8v5M12 16.2v.1"/>
+{%- elif nome == 'relogio' %}<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>
+{%- elif nome == 'documento' %}<path d="M7 3.5h7l4 4v13H7z"/><path d="M14 3.5v4h4M9.5 12.5h5M9.5 16h5"/>
+{%- elif nome == 'mensagem' %}<path d="M4.5 5.5h15v10h-9l-4 3.5v-3.5h-2z"/>
+{%- elif nome == 'seta-esq' %}<path d="M14.5 6l-6 6 6 6"/>
+{%- elif nome == 'relogio-volta' %}<path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4.5v3.7h3.7"/>
+{%- endif -%}
+</svg>
+{%- endmacro %}
+
+{% macro vazio(titulo, texto, nome_icone='check') -%}
+<div class="vazio"><span class="vazio-icone">{{ icone(nome_icone, 18) }}</span><h3>{{ titulo }}</h3><p>{{ texto }}</p></div>
+{%- endmacro %}

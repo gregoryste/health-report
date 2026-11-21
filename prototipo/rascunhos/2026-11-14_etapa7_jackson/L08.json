@@ -1,0 +1,76 @@
+{
+  "rascunho_id": "L08-20261114-150502",
+  "laudo_id": "L08",
+  "tipo": "laboratorio",
+  "categoria": "normal_que_assusta",
+  "exame": "Hemograma parcial",
+  "prioridade": "normal",
+  "prazo_revisao": "3 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:05:02",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.3,
+  "exemplo_e1": "E02",
+  "explicacao": "O hemograma é um exame que conta e mede as células do sangue. Todos os resultados estão dentro da faixa de referência. A hemoglobina (a parte do sangue que leva oxigênio para o corpo) está entre 12 e 16 g/dL, e o resultado foi 13,2 g/dL. As plaquetas (células que ajudam a parar sangramentos) estão entre 150.000 e 450.000 por mm³, e o resultado foi 265.000. Os leucócitos (células de defesa do corpo) estão entre 4.000 e 11.000 por mm³, e o resultado foi 7.100.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa leucócitos?",
+      "resposta": "São células de defesa do corpo."
+    },
+    {
+      "pergunta": "A hemoglobina baixa é grave?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que as plaquetas fazem?",
+      "resposta": "Ajudam o sangue a coagular e a parar sangramentos."
+    },
+    {
+      "pergunta": "O que é hemograma?",
+      "resposta": "É um exame que conta e mede as células do sangue."
+    },
+    {
+      "pergunta": "Posso ter alguma doença por causa disso?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "contradiz a regra: Hemoglobina está normal, mas o texto diz alterado"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [
+      "Hemoglobina está normal, mas o texto diz alterado"
+    ],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 52.6,
+    "explicacao": 84.2,
+    "palavras": 93
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Hemoglobina",
+      "Leucócitos",
+      "Plaquetas"
+    ],
+    "mensagem_enviada": "Exame: Hemograma parcial. Paciente: sexo feminino, 29 anos.\nResultados:\n- Hemoglobina: 13,2 g/dL (referência 12–16 g/dL) → NORMAL\n- Leucócitos: 7.100 /mm³ (referência 4000–11000 /mm³) → NORMAL\n- Plaquetas: 265.000 /mm³ (referência 150000–450000 /mm³) → NORMAL\nTom: todos os itens estão dentro da faixa. Diga isso com clareza, sem falar de doenças.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Hemoglobina: a parte das células vermelhas do sangue que leva oxigênio pelo corpo\n- Leucócitos: células de defesa do corpo\n- Plaquetas: células que ajudam o sangue a coagular e a parar sangramentos\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO hemograma é um exame que conta e mede as células do sangue. A hemoglobina (a parte do sangue que leva oxigênio para o corpo) está abaixo da faixa de referência: o resultado foi 11,0 g/dL, e o esperado é a partir de 12,0 g/dL. As plaquetas (células que ajudam a parar sangramentos) estão acima da faixa: 480.000 por mm³, quando o esperado vai até 450.000. Os leucócitos (células de defesa do corpo) estão dentro do esperado.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO hemograma é um exame que conta e mede as células do sangue. Todos os resultados estão dentro da faixa de referência. A hemoglobina (a parte do sangue que leva oxigênio para o corpo) está entre 12 e 16 g/dL, e o resultado foi 13,2 g/dL. As plaquetas (células que ajudam a parar sangramentos) estão entre 150.000 e 450.000 por mm³, e o resultado foi 265.000. Os leucócitos (células de defesa do corpo) estão entre 4.000 e 11.000 por mm³, e o resultado foi 7.100.\n\nDÚVIDAS:\nP: O que significa leucócitos?\nR: São células de defesa do corpo.\nP: A hemoglobina baixa é grave?\nR: Isso será avaliado pelo médico na consulta.\nP: O que as plaquetas fazem?\nR: Ajudam o sangue a coagular e a parar sangramentos.\nP: O que é hemograma?\nR: É um exame que conta e mede as células do sangue.\nP: Posso ter alguma doença por causa disso?\nR: Isso será avaliado pelo médico na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

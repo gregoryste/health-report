@@ -1,0 +1,53 @@
+{
+  "id": "L15",
+  "ficticio": true,
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de abdome superior",
+  "paciente": "Paciente Fictício 15",
+  "sexo": "M",
+  "idade": 46,
+  "data_coleta": "2026-11-14",
+  "texto": "Fígado discretamente aumentado, com aumento difuso da ecogenicidade e atenuação posterior do feixe sonoro, sugestivos de esteatose hepática. Não se observam lesões focais. Vesícula biliar com cálculo móvel de 0,8 cm, sem espessamento parietal. Vias biliares não dilatadas.",
+  "gabarito_alterados": [
+    {
+      "achado": "fígado discretamente aumentado",
+      "apelidos": [
+        "figado aumentado",
+        "figado um pouco aumentado",
+        "figado levemente aumentado",
+        "figado discretamente aumentado",
+        "figado esta aumentado",
+        "figado esta um pouco aumentado",
+        "aumento do figado",
+        "figado maior",
+        "figado um pouco maior",
+        "figado esta discretamente aumentado",
+        "discretamente aumentado"
+      ]
+    },
+    {
+      "achado": "achados sugestivos de esteatose hepática",
+      "apelidos": [
+        "esteatose",
+        "gordura no figado",
+        "acumulo de gordura",
+        "gordura"
+      ]
+    },
+    {
+      "achado": "cálculo de 0,8 cm na vesícula biliar",
+      "apelidos": [
+        "calculo",
+        "pedra"
+      ]
+    }
+  ],
+  "achado_critico": false,
+  "_origem": "Jackson, Pacote_Tradutor_de_Laudos v1.0 (14/11/2026); original em material_jackson/2026-11-14",
+  "_ajustes_gregory": [
+    "gabarito de imagem com apelidos curtos para a checagem de omissão",
+    "apelidos ampliados depois de testar com os exemplos de explicação do Jackson",
+    "apelido 'está discretamente aumentado' depois da 1ª rodada da etapa 7 (falsa omissão)"
+  ]
+}

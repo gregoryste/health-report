@@ -1,0 +1,122 @@
+{
+  "rascunho_id": "L04-20261114-120241",
+  "laudo_id": "L04",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de tireoide",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T12:02:41",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 5.2,
+  "exemplo_e1": "E03",
+  "explicacao": "O ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou que a glândula tem tamanho e dimensões normais. Os lobos direito e esquerdo (lados da tireoide) medem 4,8 x 1,6 x 1,5 cm e 4,6 x 1,5 x 1,4 cm, respectivamente. A parte que liga os dois lados da tireoide (istmo) tem 0,3 cm. O volume total estimado é de 11,2 cm³. O tecido da tireoide (parênquima) tem aspecto uniforme (ecotextura homogênea).\n\nFoi visto um nódulo (uma pequena área com aspecto diferente do tecido ao redor) sólido, hipoecoico (aparece mais escuro que o tecido ao redor na imagem do ultrassom), de contornos regulares, medindo 0,6 x 0,5 x 0,5 cm no terço médio do lobo direito. Não foram encontradas calcificações (pequenos depósitos de cálcio) e há vasos sanguíneos ao redor (vascularização periférica) quando se usa o Doppler.\n\nOs gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n\nO laudo também traz uma classificação, que o médico vai explicar na consulta.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa \"a classificação do laudo\"?",
+      "resposta": "É uma classificação que ajuda a avaliar o nódulo. O médico vai explicar o que ela significa na consulta."
+    },
+    {
+      "pergunta": "O que é o Doppler?",
+      "resposta": "É uma parte do ultrassom que mostra a passagem do sangue."
+    },
+    {
+      "pergunta": "O que significa \"contornos regulares\"?",
+      "resposta": "Significa que as bordas do nódulo são lisas e bem definidas."
+    },
+    {
+      "pergunta": "Por que o laudo menciona o volume total da tireoide?",
+      "resposta": "É uma medida padrão para comparar com valores de referência."
+    },
+    {
+      "pergunta": "O que são calcificações?",
+      "resposta": "São pequenos depósitos de cálcio que podem aparecer em nódulos."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Nódulo no lobo direito",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 4"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "doppler"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "explicação",
+          "frase": "O laudo traz uma classificação que o médico vai explicar na consulta.",
+          "motivo": "O laudo não traz uma classificação para ser explicada na consulta, apenas a classificação ACR TI-RADS 4."
+        },
+        {
+          "onde": "dúvida: O que significa \"a classificação do laudo\"?",
+          "frase": "É uma classificação que ajuda a avaliar o nódulo. O médico vai explicar o que ela significa na consulta.",
+          "motivo": "O laudo não menciona que a classificação ajuda a avaliar o nódulo. Apenas informa a classificação ACR TI-RADS 4."
+        },
+        {
+          "onde": "dúvida: Por que o laudo menciona o volume total da tireoide?",
+          "frase": "É uma medida padrão para comparar com valores de referência.",
+          "motivo": "O laudo não menciona que as medidas são uma 'medida padrão'."
+        },
+        {
+          "onde": "dúvida: O que são calcificações?",
+          "frase": "São pequenos depósitos de cálcio que podem aparecer em nódulos.",
+          "motivo": "O laudo afirma ausência de calcificações, não que sejam 'pequenos depósitos de cálcio que podem aparecer em nódulos'."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que a tireoide tem 'dimensões normais'.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo informa as medidas dos lobos direito e esquerdo.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo informa a medida do istmo.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo informa o volume total estimado.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o parênquima tem 'ecotextura homogênea'.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve um nódulo sólido, hipoecoico, de contornos regulares, com as medidas e localização informadas.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma ausência de calcificações e descreve a vascularização periférica ao Doppler.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma ausência de linfonodomegalias cervicais.\"}, {\"n\": 9, \"apoio\": \"nao\", \"motivo\": \"O laudo não traz uma classificação para ser explicada na consulta, apenas a classificação ACR TI-RADS 4.\"}, {\"n\": 10, \"apoio\": \"nao\", \"motivo\": \"O laudo não menciona que a classificação ajuda a avaliar o nódulo. Apenas informa a classificação ACR TI-RADS 4.\"}, {\"n\": 11, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona o uso de Doppler.\"}, {\"n\": 12, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o nódulo como tendo 'contornos regulares'.\"}, {\"n\": 13, \"apoio\": \"nao\", \"motivo\": \"O laudo não menciona que as medidas são uma 'medida padrão'.\"}, {\"n\": 14, \"apoio\": \"nao\", \"motivo\": \"O laudo afirma ausência de calcificações, não que sejam 'pequenos depósitos de cálcio que podem aparecer em nódulos'.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 39.2,
+    "explicacao": 57.5,
+    "palavras": 172
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "O laudo também traz uma classificação, que o médico vai explicar na consulta.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [
+      "O laudo traz uma classificação que o médico vai explicar na consulta."
+    ],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [
+      "ACR TI-RADS 4"
+    ],
+    "definicoes_do_glossario": [
+      "Tireoide",
+      "Lobo direito / lobo esquerdo (tireoide)",
+      "Istmo (tireoide)",
+      "Parênquima",
+      "Linfonodos",
+      "Linfonodomegalia",
+      "Nódulo",
+      "Hipoecoico",
+      "Ecotextura homogênea",
+      "Calcificações",
+      "Doppler",
+      "Vascularização periférica",
+      "Contornos regulares"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de tireoide. Paciente: sexo feminino, 39 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nEste laudo traz um escore ou classificação. Na explicação e nas dúvidas, não escreva o nome nem o número dele, não diga o que significa nem se o risco é alto ou baixo. Diga apenas que o laudo traz uma classificação que o médico vai explicar na consulta.\nTexto do laudo:\nULTRASSONOGRAFIA DA TIREOIDE\nTécnica: exame realizado com transdutor linear de alta frequência, complementado com Doppler colorido.\nTireoide tópica, de contornos regulares e dimensões normais.\nLobo direito: 4,8 x 1,6 x 1,5 cm. Lobo esquerdo: 4,6 x 1,5 x 1,4 cm. Istmo: 0,3 cm. Volume total estimado: 11,2 cm³.\nParênquima de ecotextura homogênea.\nNódulo sólido, hipoecoico, de contornos regulares, medindo 0,6 x 0,5 x 0,5 cm no terço médio do lobo direito, sem calcificações, com vascularização periférica ao Doppler (ACR TI-RADS 4).\nAusência de linfonodomegalias cervicais.\nIMPRESSÃO: Nódulo sólido hipoecoico no lobo direito da tireoide, ACR TI-RADS 4, de 0,6 cm. Demais aspectos dentro da normalidade.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Tireoide: glândula que fica na frente do pescoço\n- Lobo direito / lobo esquerdo (tireoide): o lado direito / o lado esquerdo da tireoide\n- Istmo (tireoide): a parte que liga os dois lados da tireoide\n- Parênquima: o tecido do próprio órgão\n- Linfonodos: pequenas estruturas de defesa do corpo, também chamadas de gânglios ou ínguas\n- Linfonodomegalia: linfonodos (gânglios) aumentados\n- Nódulo: uma pequena área com aspecto diferente do tecido ao redor\n- Hipoecoico: aparece mais escuro que o tecido ao redor na imagem do ultrassom\n- Ecotextura homogênea: o tecido tem aspecto uniforme no ultrassom\n- Calcificações: pequenos depósitos de cálcio\n- Doppler: parte do ultrassom que mostra a passagem do sangue\n- Vascularização periférica: há vasos sanguíneos ao redor\n- Contornos regulares: bordas lisas e bem definidas\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou que a glândula tem tamanho e dimensões normais. Os lobos direito e esquerdo (lados da tireoide) medem 4,8 x 1,6 x 1,5 cm e 4,6 x 1,5 x 1,4 cm, respectivamente. A parte que liga os dois lados da tireoide (istmo) tem 0,3 cm. O volume total estimado é de 11,2 cm³. O tecido da tireoide (parênquima) tem aspecto uniforme (ecotextura homogênea).\n\nFoi visto um nódulo (uma pequena área com aspecto diferente do tecido ao redor) sólido, hipoecoico (aparece mais escuro que o tecido ao redor na imagem do ultrassom), de contornos regulares, medindo 0,6 x 0,5 x 0,5 cm no terço médio do lobo direito. Não foram encontradas calcificações (pequenos depósitos de cálcio) e há vasos sanguíneos ao redor (vascularização periférica) quando se usa o Doppler.\n\nOs gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais. O laudo traz uma classificação que o médico vai explicar na consulta.\n\nDÚVIDAS:\nP: O que significa \"ACR TI-RADS 4\"?\nR: É uma classificação que ajuda a avaliar o nódulo. O médico vai explicar o que ela significa na consulta.\nP: O que é o Doppler?\nR: É uma parte do ultrassom que mostra a passagem do sangue.\nP: O que significa \"contornos regulares\"?\nR: Significa que as bordas do nódulo são lisas e bem definidas.\nP: Por que o laudo menciona o volume total da tireoide?\nR: É uma medida padrão para comparar com valores de referência.\nP: O que são calcificações?\nR: São pequenos depósitos de cálcio que podem aparecer em nódulos.\n"
+  },
+  "reprocessado_em": "2026-11-14T12:05:59"
+}

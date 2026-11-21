@@ -1,0 +1,78 @@
+{% extends "base.html" %}{% import "_ui.html" as ui %}
+{% block titulo %}Fila de triagem · Painel da equipe{% endblock %}
+{% block corpo %}
+{% set n_med = itens|selectattr('destino_sugerido', 'equalto', 'medico')|list|length %}
+{% set n_urg = itens|selectattr('tipo', 'equalto', 'd')|list|length %}
+<header class="cabecalho">
+  <div>
+    <h1>Fila de triagem</h1>
+    <div class="contexto">{{ itens|length }} pergunta(s) aguardando · {{ n_urg }} urgência(s) · {{ n_med }} para o médico</div>
+  </div>
+</header>
+
+<div class="colunas duas">
+  <aside class="coluna lateral esq">
+    <div class="bloco">
+      <span class="sobrancelha">Resumo</span>
+      <div class="lista-dados">
+        <div class="item"><span>Aguardando</span><b>{{ itens|length }}</b></div>
+        <div class="item"><span>Urgência (tipo d)</span><b class="{{ 'critico' if n_urg }}">{{ n_urg }}</b></div>
+        <div class="item"><span>Prioridade alta</span><b>{{ itens|selectattr('prioridade', 'equalto', 'alta')|list|length }}</b></div>
+        <div class="item"><span>Destino: enfermagem</span><b>{{ itens|selectattr('destino_sugerido', 'equalto', 'enfermagem')|list|length }}</b></div>
+        <div class="item"><span>Destino: médico</span><b>{{ n_med }}</b></div>
+      </div>
+    </div>
+    <div class="bloco sep">
+      <span class="rotulo">Como funciona (D1)</span>
+      <p class="nota-pequena">Perguntas que o chatbot não responde sozinho. A enfermagem responde o que é cuidado e repassa ao médico o que é ato médico. Nada vai ao paciente sem esta ação.</p>
+    </div>
+    <div class="bloco sep">
+      <span class="rotulo">Ordem</span>
+      <p class="nota-pequena">Urgência primeiro, depois prioridade alta, depois por chegada.</p>
+    </div>
+  </aside>
+
+  <section class="coluna centro respiro">
+  {% for i in itens %}
+    <form class="cartao-fila{{ ' urgente' if i.tipo == 'd' }}" method="post" action="/painel/fila/{{ i.id }}">
+      <div class="topo">
+        <div class="pessoa"><span class="avatar claro">{{ ui.iniciais(i.nome) }}</span>
+          <div><b>{{ i.nome }}</b><span class="meta">{{ i.exame }} · {{ i.criado_em[11:16] }}</span></div></div>
+        <div class="acoes">
+          <span class="selo {{ i.tipo }}">Tipo {{ i.tipo }}</span>
+          {% if i.prioridade == 'alta' %}{{ ui.selo('alta') }}{% endif %}
+          <span class="chip-neutro">Destino sugerido: {{ {'medico': 'médico', 'urgencia': 'urgência'}.get(i.destino_sugerido, i.destino_sugerido) }}</span>
+        </div>
+      </div>
+      <div class="corpo">
+        <p class="pergunta">“{{ i.pergunta }}”</p>
+        <p class="nota-pequena">Motivo: {{ i.motivo }}</p>
+        {% if i.tipo in ['c', 'a', 'b'] %}
+        <div class="campo">
+          <div class="campo-topo"><label for="resposta_{{ i.id }}">Resposta</label><span class="chip-ia">Rascunho da IA com as fontes · edite antes de enviar</span></div>
+          <textarea name="resposta" id="resposta_{{ i.id }}">{{ i.rascunho or '' }}</textarea>
+        </div>
+        <p class="meta">Fontes citadas: {{ i.fontes|join(', ') or '—' }}</p>
+        {% endif %}
+      </div>
+      <div class="rodape">
+      {% if i.tipo in ['c', 'a', 'b'] %}
+        <select name="destino_final" id="destino_{{ i.id }}" aria-label="Quem respondeu">
+          <option value="enfermagem" {{ 'selected' if i.destino_sugerido=='enfermagem' }}>Respondido pela enfermagem</option>
+          <option value="medico" {{ 'selected' if i.destino_sugerido=='medico' }}>Respondido pelo médico</option>
+        </select>
+        <button class="btn" name="acao" value="responder">Enviar resposta ao paciente</button>
+        {% if i.destino_sugerido != 'medico' %}<button class="btn secundario" name="acao" value="encaminhar_medico">Encaminhar ao médico</button>{% endif %}
+        <button class="btn perigo empurra" name="acao" value="descartar">Descartar</button>
+      {% else %}
+        <input type="hidden" name="resposta" value="">
+        <button class="btn {{ 'tinta' if i.tipo == 'd' else '' }}" name="acao" value="resolver">{{ 'Contato feito' if i.tipo=='d' else 'Resolvido' }}</button>
+      {% endif %}
+      </div>
+    </form>
+  {% else %}
+    <div class="cartao-fila">{{ ui.vazio('Fila vazia', 'Nenhuma pergunta de paciente aguardando a equipe.') }}</div>
+  {% endfor %}
+  </section>
+</div>
+{% endblock %}

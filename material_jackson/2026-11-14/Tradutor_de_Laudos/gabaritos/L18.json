@@ -1,0 +1,13 @@
+{
+  "id": "L18",
+  "categoria": "normal_que_assusta",
+  "gabarito_alterados": [],
+  "conteudos_obrigatorios": [
+    "TSH 3,9 dentro da faixa",
+    "T4 livre dentro da faixa",
+    "Não diagnosticar doença pela proximidade do limite"
+  ],
+  "exemplo_explicacao": "O TSH, hormônio que estimula a tireoide, está em 3,9 mUI/L e está dentro da faixa de 0,4 a 4 deste laudo. O T4 livre, hormônio produzido pela tireoide, também está dentro da faixa, em 1,1 ng/dL. Estar perto de um limite não torna o resultado automaticamente alterado. A interpretação considera também o seu contexto.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

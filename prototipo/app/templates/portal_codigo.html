@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% set paciente_header = 1 %}
+{% block corpo %}<main class="estreito"><form class="cartao" method="post" action="/p/{{ token }}/codigo">
+<h1>Digite o código</h1><p>Enviamos um código de 6 números para o seu WhatsApp. Ele vale por 10 minutos e só pode ser usado uma vez.</p>
+{% if erro %}<p class="erro">Código incorreto.</p>{% endif %}
+<p><input type="text" name="codigo" id="codigo" inputmode="numeric" maxlength="6" required autocomplete="one-time-code"></p>
+<button>Entrar</button></form></main>{% endblock %}

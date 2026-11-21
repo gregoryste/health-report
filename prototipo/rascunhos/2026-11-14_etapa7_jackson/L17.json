@@ -1,0 +1,106 @@
+{
+  "rascunho_id": "L17-20261114-150627",
+  "laudo_id": "L17",
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Tomografia de abdome",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:06:27",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.2,
+  "exemplo_e1": null,
+  "explicacao": "O exame de tomografia do abdome mostra que o baço está com tamanho normal. Foi encontrado um baço acessório (um pedaço extra de baço) de 1,1 cm perto da entrada do baço (hilo esplênico). Esse pedaço extra tem a mesma aparência e reage da mesma forma que o baço normal. Não foram encontradas alterações abdominais agudas (problemas que surgem de repente) no exame. As demais estruturas do abdome estão normais.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é baço acessório?",
+      "resposta": "É um pedaço extra de baço que algumas pessoas têm. Ele é pequeno e tem a mesma aparência do baço normal."
+    },
+    {
+      "pergunta": "O que significa \"hilo esplênico\"?",
+      "resposta": "É a entrada do baço, onde entram os vasos sanguíneos e os nervos."
+    },
+    {
+      "pergunta": "O que é \"densidade e realce semelhantes\"?",
+      "resposta": "Significa que o baço acessório tem a mesma aparência e reage da mesma forma que o baço normal."
+    },
+    {
+      "pergunta": "O que significa \"alterações abdominais agudas\"?",
+      "resposta": "São problemas que surgem de repente no abdome, como inflamação ou lesões."
+    },
+    {
+      "pergunta": "O que significa \"estruturas normais\"?",
+      "resposta": "Significa que as estruturas do abdome estão com aparência normal."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "baço acessório de 1,1 cm junto ao hilo esplênico",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 5"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "explicação",
+          "frase": "As demais estruturas do abdome estão normais.",
+          "motivo": "O laudo não menciona as demais estruturas do abdome."
+        },
+        {
+          "onde": "dúvida: O que é baço acessório?",
+          "frase": "É um pedaço extra de baço que algumas pessoas têm. Ele é pequeno e tem a mesma aparência do baço normal.",
+          "motivo": "O laudo não menciona que é um pedaço extra de baço que algumas pessoas têm."
+        },
+        {
+          "onde": "dúvida: O que significa \"hilo esplênico\"?",
+          "frase": "É a entrada do baço, onde entram os vasos sanguíneos e os nervos.",
+          "motivo": "O laudo não descreve o hilo esplênico como a entrada de vasos sanguíneos e nervos."
+        },
+        {
+          "onde": "dúvida: O que significa \"alterações abdominais agudas\"?",
+          "frase": "São problemas que surgem de repente no abdome, como inflamação ou lesões.",
+          "motivo": "O laudo não descreve alterações abdominais agudas como inflamação ou lesões."
+        },
+        {
+          "onde": "dúvida: O que significa \"estruturas normais\"?",
+          "frase": "Significa que as estruturas do abdome estão com aparência normal.",
+          "motivo": "O laudo não afirma que as estruturas do abdome estão com aparência normal."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o baço tem dimensões preservadas, o que implica tamanho normal.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo identifica um baço acessório de 1,1 cm junto ao hilo esplênico.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o baço acessório tem densidade e realce semelhantes ao baço.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma ausência de alterações abdominais agudas.\"}, {\"n\": 5, \"apoio\": \"nao\", \"motivo\": \"O laudo não menciona as demais estruturas do abdome.\"}, {\"n\": 6, \"apoio\": \"nao\", \"motivo\": \"O laudo não menciona que é um pedaço extra de baço que algumas pessoas têm.\"}, {\"n\": 7, \"apoio\": \"nao\", \"motivo\": \"O laudo não descreve o hilo esplênico como a entrada de vasos sanguíneos e nervos.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o baço acessório tem densidade e realce semelhantes ao baço.\"}, {\"n\": 9, \"apoio\": \"nao\", \"motivo\": \"O laudo não descreve alterações abdominais agudas como inflamação ou lesões.\"}, {\"n\": 10, \"apoio\": \"nao\", \"motivo\": \"O laudo não afirma que as estruturas do abdome estão com aparência normal.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 26.1,
+    "explicacao": 62.2,
+    "palavras": 78
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [],
+    "mensagem_enviada": "Exame: Tomografia de abdome. Paciente: sexo masculino, 44 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nBaço de dimensões preservadas. Identifica-se incidentalmente baço acessório de 1,1 cm junto ao hilo esplênico, com densidade e realce semelhantes ao baço. Ausência de alterações abdominais agudas no estudo.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de tomografia do abdome mostra que o baço está com tamanho normal. Foi encontrado um baço acessório (um pedaço extra de baço) de 1,1 cm perto da entrada do baço (hilo esplênico). Esse pedaço extra tem a mesma aparência e reage da mesma forma que o baço normal. Não foram encontradas alterações abdominais agudas (problemas que surgem de repente) no exame. As demais estruturas do abdome estão normais.\n\nDÚVIDAS:\nP: O que é baço acessório?\nR: É um pedaço extra de baço que algumas pessoas têm. Ele é pequeno e tem a mesma aparência do baço normal.\nP: O que significa \"hilo esplênico\"?\nR: É a entrada do baço, onde entram os vasos sanguíneos e os nervos.\nP: O que é \"densidade e realce semelhantes\"?\nR: Significa que o baço acessório tem a mesma aparência e reage da mesma forma que o baço normal.\nP: O que significa \"alterações abdominais agudas\"?\nR: São problemas que surgem de repente no abdome, como inflamação ou lesões.\nP: O que significa \"estruturas normais\"?\nR: Significa que as estruturas do abdome estão com aparência normal.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

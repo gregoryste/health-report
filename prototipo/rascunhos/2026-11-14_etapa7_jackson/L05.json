@@ -1,0 +1,92 @@
+{
+  "rascunho_id": "L05-20261114-150429",
+  "laudo_id": "L05",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de tireoide",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:04:29",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.7,
+  "exemplo_e1": "E03",
+  "explicacao": "O ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou que a tireoide tem tamanho normal. No lobo direito (lado direito) da tireoide foi visto um nódulo (uma pequena área com aspecto diferente do tecido ao redor) sólido hipoecoico (aparece mais escuro que o tecido ao redor na imagem do ultrassom). O nódulo tem 0,6 cm e é mais largo que alto. As margens do nódulo são regulares e não há focos ecogênicos puntiformes (pequenos pontos brilhantes). Os linfonodos (pequenas estruturas de defesa do corpo) do pescoço estão normais.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa \"hipoecoico\"?",
+      "resposta": "Significa que o nódulo aparece mais escuro na imagem do ultrassom, comparado com o tecido normal da tireoide."
+    },
+    {
+      "pergunta": "O que são focos ecogênicos puntiformes?",
+      "resposta": "São pequenos pontos brilhantes que aparecem na imagem do ultrassom."
+    },
+    {
+      "pergunta": "O que significa \"margens regulares\"?",
+      "resposta": "Significa que as bordas do nódulo têm um formato normal."
+    },
+    {
+      "pergunta": "O que é o lobo direito da tireoide?",
+      "resposta": "É o lado direito da tireoide."
+    },
+    {
+      "pergunta": "O que são linfonodos?",
+      "resposta": "São pequenas estruturas de defesa do corpo, também chamadas de gânglios ou ínguas."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "nódulo sólido de 0,6 cm no lobo direito da tireoide",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 1"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "dúvida: O que são focos ecogênicos puntiformes?",
+          "frase": "São pequenos pontos brilhantes que aparecem na imagem do ultrassom.",
+          "motivo": "O laudo não menciona focos ecogênicos puntiformes como 'pequenos pontos brilhantes'."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Tireoide de dimensões preservadas' e a definição de tireoide é 'glândula que fica na frente do pescoço'.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve um nódulo no lobo direito e o descreve como hipoecoico.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o nódulo tem 0,6 cm e é mais largo que alto.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que as margens são regulares e não há focos ecogênicos puntiformes.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Não se observam linfonodos cervicais aumentados'.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"Hipoecoico é definido como 'aparece mais escuro que o tecido ao redor na imagem do ultrassom'.\"}, {\"n\": 7, \"apoio\": \"nao\", \"motivo\": \"O laudo não menciona focos ecogênicos puntiformes como 'pequenos pontos brilhantes'.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que as margens são regulares.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona o lobo direito e a definição aprovada define lobo direito como 'o lado direito da tireoide'.\"}, {\"n\": 10, \"apoio\": \"sim\", \"motivo\": \"Linfonodos são definidos como 'pequenas estruturas de defesa do corpo, também chamadas de gânglios ou ínguas'.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 38.5,
+    "explicacao": 58.7,
+    "palavras": 99
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Tireoide",
+      "Lobo direito / lobo esquerdo (tireoide)",
+      "Linfonodos",
+      "Nódulo",
+      "Hipoecoico"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de tireoide. Paciente: sexo feminino, 39 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nTireoide de dimensões preservadas. No lobo direito, nódulo sólido hipoecoico de 0,6 cm, mais largo que alto, com margens regulares e sem focos ecogênicos puntiformes. Não se observam linfonodos cervicais aumentados.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Tireoide: glândula que fica na frente do pescoço\n- Lobo direito / lobo esquerdo (tireoide): o lado direito / o lado esquerdo da tireoide\n- Linfonodos: pequenas estruturas de defesa do corpo, também chamadas de gânglios ou ínguas\n- Nódulo: uma pequena área com aspecto diferente do tecido ao redor\n- Hipoecoico: aparece mais escuro que o tecido ao redor na imagem do ultrassom\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou que a tireoide tem tamanho normal. No lobo direito (lado direito) da tireoide foi visto um nódulo (uma pequena área com aspecto diferente do tecido ao redor) sólido hipoecoico (aparece mais escuro que o tecido ao redor na imagem do ultrassom). O nódulo tem 0,6 cm e é mais largo que alto. As margens do nódulo são regulares e não há focos ecogênicos puntiformes (pequenos pontos brilhantes). Os linfonodos (pequenas estruturas de defesa do corpo) do pescoço estão normais.\n\nDÚVIDAS:\nP: O que significa \"hipoecoico\"?\nR: Significa que o nódulo aparece mais escuro na imagem do ultrassom, comparado com o tecido normal da tireoide.\nP: O que são focos ecogênicos puntiformes?\nR: São pequenos pontos brilhantes que aparecem na imagem do ultrassom.\nP: O que significa \"margens regulares\"?\nR: Significa que as bordas do nódulo têm um formato normal.\nP: O que é o lobo direito da tireoide?\nR: É o lado direito da tireoide.\nP: O que são linfonodos?\nR: São pequenas estruturas de defesa do corpo, também chamadas de gânglios ou ínguas.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "L08",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "categoria": "normal_que_assusta",
+  "exame": "Hemograma parcial",
+  "paciente": "Paciente Fictício 08",
+  "sexo": "F",
+  "idade": 29,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Hemoglobina",
+      "valor": 13.2,
+      "unidade": "g/dL",
+      "apelidos": [
+        "hemoglobina"
+      ],
+      "ref_min": 12,
+      "ref_max": 16
+    },
+    {
+      "analito": "Leucócitos",
+      "valor": 7100,
+      "unidade": "/mm³",
+      "apelidos": [
+        "leucocitos",
+        "celulas de defesa"
+      ],
+      "ref_min": 4000,
+      "ref_max": 11000
+    },
+    {
+      "analito": "Plaquetas",
+      "valor": 265000,
+      "unidade": "/mm³",
+      "apelidos": [
+        "plaquetas"
+      ],
+      "ref_min": 150000,
+      "ref_max": 450000
+    }
+  ],
+  "gabarito_alterados": [],
+  "_origem": "Jackson, Pacote_Tradutor_de_Laudos v1.0 (14/11/2026); original em material_jackson/2026-11-14"
+}

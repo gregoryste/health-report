@@ -1,0 +1,15 @@
+{
+  "id": "L04",
+  "categoria": "sangue_comum",
+  "gabarito_alterados": [
+    "Colesterol LDL",
+    "Triglicerídeos"
+  ],
+  "conteudos_obrigatorios": [
+    "Colesterol LDL",
+    "Triglicerídeos"
+  ],
+  "exemplo_explicacao": "O LDL, conhecido como colesterol ruim, está em 168 mg/dL, acima do limite de 130 informado neste laudo. Os triglicerídeos, um tipo de gordura no sangue, estão em 190 mg/dL, acima de 150. O HDL, conhecido como colesterol bom, está dentro da referência apresentada. A equipe de saúde deve avaliar os resultados e definir as metas adequadas ao seu caso.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

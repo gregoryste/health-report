@@ -1,0 +1,20 @@
+{
+  "id": "E02",
+  "ficticio": true,
+  "anonimizado": true,
+  "tipo": "laboratorio",
+  "categoria": "laboratorio_comum",
+  "prioridade": "alterado",
+  "exame": "Hemograma",
+  "palavras_chave": [
+    "hemograma",
+    "hemoglobina",
+    "leucocitos",
+    "plaquetas",
+    "hemacias",
+    "vcm"
+  ],
+  "explicacao": "O hemograma é um exame que conta e mede as células do sangue. A hemoglobina (a parte do sangue que leva oxigênio para o corpo) está abaixo da faixa de referência: o resultado foi 11,0 g/dL, e o esperado é a partir de 12,0 g/dL. As plaquetas (células que ajudam a parar sangramentos) estão acima da faixa: 480.000 por mm³, quando o esperado vai até 450.000. Os leucócitos (células de defesa do corpo) estão dentro do esperado.",
+  "aprovado_por": "revisor fictício (exemplo do protótipo)",
+  "data_aprovacao": "2026-11-14"
+}

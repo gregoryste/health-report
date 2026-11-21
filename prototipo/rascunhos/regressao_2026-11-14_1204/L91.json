@@ -1,0 +1,89 @@
+{
+  "rascunho_id": "L91-20261114-120455",
+  "laudo_id": "L91",
+  "tipo": "laboratorio",
+  "categoria": "normal_que_assusta",
+  "exame": "Perfil hepático",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T12:04:55",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 4.4,
+  "exemplo_e1": null,
+  "explicacao": "O exame do perfil hepático mostra que a bilirrubina total está acima do valor esperado. O valor encontrado foi 1,4 mg/dL, e a faixa de referência é de até 1,2 mg/dL. A bilirrubina indireta também está acima do normal, com 1,1 mg/dL, quando o valor esperado é de até 0,8 mg/dL. A bilirrubina direta está dentro da faixa considerada normal.\n\nAs enzimas AST (TGO) e ALT (TGP) estão dentro dos valores esperados. A Gama-GT também está dentro da faixa de referência.\n\nA bilirrubina é um pigmento amarelo que o corpo produz ao renovar as células vermelhas do sangue. A bilirrubina indireta é a parte da bilirrubina que ainda não passou pelo fígado, e a bilirrubina direta é a parte que já passou pelo fígado. As enzimas AST (TGO) e ALT (TGP) são substâncias do fígado medidas no sangue, e a Gama-GT é uma enzima do fígado e dos canais da bile.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa bilirrubina indireta acima do normal?",
+      "resposta": "Significa que a bilirrubina que ainda não passou pelo fígado está em um valor maior do que o esperado."
+    },
+    {
+      "pergunta": "A bilirrubina direta está normal, isso é bom?",
+      "resposta": "Sim, a bilirrubina direta está dentro da faixa considerada normal."
+    },
+    {
+      "pergunta": "O que são AST e ALT?",
+      "resposta": "São enzimas do fígado medidas no sangue."
+    },
+    {
+      "pergunta": "A Gama-GT alta pode indicar algum problema?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que significa \"faixa de referência\"?",
+      "resposta": "É o intervalo de valores que são considerados normais para a maioria das pessoas."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Bilirrubina total",
+        "origem": "regra",
+        "citado": true
+      },
+      {
+        "nome": "Bilirrubina indireta",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "contradiz a regra: Gama-GT está normal, mas o texto diz alterado"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [
+      "Gama-GT está normal, mas o texto diz alterado"
+    ],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 82.6,
+    "explicacao": 69.6,
+    "palavras": 159
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Bilirrubina",
+      "Bilirrubina indireta",
+      "Bilirrubina direta",
+      "AST (TGO) e ALT (TGP)",
+      "Gama-GT"
+    ],
+    "mensagem_enviada": "Exame: Perfil hepático. Paciente: sexo feminino, 29 anos.\nResultados:\n- Bilirrubina total: 1,4 mg/dL (referência ≤ 1,2 mg/dL) → ACIMA da faixa, ALTERADO\n- Bilirrubina indireta: 1,1 mg/dL (referência ≤ 0,8 mg/dL) → ACIMA da faixa, ALTERADO\n- Bilirrubina direta: 0,3 mg/dL (referência ≤ 0,4 mg/dL) → NORMAL\n- AST (TGO): 28 U/L (referência ≤ 40 U/L) → NORMAL\n- ALT (TGP): 32 U/L (referência ≤ 41 U/L) → NORMAL\n- Gama-GT: 35 U/L (referência 8–61 U/L) → NORMAL\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Bilirrubina: um pigmento amarelo que o corpo produz ao renovar as células vermelhas do sangue\n- Bilirrubina indireta: a parte da bilirrubina que ainda não passou pelo fígado\n- Bilirrubina direta: a parte da bilirrubina que já passou pelo fígado\n- AST (TGO) e ALT (TGP): enzimas (substâncias) do fígado medidas no sangue\n- Gama-GT: uma enzima do fígado e dos canais da bile medida no sangue",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame do perfil hepático mostra que a bilirrubina total está acima do valor esperado. O valor encontrado foi 1,4 mg/dL, e a faixa de referência é de até 1,2 mg/dL. A bilirrubina indireta também está acima do normal, com 1,1 mg/dL, quando o valor esperado é de até 0,8 mg/dL. A bilirrubina direta está dentro da faixa considerada normal.\n\nAs enzimas AST (TGO) e ALT (TGP) estão dentro dos valores esperados. A Gama-GT também está dentro da faixa de referência.\n\nA bilirrubina é um pigmento amarelo que o corpo produz ao renovar as células vermelhas do sangue. A bilirrubina indireta é a parte da bilirrubina que ainda não passou pelo fígado, e a bilirrubina direta é a parte que já passou pelo fígado. As enzimas AST (TGO) e ALT (TGP) são substâncias do fígado medidas no sangue, e a Gama-GT é uma enzima do fígado e dos canais da bile.\n\nDÚVIDAS:\nP: O que significa bilirrubina indireta acima do normal?\nR: Significa que a bilirrubina que ainda não passou pelo fígado está em um valor maior do que o esperado.\n\nP: A bilirrubina direta está normal, isso é bom?\nR: Sim, a bilirrubina direta está dentro da faixa considerada normal.\n\nP: O que são AST e ALT?\nR: São enzimas do fígado medidas no sangue.\n\nP: A Gama-GT alta pode indicar algum problema?\nR: Isso será avaliado pelo médico na consulta.\n\nP: O que significa \"faixa de referência\"?\nR: É o intervalo de valores que são considerados normais para a maioria das pessoas.\n"
+  },
+  "reprocessado_em": "2026-11-14T12:05:59"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "L06",
+  "ficticio": true,
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de abdome total",
+  "paciente": "Paciente Fictício 06",
+  "sexo": "M",
+  "idade": 58,
+  "data_coleta": "2026-11-14",
+  "achado_critico": false,
+  "texto": "ULTRASSONOGRAFIA DE ABDOME TOTAL\nFígado de dimensões normais, contornos regulares, com ecogenicidade difusamente aumentada, compatível com esteatose hepática leve (grau I).\nVesícula biliar normodistendida, de paredes finas, sem cálculos.\nVias biliares intra e extra-hepáticas sem dilatação.\nPâncreas, baço e rins de aspecto ecográfico normal.\nAorta abdominal de calibre normal.\nIMPRESSÃO: Esteatose hepática leve (grau I). Demais estruturas sem alterações.",
+  "gabarito_alterados": [
+    {"achado": "Esteatose hepática", "apelidos": ["esteatose", "gordura no figado"]}
+  ]
+}

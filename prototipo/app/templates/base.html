@@ -1,0 +1,27 @@
+{% import '_ui.html' as ui %}<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block titulo %}Painel da equipe · Clínica{% endblock %}</title><link rel="stylesheet" href="/static/estilo.css?v={{ versao_css() }}"></head>
+{% set equipe = s is defined and s and s.papel == 'equipe' %}
+<body class="{% block classe_body %}{{ 'app' if equipe }}{% endblock %}">
+{% if equipe %}{% set caminho = request.url.path %}{% set c = contagens or {} %}
+<nav class="barra" aria-label="Navegação do painel">
+  <div class="barra-esq">
+    <span class="marca-texto">Clínica <span>· Painel da equipe</span></span>
+    <div class="abas">
+      <a href="/painel" class="{{ 'ativa' if caminho == '/painel' or caminho.startswith('/painel/rascunho') }}">Revisão de laudos{% if c.rascunhos %}<span class="contador">{{ c.rascunhos }}</span>{% endif %}</a>
+      <a href="/painel/fila" class="{{ 'ativa' if caminho.startswith('/painel/fila') }}">Fila de triagem{% if c.fila %}<span class="contador">{{ c.fila }}</span>{% endif %}</a>
+      <a href="/painel/whatsapp" class="{{ 'ativa' if caminho.startswith('/painel/whatsapp') }}">Avisos enviados</a>
+      <a href="/painel/registro" class="{{ 'ativa' if caminho.startswith('/painel/registro') }}">Registro de aprovações</a>
+      {% if eh_admin %}<a href="/painel/equipe" class="{{ 'ativa' if caminho.startswith('/painel/equipe') }}">Equipe e acessos</a>{% endif %}
+    </div>
+  </div>
+  <div class="barra-dir">
+    <span class="etiqueta" title="Orquestrador: {{ cfg.orquestrador }}">Protótipo · dados fictícios · {{ cfg.orquestrador }}</span>
+    <div class="usuario"><span class="avatar">{{ ui.iniciais(s.nome) }}</span><div><b>{{ s.nome }}</b><small>{{ funcao or 'Equipe clínica' }}</small></div></div>
+    <form method="post" action="/painel/sair"><button class="btn secundario pequeno" type="submit">Sair</button></form>
+  </div>
+</nav>
+{% elif paciente_header is defined %}
+<nav class="barra"><span class="marca-texto">Clínica <span>· Portal do paciente</span></span><span class="etiqueta">Protótipo · dados fictícios</span></nav>
+{% endif %}
+{% block corpo %}{% endblock %}
+</body></html>

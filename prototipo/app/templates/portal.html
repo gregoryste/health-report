@@ -1,0 +1,23 @@
+{% extends "base.html" %}{% set paciente_header = 1 %}
+{% block corpo %}<main class="estreito">
+<div class="cartao"><h1>{{ pub.exame }}</h1><p class="mut pequeno">Explicação revisada e aprovada pela equipe da clínica em {{ pub.publicado_em[:10] }}.</p>
+{% for p in paragrafos %}<p>{{ p }}</p>{% endfor %}</div>
+{% if pub.duvidas_liberadas and duvidas %}<div class="cartao"><h2>Dúvidas comuns sobre este exame</h2>
+{% for q in duvidas %}<details><summary>{{ q.pergunta }}</summary><p>{{ q.resposta }}</p></details>{% endfor %}</div>{% endif %}
+<div class="cartao" id="whatsapp"><h2>Receber pelo WhatsApp</h2>
+{% if consentimento %}
+<p>✅ Você autorizou em {{ consentimento.aceito_em[:10] }} receber a explicação e tirar dúvidas pelo WhatsApp{% if numero_clinica %} (número da clínica: <b>{{ numero_clinica }}</b>){% endif %}.
+Para receber a explicação, mande <b>oi</b> para esse número. Para parar, responda <b>SAIR</b> no WhatsApp ou clique abaixo.</p>
+<form method="post" action="/portal/whatsapp"><button class="perigo" name="acao" value="revogar">Cancelar o recebimento pelo WhatsApp</button></form>
+{% else %}
+<p>Por padrão, as informações dos seus exames ficam só aqui no portal, que é protegido por código de acesso. Se preferir, você pode receber a explicação e tirar dúvidas pelo WhatsApp.</p>
+<form method="post" action="/portal/whatsapp"><details><summary>Ler o termo antes de autorizar</summary><p class="pequeno">{{ termo }}</p></details>
+<p><label class="pequeno"><input type="checkbox" name="concordo" id="concordo" required> Li e autorizo, nos termos acima.</label></p>
+<button class="sec" name="acao" value="aceitar">Autorizar o WhatsApp</button></form>
+{% endif %}</div>
+<div class="cartao" id="chat"><h2>Tirar uma dúvida</h2>
+{% if pub.duvidas_liberadas %}<div class="chat">{% for m in chat %}<div class="msg {{ m.autor }}">{{ m.texto }}<small>{{ {'paciente':'você','sistema':'clínica (automático)','equipe':'equipe da clínica'}[m.autor] }} · {{ m.criado_em[11:16] }}</small></div>{% endfor %}</div>
+<form method="post" action="/portal/chat" class="linha" style="margin-top:12px" onsubmit="var b=this.querySelector('button'); if(b.disabled){return false;} b.disabled=true; b.textContent='Enviando…';"><input type="text" name="pergunta" id="pergunta" placeholder="Escreva sua dúvida" required style="flex:1"><button>Enviar</button></form>
+<p class="mut pequeno">Em caso de urgência, ligue 192 (SAMU). O chat responde dúvidas sobre esta explicação; perguntas sobre diagnóstico ou tratamento vão para a equipe da clínica.</p>
+{% else %}<p>As dúvidas sobre este exame serão respondidas na sua consulta.</p>{% endif %}</div>
+</main>{% endblock %}

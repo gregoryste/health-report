@@ -1,0 +1,82 @@
+{
+  "id": "Xf5ErrosOrq0001a",
+  "name": "Erros: aviso de falha no painel",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Erros dos fluxos (fluxo 5)\nOs fluxos 1 a 4 apontam para este (Configurações → Error workflow). Quando um deles falha (serviço fora do ar, tempo esgotado, resposta de erro), o n8n dispara este fluxo.\nEle abre o alerta \"Falha de orquestração\" no painel (âmbar: falha técnica, não clínica), com o nome do fluxo, o nó e a 1ª linha da mensagem. Nenhum dado de saúde vai no texto.\nSe o serviço também estiver fora, tenta de novo (5 vezes, a cada 5 s).",
+        "height": 260,
+        "width": 520
+      },
+      "id": "a0b1c2d3-e4f5-4a6b-8c7d-9e0f1a2b3c41",
+      "name": "Sobre este fluxo",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -60
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "b1c2d3e4-f5a6-4b7c-9d8e-0f1a2b3c4d51",
+      "name": "Um fluxo falhou",
+      "type": "n8n-nodes-base.errorTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SERVICO_URL }}/api/acoes/falha",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "={{ $env.SERVICO_API_KEY }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ origem: $json.workflow.name, detalhe: ($json.execution.lastNodeExecuted || 'nó desconhecido') + ': ' + String(($json.execution.error && $json.execution.error.message) || 'erro sem mensagem').split('\\n')[0].slice(0, 120) }) }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "c2d3e4f5-a6b7-4c8d-8e9f-1a2b3c4d5e61",
+      "name": "Alerta de falha no painel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        280,
+        300
+      ],
+      "retryOnFail": true,
+      "maxTries": 5,
+      "waitBetweenTries": 5000
+    }
+  ],
+  "connections": {
+    "Um fluxo falhou": {
+      "main": [
+        [
+          {
+            "node": "Alerta de falha no painel",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "active": false,
+  "pinData": {}
+}

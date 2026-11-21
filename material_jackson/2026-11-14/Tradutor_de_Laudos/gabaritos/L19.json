@@ -1,0 +1,15 @@
+{
+  "id": "L19",
+  "categoria": "sangue_comum",
+  "gabarito_alterados": [
+    "TSH",
+    "T4 livre"
+  ],
+  "conteudos_obrigatorios": [
+    "TSH",
+    "T4 livre"
+  ],
+  "exemplo_explicacao": "O TSH, hormônio que estimula a tireoide, está em 8,2 mUI/L, acima de 4. O T4 livre, hormônio produzido pela tireoide, está em 0,7 ng/dL, abaixo de 0,8. A equipe de saúde deve avaliar esses dois resultados em conjunto. Eles não permitem que o portal indique um medicamento ou ajuste uma dose.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

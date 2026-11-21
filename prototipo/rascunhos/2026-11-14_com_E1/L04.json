@@ -1,0 +1,95 @@
+{
+  "rascunho_id": "L04-20261114-114154",
+  "laudo_id": "L04",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de tireoide",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T11:41:54",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.3,
+  "exemplo_e1": "E03",
+  "explicacao": "O ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou que a glândula e os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais. No lobo direito da tireoide foi visto um nódulo sólido (uma formação diferente do tecido normal) hipoecoico (mais escuro que o tecido normal) de 0,6 cm.\n\nO laudo também traz uma classificação, que o médico vai explicar na consulta.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa \"hipoecoico\"?",
+      "resposta": "Significa que o nódulo apareceu mais escuro no ultrassom, quando comparado com o tecido normal da tireoide."
+    },
+    {
+      "pergunta": "O que é a classificação do laudo?",
+      "resposta": "É uma classificação que ajuda a avaliar o nódulo e será explicada pelo médico na consulta."
+    },
+    {
+      "pergunta": "O nódulo é perigoso?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Preciso fazer algum exame para saber se o nódulo é grave?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que significa \"vascularização periférica\"?",
+      "resposta": "Significa que foram vistos vasos sanguíneos ao redor do nódulo no ultrassom."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Nódulo no lobo direito",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "vascularizacao"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 39.2,
+    "explicacao": 59.7,
+    "palavras": 75
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "O laudo também traz uma classificação, que o médico vai explicar na consulta.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [
+      "O laudo traz uma classificação que o médico vai explicar na consulta."
+    ],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [
+      "ACR TI-RADS"
+    ],
+    "definicoes_do_glossario": [
+      "Tireoide",
+      "Lobo direito / lobo esquerdo (tireoide)",
+      "Istmo (tireoide)",
+      "Parênquima",
+      "Linfonodos",
+      "Linfonodomegalia",
+      "Nódulo",
+      "Hipoecoico",
+      "Ecotextura homogênea",
+      "Calcificações",
+      "Doppler",
+      "Vascularização periférica",
+      "Contornos regulares"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de tireoide. Paciente: sexo feminino, 39 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nULTRASSONOGRAFIA DA TIREOIDE\nTécnica: exame realizado com transdutor linear de alta frequência, complementado com Doppler colorido.\nTireoide tópica, de contornos regulares e dimensões normais.\nLobo direito: 4,8 x 1,6 x 1,5 cm. Lobo esquerdo: 4,6 x 1,5 x 1,4 cm. Istmo: 0,3 cm. Volume total estimado: 11,2 cm³.\nParênquima de ecotextura homogênea.\nNódulo sólido, hipoecoico, de contornos regulares, medindo 0,6 x 0,5 x 0,5 cm no terço médio do lobo direito, sem calcificações, com vascularização periférica ao Doppler (ACR TI-RADS 4).\nAusência de linfonodomegalias cervicais.\nIMPRESSÃO: Nódulo sólido hipoecoico no lobo direito da tireoide, ACR TI-RADS 4, de 0,6 cm. Demais aspectos dentro da normalidade.\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou que a glândula e os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais. No lobo direito da tireoide foi visto um nódulo sólido (uma formação diferente do tecido normal) hipoecoico (mais escuro que o tecido normal) de 0,6 cm. O laudo traz uma classificação que o médico vai explicar na consulta.\n\nDÚVIDAS:\nP: O que significa \"hipoecoico\"?\nR: Significa que o nódulo apareceu mais escuro no ultrassom, quando comparado com o tecido normal da tireoide.\nP: O que é ACR TI-RADS?\nR: É uma classificação que ajuda a avaliar o nódulo e será explicada pelo médico na consulta.\nP: O nódulo é perigoso?\nR: Isso será avaliado pelo médico na consulta.\nP: Preciso fazer algum exame para saber se o nódulo é grave?\nR: Isso será avaliado pelo médico na consulta.\nP: O que significa \"vascularização periférica\"?\nR: Significa que foram vistos vasos sanguíneos ao redor do nódulo no ultrassom.\n"
+  },
+  "reprocessado_em": "2026-11-14T12:05:59"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "L17",
+  "ficticio": true,
+  "tipo": "imagem",
+  "exame": "Tomografia de abdome",
+  "paciente": "Paciente Fictício 17",
+  "sexo": "M",
+  "idade": 44,
+  "data_coleta": "2026-11-14",
+  "texto": "Baço de dimensões preservadas. Identifica-se incidentalmente baço acessório de 1,1 cm junto ao hilo esplênico, com densidade e realce semelhantes ao baço. Ausência de alterações abdominais agudas no estudo."
+}

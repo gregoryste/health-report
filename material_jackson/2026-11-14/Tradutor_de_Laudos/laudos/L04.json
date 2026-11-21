@@ -1,0 +1,46 @@
+{
+  "id": "L04",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "exame": "Perfil lipídico",
+  "paciente": "Paciente Fictício 04",
+  "sexo": "F",
+  "idade": 47,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Colesterol LDL",
+      "valor": 168,
+      "unidade": "mg/dL",
+      "apelidos": [
+        "ldl",
+        "colesterol ruim"
+      ],
+      "ref_max": 130
+    },
+    {
+      "analito": "Colesterol HDL",
+      "valor": 52,
+      "unidade": "mg/dL",
+      "apelidos": [
+        "hdl",
+        "colesterol bom"
+      ],
+      "ref_min": 40
+    },
+    {
+      "analito": "Triglicerídeos",
+      "valor": 190,
+      "unidade": "mg/dL",
+      "apelidos": [
+        "triglicerideos",
+        "gorduras no sangue"
+      ],
+      "ref_max": 150
+    }
+  ],
+  "gabarito_alterados": [
+    "Colesterol LDL",
+    "Triglicerídeos"
+  ]
+}

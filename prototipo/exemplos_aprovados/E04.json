@@ -1,0 +1,20 @@
+{
+  "id": "E04",
+  "ficticio": true,
+  "anonimizado": true,
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "prioridade": "critico",
+  "exame": "Eletrólitos",
+  "palavras_chave": [
+    "sodio",
+    "potassio",
+    "eletrolitos",
+    "creatinina",
+    "ureia",
+    "renal"
+  ],
+  "explicacao": "Este exame mede sais minerais do sangue que ajudam o corpo a funcionar. O sódio está muito abaixo da faixa de referência: o resultado foi 118 mEq/L, e o esperado é de 136 a 145 mEq/L. Esse valor foi marcado como crítico, ou seja, precisa ser visto pela equipe com rapidez. O potássio está dentro do esperado.",
+  "aprovado_por": "revisor fictício (exemplo do protótipo)",
+  "data_aprovacao": "2026-11-14"
+}

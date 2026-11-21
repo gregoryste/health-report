@@ -1,0 +1,22 @@
+flowchart TD
+  classDef humano fill:#fde7c8,stroke:#b8650a,stroke-width:2px,color:#3a2200
+  classDef ia fill:#dbeafe,stroke:#1e5aa8,color:#0b2545
+  classDef regra fill:#e3f2e1,stroke:#2d6a2f,color:#123d14
+  classDef alerta fill:#fbe5e3,stroke:#b3261e,color:#4a0f0b
+  classDef fim fill:#ffffff,stroke:#777,color:#222
+
+  Q["Paciente pergunta no chat do portal<br/>(já autenticado)"]:::fim --> AL
+  AL{"Lista de alarme<br/>(sem LLM)"}:::regra
+  AL -- "bateu" --> D
+  AL -- "não bateu" --> CL["Classificador a–e (LLM)<br/>tipo, destino, prioridade"]:::ia
+  CL -- "d" --> D["d: mensagem fixa SAMU 192<br/>(+ CVV 188 se risco de suicídio)<br/>+ alerta imediato à equipe"]:::alerta
+  CL -- "e" --> E["e: mensagem fixa<br/>recepção (administrativo)<br/>ou recusa + registro (manipulação)"]:::fim
+  CL -- "a, b" --> CTX["Contexto (D2): explicação e dúvidas APROVADAS<br/>deste paciente (consulta direta)<br/>+ base da clínica (RAG, sem dado pessoal)"]:::regra
+  CL -- "c" --> RASC
+  CTX --> RESP["LLM responde só com as fontes,<br/>citando cada uma"]:::ia
+  RESP --> VER{"Causa ou prognóstico?<br/>Apoio nas fontes?<br/>Responde à pergunta?"}:::regra
+  VER -- "tudo ok" --> OK["Resposta no portal"]:::fim
+  VER -- "falhou<br/>(logística fora da base → recepção)" --> RASC
+  RASC["c: rascunho + fontes + destino sugerido<br/>→ fila de triagem<br/>paciente recebe mensagem fixa<br/>(acolhedora, com prioridade, se houver angústia)"]:::regra --> TRI
+  TRI{"Enfermagem faz a triagem;<br/>ato médico vai ao médico"}:::humano
+  TRI -- "aprova, edita ou descarta" --> AV["Resposta no portal<br/>+ aviso genérico pelo WhatsApp"]:::fim

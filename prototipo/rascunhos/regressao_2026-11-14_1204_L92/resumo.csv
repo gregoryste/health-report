@@ -1,0 +1,5 @@
+laudo,categoria,prioridade,exemplo_e1,omitidos,suavizacao,alertas,jargao_proibido,jargao_sem_explicacao,flesch_laudo,flesch_explicacao,palavras,n_duvidas,sem_apoio,tempo_s
+L01,laboratorio_comum,alterado,E02,,,,,,62.5,77.2,126,5,,3.9
+L90,achado_incidental,alterado,,,,fala de prognóstico; frase sem apoio no laudo (verificador): 2,,,47.2,68.7,149,5,2,3.7
+L91,normal_que_assusta,alterado,,,,"contradiz a regra: Gama-GT está normal, mas o texto diz alterado",,,82.6,69.6,159,5,,4.4
+L92,imagem,alterado,E03,,,frase sem apoio no laudo (verificador): 1,,,39.2,54.2,141,5,1,4.5

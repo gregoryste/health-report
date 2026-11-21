@@ -1,0 +1,25 @@
+{
+  "id": "L05",
+  "ficticio": true,
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de tireoide",
+  "paciente": "Paciente Fictício 05",
+  "sexo": "F",
+  "idade": 39,
+  "data_coleta": "2026-11-14",
+  "texto": "Tireoide de dimensões preservadas. No lobo direito, nódulo sólido hipoecoico de 0,6 cm, mais largo que alto, com margens regulares e sem focos ecogênicos puntiformes. Não se observam linfonodos cervicais aumentados.",
+  "gabarito_alterados": [
+    {
+      "achado": "nódulo sólido de 0,6 cm no lobo direito da tireoide",
+      "apelidos": [
+        "nodulo"
+      ]
+    }
+  ],
+  "achado_critico": false,
+  "_origem": "Jackson, Pacote_Tradutor_de_Laudos v1.0 (14/11/2026); original em material_jackson/2026-11-14",
+  "_ajustes_gregory": [
+    "gabarito de imagem com apelidos curtos para a checagem de omissão"
+  ]
+}

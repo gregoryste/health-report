@@ -1,0 +1,105 @@
+{
+  "rascunho_id": "L92-20261114-120424",
+  "laudo_id": "L92",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de tireoide",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T12:04:24",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 4.5,
+  "exemplo_e1": "E03",
+  "explicacao": "O ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou que a glândula tem tamanho e contornos normais. Os lados direito e esquerdo da tireoide (lobos direito e esquerdo) têm dimensões normais, assim como a parte que liga os dois lados (istmo). O tecido da tireoide (parênquima) tem aspecto uniforme.\n\nFoi visto um nódulo (uma pequena área com aspecto diferente do tecido ao redor) sólido, hipoecoico (aparece mais escuro que o tecido ao redor na imagem do ultrassom), de 0,6 cm, no lado direito da tireoide. Ele tem contornos regulares e vascularização periférica (há vasos sanguíneos ao redor). Não foram encontradas calcificações (pequenos depósitos de cálcio).\n\nOs gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n\nO laudo também traz uma classificação, que o médico vai explicar na consulta.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa \"hipoecoico\"?",
+      "resposta": "Significa que o nódulo aparece mais escuro que o tecido normal da tireoide na imagem do ultrassom."
+    },
+    {
+      "pergunta": "O que é vascularização periférica?",
+      "resposta": "Significa que há vasos sanguíneos ao redor do nódulo."
+    },
+    {
+      "pergunta": "O que é a classificação do laudo?",
+      "resposta": "É uma classificação que ajuda a avaliar o nódulo, mas o médico vai explicar o que ela significa na consulta."
+    },
+    {
+      "pergunta": "O que significa \"contornos regulares\"?",
+      "resposta": "Significa que as bordas do nódulo são lisas e bem definidas."
+    },
+    {
+      "pergunta": "O que é o istmo da tireoide?",
+      "resposta": "É a parte que liga os dois lados da tireoide."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Nódulo no lobo direito",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 1"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "dúvida: O que é a classificação do laudo?",
+          "frase": "É uma classificação que ajuda a avaliar o nódulo, mas o médico vai explicar o que ela significa na consulta.",
+          "motivo": "O laudo menciona ACR TI-RADS 4, mas não explica o que ela significa."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que a tireoide tem 'dimensões normais' e 'contornos regulares'.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo informa as dimensões dos lobos direito e esquerdo e do istmo, confirmando que estão normais.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o 'parênquima' como tendo 'ecotextura homogênea'.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve um nódulo sólido hipoecoico no lobo direito, com as dimensões informadas.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o nódulo como tendo 'contornos regulares' e 'vascularização periférica'.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que não há 'calcificações'.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Ausência de linfonodomegalias cervicais'.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"Paráfrase de 'hipoecoico'.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"Paráfrase de 'vascularização periférica'.\"}, {\"n\": 10, \"apoio\": \"nao\", \"motivo\": \"O laudo menciona ACR TI-RADS 4, mas não explica o que ela significa.\"}, {\"n\": 11, \"apoio\": \"sim\", \"motivo\": \"Paráfrase de 'contornos regulares'.\"}, {\"n\": 12, \"apoio\": \"sim\", \"motivo\": \"Paráfrase de 'istmo'.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 39.2,
+    "explicacao": 54.2,
+    "palavras": 141
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "O laudo também traz uma classificação, que o médico vai explicar na consulta.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [
+      "O laudo traz uma classificação que o médico vai explicar na consulta."
+    ],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [
+      "ACR TI-RADS"
+    ],
+    "definicoes_do_glossario": [
+      "Tireoide",
+      "Lobo direito / lobo esquerdo (tireoide)",
+      "Istmo (tireoide)",
+      "Parênquima",
+      "Linfonodos",
+      "Linfonodomegalia",
+      "Nódulo",
+      "Hipoecoico",
+      "Ecotextura homogênea",
+      "Calcificações",
+      "Doppler",
+      "Vascularização periférica",
+      "Contornos regulares"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de tireoide. Paciente: sexo feminino, 39 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nEste laudo traz um escore ou classificação. Na explicação e nas dúvidas, não escreva o nome nem o número dele, não diga o que significa nem se o risco é alto ou baixo. Não escreva nada sobre ela na explicação: o sistema acrescenta uma frase sobre isso.\nTexto do laudo:\nULTRASSONOGRAFIA DA TIREOIDE\nTécnica: exame realizado com transdutor linear de alta frequência, complementado com Doppler colorido.\nTireoide tópica, de contornos regulares e dimensões normais.\nLobo direito: 4,8 x 1,6 x 1,5 cm. Lobo esquerdo: 4,6 x 1,5 x 1,4 cm. Istmo: 0,3 cm. Volume total estimado: 11,2 cm³.\nParênquima de ecotextura homogênea.\nNódulo sólido, hipoecoico, de contornos regulares, medindo 0,6 x 0,5 x 0,5 cm no terço médio do lobo direito, sem calcificações, com vascularização periférica ao Doppler (ACR TI-RADS 4).\nAusência de linfonodomegalias cervicais.\nIMPRESSÃO: Nódulo sólido hipoecoico no lobo direito da tireoide, ACR TI-RADS 4, de 0,6 cm. Demais aspectos dentro da normalidade.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Tireoide: glândula que fica na frente do pescoço\n- Lobo direito / lobo esquerdo (tireoide): o lado direito / o lado esquerdo da tireoide\n- Istmo (tireoide): a parte que liga os dois lados da tireoide\n- Parênquima: o tecido do próprio órgão\n- Linfonodos: pequenas estruturas de defesa do corpo, também chamadas de gânglios ou ínguas\n- Linfonodomegalia: linfonodos (gânglios) aumentados\n- Nódulo: uma pequena área com aspecto diferente do tecido ao redor\n- Hipoecoico: aparece mais escuro que o tecido ao redor na imagem do ultrassom\n- Ecotextura homogênea: o tecido tem aspecto uniforme no ultrassom\n- Calcificações: pequenos depósitos de cálcio\n- Doppler: parte do ultrassom que mostra a passagem do sangue\n- Vascularização periférica: há vasos sanguíneos ao redor\n- Contornos regulares: bordas lisas e bem definidas\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou que a glândula tem tamanho e contornos normais. Os lados direito e esquerdo da tireoide (lobos direito e esquerdo) têm dimensões normais, assim como a parte que liga os dois lados (istmo). O tecido da tireoide (parênquima) tem aspecto uniforme.\n\nFoi visto um nódulo (uma pequena área com aspecto diferente do tecido ao redor) sólido, hipoecoico (aparece mais escuro que o tecido ao redor na imagem do ultrassom), de 0,6 cm, no lado direito da tireoide. Ele tem contornos regulares e vascularização periférica (há vasos sanguíneos ao redor). Não foram encontradas calcificações (pequenos depósitos de cálcio).\n\nOs gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais. O laudo traz uma classificação que o médico vai explicar na consulta.\n\nDÚVIDAS:\nP: O que significa \"hipoecoico\"?\nR: Significa que o nódulo aparece mais escuro que o tecido normal da tireoide na imagem do ultrassom.\n\nP: O que é vascularização periférica?\nR: Significa que há vasos sanguíneos ao redor do nódulo.\n\nP: O que é ACR TI-RADS?\nR: É uma classificação que ajuda a avaliar o nódulo, mas o médico vai explicar o que ela significa na consulta.\n\nP: O que significa \"contornos regulares\"?\nR: Significa que as bordas do nódulo são lisas e bem definidas.\n\nP: O que é o istmo da tireoide?\nR: É a parte que liga os dois lados da tireoide.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:17"
+}

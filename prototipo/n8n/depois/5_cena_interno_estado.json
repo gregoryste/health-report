@@ -1,0 +1,349 @@
+{
+ "alertas_novos": [
+  {
+   "tipo": "prazo_vencido",
+   "paciente_id": "P06",
+   "referencia": "L05-20261114-151214",
+   "status": "aberto",
+   "resolvido_por": null
+  },
+  {
+   "tipo": "urgencia",
+   "paciente_id": "P02",
+   "referencia": "15",
+   "status": "resolvido",
+   "resolvido_por": "Teste Médico"
+  }
+ ],
+ "alertas_antigos_mudados": [],
+ "alertas_abertos_por_tipo": [
+  {
+   "tipo": "prazo_vencido",
+   "n": 1
+  }
+ ],
+ "alertas_duplicados": [],
+ "avisos_novos": [
+  {
+   "paciente_id": "P02",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Há uma nova mensagem da clínica para você: responda OI nesta conversa para ver."
+  },
+  {
+   "paciente_id": "P04",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Há uma nova mensagem da clínica para você: responda OI nesta conversa para ver."
+  },
+  {
+   "paciente_id": "P02",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "conteúdo com consentimento",
+   "texto": "Resposta da equipe da clínica sobre “Estou com dor no peito forte agora”:\n\nProcure o pronto-socorro agora. A equipe vai ligar."
+  },
+  {
+   "paciente_id": "P01",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Lembrete: há uma mensagem da clínica para você: responda OI nesta conversa para ver."
+  },
+  {
+   "paciente_id": "P91",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Lembrete: há uma mensagem da clínica para você: responda OI nesta conversa para ver."
+  },
+  {
+   "paciente_id": "P05",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Lembrete: há uma mensagem da clínica para você: responda OI nesta conversa para ver."
+  },
+  {
+   "paciente_id": "P06",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Lembrete: há uma mensagem da clínica para você: responda OI nesta conversa para ver."
+  },
+  {
+   "paciente_id": "P04",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Lembrete: há uma mensagem da clínica para você: responda OI nesta conversa para ver."
+  },
+  {
+   "paciente_id": "P02",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Lembrete: há uma mensagem da clínica para você: responda OI nesta conversa para ver."
+  },
+  {
+   "paciente_id": "P04",
+   "canal": "simulado",
+   "status": "simulado",
+   "detalhe": "",
+   "texto": "Lembrete: há uma mensagem da clínica para você: responda OI nesta conversa para ver."
+  }
+ ],
+ "fila_da_cena": [
+  {
+   "id": 15,
+   "tipo": "d",
+   "status": "respondido",
+   "destino_final": "medico",
+   "respondido_por": "Teste Médico",
+   "resposta_final": "Procure o pronto-socorro agora. A equipe vai ligar."
+  }
+ ],
+ "fila_status": [
+  {
+   "status": "descartado",
+   "n": 4
+  },
+  {
+   "status": "respondido",
+   "n": 11
+  }
+ ],
+ "rascunhos": [
+  {
+   "rascunho_id": "E001-20261114-154607",
+   "laudo_id": "E001",
+   "status": "publicado",
+   "prioridade": "alterado"
+  },
+  {
+   "rascunho_id": "L01-20261114-125023",
+   "laudo_id": "L01",
+   "status": "publicado",
+   "prioridade": "alterado"
+  },
+  {
+   "rascunho_id": "L02-20261114-133332",
+   "laudo_id": "L02",
+   "status": "publicado",
+   "prioridade": "normal"
+  },
+  {
+   "rascunho_id": "L03-20261114-124437",
+   "laudo_id": "L03",
+   "status": "publicado",
+   "prioridade": "critico"
+  },
+  {
+   "rascunho_id": "L04-20261114-151207",
+   "laudo_id": "L04",
+   "status": "publicado",
+   "prioridade": "alterado"
+  },
+  {
+   "rascunho_id": "L05-20261114-151214",
+   "laudo_id": "L05",
+   "status": "aguardando_revisao",
+   "prioridade": "alterado"
+  },
+  {
+   "rascunho_id": "L06-20261114-151227",
+   "laudo_id": "L06",
+   "status": "publicado",
+   "prioridade": "critico"
+  },
+  {
+   "rascunho_id": "L91-20261114-124501",
+   "laudo_id": "L91",
+   "status": "publicado",
+   "prioridade": "alterado"
+  },
+  {
+   "rascunho_id": "L92-20261114-124445",
+   "laudo_id": "L92",
+   "status": "publicado",
+   "prioridade": "alterado"
+  }
+ ],
+ "publicacoes": [
+  {
+   "laudo_id": "E001",
+   "paciente_id": "P04",
+   "revisor": "Gregory Stein",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 0
+  },
+  {
+   "laudo_id": "L-CENA",
+   "paciente_id": "P02",
+   "revisor": "cena",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 1
+  },
+  {
+   "laudo_id": "L01",
+   "paciente_id": "P01",
+   "revisor": "Revisor Teste",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 0
+  },
+  {
+   "laudo_id": "L02",
+   "paciente_id": "P02",
+   "revisor": "Gregory Stein",
+   "duvidas_liberadas": 1,
+   "lembretes": 0,
+   "lido": 1
+  },
+  {
+   "laudo_id": "L02-P05",
+   "paciente_id": "P05",
+   "revisor": "Gregory Stein",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 0
+  },
+  {
+   "laudo_id": "L02-P06",
+   "paciente_id": "P06",
+   "revisor": "Gregory Stein",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 0
+  },
+  {
+   "laudo_id": "L03",
+   "paciente_id": "P03",
+   "revisor": "Revisor Teste",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 0
+  },
+  {
+   "laudo_id": "L04",
+   "paciente_id": "P02",
+   "revisor": "Teste Médico",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 0
+  },
+  {
+   "laudo_id": "L06",
+   "paciente_id": "P04",
+   "revisor": "Teste Médico",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 0
+  },
+  {
+   "laudo_id": "L91",
+   "paciente_id": "P91",
+   "revisor": "Revisor Teste",
+   "duvidas_liberadas": 1,
+   "lembretes": 1,
+   "lido": 0
+  },
+  {
+   "laudo_id": "L92",
+   "paciente_id": "P04",
+   "revisor": "Revisor Teste",
+   "duvidas_liberadas": 1,
+   "lembretes": 0,
+   "lido": 1
+  }
+ ],
+ "chat_da_cena": [
+  {
+   "autor": "equipe",
+   "texto": "Procure o pronto-socorro agora. A equipe vai ligar.",
+   "tipo": "resposta_equipe"
+  }
+ ],
+ "registro_aprovacoes": [
+  {
+   "rascunho_id": "L04-20261114-124445",
+   "laudo_id": "L04",
+   "acao": "aprovado",
+   "revisor": "Revisor Teste",
+   "duvidas_liberadas": true
+  },
+  {
+   "rascunho_id": "L03-20261114-124437",
+   "laudo_id": "L03",
+   "acao": "editado",
+   "revisor": "Revisor Teste",
+   "duvidas_liberadas": true
+  },
+  {
+   "rascunho_id": "L01-20261114-125023",
+   "laudo_id": "L01",
+   "acao": "aprovado",
+   "revisor": "Revisor Teste",
+   "duvidas_liberadas": true
+  },
+  {
+   "rascunho_id": "L91-20261114-124501",
+   "laudo_id": "L91",
+   "acao": "editado",
+   "revisor": "Revisor Teste",
+   "duvidas_liberadas": true
+  },
+  {
+   "rascunho_id": "L02-20261114-133332",
+   "laudo_id": "L02",
+   "acao": "aprovado",
+   "revisor": "Gregory Stein",
+   "duvidas_liberadas": true
+  },
+  {
+   "rascunho_id": "E001-20261114-154607",
+   "laudo_id": "E001",
+   "acao": "aprovado",
+   "revisor": "Gregory Stein",
+   "duvidas_liberadas": true
+  },
+  {
+   "rascunho_id": "L04-20261114-151207",
+   "laudo_id": "L04",
+   "acao": "editado",
+   "revisor": "Teste Médico",
+   "duvidas_liberadas": true
+  },
+  {
+   "rascunho_id": "L06-20261114-151227",
+   "laudo_id": "L06",
+   "acao": "aprovado",
+   "revisor": "Teste Médico",
+   "duvidas_liberadas": true
+  }
+ ],
+ "registro_aprovacoes_linhas": 8,
+ "contagens": {
+  "alertas": 11,
+  "avisos": 94,
+  "fila": 15,
+  "rascunhos": 9,
+  "publicacoes": 11,
+  "chat": 49,
+  "pacientes": 8
+ },
+ "cena_ids": {
+  "R1": "L04-20261114-151207",
+  "R2": "L06-20261114-151227",
+  "R3": "L05-20261114-151214",
+  "fila_id": 15,
+  "avisos_max_id": 94,
+  "alertas_max_id": 9,
+  "fila_max_id": 14,
+  "chat_max_id": 60
+ }
+}

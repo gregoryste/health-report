@@ -1,0 +1,87 @@
+{
+  "rascunho_id": "L04-20261114-151207",
+  "laudo_id": "L04",
+  "tipo": "laboratorio",
+  "categoria": "sangue_comum",
+  "exame": "Perfil lipídico",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:12:07",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.2,
+  "exemplo_e1": null,
+  "explicacao": "O exame de perfil lipídico mostra alguns resultados fora da faixa de referência. O Colesterol LDL, conhecido como colesterol ruim, está em 168 mg/dL. A faixa de referência é de até 130 mg/dL, então o resultado está acima do esperado. Os Triglicerídeos, outro tipo de gordura do sangue, também estão alterados. O resultado foi 190 mg/dL, e a faixa de referência é de até 150 mg/dL. O Colesterol HDL, conhecido como colesterol bom, está dentro da faixa de referência, com 52 mg/dL.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa Colesterol LDL alto?",
+      "resposta": "É um tipo de gordura do sangue, conhecido como colesterol ruim, que está acima do valor esperado."
+    },
+    {
+      "pergunta": "O que são triglicerídeos?",
+      "resposta": "São um tipo de gordura do sangue."
+    },
+    {
+      "pergunta": "O que significa ter o Colesterol HDL normal?",
+      "resposta": "Significa que o Colesterol HDL, conhecido como colesterol bom, está dentro da faixa de referência."
+    },
+    {
+      "pergunta": "O que o médico vai fazer com esses resultados?",
+      "resposta": "O médico vai avaliar esses resultados na consulta."
+    },
+    {
+      "pergunta": "Preciso tomar algum remédio?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Colesterol LDL",
+        "origem": "regra",
+        "citado": true
+      },
+      {
+        "nome": "Triglicerídeos",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "ldl",
+        "hdl",
+        "triglicerideos"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 77.1,
+    "explicacao": 67.5,
+    "palavras": 90
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Colesterol LDL",
+      "Colesterol HDL",
+      "Triglicerídeos"
+    ],
+    "mensagem_enviada": "Exame: Perfil lipídico. Paciente: sexo feminino, 47 anos.\nResultados:\n- Colesterol LDL: 168 mg/dL (referência ≤ 130 mg/dL) → ACIMA da faixa, ALTERADO\n- Colesterol HDL: 52 mg/dL (referência ≥ 40 mg/dL) → NORMAL\n- Triglicerídeos: 190 mg/dL (referência ≤ 150 mg/dL) → ACIMA da faixa, ALTERADO\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Colesterol LDL: um tipo de gordura do sangue, conhecido como colesterol ruim\n- Colesterol HDL: um tipo de gordura do sangue, conhecido como colesterol bom\n- Triglicerídeos: um tipo de gordura do sangue",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de perfil lipídico mostra alguns resultados fora da faixa de referência. O Colesterol LDL, conhecido como colesterol ruim, está em 168 mg/dL. A faixa de referência é de até 130 mg/dL, então o resultado está acima do esperado. Os Triglicerídeos, outro tipo de gordura do sangue, também estão alterados. O resultado foi 190 mg/dL, e a faixa de referência é de até 150 mg/dL. O Colesterol HDL, conhecido como colesterol bom, está dentro da faixa de referência, com 52 mg/dL.\n\nDÚVIDAS:\nP: O que significa Colesterol LDL alto?\nR: É um tipo de gordura do sangue, conhecido como colesterol ruim, que está acima do valor esperado.\nP: O que são triglicerídeos?\nR: São um tipo de gordura do sangue.\nP: O que significa ter o Colesterol HDL normal?\nR: Significa que o Colesterol HDL, conhecido como colesterol bom, está dentro da faixa de referência.\nP: O que o médico vai fazer com esses resultados?\nR: O médico vai avaliar esses resultados na consulta.\nP: Preciso tomar algum remédio?\nR: Isso será avaliado pelo médico na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

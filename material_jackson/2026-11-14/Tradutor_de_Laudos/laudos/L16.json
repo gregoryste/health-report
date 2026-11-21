@@ -1,0 +1,25 @@
+{
+  "id": "L16",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "exame": "Sódio sérico",
+  "paciente": "Paciente Fictício 16",
+  "sexo": "F",
+  "idade": 76,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Sódio",
+      "valor": 118,
+      "unidade": "mEq/L",
+      "apelidos": [
+        "sodio"
+      ],
+      "ref_min": 135,
+      "ref_max": 145
+    }
+  ],
+  "gabarito_alterados": [
+    "Sódio"
+  ]
+}

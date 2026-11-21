@@ -1,0 +1,181 @@
+{% extends "base.html" %}{% import "_ui.html" as ui %}
+{% block titulo %}{{ d.exame }} · {{ paciente.nome }} · Revisão{% endblock %}
+{% block corpo %}
+{% set v = d.verificacao %}
+{% set n_sinais = v.omitidos|length + v.suavizacao|length + v.alertas|length + v.jargao.proibidos|length + sem_apoio|length %}
+{% set erro_motivo = request.query_params.get('erro') == 'motivo' %}
+<header class="cabecalho paciente">
+  <div class="cab-paciente">
+    <span class="avatar grande">{{ ui.iniciais(paciente.nome) }}</span>
+    <div>
+      <h1>{{ paciente.nome }} <small>{{ d.exame }} · {{ 'laudo de imagem' if laudo.tipo == 'imagem' else 'laboratório' }}</small></h1>
+      <div class="chips">
+        {{ ui.selo(d.prioridade) }}
+        <span class="chip-ia">{{ ui.icone('brilho', 12) }}Rascunho da IA · revisar</span>
+        {% if laudo._envio %}<span class="chip-neutro">Enviado pelo paciente</span>{% endif %}
+        <span class="meta">Prazo {{ d.prazo_revisao }} · modelo {{ d.modelo }} · exemplo E1: {{ d.exemplo_e1 or '—' }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="acoes">
+    <a class="btn secundario" href="/painel">{{ ui.icone('seta-esq', 15) }}Voltar à lista</a>
+    <button class="btn tinta" form="form-rascunho" name="acao" value="aprovar">Aprovar e publicar</button>
+  </div>
+</header>
+
+<div class="colunas revisao">
+  <aside class="coluna lateral esq">
+    <div class="bloco">
+      <div class="titulo-bloco"><span class="sobrancelha">Laudo original</span>{% if laudo._envio %}<a class="meta" href="/painel/envio/{{ laudo._envio.envio_id }}" target="_blank">ver arquivo</a>{% endif %}</div>
+      {% if laudo.tipo == 'imagem' %}
+        <pre class="laudo">{{ laudo.texto }}</pre>
+      {% else %}
+        <div class="analitos">
+        {% for i in avaliacao.itens %}
+          <div class="analito">
+            <span class="nome">{{ i.analito }}</span><span class="valor">{{ i.valor }} {{ i.unidade }}</span>
+            <span class="faixa-ref">Ref. {{ i.faixa }}</span><span>{{ ui.selo(i.nivel) }}</span>
+          </div>
+        {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <div class="bloco sep">
+      <span class="sobrancelha">Precisa estar na explicação</span>
+      <ul class="checklist">
+      {% for i in v.itens %}
+        <li><span class="marca {{ 'sim' if i.citado else 'nao' }}">{{ ui.icone('check' if i.citado else 'x', 12) }}</span>{{ i.nome }}<span class="meta">{{ i.origem }}</span></li>
+      {% else %}
+        <li class="nota-pequena">Nenhum item alterado.</li>
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="bloco sep">
+      <span class="sobrancelha">Legibilidade (Flesch)</span>
+      <div class="metrica">{{ d.legibilidade.explicacao }}<small>explicação · laudo {{ d.legibilidade.laudo }}</small></div>
+    </div>
+  </aside>
+
+  <section class="coluna centro respiro">
+    <form id="form-rascunho" class="nota" onkeydown="if(event.key==='Enter'&&event.target.tagName==='INPUT'){event.preventDefault()}" method="post" action="/painel/rascunho/{{ r.rascunho_id }}">
+      <input type="hidden" name="aberto_em" value="{{ aberto_em }}">
+      <div class="nota-topo">
+        <div class="esq"><h2>Explicação para o paciente</h2><span class="chip-ia">Rascunho da IA · revisar</span></div>
+        <span class="meta">O que você mudar fica registrado</span>
+      </div>
+      <div class="nota-corpo">
+        <div class="nota-secao">
+          <div class="lado"><span class="letra">Texto</span><span class="legenda">Edite à vontade. A edição é o que ensina o sistema.</span></div>
+          <div class="conteudo"><textarea class="grande" name="explicacao" id="explicacao" aria-label="Explicação para o paciente">{{ d.explicacao }}</textarea></div>
+        </div>
+        <div class="nota-secao">
+          <div class="lado"><span class="letra">Dúvidas</span><span class="legenda">Antecipadas pela IA (F1). Tracejado: proposta, exige aceite.</span></div>
+          <div class="conteudo">
+          {% for q in d.duvidas %}
+            <div class="proposta">
+              <label class="marcar"><input type="checkbox" name="manter_{{ loop.index0 }}" id="manter_{{ loop.index0 }}" checked onchange="this.closest('.proposta').classList.toggle('desmarcada', !this.checked)"> Manter esta dúvida</label>
+              <input type="text" name="p_{{ loop.index0 }}" id="p_{{ loop.index0 }}" value="{{ q.pergunta }}" aria-label="Pergunta">
+              <textarea name="r_{{ loop.index0 }}" id="r_{{ loop.index0 }}" aria-label="Resposta">{{ q.resposta }}</textarea>
+            </div>
+          {% else %}
+            <p class="nota-pequena">A IA não propôs dúvidas para este exame.</p>
+          {% endfor %}
+          </div>
+        </div>
+        <div class="nota-secao">
+          <div class="lado"><span class="letra">Nova</span><span class="legenda">Opcional. Resposta escrita por você.</span></div>
+          <div class="conteudo">
+            <p class="nota-pequena">Perguntas que o paciente provavelmente fará e que só um profissional pode responder (ex.: “Esse resultado é hereditário?”). Com a resposta aprovada aqui, o chat passa a responder sozinho, sempre com o seu texto.</p>
+            {% for k in range(2) %}
+            <details class="dobra" {{ 'open' if k == 0 }}><summary>Nova dúvida {{ k + 1 }}</summary>
+              <div class="bloco">
+                <input type="text" name="nova_p_{{ k }}" id="nova_p_{{ k }}" placeholder="Pergunta" aria-label="Pergunta">
+                <textarea name="nova_r_{{ k }}" id="nova_r_{{ k }}" placeholder="Resposta aprovada" aria-label="Resposta aprovada" style="min-height:64px"></textarea>
+              </div>
+            </details>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="nota-secao">
+          <div class="lado"><span class="letra">Chat</span><span class="legenda">Depois da publicação.</span></div>
+          <div class="conteudo"><label class="marcar"><input type="checkbox" name="liberar_duvidas" id="liberar_duvidas" checked> Liberar o chat de dúvidas para este exame</label></div>
+        </div>
+      </div>
+      <div class="nota-rodape">
+        <button class="btn" name="acao" value="aprovar">Aprovar e publicar</button>
+        <span class="nota-pequena">Publica no portal e envia só um aviso genérico pelo WhatsApp.</span>
+      </div>
+    </form>
+  </section>
+
+  <aside class="coluna lateral dir">
+    <div class="titulo-bloco"><span class="titulo-forte">{{ ui.icone('brilho', 15) }}Verificação</span><span class="meta">{{ n_sinais }} sinalização(ões)</span></div>
+
+    {% if sem_apoio %}
+    <div class="sinal critico">
+      <span class="sobre">Sem apoio no laudo</span>
+      <ul>{% for x in sem_apoio %}<li>“{{ x.frase }}” · {{ x.motivo }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+
+    {% if v.omitidos or v.suavizacao or v.alertas or v.jargao.proibidos %}
+    <div class="sinal atencao">
+      <span class="sobre">Leia com atenção</span>
+      <ul>
+        {% for o in v.omitidos %}<li><b>Omissão:</b> a explicação não cita “{{ o }}”.</li>{% endfor %}
+        {% for x in v.suavizacao %}<li><b>Suavização:</b> “{{ x }}”.</li>{% endfor %}
+        {% for x in v.jargao.proibidos %}<li><b>Jargão proibido:</b> {{ x }}.</li>{% endfor %}
+        {% for x in v.alertas %}<li>{{ x }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if laudo._envio %}{% set ev = laudo._envio %}
+    <div class="sinal sugestao">
+      <span class="sobre">Laudo enviado pelo WhatsApp</span>
+      <ul>
+        <li>Lido por: {{ ev.como_foi_lido }}{% if ev.confianca_ocr is not none %} · confiança média do OCR {{ ev.confianca_ocr }}{% endif %} · <a href="/painel/envio/{{ ev.envio_id }}" target="_blank">ver o arquivo original</a></li>
+        <li>{% if ev.conferido_pelo_paciente %}O paciente conferiu os valores lidos e já recebeu o resumo automático (valores, posição na faixa do laudo e definições aprovadas).{% elif ev.resumo_enviado and laudo.tipo == 'laboratorio' %}<b>Valores lidos automaticamente, sem conferência do paciente.</b> Ele já recebeu o resumo automático com esses valores (posição na faixa do laudo e definições aprovadas): confira com o arquivo original.{% elif ev.correcao_do_paciente %}<b>O paciente apontou um erro na leitura:</b> “{{ ev.correcao_do_paciente }}”. Confira com o arquivo; ele ainda não recebeu nenhum resumo.{% else %}Laudo de imagem: o paciente recebeu só as definições aprovadas dos termos.{% endif %}</li>
+        {% if ev.nome_confere is none %}<li><b>Nome do paciente não encontrado no laudo:</b> confira se o laudo é dele.</li>{% endif %}
+      </ul>
+    </div>
+    {% endif %}
+
+    {% if not n_sinais and not laudo._envio %}{{ ui.vazio('Nenhuma sinalização', 'A verificação não encontrou omissão, suavização, jargão nem frase sem apoio.') }}{% endif %}
+
+    <div class="bloco sep">
+      <span class="sobrancelha">De onde vem cada frase</span>
+      <div class="legenda-frases">
+        <span><i style="background:var(--ok)"></i>do laudo</span><span><i style="background:var(--rot)"></i>frase fixa</span>
+        <span><i style="border:1px dashed var(--av);background:var(--avb)"></i>sem origem</span><span><i style="background:var(--cr)"></i>sem apoio</span>
+      </div>
+      <div class="frases">
+      {% for f in frases %}
+        <div class="frase {{ 'sem_apoio' if f.sem_apoio else f.tipo }}">{{ f.frase }}
+          <small>{% if f.sem_apoio %}Sem apoio segundo o verificador · {% endif %}{% if f.origem %}{{ f.origem|join(' · ') }}{% else %}Sem origem clara no laudo: confira{% endif %}</small></div>
+      {% endfor %}
+      </div>
+    </div>
+
+    <div class="bloco sep">
+      <span class="sobrancelha">Descartar rascunho</span>
+      <div class="campo{{ ' erro' if erro_motivo }}">
+        <label for="motivo">Motivo (obrigatório para descartar)</label>
+        <input type="text" name="motivo" id="motivo" form="form-rascunho" onkeydown="if(event.key==='Enter'){event.preventDefault()}">
+        {% if erro_motivo %}<span class="msg-erro" role="alert">{{ ui.icone('alerta', 14) }}Para descartar, informe o motivo.</span>{% endif %}
+      </div>
+      <button class="btn perigo largo" form="form-rascunho" name="acao" value="descartar">Descartar rascunho</button>
+    </div>
+
+    <details class="dobra"><summary>Auditoria</summary>
+      <div class="lista-dados">
+        <div class="item"><span>Frases fixas</span><b>{{ d.auditoria.frases_fixas|length }}</b></div>
+        <div class="item"><span>Removidas do texto do modelo</span><b>{{ d.auditoria.frases_removidas_do_modelo|length }}</b></div>
+        <div class="item"><span>Escores ocultados</span><b>{{ d.auditoria.escores_ocultados|join(', ') or '—' }}</b></div>
+        <div class="item"><span>Dúvidas com causa trocadas</span><b>{{ d.auditoria.duvidas_com_causa_trocadas|length }}</b></div>
+      </div>
+      <p class="nota-pequena" style="margin-top:8px">Frases fixas: {{ d.auditoria.frases_fixas|join(' | ') }}<br>Removidas: {{ d.auditoria.frases_removidas_do_modelo|join(' | ') or '—' }}<br>Glossário usado: {{ d.auditoria.definicoes_do_glossario|join(', ') }}</p>
+    </details>
+  </aside>
+</div>
+{% endblock %}

@@ -1,0 +1,235 @@
+{
+  "id": "HqqLDillJx7uMjsU",
+  "name": "Rotinas: prazos e lembretes",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Rotinas (D6)\nTodo dia às 8h: rascunho com prazo vencido → alerta para o médico de referência; prazo expirado → o rascunho NUNCA é enviado, só o aviso de que será explicado na consulta; explicação não lida em 3 dias → lembrete genérico.\n**O n8n decide:** se houve alerta de prazo, monta o \"Resumo do dia\" com as contagens, que fica no histórico de execuções.\nO webhook 'rotinas' permite rodar sob demanda na demo.",
+        "height": 260,
+        "width": 520
+      },
+      "id": "854033ae-2ef7-4bbd-bcaa-42199b4509ef",
+      "name": "Sobre este fluxo",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * *"
+            }
+          ]
+        }
+      },
+      "id": "480d9418-503d-45b3-a2c4-abb0c4f7d2c8",
+      "name": "Todo dia às 8h",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        260
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "rotinas",
+        "responseMode": "lastNode",
+        "responseData": "firstEntryJson",
+        "options": {}
+      },
+      "id": "b4413079-e7c4-44ca-adb7-76535f7b5904",
+      "name": "Rodar rotinas agora (demo)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        460
+      ],
+      "webhookId": "0f1bb192-4a73-475e-bfde-660f4868b0f3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SERVICO_URL }}/api/rotinas",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "={{ $env.SERVICO_API_KEY }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ dias_simulados: ($json.body && $json.body.dias_simulados) || 0 }) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "240481ed-0653-47c0-a820-8617e8b5a39c",
+      "name": "Prazos de aprovação e lembretes de leitura",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        280,
+        360
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "1d2e3f4a-5b6c-4d7e-8f9a-0b1c2d3e4f51",
+              "leftValue": "={{ $json.prazo_vencido }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "6e7f8a9b-0c1d-4e2f-9a3b-4c5d6e7f8a91",
+      "name": "Houve alerta de prazo?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        540,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7a8b9c0d-1e2f-4a3b-8c4d-5e6f7a8b9c01",
+              "name": "prazo_vencido",
+              "value": "={{ $json.prazo_vencido }}",
+              "type": "number"
+            },
+            {
+              "id": "7a8b9c0d-1e2f-4a3b-8c4d-5e6f7a8b9c02",
+              "name": "expirados",
+              "value": "={{ $json.expirados }}",
+              "type": "number"
+            },
+            {
+              "id": "7a8b9c0d-1e2f-4a3b-8c4d-5e6f7a8b9c03",
+              "name": "lembretes",
+              "value": "={{ $json.lembretes }}",
+              "type": "number"
+            },
+            {
+              "id": "7a8b9c0d-1e2f-4a3b-8c4d-5e6f7a8b9c04",
+              "name": "resumo",
+              "value": "={{ $json.prazo_vencido + ' rascunho(s) com prazo vencido (alerta no painel), ' + $json.expirados + ' expirado(s), ' + $json.lembretes + ' lembrete(s) de leitura enviados.' }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8b9c0d1e-2f3a-4b4c-9d5e-6f7a8b9c0d11",
+      "name": "Resumo do dia",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        260
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "9c0d1e2f-3a4b-4c5d-8e6f-7a8b9c0d1e21",
+      "name": "Dia sem alerta novo",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        800,
+        460
+      ]
+    }
+  ],
+  "connections": {
+    "Todo dia às 8h": {
+      "main": [
+        [
+          {
+            "node": "Prazos de aprovação e lembretes de leitura",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Rodar rotinas agora (demo)": {
+      "main": [
+        [
+          {
+            "node": "Prazos de aprovação e lembretes de leitura",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prazos de aprovação e lembretes de leitura": {
+      "main": [
+        [
+          {
+            "node": "Houve alerta de prazo?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Houve alerta de prazo?": {
+      "main": [
+        [
+          {
+            "node": "Resumo do dia",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Dia sem alerta novo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "errorWorkflow": "Xf5ErrosOrq0001a"
+  },
+  "active": false,
+  "pinData": {}
+}

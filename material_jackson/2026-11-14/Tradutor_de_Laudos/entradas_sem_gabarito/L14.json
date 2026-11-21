@@ -1,0 +1,36 @@
+{
+  "id": "L14",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "exame": "Glicose e hemoglobina glicada",
+  "paciente": "Paciente Fictício 14",
+  "sexo": "M",
+  "idade": 51,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Glicose em jejum",
+      "valor": 118,
+      "unidade": "mg/dL",
+      "apelidos": [
+        "glicose",
+        "glicemia",
+        "acucar no sangue"
+      ],
+      "ref_min": 70,
+      "ref_max": 99
+    },
+    {
+      "analito": "Hemoglobina glicada",
+      "valor": 6.1,
+      "unidade": "%",
+      "apelidos": [
+        "hemoglobina glicada",
+        "hba1c",
+        "media do acucar no sangue"
+      ],
+      "ref_min": 4,
+      "ref_max": 5.6
+    }
+  ]
+}

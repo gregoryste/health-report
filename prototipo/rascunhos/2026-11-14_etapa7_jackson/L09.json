@@ -1,0 +1,90 @@
+{
+  "rascunho_id": "L09-20261114-150509",
+  "laudo_id": "L09",
+  "tipo": "laboratorio",
+  "categoria": "sangue_comum",
+  "exame": "Hemograma parcial",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:05:09",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 4.1,
+  "exemplo_e1": "E02",
+  "explicacao": "O hemograma é um exame que conta e mede as células do sangue. A hemoglobina (a parte do sangue que leva oxigênio para o corpo) está abaixo da faixa de referência: o resultado foi 10,5 g/dL, e o esperado é a partir de 12,0 g/dL. O hematócrito (parte do sangue ocupada pelos glóbulos vermelhos) também está abaixo do esperado: o resultado foi 33%, e o esperado é a partir de 36%. O volume corpuscular médio (VCM), que mostra o tamanho médio das células vermelhas do sangue, está abaixo da faixa: o resultado foi 74 fL, e o esperado é a partir de 80 fL. Os leucócitos (células de defesa do corpo) e as plaquetas (células que ajudam a parar sangramentos) estão dentro da faixa de referência.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa hemoglobina baixa?",
+      "resposta": "A hemoglobina é a parte do sangue que leva oxigênio. O resultado está abaixo do esperado, mas o que isso significa será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que é o VCM?",
+      "resposta": "O VCM mostra o tamanho médio das células vermelhas do sangue. O resultado está abaixo do esperado, mas o que isso significa será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que pode estar causando isso?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Preciso fazer algum outro exame?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Isso é grave?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Hemoglobina",
+        "origem": "regra",
+        "citado": true
+      },
+      {
+        "nome": "Hematócrito",
+        "origem": "regra",
+        "citado": true
+      },
+      {
+        "nome": "Volume corpuscular médio",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 30.3,
+    "explicacao": 62.2,
+    "palavras": 134
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Hemoglobina",
+      "VCM",
+      "Leucócitos",
+      "Plaquetas",
+      "hematócrito"
+    ],
+    "mensagem_enviada": "Exame: Hemograma parcial. Paciente: sexo feminino, 35 anos.\nResultados:\n- Hemoglobina: 10,5 g/dL (referência 12–16 g/dL) → ABAIXO da faixa, ALTERADO\n- Hematócrito: 33 % (referência 36–46 %) → ABAIXO da faixa, ALTERADO\n- Volume corpuscular médio: 74 fL (referência 80–100 fL) → ABAIXO da faixa, ALTERADO\n- Leucócitos: 6.800 /mm³ (referência 4000–11000 /mm³) → NORMAL\n- Plaquetas: 310.000 /mm³ (referência 150000–450000 /mm³) → NORMAL\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Hemoglobina: a parte das células vermelhas do sangue que leva oxigênio pelo corpo\n- VCM: o tamanho médio das células vermelhas do sangue\n- Leucócitos: células de defesa do corpo\n- Plaquetas: células que ajudam o sangue a coagular e a parar sangramentos\n- hematócrito: parte do sangue ocupada pelos glóbulos vermelhos\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO hemograma é um exame que conta e mede as células do sangue. A hemoglobina (a parte do sangue que leva oxigênio para o corpo) está abaixo da faixa de referência: o resultado foi 11,0 g/dL, e o esperado é a partir de 12,0 g/dL. As plaquetas (células que ajudam a parar sangramentos) estão acima da faixa: 480.000 por mm³, quando o esperado vai até 450.000. Os leucócitos (células de defesa do corpo) estão dentro do esperado.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO hemograma é um exame que conta e mede as células do sangue. A hemoglobina (a parte do sangue que leva oxigênio para o corpo) está abaixo da faixa de referência: o resultado foi 10,5 g/dL, e o esperado é a partir de 12,0 g/dL. O hematócrito (parte do sangue ocupada pelos glóbulos vermelhos) também está abaixo do esperado: o resultado foi 33%, e o esperado é a partir de 36%. O volume corpuscular médio (VCM), que mostra o tamanho médio das células vermelhas do sangue, está abaixo da faixa: o resultado foi 74 fL, e o esperado é a partir de 80 fL. Os leucócitos (células de defesa do corpo) e as plaquetas (células que ajudam a parar sangramentos) estão dentro da faixa de referência.\n\nDÚVIDAS:\nP: O que significa hemoglobina baixa?\nR: A hemoglobina é a parte do sangue que leva oxigênio. O resultado está abaixo do esperado, mas o que isso significa será avaliado pelo médico na consulta.\n\nP: O que é o VCM?\nR: O VCM mostra o tamanho médio das células vermelhas do sangue. O resultado está abaixo do esperado, mas o que isso significa será avaliado pelo médico na consulta.\n\nP: O que pode estar causando isso?\nR: Isso será avaliado pelo médico na consulta.\n\nP: Preciso fazer algum outro exame?\nR: Isso será avaliado pelo médico na consulta.\n\nP: Isso é grave?\nR: Isso será avaliado pelo médico na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

@@ -1,0 +1,25 @@
+# interna:gemma3:12b-it-qat · L02
+
+## Entrada
+Exame: Check-up (glicose, lipídios, tireoide). Paciente: sexo feminino, 38 anos.
+Resultados:
+- Glicose em jejum: 88 mg/dL (referência 70–99 mg/dL) → NORMAL
+- Colesterol total: 172 mg/dL (referência ≤ 190 mg/dL) → NORMAL
+- HDL: 52 mg/dL (referência ≥ 40 mg/dL) → NORMAL
+- Triglicerídeos: 110 mg/dL (referência ≤ 150 mg/dL) → NORMAL
+- TSH: 2,1 µUI/mL (referência 0,4–4,0 µUI/mL) → NORMAL
+
+## Resposta
+EXPLICAÇÃO:
+O exame de check-up avaliou sua glicose, lipídios (colesterol e triglicerídeos) e tireoide. A glicose em jejum, o colesterol total, o HDL (colesterol bom), os triglicerídeos e o TSH (hormônio da tireoide) estão dentro dos valores considerados normais. Todos os itens avaliados estão dentro das faixas de referência. As estruturas normais não foram mencionadas no laudo.
+
+DÚVIDAS:
+P: O que significa TSH?
+R: TSH é um exame que mede o hormônio da tireoide.
+P: O que é HDL?
+R: HDL é um tipo de colesterol que ajuda a proteger o coração.
+P: O que é glicose em jejum?
+R: É a quantidade de açúcar no sangue depois de não comer por pelo menos 8 horas.
+P: O que significa "faixa de referência"?
+R: É o intervalo de valores que a maioria das pessoas tem.
+

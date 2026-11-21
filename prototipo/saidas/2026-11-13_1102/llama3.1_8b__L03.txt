@@ -1,0 +1,26 @@
+# llama3.1:8b · L03
+
+## Entrada
+Exame: Função renal e eletrólitos. Paciente: sexo masculino, 71 anos.
+Resultados:
+- Potássio: 6.8 mEq/L (referência 3.5–5.1 mEq/L) → ACIMA da faixa, CRÍTICO
+- Sódio: 139 mEq/L (referência 136–145 mEq/L) → NORMAL
+- Creatinina: 2.4 mg/dL (referência 0.7–1.3 mg/dL) → ACIMA da faixa, ALTERADO
+- Ureia: 88 mg/dL (referência 15–45 mg/dL) → ACIMA da faixa, ALTERADO
+
+## Resposta
+EXPLICAÇÃO:
+O exame de função renal e eletrólitos avaliou como está funcionando seus rins e como estão os níveis de certos minerais no seu sangue. O potássio é um mineral importante para o funcionamento do coração e dos músculos. O seu nível de potássio está acima do normal, o que pode indicar problemas nos rins ou outros problemas de saúde. Isso é considerado crítico e a clínica entrará em contato com você ainda hoje para discutir os próximos passos. Além disso, o seu nível de creatinina e ureia também estão acima do normal, o que pode indicar que os rins não estão funcionando corretamente.
+
+DÚVIDAS:
+P: O que isso significa para mim?
+R: Isso significa que precisamos investigar mais sobre o funcionamento dos seus rins e ajustar o tratamento se necessário.
+
+P: Posso continuar com as minhas atividades normais?
+R: Não, é importante que você fique em repouso e não faça exercícios até que o médico discuta os resultados com você.
+
+P: Posso comer normalmente?
+R: Sim, você pode continuar comendo normalmente, mas é importante que você siga as orientações do médico sobre a sua dieta.
+
+P: Quanto tempo leva para os rins voltarem a funcionar normalmente?
+R: Isso depende do tipo e da gravidade da doença, e o médico precisará avaliar os resultados para determinar o melhor plano de tratamento.

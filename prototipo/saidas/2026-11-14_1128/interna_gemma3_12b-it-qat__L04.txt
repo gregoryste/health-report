@@ -1,0 +1,37 @@
+# interna:gemma3:12b-it-qat · L04
+
+## Entrada
+Exame: Ultrassonografia de tireoide. Paciente: sexo feminino, 39 anos.
+Tipo: laudo de imagem (texto livre).
+Texto do laudo:
+ULTRASSONOGRAFIA DA TIREOIDE
+Técnica: exame realizado com transdutor linear de alta frequência, complementado com Doppler colorido.
+Tireoide tópica, de contornos regulares e dimensões normais.
+Lobo direito: 4,8 x 1,6 x 1,5 cm. Lobo esquerdo: 4,6 x 1,5 x 1,4 cm. Istmo: 0,3 cm. Volume total estimado: 11,2 cm³.
+Parênquima de ecotextura homogênea.
+Nódulo sólido, hipoecoico, de contornos regulares, medindo 0,6 x 0,5 x 0,5 cm no terço médio do lobo direito, sem calcificações, com vascularização periférica ao Doppler (ACR TI-RADS 4).
+Ausência de linfonodomegalias cervicais.
+IMPRESSÃO: Nódulo sólido hipoecoico no lobo direito da tireoide, ACR TI-RADS 4, de 0,6 cm. Demais aspectos dentro da normalidade.
+
+## Resposta
+EXPLICAÇÃO:
+O ultrassom da tireoide mostra que a tireoide tem tamanho e formato normais. Os lobos direito e esquerdo medem 4,8 x 1,6 x 1,5 cm e 4,6 x 1,5 x 1,4 cm, respectivamente. O istmo (parte que liga os lobos) tem 0,3 cm. O volume total da tireoide é estimado em 11,2 cm³.
+
+Foi encontrado um nódulo sólido no lobo direito, que é mais escuro que o tecido normal da tireoide (hipoecoico). Ele tem 0,6 x 0,5 x 0,5 cm e está localizado no terço médio do lobo direito. Não foram encontradas calcificações (depósitos de cálcio) dentro do nódulo, mas ele tem um pouco de fluxo sanguíneo ao redor (vascularização periférica).
+
+O laudo traz uma classificação chamada ACR TI-RADS 4. Não foram encontradas alterações nos gânglios linfáticos do pescoço (linfonodomegalias).
+
+Converse com o médico sobre os resultados.
+
+DÚVIDAS:
+P: O que significa nódulo hipoecoico?
+R: Significa que o nódulo é mais escuro que o tecido normal da tireoide no ultrassom.
+P: O que é ACR TI-RADS 4?
+R: É uma classificação que consta no laudo e será explicada pelo médico.
+P: Preciso fazer mais exames?
+R: Isso será avaliado pelo médico na consulta.
+P: O nódulo pode ser câncer?
+R: Isso será avaliado pelo médico na consulta.
+P: O que é vascularização periférica?
+R: Significa que há um pouco de fluxo sanguíneo ao redor do nódulo.
+

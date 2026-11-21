@@ -1,0 +1,13 @@
+{
+  "id": "L22",
+  "categoria": "achado_incidental",
+  "gabarito_alterados": [
+    "nódulo inteiramente calcificado de 0,4 cm no lobo superior direito do pulmão, de aspecto residual"
+  ],
+  "conteudos_obrigatorios": [
+    "nódulo inteiramente calcificado de 0,4 cm no lobo superior direito do pulmão, de aspecto residual"
+  ],
+  "exemplo_explicacao": "O exame descreve uma pequena formação de 0,4 cm na parte de cima do pulmão direito, toda preenchida por cálcio. O laudo apresenta a aparência como residual, isto é, semelhante a uma marca antiga. Não descreve áreas de preenchimento do pulmão, líquido ao redor dele ou estruturas de defesa aumentadas na região central do peito. A equipe deve interpretar o achado junto do histórico. Não dá para afirmar sua causa apenas pelo texto.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

@@ -1,0 +1,79 @@
+{
+  "rascunho_id": "L21-20261114-150707",
+  "laudo_id": "L21",
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Potássio sérico",
+  "prioridade": "critico",
+  "prazo_revisao": "mesmo dia + ligação",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:07:07",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.1,
+  "exemplo_e1": null,
+  "explicacao": "O exame de potássio sérico mostra que o seu nível de potássio está abaixo do valor esperado. O resultado foi 2,3 mEq/L, e a faixa de referência é de 3,5 a 5,1 mEq/L. Esse resultado está marcado como CRÍTICO no laudo.\n\nO potássio é um sal mineral do sangue, importante para os músculos e o coração. O valor abaixo do normal pode indicar que há menos potássio no seu sangue do que o esperado. Esse resultado será avaliado pelo seu médico na consulta.\n\nHá um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa \"mEq/L\"?",
+      "resposta": "É a unidade de medida do potássio no sangue."
+    },
+    {
+      "pergunta": "Por que o resultado está marcado como \"CRÍTICO\"?",
+      "resposta": "Indica que o valor está muito abaixo do normal e precisa de atenção."
+    },
+    {
+      "pergunta": "O que o médico vai fazer com esse resultado?",
+      "resposta": "O médico vai avaliar o resultado e decidir o que fazer."
+    },
+    {
+      "pergunta": "Isso significa que eu estou doente?",
+      "resposta": "O resultado mostra uma alteração, mas não indica se você está doente."
+    },
+    {
+      "pergunta": "Preciso me preocupar?",
+      "resposta": "O médico vai avaliar o resultado e decidir se é preciso alguma ação."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Potássio",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "cita causa"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 87.6,
+    "explicacao": 72.6,
+    "palavras": 111
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Há um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Potássio"
+    ],
+    "mensagem_enviada": "Exame: Potássio sérico. Paciente: sexo masculino, 57 anos.\nResultados:\n- Potássio: 2,3 mEq/L (referência 3,5–5,1 mEq/L) → ABAIXO da faixa, CRÍTICO\nTom: há um resultado crítico. Seja claro e sério, sem alarmar e sem descrever consequências para a saúde.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Potássio: um sal mineral do sangue, importante para os músculos e o coração",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de potássio sérico mostra que o seu nível de potássio está abaixo do valor esperado. O resultado foi 2,3 mEq/L, e a faixa de referência é de 3,5 a 5,1 mEq/L. Esse resultado está marcado como CRÍTICO no laudo.\n\nO potássio é um sal mineral do sangue, importante para os músculos e o coração. O valor abaixo do normal pode indicar que há menos potássio no seu sangue do que o esperado. Esse resultado será avaliado pelo seu médico na consulta.\n\nDÚVIDAS:\nP: O que significa \"mEq/L\"?\nR: É a unidade de medida do potássio no sangue.\nP: Por que o resultado está marcado como \"CRÍTICO\"?\nR: Indica que o valor está muito abaixo do normal e precisa de atenção.\nP: O que o médico vai fazer com esse resultado?\nR: O médico vai avaliar o resultado e decidir o que fazer.\nP: Isso significa que eu estou doente?\nR: O resultado mostra uma alteração, mas não indica se você está doente.\nP: Preciso me preocupar?\nR: O médico vai avaliar o resultado e decidir se é preciso alguma ação.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

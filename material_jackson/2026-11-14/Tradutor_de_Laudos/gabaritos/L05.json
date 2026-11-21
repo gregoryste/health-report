@@ -1,0 +1,15 @@
+{
+  "id": "L05",
+  "categoria": "imagem",
+  "gabarito_alterados": [
+    "nódulo sólido de 0,6 cm no lobo direito da tireoide"
+  ],
+  "conteudos_obrigatorios": [
+    "Nódulo sólido de 0,6 cm no lado direito da tireoide",
+    "Aparência mais escura e bordas regulares",
+    "Não concluir câncer nem benignidade definitiva"
+  ],
+  "exemplo_explicacao": "O exame descreve um nódulo, uma pequena formação de tecido, de 0,6 cm no lado direito da tireoide. Ele é sólido, aparece mais escuro no ultrassom e tem bordas regulares. Não foram descritas estruturas de defesa aumentadas no pescoço. Esse texto, sozinho, não permite dizer se o nódulo é câncer. A equipe de saúde avaliará o significado do achado.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

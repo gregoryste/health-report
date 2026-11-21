@@ -1,0 +1,13 @@
+{
+  "id": "L10",
+  "categoria": "imagem",
+  "gabarito_alterados": [
+    "discreto espessamento peribrônquico bilateral"
+  ],
+  "conteudos_obrigatorios": [
+    "discreto espessamento peribrônquico bilateral"
+  ],
+  "exemplo_explicacao": "O exame descreve um leve espessamento ao redor dos tubos que levam o ar aos pulmões, dos dois lados. Não descreve áreas focais de preenchimento do pulmão nem líquido ao redor dos pulmões. O tamanho do coração está preservado. A causa dessa alteração deve ser avaliada junto dos sintomas. O laudo não confirma uma infecção nem a necessidade de antibiótico.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

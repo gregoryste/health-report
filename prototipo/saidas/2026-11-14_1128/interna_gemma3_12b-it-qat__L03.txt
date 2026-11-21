@@ -1,0 +1,28 @@
+# interna:gemma3:12b-it-qat · L03
+
+## Entrada
+Exame: Função renal e eletrólitos. Paciente: sexo masculino, 71 anos.
+Resultados:
+- Potássio: 6.8 mEq/L (referência 3.5–5.1 mEq/L) → ACIMA da faixa, CRÍTICO
+- Sódio: 139 mEq/L (referência 136–145 mEq/L) → NORMAL
+- Creatinina: 2.4 mg/dL (referência 0.7–1.3 mg/dL) → ACIMA da faixa, ALTERADO
+- Ureia: 88 mg/dL (referência 15–45 mg/dL) → ACIMA da faixa, ALTERADO
+
+## Resposta
+EXPLICAÇÃO:
+O exame de função renal e eletrólitos mostrou alguns resultados alterados. O potássio está ACIMA do valor esperado, em 6.8 mEq/L, e foi classificado como CRÍTICO. O sódio está dentro da faixa considerada normal. A creatinina, que mede a capacidade dos rins de filtrar o sangue, está ACIMA do valor de referência, em 2.4 mg/dL. A ureia, que também avalia a função dos rins, está ACIMA do valor esperado, em 88 mg/dL. A clínica vai entrar em contato ainda hoje para dar continuidade ao seu acompanhamento.
+
+DÚVIDAS:
+P: O que significa potássio alto?
+R: Isso será avaliado pelo médico na consulta.
+P: Por que a creatinina está alta?
+R: Isso será avaliado pelo médico na consulta.
+P: Preciso tomar algum remédio?
+R: Isso será avaliado pelo médico na consulta.
+P: Isso é grave?
+R: Isso será avaliado pelo médico na consulta.
+P: O que devo fazer agora?
+R: Isso será avaliado pelo médico na consulta.
+
+Converse com o médico sobre os resultados.
+

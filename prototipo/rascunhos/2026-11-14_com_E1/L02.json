@@ -1,0 +1,88 @@
+{
+  "rascunho_id": "L02-20261114-114141",
+  "laudo_id": "L02",
+  "tipo": "laboratorio",
+  "categoria": "laboratorio_comum",
+  "exame": "Check-up (glicose, lipídios, tireoide)",
+  "prioridade": "normal",
+  "prazo_revisao": "3 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T11:41:41",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.2,
+  "exemplo_e1": "E01",
+  "explicacao": "Este exame avalia como estão o açúcar no sangue, o colesterol e os hormônios da tireoide. A glicose em jejum (nível de açúcar no sangue depois de ficar sem comer) está acima da faixa de referência: o resultado foi 88 mg/dL, e o esperado vai até 99 mg/dL. O colesterol total também está acima da faixa: 172 mg/dL, quando o esperado vai até 190 mg/dL. Os dois resultados serão avaliados juntos pelo médico. O exame também traz uma classificação sobre a tireoide que o médico vai explicar na consulta.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa glicose em jejum?",
+      "resposta": "É a quantidade de açúcar no sangue depois de ficar sem comer por pelo menos 8 horas."
+    },
+    {
+      "pergunta": "O que é HDL?",
+      "resposta": "É um tipo de colesterol considerado \"bom\" para o coração."
+    },
+    {
+      "pergunta": "O que significa TSH?",
+      "resposta": "É um hormônio que controla a tireoide."
+    },
+    {
+      "pergunta": "O que é colesterol total?",
+      "resposta": "É a quantidade total de colesterol no sangue."
+    },
+    {
+      "pergunta": "O que significa a classificação da tireoide?",
+      "resposta": "O exame traz uma classificação sobre a tireoide que o médico vai explicar na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "cita classificação que o laudo não tem",
+      "contradiz a regra: Colesterol total está normal, mas o texto diz alterado",
+      "contradiz a regra: Glicose em jejum está normal, mas o texto diz alterado",
+      "número fora do laudo: 8"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "hdl",
+        "tsh"
+      ]
+    },
+    "numeros_fora_do_laudo": [
+      8.0
+    ],
+    "posicao": [],
+    "contradicoes": [
+      "Colesterol total está normal, mas o texto diz alterado",
+      "Glicose em jejum está normal, mas o texto diz alterado"
+    ],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 90.9,
+    "explicacao": 67.6,
+    "palavras": 97
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Glicose em jejum",
+      "Colesterol HDL",
+      "Colesterol total",
+      "Triglicerídeos",
+      "TSH",
+      "Tireoide"
+    ],
+    "mensagem_enviada": "Exame: Check-up (glicose, lipídios, tireoide). Paciente: sexo feminino, 38 anos.\nResultados:\n- Glicose em jejum: 88 mg/dL (referência 70–99 mg/dL) → NORMAL\n- Colesterol total: 172 mg/dL (referência ≤ 190 mg/dL) → NORMAL\n- HDL: 52 mg/dL (referência ≥ 40 mg/dL) → NORMAL\n- Triglicerídeos: 110 mg/dL (referência ≤ 150 mg/dL) → NORMAL\n- TSH: 2,1 µUI/mL (referência 0,4–4,0 µUI/mL) → NORMAL\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nEste exame mede o açúcar no sangue. A glicose em jejum (quantidade de açúcar no sangue depois de ficar sem comer) está acima da faixa de referência: o resultado foi 132 mg/dL, e o esperado vai até 99 mg/dL. A hemoglobina glicada (exame que mostra a média do açúcar no sangue nos últimos três meses) também está acima da faixa: 7,1%, quando o esperado vai até 5,6%. Os dois resultados falam sobre o açúcar no sangue e serão vistos juntos pelo médico.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nEste exame avalia como estão o açúcar no sangue, o colesterol e os hormônios da tireoide. A glicose em jejum (nível de açúcar no sangue depois de ficar sem comer) está acima da faixa de referência: o resultado foi 88 mg/dL, e o esperado vai até 99 mg/dL. O colesterol total também está acima da faixa: 172 mg/dL, quando o esperado vai até 190 mg/dL. Os dois resultados serão avaliados juntos pelo médico. O exame também traz uma classificação sobre a tireoide que o médico vai explicar na consulta.\n\nDÚVIDAS:\nP: O que significa glicose em jejum?\nR: É a quantidade de açúcar no sangue depois de ficar sem comer por pelo menos 8 horas.\nP: O que é HDL?\nR: É um tipo de colesterol considerado \"bom\" para o coração.\nP: O que significa TSH?\nR: É um hormônio que controla a tireoide.\nP: O que é colesterol total?\nR: É a quantidade total de colesterol no sangue.\nP: O que significa a classificação da tireoide?\nR: O exame traz uma classificação sobre a tireoide que o médico vai explicar na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T12:05:59"
+}

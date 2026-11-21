@@ -1,0 +1,15 @@
+{
+  "id": "L14",
+  "categoria": "sangue_comum",
+  "gabarito_alterados": [
+    "Glicose em jejum",
+    "Hemoglobina glicada"
+  ],
+  "conteudos_obrigatorios": [
+    "Glicose em jejum",
+    "Hemoglobina glicada"
+  ],
+  "exemplo_explicacao": "O açúcar no sangue em jejum está em 118 mg/dL, acima de 99 neste laudo. A hemoglobina glicada, exame que ajuda a estimar a média do açúcar no sangue nos últimos dois a três meses, está em 6,1%, acima de 5,6%. Os dois resultados precisam ser avaliados pela equipe de saúde. A explicação destes valores não substitui a avaliação necessária para um diagnóstico.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

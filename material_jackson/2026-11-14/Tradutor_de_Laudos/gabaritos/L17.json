@@ -1,0 +1,13 @@
+{
+  "id": "L17",
+  "categoria": "achado_incidental",
+  "gabarito_alterados": [],
+  "conteudos_obrigatorios": [
+    "Baço acessório de 1,1 cm próximo ao baço",
+    "Achado incidental de tecido adicional",
+    "Ausência de alterações agudas descritas"
+  ],
+  "exemplo_explicacao": "O exame encontrou, por acaso, um pequeno pedaço adicional de tecido do baço, com 1,1 cm, próximo ao próprio órgão. O laudo chama isso de baço acessório. O baço tem tamanho preservado e o estudo não descreve alterações abdominais agudas. A equipe de saúde pode esclarecer esse achado junto dos demais resultados.",
+  "nao_inferir": "Não apresentar como tumor ou afirmar que precisa ser retirado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

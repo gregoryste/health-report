@@ -1,0 +1,13 @@
+{
+  "id": "L08",
+  "categoria": "normal_que_assusta",
+  "gabarito_alterados": [],
+  "conteudos_obrigatorios": [
+    "Três itens dentro das faixas fornecidas",
+    "Explicar leucócitos e plaquetas",
+    "Não garantir ausência de doença"
+  ],
+  "exemplo_explicacao": "Os três resultados apresentados estão dentro das faixas deste laudo. A hemoglobina, proteína que transporta oxigênio no sangue, está em 13,2 g/dL. Os leucócitos, células de defesa, estão em 7.100/mm³. As plaquetas, que ajudam a estancar sangramentos, estão em 265.000/mm³. Esses dados, por si só, não avaliam toda a sua saúde.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

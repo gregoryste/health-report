@@ -1,0 +1,11 @@
+{
+  "id": "L10",
+  "ficticio": true,
+  "tipo": "imagem",
+  "exame": "Radiografia de tórax",
+  "paciente": "Paciente Fictício 10",
+  "sexo": "M",
+  "idade": 42,
+  "data_coleta": "2026-11-14",
+  "texto": "Discreto espessamento peribrônquico bilateral. Ausência de consolidações focais e de derrame pleural. Silhueta cardíaca de dimensões preservadas."
+}

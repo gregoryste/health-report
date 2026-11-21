@@ -1,0 +1,14 @@
+{
+  "id": "L07",
+  "ficticio": true,
+  "tipo": "imagem",
+  "exame": "Ultrassonografia de rins e vias urinárias",
+  "paciente": "Paciente Fictício 07",
+  "sexo": "M",
+  "idade": 54,
+  "data_coleta": "2026-11-14",
+  "texto": "Rins em topografia habitual, com dimensões preservadas. Ausência de litíase e hidronefrose. Incidentalmente, identifica-se cisto cortical simples de 1,2 cm no polo superior do rim esquerdo, anecoico, de paredes finas e sem septações. Bexiga sem alterações descritas.",
+  "gabarito_alterados": [
+    "cisto simples de 1,2 cm no polo superior do rim esquerdo"
+  ]
+}

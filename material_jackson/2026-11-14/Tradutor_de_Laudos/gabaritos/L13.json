@@ -1,0 +1,13 @@
+{
+  "id": "L13",
+  "categoria": "normal_que_assusta",
+  "gabarito_alterados": [],
+  "conteudos_obrigatorios": [
+    "Variação anatômica descrita no rim esquerdo",
+    "Ausência de massas, pedras e dilatação",
+    "Não transformar variante em doença"
+  ],
+  "exemplo_explicacao": "O exame descreve uma parte do tecido normal do rim esquerdo mais saliente, apresentada no laudo como uma variação da anatomia. Não foram descritas massas, pedras ou dilatação nos rins. Os tamanhos e a espessura do tecido estão preservados. A expressão técnica usada no laudo não significa, nesse texto, que tenha sido encontrado um tumor.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

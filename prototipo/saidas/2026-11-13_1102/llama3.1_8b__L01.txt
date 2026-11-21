@@ -1,0 +1,21 @@
+# llama3.1:8b · L01
+
+## Entrada
+Exame: Hemograma. Paciente: sexo masculino, 54 anos.
+Resultados:
+- Hemoglobina: 10.2 g/dL (referência 13.5–17.5 g/dL) → ABAIXO da faixa, ALTERADO
+- VCM: 72 fL (referência 80–100 fL) → ABAIXO da faixa, ALTERADO
+- Leucócitos: 12800 /mm³ (referência 4000–11000 /mm³) → ACIMA da faixa, ALTERADO
+- Plaquetas: 230000 /mm³ (referência 150000–450000 /mm³) → NORMAL
+
+## Resposta
+EXPLICAÇÃO:
+O hemograma é um exame que avalia a contagem de células sanguíneas, como glóbulos vermelhos, brancos e plaquetas. Neste caso, o paciente apresentou alguns resultados alterados. A hemoglobina, que é a proteína que transporta o oxigênio nos glóbulos vermelhos, está abaixo do normal. Isso pode indicar que o paciente tem uma quantidade insuficiente de glóbulos vermelhos ou que essas células não estão funcionando corretamente. Além disso, a contagem de glóbulos brancos (leucócitos) está acima do normal, o que pode indicar que o paciente tem uma inflamação ou uma infecção. Por fim, a contagem de volume corpuscular médio (VCM) também está abaixo do normal, o que pode indicar que os glóbulos vermelhos são menores do que o normal.
+
+DÚVIDAS:
+P: O que isso significa?
+R: Isso significa que o seu exame de sangue mostrou alguns resultados diferentes do que o normal. Vamos discutir esses resultados com o seu médico para entender melhor o que isso significa para você.
+P: Posso ter alguma doença?
+R: Não podemos dizer se você tem uma doença ou não com base nesse exame. O médico precisará examinar você e discutir os resultados com você para entender melhor a situação.
+P: O que posso fazer agora?
+R: A clínica vai entrar em contato com você ainda hoje para discutir os resultados e agendar uma consulta com o médico.

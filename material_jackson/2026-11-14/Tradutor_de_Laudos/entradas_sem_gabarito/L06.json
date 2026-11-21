@@ -1,0 +1,22 @@
+{
+  "id": "L06",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "exame": "Potássio sérico",
+  "paciente": "Paciente Fictício 06",
+  "sexo": "M",
+  "idade": 68,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Potássio",
+      "valor": 6.8,
+      "unidade": "mEq/L",
+      "apelidos": [
+        "potassio"
+      ],
+      "ref_min": 3.5,
+      "ref_max": 5.1
+    }
+  ]
+}

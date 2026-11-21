@@ -1,0 +1,32 @@
+{
+  "id": "L06",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Potássio sérico",
+  "paciente": "Paciente Fictício 06",
+  "sexo": "M",
+  "idade": 68,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Potássio",
+      "valor": 6.8,
+      "unidade": "mEq/L",
+      "apelidos": [
+        "potassio"
+      ],
+      "ref_min": 3.5,
+      "ref_max": 5.1,
+      "critico_min": 2.8,
+      "critico_max": 6.0
+    }
+  ],
+  "gabarito_alterados": [
+    "Potássio"
+  ],
+  "_origem": "Jackson, Pacote_Tradutor_de_Laudos v1.0 (14/11/2026); original em material_jackson/2026-11-14",
+  "_ajustes_gregory": [
+    "Potássio: limites críticos provisórios 2.8 e 6.0 (convenção do L03; a confirmar)"
+  ]
+}

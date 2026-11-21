@@ -1,0 +1,3 @@
+laudo,categoria,prioridade,exemplo_e1,omitidos,suavizacao,alertas,jargao_proibido,jargao_sem_explicacao,flesch_laudo,flesch_explicacao,palavras,n_duvidas,sem_apoio,tempo_s
+L90,achado_incidental,alterado,,,,"fala de prognóstico; posição: 'distal' traduzido como distante/longe (no ureter, distal = perto da bexiga)",,,47.2,62.4,127,5,,3.8
+L91,normal_que_assusta,alterado,,,,cita causa,,,82.6,63.3,110,5,,3.2

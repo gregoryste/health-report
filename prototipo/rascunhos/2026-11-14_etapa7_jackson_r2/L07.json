@@ -1,0 +1,88 @@
+{
+  "rascunho_id": "L07-20261114-151233",
+  "laudo_id": "L07",
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Ultrassonografia de rins e vias urinárias",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:12:33",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.0,
+  "exemplo_e1": "E03",
+  "explicacao": "O ultrassom dos rins e das vias urinárias mostra que os rins estão no lugar de costume e têm tamanho normal. Não foram encontradas pedras (litíase) nem dilatação da parte interna do rim (hidronefrose). Foi visto um cisto (uma pequena bolsa com líquido) na camada externa do rim esquerdo (córtex), na parte de cima (polo superior). O cisto tem 1,2 cm, aparece escuro no ultrassom (anecoico), tem paredes finas e não tem divisões internas (septações). A bexiga está normal.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é um cisto?",
+      "resposta": "É uma pequena bolsa com líquido."
+    },
+    {
+      "pergunta": "O cisto é grave?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que significa que o cisto é anecoico?",
+      "resposta": "Significa que ele aparece escuro na imagem do ultrassom, como acontece com o líquido."
+    },
+    {
+      "pergunta": "O que é o córtex do rim?",
+      "resposta": "É a camada externa do rim."
+    },
+    {
+      "pergunta": "O que significa que os rins têm dimensões preservadas?",
+      "resposta": "Significa que o tamanho deles está dentro do esperado."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "cisto simples de 1,2 cm no polo superior do rim esquerdo",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"Rins em topografia habitual, com dimensões preservadas.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"Ausência de litíase e hidronefrose.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"Identifica-se cisto cortical simples de 1,2 cm no polo superior do rim esquerdo.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"cisto cortical simples de 1,2 cm... anecoico, de paredes finas e sem septações.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"Bexiga sem alterações descritas.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"Cisto: uma pequena bolsa com líquido.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"Anecoico: que aparece escuro no ultrassom, como acontece com o líquido.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"Córtex / cortical (rim): a camada externa do rim.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"Dimensões preservadas: tamanho dentro do esperado.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 38.2,
+    "explicacao": 68.0,
+    "palavras": 87
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Polo superior / polo inferior (rim)",
+      "Cisto",
+      "Córtex / cortical (rim)",
+      "Hidronefrose",
+      "Litíase",
+      "Septações",
+      "Anecoico",
+      "Topografia habitual",
+      "Dimensões preservadas"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de rins e vias urinárias. Paciente: sexo masculino, 54 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nRins em topografia habitual, com dimensões preservadas. Ausência de litíase e hidronefrose. Incidentalmente, identifica-se cisto cortical simples de 1,2 cm no polo superior do rim esquerdo, anecoico, de paredes finas e sem septações. Bexiga sem alterações descritas.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Polo superior / polo inferior (rim): a parte de cima / a parte de baixo do rim\n- Cisto: uma pequena bolsa com líquido\n- Córtex / cortical (rim): a camada externa do rim\n- Hidronefrose: dilatação da parte interna do rim por acúmulo de urina\n- Litíase: presença de pedras (cálculos)\n- Septações: divisões internas\n- Anecoico: que aparece escuro no ultrassom, como acontece com o líquido\n- Topografia habitual: no lugar de costume\n- Dimensões preservadas: tamanho dentro do esperado\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO ultrassom dos rins e das vias urinárias mostra que os rins estão no lugar de costume e têm tamanho normal. Não foram encontradas pedras (litíase) nem dilatação da parte interna do rim (hidronefrose). Foi visto um cisto (uma pequena bolsa com líquido) na camada externa do rim esquerdo (córtex), na parte de cima (polo superior). O cisto tem 1,2 cm, aparece escuro no ultrassom (anecoico), tem paredes finas e não tem divisões internas (septações). A bexiga está normal.\n\nDÚVIDAS:\nP: O que é um cisto?\nR: É uma pequena bolsa com líquido.\nP: O cisto é grave?\nR: Isso será avaliado pelo médico na consulta.\nP: O que significa que o cisto é anecoico?\nR: Significa que ele aparece escuro na imagem do ultrassom, como acontece com o líquido.\nP: O que é o córtex do rim?\nR: É a camada externa do rim.\nP: O que significa que os rins têm dimensões preservadas?\nR: Significa que o tamanho deles está dentro do esperado.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

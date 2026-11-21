@@ -1,0 +1,19 @@
+{
+  "id": "E03",
+  "ficticio": true,
+  "anonimizado": true,
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "prioridade": "alterado",
+  "exame": "Ultrassonografia de tireoide",
+  "palavras_chave": [
+    "tireoide",
+    "nodulo",
+    "cisto",
+    "ultrassonografia",
+    "lobo"
+  ],
+  "explicacao": "O ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.",
+  "aprovado_por": "revisor fictício (exemplo do protótipo)",
+  "data_aprovacao": "2026-11-14"
+}

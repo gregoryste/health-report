@@ -1,0 +1,12 @@
+# Serviço do protótipo (painel, portal, API e webhook do WhatsApp)
+fastapi==0.162.7
+uvicorn==0.54.0
+Jinja2==3.1.6
+python-multipart==0.0.33
+
+# Opcionais
+# openpyxl      # planilha_avaliacao.py (planilhas de avaliação)
+# matplotlib    # etapa5/diagramas e gráficos da avaliação
+# playwright    # etapa8/fonte-video (captura e gravação do vídeo)
+#
+# Ferramentas do sistema (Homebrew): tesseract (+ tesseract-lang), poppler (pdftotext), ffmpeg, cloudflared, Docker

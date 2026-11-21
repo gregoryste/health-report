@@ -1,0 +1,21 @@
+laudo,categoria,prioridade,exemplo_e1,omitidos,suavizacao,alertas,jargao_proibido,jargao_sem_explicacao,flesch_laudo,flesch_explicacao,palavras,n_duvidas,sem_apoio,tempo_s
+L04,sangue_comum,alterado,,,,,,ldl; hdl; triglicerideos,77.1,67.5,90,5,,3.2
+L05,imagem,alterado,E03,,,posição: 'esquerd...' não aparece no laudo; frase sem apoio no laudo (verificador): 2,,,38.5,55.2,108,5,2,3.9
+L06,valor_critico,critico,,,,cita causa,,,87.6,62.5,122,4,,3.1
+L07,achado_incidental,alterado,E03,,,,,,38.2,68.0,87,5,0,3.0
+L08,normal_que_assusta,normal,E02,,,,,,52.6,79.5,71,5,,2.8
+L09,sangue_comum,alterado,E02,,,,,,30.3,62.2,134,5,,4.2
+L10,imagem,alterado,,,,frase sem apoio no laudo (verificador): 3,,peribronquico,-0.8,62.4,85,5,3,3.5
+L11,valor_critico,critico,,,,cita causa,,,87.6,63.0,133,4,,2.8
+L12,achado_incidental,alterado,E03,,,frase sem apoio no laudo (verificador): 1,,ecogenicidade,30.2,58.7,92,5,1,3.6
+L13,normal_que_assusta,alterado,,,,,,,23.3,63.9,93,5,0,3.4
+L14,sangue_comum,alterado,E01,,,,,,43.3,63.9,109,5,,3.3
+L15,imagem,alterado,,fígado discretamente aumentado,,frase sem apoio no laudo (verificador): 2,,,22.2,48.9,127,5,2,4.2
+L16,valor_critico,critico,,,,,,sodio,101.7,70.9,117,4,,2.9
+L17,achado_incidental,alterado,,,,,,,26.1,53.6,99,4,0,3.3
+L18,normal_que_assusta,normal,,,,,,tsh; t4 livre,112.1,82.0,93,4,,3.0
+L19,sangue_comum,alterado,,,,,,,112.1,72.9,100,5,,3.3
+L20,imagem,alterado,,,,frase sem apoio no laudo (verificador): 4,,,26.0,60.4,84,5,4,3.3
+L21,valor_critico,critico,,,,resposta repetida; menos de 3 dúvidas,,,87.6,72.7,172,0,,2.6
+L22,achado_incidental,alterado,E03,,,frase sem apoio no laudo (verificador): 1,,calcificacoes,-4.6,54.6,125,5,1,3.5
+L23,normal_que_assusta,alterado,E02,,,,,,52.6,78.9,109,5,,3.9

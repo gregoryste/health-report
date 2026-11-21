@@ -1,0 +1,115 @@
+{
+  "rascunho_id": "L90-20261114-120439",
+  "laudo_id": "L90",
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Tomografia computadorizada de abdome e pelve",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T12:04:39",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.7,
+  "exemplo_e1": null,
+  "explicacao": "O exame de tomografia do abdome e pelve mostra um cálculo de 0,4 cm no terço distal do ureter esquerdo. Essa pedra está na parte final do canal que leva a urina do rim até a bexiga. O cálculo está causando uma leve dilatação a montante, ou seja, o trecho antes do cálculo ficou um pouco mais largo.\n\nTambém foi encontrada uma imagem cística de 1,8 cm no polo superior do rim direito. Essa imagem é um cisto, uma pequena bolsa com líquido. As paredes desse cisto são finas e o conteúdo é homogêneo, o que é considerado um achado benigno.\n\nO fígado, a vesícula biliar, o pâncreas, os adrenais e o rim direito estão com aparência normal. A bexiga também está normal, sem líquido livre na cavidade.\n\nO laudo também traz uma classificação, que o médico vai explicar na consulta.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é um cisto?",
+      "resposta": "É uma pequena bolsa com líquido."
+    },
+    {
+      "pergunta": "O que significa \"dilatação a montante\"?",
+      "resposta": "Significa que o trecho do ureter antes do cálculo ficou um pouco mais largo."
+    },
+    {
+      "pergunta": "O que são adrenais?",
+      "resposta": "São pequenas glândulas que ficam em cima dos rins."
+    },
+    {
+      "pergunta": "O que é o polo superior do rim?",
+      "resposta": "É a parte de cima do rim."
+    },
+    {
+      "pergunta": "O que significa \"a classificação do laudo\"?",
+      "resposta": "O motivo desse resultado será avaliado pelo médico na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Cálculo no ureter esquerdo",
+        "origem": "gabarito (teste)",
+        "citado": true
+      },
+      {
+        "nome": "Cisto no rim direito",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "fala de prognóstico",
+      "frase sem apoio no laudo (verificador): 2"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "explicação",
+          "frase": "As paredes desse cisto são finas e o conteúdo é homogêneo, o que é considerado um achado benigno.",
+          "motivo": "O laudo não afirma que é um achado benigno, apenas descreve as características."
+        },
+        {
+          "onde": "dúvida: O que significa \"a classificação do laudo\"?",
+          "frase": "É uma classificação para cistos renais, indicando um achado benigno.",
+          "motivo": "O laudo descreve a classificação Bosniak I, mas não afirma ser um achado benigno."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Cálculo de 0,4 cm no ureter distal esquerdo'.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"Ureter é definido como o canal que leva a urina do rim até a bexiga.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'discreta dilatação a montante'.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'imagem cística de 1,8 cm no polo superior do rim direito'.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"Cisto é definido como uma pequena bolsa com líquido.\"}, {\"n\": 6, \"apoio\": \"nao\", \"motivo\": \"O laudo não afirma que é um achado benigno, apenas descreve as características.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Fígado de dimensões normais...Pâncreas, baço e adrenais sem alterações...Rim direito de dimensões normais'.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Bexiga com paredes regulares. Ausência de líquido livre na cavidade'.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"Cisto é definido como uma pequena bolsa com líquido.\"}, {\"n\": 10, \"apoio\": \"sim\", \"motivo\": \"Dilatação a montante é definida como o trecho antes do cálculo ficou um pouco mais largo.\"}, {\"n\": 11, \"apoio\": \"sim\", \"motivo\": \"Adrenais são definidas como pequenas glândulas que ficam em cima dos rins.\"}, {\"n\": 12, \"apoio\": \"sim\", \"motivo\": \"Polo superior (rim) é definido como a parte de cima do rim.\"}, {\"n\": 13, \"apoio\": \"nao\", \"motivo\": \"O laudo descreve a classificação Bosniak I, mas não afirma ser um achado benigno.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 47.2,
+    "explicacao": 68.7,
+    "palavras": 149
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "O laudo também traz uma classificação, que o médico vai explicar na consulta.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [
+      {
+        "pergunta": "O que significa \"Bosniak I\"?",
+        "resposta": "É uma classificação para cistos renais, indicando um achado benigno."
+      }
+    ],
+    "escores_ocultados": [
+      "Bosniak I"
+    ],
+    "definicoes_do_glossario": [
+      "Ureter",
+      "Terço distal do ureter",
+      "Polo superior / polo inferior (rim)",
+      "Adrenais",
+      "Vesícula biliar",
+      "Líquido livre",
+      "Cisto",
+      "Cálculo",
+      "Dilatação a montante"
+    ],
+    "mensagem_enviada": "Exame: Tomografia computadorizada de abdome e pelve. Paciente: sexo masculino, 44 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nEste laudo traz um escore ou classificação. Na explicação e nas dúvidas, não escreva o nome nem o número dele, não diga o que significa nem se o risco é alto ou baixo. Não escreva nada sobre ela na explicação: o sistema acrescenta uma frase sobre isso.\nTexto do laudo:\nTOMOGRAFIA COMPUTADORIZADA DE ABDOME E PELVE SEM CONTRASTE\nIndicação: dor lombar à esquerda.\nTécnica: aquisição helicoidal, sem administração de meio de contraste.\nFígado de dimensões normais e densidade habitual. Vesícula biliar sem cálculos radiopacos. Pâncreas, baço e adrenais sem alterações.\nRim direito de dimensões normais, com imagem cística de 1,8 cm no polo superior, de paredes finas e conteúdo homogêneo (Bosniak I).\nRim esquerdo de dimensões normais, sem cálculos. Ureter esquerdo com cálculo de 0,4 cm no terço distal, determinando discreta dilatação a montante.\nBexiga com paredes regulares. Ausência de líquido livre na cavidade.\nIMPRESSÃO: Cálculo de 0,4 cm no ureter distal esquerdo, com discreta dilatação a montante. Cisto renal simples no polo superior do rim direito (Bosniak I).\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Ureter: o canal que leva a urina do rim até a bexiga\n- Terço distal do ureter: a parte final do ureter, a mais perto da bexiga\n- Polo superior / polo inferior (rim): a parte de cima / a parte de baixo do rim\n- Adrenais: pequenas glândulas que ficam em cima dos rins\n- Vesícula biliar: pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão\n- Líquido livre: líquido fora dos órgãos, dentro da barriga\n- Cisto: uma pequena bolsa com líquido\n- Cálculo: uma pedra formada por sais minerais\n- Dilatação a montante: o trecho antes do cálculo ficou um pouco mais largo",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de tomografia do abdome e pelve mostra um cálculo de 0,4 cm no terço distal do ureter esquerdo. Essa pedra está na parte final do canal que leva a urina do rim até a bexiga. O cálculo está causando uma leve dilatação a montante, ou seja, o trecho antes do cálculo ficou um pouco mais largo.\n\nTambém foi encontrada uma imagem cística de 1,8 cm no polo superior do rim direito. Essa imagem é um cisto, uma pequena bolsa com líquido. As paredes desse cisto são finas e o conteúdo é homogêneo, o que é considerado um achado benigno.\n\nO fígado, a vesícula biliar, o pâncreas, os adrenais e o rim direito estão com aparência normal. A bexiga também está normal, sem líquido livre na cavidade.\n\nDÚVIDAS:\nP: O que é um cisto?\nR: É uma pequena bolsa com líquido.\nP: O que significa \"dilatação a montante\"?\nR: Significa que o trecho do ureter antes do cálculo ficou um pouco mais largo.\nP: O que são adrenais?\nR: São pequenas glândulas que ficam em cima dos rins.\nP: O que é o polo superior do rim?\nR: É a parte de cima do rim.\nP: O que significa \"Bosniak I\"?\nR: É uma classificação para cistos renais, indicando um achado benigno.\n"
+  },
+  "reprocessado_em": "2026-11-14T12:05:59"
+}

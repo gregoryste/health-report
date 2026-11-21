@@ -1,0 +1,26 @@
+# qwen3:8b · L01
+
+## Entrada
+Exame: Hemograma. Paciente: sexo masculino, 54 anos.
+Resultados:
+- Hemoglobina: 10.2 g/dL (referência 13.5–17.5 g/dL) → ABAIXO da faixa, ALTERADO
+- VCM: 72 fL (referência 80–100 fL) → ABAIXO da faixa, ALTERADO
+- Leucócitos: 12800 /mm³ (referência 4000–11000 /mm³) → ACIMA da faixa, ALTERADO
+- Plaquetas: 230000 /mm³ (referência 150000–450000 /mm³) → NORMAL
+
+## Resposta
+EXPLICAÇÃO:  
+Seu hemograma mostra alguns valores alterados. A hemoglobina está abaixo da faixa normal (10,2 g/dL), o VCM também está abaixo (72 fL). Leucócitos estão acima da faixa (12.800 /mm³). Plaquetas estão normais. Esses resultados podem indicar uma perda de sangue, anemia ou outra condição. A clínica entrará em contato ainda hoje para orientar sobre o próximo passo.
+
+DÚVIDAS:  
+P: O que significa hemoglobina abaixo da normal?  
+R: Hemoglobina é a proteína no sangue que transporta oxigênio. Valor abaixo pode indicar perda de sangue ou anemia.  
+
+P: Por que o VCM está abaixo?  
+R: VCM mede o tamanho das células do sangue. Valor abaixo pode indicar anemia ou deficiência de ferro.  
+
+P: Leucócitos acima da normal significa algo grave?  
+R: Leucócitos são células do sistema imunológico. Valor acima pode indicar infecção ou outra condição.  
+
+P: Por que a clínica vai me ligar?  
+R: Porque alguns valores estão alterados e precisam ser investigados.

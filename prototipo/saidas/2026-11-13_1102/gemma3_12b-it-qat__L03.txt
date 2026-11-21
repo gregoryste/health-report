@@ -1,0 +1,29 @@
+# gemma3:12b-it-qat · L03
+
+## Entrada
+Exame: Função renal e eletrólitos. Paciente: sexo masculino, 71 anos.
+Resultados:
+- Potássio: 6.8 mEq/L (referência 3.5–5.1 mEq/L) → ACIMA da faixa, CRÍTICO
+- Sódio: 139 mEq/L (referência 136–145 mEq/L) → NORMAL
+- Creatinina: 2.4 mg/dL (referência 0.7–1.3 mg/dL) → ACIMA da faixa, ALTERADO
+- Ureia: 88 mg/dL (referência 15–45 mg/dL) → ACIMA da faixa, ALTERADO
+
+## Resposta
+EXPLICAÇÃO:
+Seu exame de função renal e eletrólitos mostrou alguns resultados que precisam de atenção. O exame avalia como seus rins estão funcionando e os níveis de algumas substâncias importantes no seu sangue.
+
+Identificamos que o **Potássio** está **ACIMA** do valor esperado, e este resultado é considerado **CRÍTICO**. A clínica entrará em contato com você ainda hoje para te orientar. O **Sódio** está dentro do normal. A **Creatinina** e a **Ureia** também estão **ACIMA** do que é considerado normal. Esses dois itens são classificados como **ALTERADOS**. A creatinina e a ureia são substâncias que os rins ajudam a eliminar do corpo. Níveis altos podem indicar que os rins não estão funcionando tão bem quanto deveriam.
+
+É importante conversar com seu médico sobre esses resultados para entender o que eles significam para você e quais os próximos passos.
+
+DÚVIDAS:
+P: O que significa Potássio alto e crítico?
+R: Significa que o nível de potássio no seu sangue está muito elevado e requer atenção imediata.
+P: Por que a Creatinina e a Ureia estão altas?
+R: Isso pode indicar que os rins não estão filtrando o sangue como deveriam.
+P: Preciso tomar algum remédio?
+R: Não podemos indicar remédio. Seu médico vai avaliar e decidir o que é melhor para você.
+P: O que devo fazer agora?
+R: Converse com seu médico sobre os resultados do exame.
+P: Esse exame indica que tenho alguma doença?
+R: O exame mostra alterações, mas não indica o diagnóstico.

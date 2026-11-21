@@ -1,0 +1,22 @@
+{
+  "id": "L03",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Função renal e eletrólitos",
+  "paciente": "Paciente Fictício 03",
+  "sexo": "M",
+  "idade": 71,
+  "data_coleta": "2026-11-11",
+  "itens": [
+    {"analito": "Potássio", "valor": 6.8, "unidade": "mEq/L", "ref_min": 3.5, "ref_max": 5.1, "critico_min": 2.8, "critico_max": 6.0,
+     "apelidos": ["potassio"]},
+    {"analito": "Sódio", "valor": 139, "unidade": "mEq/L", "ref_min": 136, "ref_max": 145, "critico_min": 120, "critico_max": 160,
+     "apelidos": ["sodio"]},
+    {"analito": "Creatinina", "valor": 2.4, "unidade": "mg/dL", "ref_min": 0.7, "ref_max": 1.3,
+     "apelidos": ["creatinina"]},
+    {"analito": "Ureia", "valor": 88, "unidade": "mg/dL", "ref_min": 15, "ref_max": 45,
+     "apelidos": ["ureia"]}
+  ],
+  "gabarito_alterados": ["Potássio", "Creatinina", "Ureia"]
+}

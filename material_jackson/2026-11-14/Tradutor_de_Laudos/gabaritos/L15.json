@@ -1,0 +1,17 @@
+{
+  "id": "L15",
+  "categoria": "imagem",
+  "gabarito_alterados": [
+    "fígado discretamente aumentado",
+    "achados sugestivos de esteatose hepática",
+    "cálculo de 0,8 cm na vesícula biliar"
+  ],
+  "conteudos_obrigatorios": [
+    "fígado discretamente aumentado",
+    "achados sugestivos de esteatose hepática",
+    "cálculo de 0,8 cm na vesícula biliar"
+  ],
+  "exemplo_explicacao": "O fígado está um pouco aumentado e tem uma aparência que sugere acúmulo de gordura. O exame também descreve uma pedra móvel de 0,8 cm na vesícula, sem espessamento da parede. Não foram descritas lesões localizadas no fígado nem dilatação dos canais da bile. A equipe deve avaliar esses achados junto do seu histórico. O exame não determina sozinho a causa nem a necessidade de cirurgia.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "L21",
+  "categoria": "valor_critico",
+  "gabarito_alterados": [
+    "Potássio"
+  ],
+  "conteudos_obrigatorios": [
+    "Potássio 2,3 mEq/L baixo",
+    "Avaliação imediata mesmo sem sintomas",
+    "Não recomendar suplementação"
+  ],
+  "exemplo_explicacao": "O potássio está em 2,3 mEq/L, muito abaixo da faixa de 3,5 a 5,1 deste laudo. Isso pode afetar os músculos e os batimentos do coração. Procure avaliação médica imediata, mesmo sem sintomas. Não espere pelo portal e não tome suplementos por conta própria.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "avaliacao_imediata"
+}

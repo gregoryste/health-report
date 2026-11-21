@@ -1,0 +1,79 @@
+{
+  "rascunho_id": "L17-20261114-151414",
+  "laudo_id": "L17",
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Tomografia de abdome",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:14:14",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.3,
+  "exemplo_e1": null,
+  "explicacao": "O exame de tomografia do abdome mostra que o baço tem dimensões preservadas, ou seja, o tamanho está normal. Foi encontrado um baço acessório, que é uma pequena porção extra de tecido de baço, separada do baço principal. Ele tem 1,1 cm e está localizado junto ao hilo esplênico, que é a região do baço por onde entram e saem os vasos sanguíneos. O baço acessório tem características semelhantes ao baço principal. Não foram encontradas alterações abdominais agudas, ou seja, não há problemas de início recente que precisariam de atenção imediata.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é o baço acessório?",
+      "resposta": "É uma pequena porção extra de tecido de baço, separada do baço principal. É uma variação que algumas pessoas têm desde o nascimento."
+    },
+    {
+      "pergunta": "O que significa \"hilo esplênico\"?",
+      "resposta": "É a região do baço por onde entram e saem os vasos sanguíneos."
+    },
+    {
+      "pergunta": "O que são \"alterações agudas\"?",
+      "resposta": "São problemas de início recente, que costumam precisar de atendimento rápido."
+    },
+    {
+      "pergunta": "O que significa \"dimensões preservadas\"?",
+      "resposta": "Significa que o tamanho do baço está dentro do esperado."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "baço acessório de 1,1 cm junto ao hilo esplênico",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o baço tem dimensões preservadas, e a definição aprovada diz que dimensões preservadas significa tamanho dentro do esperado.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo identifica um baço acessório, e a definição aprovada descreve o que é um baço acessório.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o baço acessório tem 1,1 cm e está junto ao hilo esplênico, e a definição aprovada descreve o que é o hilo esplênico.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o baço acessório tem densidade e realce semelhantes ao baço.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma ausência de alterações abdominais agudas, e a definição aprovada descreve o que são alterações agudas.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"É uma definição aprovada de baço acessório.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"É uma definição aprovada de hilo esplênico.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"É uma definição aprovada de alterações agudas.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o baço tem dimensões preservadas, e a definição aprovada diz que dimensões preservadas significa tamanho dentro do esperado.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 26.1,
+    "explicacao": 53.6,
+    "palavras": 99
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Baço acessório",
+      "Hilo esplênico",
+      "Alterações agudas",
+      "Dimensões preservadas"
+    ],
+    "mensagem_enviada": "Exame: Tomografia de abdome. Paciente: sexo masculino, 44 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nBaço de dimensões preservadas. Identifica-se incidentalmente baço acessório de 1,1 cm junto ao hilo esplênico, com densidade e realce semelhantes ao baço. Ausência de alterações abdominais agudas no estudo.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Baço acessório: pequena porção extra de tecido de baço, separada do baço principal; é uma variação que algumas pessoas têm desde o nascimento\n- Hilo esplênico: a região do baço por onde entram e saem os vasos sanguíneos\n- Alterações agudas: problemas de início recente, que costumam precisar de atendimento rápido\n- Dimensões preservadas: tamanho dentro do esperado",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de tomografia do abdome mostra que o baço tem dimensões preservadas, ou seja, o tamanho está normal. Foi encontrado um baço acessório, que é uma pequena porção extra de tecido de baço, separada do baço principal. Ele tem 1,1 cm e está localizado junto ao hilo esplênico, que é a região do baço por onde entram e saem os vasos sanguíneos. O baço acessório tem características semelhantes ao baço principal. Não foram encontradas alterações abdominais agudas, ou seja, não há problemas de início recente que precisariam de atenção imediata.\n\nDÚVIDAS:\nP: O que é o baço acessório?\nR: É uma pequena porção extra de tecido de baço, separada do baço principal. É uma variação que algumas pessoas têm desde o nascimento.\nP: O que significa \"hilo esplênico\"?\nR: É a região do baço por onde entram e saem os vasos sanguíneos.\nP: O que são \"alterações agudas\"?\nR: São problemas de início recente, que costumam precisar de atendimento rápido.\nP: O que significa \"dimensões preservadas\"?\nR: Significa que o tamanho do baço está dentro do esperado.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

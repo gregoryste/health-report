@@ -1,0 +1,20 @@
+# estado do real antes da 4.3 (19:13:27)
+pacientes=9
+laudos=9
+rascunhos=6
+publicacoes=9
+alertas=9
+avisos=94
+fila=14
+chat=52
+usuarios=3
+consentimentos=5
+envios=1
+--usuarios
+helena|medico|1
+jackson.pandolfo|admin|1
+lucas.toledo|admin|1
+--pacientes
+P01 P02 P03 P04 P05 P06 P07 P90 P91 
+registro_linhas=6
+db_mtime=1794686521 db_size=241664

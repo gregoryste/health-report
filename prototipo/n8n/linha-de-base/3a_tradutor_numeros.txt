@@ -1,0 +1,8 @@
+laudos=20
+omissao=0/20
+suavizacao=0/20
+jargao_proibido=0/20
+jargao_sem_explicacao=6/20
+com_alerta=9/20
+criticos=4 ['L06', 'L11', 'L16', 'L21'] (esperados L06 L11 L16 L21)
+prioridades= {'alterado': 14, 'critico': 4, 'normal': 2}

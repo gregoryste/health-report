@@ -1,0 +1,84 @@
+{
+  "rascunho_id": "L12-20261114-150534",
+  "laudo_id": "L12",
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Ultrassonografia de abdome superior",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:05:34",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.8,
+  "exemplo_e1": "E03",
+  "explicacao": "O ultrassom do abdome superior (parte de baixo do tórax e parte de cima da barriga) mostrou que o fígado (órgão que ajuda a limpar o sangue) tem tamanho e aparência normais. Foi visto um cisto (uma pequena bolsa com líquido) no fígado, mais precisamente no segmento VI hepático, que é uma área do fígado. O cisto tem 0,9 cm de diâmetro, não tem áreas internas (anecoico), tem paredes finas e não tem divisões internas (sem septações). As vias biliares (tubos que levam a bile do fígado para a vesícula e intestino) não estão dilatadas. A vesícula (pequena bolsa que armazena a bile) não tem cálculos (pedras).\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é o segmento VI hepático?",
+      "resposta": "É uma área do fígado. O fígado é dividido em segmentos para ajudar os médicos a localizarem problemas."
+    },
+    {
+      "pergunta": "O que significa \"anecoico\"?",
+      "resposta": "Significa que o cisto não tem áreas internas que reflitam o ultrassom."
+    },
+    {
+      "pergunta": "O que são as vias biliares?",
+      "resposta": "São tubos que levam a bile do fígado para a vesícula e intestino."
+    },
+    {
+      "pergunta": "O que é ecogenicidade?",
+      "resposta": "É como o fígado aparece no ultrassom. No caso, o laudo diz que a ecogenicidade do fígado está normal."
+    },
+    {
+      "pergunta": "O que significa \"sem septações\"?",
+      "resposta": "Significa que o cisto não tem divisões internas."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "cisto simples de 0,9 cm no segmento VI do fígado",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "ecogenicidade"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o fígado tem dimensões e ecogenicidade preservadas, o que implica tamanho e aparência normais.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve um cisto no fígado, especificando o segmento VI hepático.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o cisto com as características mencionadas: 0,9 cm, anecoico, paredes finas e sem septações.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que as vias biliares não estão dilatadas.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que a vesícula não tem cálculos.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona que o fígado é dividido em segmentos para ajudar os médicos a localizarem problemas.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o cisto como 'anecoico', o que significa que não tem áreas internas que reflitam o ultrassom.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve as vias biliares como tubos que levam a bile do fígado para a vesícula e intestino.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que a ecogenicidade do fígado está normal, o que significa como ele aparece no ultrassom.\"}, {\"n\": 10, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o cisto como 'sem septações', o que significa que não tem divisões internas'.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 30.2,
+    "explicacao": 64.8,
+    "palavras": 115
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Cisto",
+      "Cálculo",
+      "Ecogenicidade aumentada (fígado)"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de abdome superior. Paciente: sexo feminino, 58 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nFígado de dimensões e ecogenicidade preservadas. Pequeno cisto simples no segmento VI hepático, medindo 0,9 cm, anecoico, de paredes finas, sem septações. Vias biliares não dilatadas. Vesícula sem cálculos.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Cisto: uma pequena bolsa com líquido\n- Cálculo: uma pedra formada por sais minerais\n- Ecogenicidade aumentada (fígado): o fígado aparece mais claro no ultrassom\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO ultrassom do abdome superior (parte de baixo do tórax e parte de cima da barriga) mostrou que o fígado (órgão que ajuda a limpar o sangue) tem tamanho e aparência normais. Foi visto um cisto (uma pequena bolsa com líquido) no fígado, mais precisamente no segmento VI hepático, que é uma área do fígado. O cisto tem 0,9 cm de diâmetro, não tem áreas internas (anecoico), tem paredes finas e não tem divisões internas (sem septações). As vias biliares (tubos que levam a bile do fígado para a vesícula e intestino) não estão dilatadas. A vesícula (pequena bolsa que armazena a bile) não tem cálculos (pedras).\n\nDÚVIDAS:\nP: O que é o segmento VI hepático?\nR: É uma área do fígado. O fígado é dividido em segmentos para ajudar os médicos a localizarem problemas.\nP: O que significa \"anecoico\"?\nR: Significa que o cisto não tem áreas internas que reflitam o ultrassom.\nP: O que são as vias biliares?\nR: São tubos que levam a bile do fígado para a vesícula e intestino.\nP: O que é ecogenicidade?\nR: É como o fígado aparece no ultrassom. No caso, o laudo diz que a ecogenicidade do fígado está normal.\nP: O que significa \"sem septações\"?\nR: Significa que o cisto não tem divisões internas.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

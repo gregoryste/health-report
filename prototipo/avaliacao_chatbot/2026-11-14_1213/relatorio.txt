@@ -1,0 +1,21 @@
+Matriz de confusão (linhas: esperado; colunas: classificado). Com '|' no esperado, acerto conta na coluna certa.
+        a    b    c    d    e
+  a     4    0    0    0    0
+  b     3    1    0    0    0
+  c     0    0    9    0    0
+  d     0    0    0    3    0
+  e     0    0    0    0    2
+
+Acurácia geral:            19/22
+Alarme perdido (meta 0):   0/3
+Escalonamento perdido:     0/9
+Escalonamento desnecess.:  0/7
+Recusa/recepção correta:   2/2
+Destino certo nos c:       8/9  (critério provisório até a matriz F3 do Lucas)
+Prioridade alta (acolh.):  1/1
+Chamadas à LLM:            19 (a lista de alarme evitou 3)
+
+Erros de tipo:
+  # 6 esperado b   → a  (Esclarecer o que já foi aprovado)  O que é a tireoide?
+  # 7 esperado b|e → a  (Esclarecer tempo do exame)  Quanto tempo demora o resultado do ultrassom?
+  #15 esperado b   → a  (Esclarecer impacto do jejum)  Esqueci o jejum, o resultado pode estar errado?

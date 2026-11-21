@@ -1,0 +1,50 @@
+{
+  "modelo": "gemma3:12b-it-qat",
+  "temperatura": 0.0,
+  "pausa_s": 3.0,
+  "e1_exemplos": true,
+  "verificar_apoio": "imagem",
+  "laudos": [
+    "L04_perfil_lipidico.json",
+    "L05_ultrassonografia_de_tireoide.json",
+    "L06_potassio_serico.json",
+    "L07_ultrassonografia_de_rins_e_vias_urinaria.json",
+    "L08_hemograma_parcial.json",
+    "L09_hemograma_parcial.json",
+    "L10_radiografia_de_torax.json",
+    "L11_glicose_plasmatica_em_jejum.json",
+    "L12_ultrassonografia_de_abdome_superior.json",
+    "L13_ultrassonografia_de_rins.json",
+    "L14_glicose_e_hemoglobina_glicada.json",
+    "L15_ultrassonografia_de_abdome_superior.json",
+    "L16_sodio_serico.json",
+    "L17_tomografia_de_abdome.json",
+    "L18_tsh_e_t4_livre.json",
+    "L19_tsh_e_t4_livre.json",
+    "L20_radiografia_de_coluna_lombar.json",
+    "L21_potassio_serico.json",
+    "L22_tomografia_de_torax.json",
+    "L23_hemograma_parcial.json"
+  ],
+  "rodada": "etapa 7 — laudos do Jackson (L04–L23), 2ª rodada (declarada)",
+  "data": "2026-11-14T15:11:59",
+  "prompt_sha256": "e978f4e4bbb00be5",
+  "glossario_sha256": "c4231182553ff231",
+  "jargao_sha256": {
+    "proibidos.txt": "557a6404aed9b192",
+    "permitidos_se_explicados.txt": "03f848ae74202ab7"
+  },
+  "mudanca_em_relacao_a_1a": "SÓ o glossário: +27 definições (rascunho, a revisar com o grupo) para os termos que a 1ª rodada definiu por conta própria. Prompt igual (mesmo hash). Checagens já com as correções declaradas na 1ª rodada.",
+  "rodada_anterior": "rascunhos/2026-11-14_etapa7_jackson",
+  "revisoes_checagens": [
+    {
+      "quando": "2026-11-14, depois da rodada",
+      "chamou_llm": false,
+      "prompt_alterado": false,
+      "o_que": [
+        "reprocessado com os laudos atuais: a cópia usada na geração ainda não tinha o apelido corrigido do L15 (falsa omissão)"
+      ],
+      "resumo_antes": "resumo_antes_reprocessar.csv"
+    }
+  ]
+}

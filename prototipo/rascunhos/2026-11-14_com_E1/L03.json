@@ -1,0 +1,94 @@
+{
+  "rascunho_id": "L03-20261114-114148",
+  "laudo_id": "L03",
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Função renal e eletrólitos",
+  "prioridade": "critico",
+  "prazo_revisao": "mesmo dia + ligação",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T11:41:48",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 4.3,
+  "exemplo_e1": "E04",
+  "explicacao": "Este exame analisa a função dos rins e a quantidade de sais minerais no sangue. O potássio está acima do valor esperado: o resultado foi 6,8 mEq/L, e a faixa de referência é de 3,5 a 5,1 mEq/L. Esse valor foi marcado como crítico, o que significa que precisa de atenção imediata. A creatinina está acima da faixa de referência: o resultado foi 2,4 mg/dL, e o esperado é de 0,7 a 1,3 mg/dL. A ureia também está acima do valor esperado: o resultado foi 88 mg/dL, e a faixa de referência é de 15 a 45 mg/dL. O sódio está dentro dos limites considerados normais. O laudo traz uma classificação que o médico vai explicar na consulta.\n\nHá um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa potássio alto?",
+      "resposta": "O potássio é um mineral importante para o funcionamento do corpo. O resultado está acima do valor esperado, e isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Por que a creatinina está alta?",
+      "resposta": "A creatinina é um exame que mostra como os rins estão funcionando. O resultado está acima do valor esperado, e isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que é ureia?",
+      "resposta": "A ureia é um exame que mostra como os rins estão funcionando. O resultado está acima do valor esperado, e isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Preciso me preocupar com o resultado do sódio?",
+      "resposta": "O sódio está dentro da faixa considerada normal."
+    },
+    {
+      "pergunta": "O que significa que o resultado é \"crítico\"?",
+      "resposta": "Significa que o resultado precisa ser visto com atenção imediata pela equipe médica."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Potássio",
+        "origem": "regra",
+        "citado": true
+      },
+      {
+        "nome": "Creatinina",
+        "origem": "regra",
+        "citado": true
+      },
+      {
+        "nome": "Ureia",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "cita classificação que o laudo não tem"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "sodio"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 91.2,
+    "explicacao": 74.0,
+    "palavras": 146
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Há um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Potássio",
+      "Sódio",
+      "Creatinina",
+      "Ureia"
+    ],
+    "mensagem_enviada": "Exame: Função renal e eletrólitos. Paciente: sexo masculino, 71 anos.\nResultados:\n- Potássio: 6,8 mEq/L (referência 3,5–5,1 mEq/L) → ACIMA da faixa, CRÍTICO\n- Sódio: 139 mEq/L (referência 136–145 mEq/L) → NORMAL\n- Creatinina: 2,4 mg/dL (referência 0,7–1,3 mg/dL) → ACIMA da faixa, ALTERADO\n- Ureia: 88 mg/dL (referência 15–45 mg/dL) → ACIMA da faixa, ALTERADO\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nEste exame mede sais minerais do sangue que ajudam o corpo a funcionar. O sódio está muito abaixo da faixa de referência: o resultado foi 118 mEq/L, e o esperado é de 136 a 145 mEq/L. Esse valor foi marcado como crítico, ou seja, precisa ser visto pela equipe com rapidez. O potássio está dentro do esperado.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nEste exame analisa a função dos rins e a quantidade de sais minerais no sangue. O potássio está acima do valor esperado: o resultado foi 6,8 mEq/L, e a faixa de referência é de 3,5 a 5,1 mEq/L. Esse valor foi marcado como crítico, o que significa que precisa de atenção imediata. A creatinina está acima da faixa de referência: o resultado foi 2,4 mg/dL, e o esperado é de 0,7 a 1,3 mg/dL. A ureia também está acima do valor esperado: o resultado foi 88 mg/dL, e a faixa de referência é de 15 a 45 mg/dL. O sódio está dentro dos limites considerados normais. O laudo traz uma classificação que o médico vai explicar na consulta.\n\nDÚVIDAS:\nP: O que significa potássio alto?\nR: O potássio é um mineral importante para o funcionamento do corpo. O resultado está acima do valor esperado, e isso será avaliado pelo médico na consulta.\nP: Por que a creatinina está alta?\nR: A creatinina é um exame que mostra como os rins estão funcionando. O resultado está acima do valor esperado, e isso será avaliado pelo médico na consulta.\nP: O que é ureia?\nR: A ureia é um exame que mostra como os rins estão funcionando. O resultado está acima do valor esperado, e isso será avaliado pelo médico na consulta.\nP: Preciso me preocupar com o resultado do sódio?\nR: O sódio está dentro da faixa considerada normal.\nP: O que significa que o resultado é \"crítico\"?\nR: Significa que o resultado precisa ser visto com atenção imediata pela equipe médica.\n"
+  },
+  "reprocessado_em": "2026-11-14T12:05:59"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "L10",
+  "ficticio": true,
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Radiografia de tórax",
+  "paciente": "Paciente Fictício 10",
+  "sexo": "M",
+  "idade": 42,
+  "data_coleta": "2026-11-14",
+  "texto": "Discreto espessamento peribrônquico bilateral. Ausência de consolidações focais e de derrame pleural. Silhueta cardíaca de dimensões preservadas.",
+  "gabarito_alterados": [
+    {
+      "achado": "discreto espessamento peribrônquico bilateral",
+      "apelidos": [
+        "espessamento",
+        "bronquio"
+      ]
+    }
+  ],
+  "achado_critico": false,
+  "_origem": "Jackson, Pacote_Tradutor_de_Laudos v1.0 (14/11/2026); original em material_jackson/2026-11-14",
+  "_ajustes_gregory": [
+    "gabarito de imagem com apelidos curtos para a checagem de omissão"
+  ]
+}

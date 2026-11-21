@@ -1,0 +1,23 @@
+# llama3.1:8b · L02
+
+## Entrada
+Exame: Check-up (glicose, lipídios, tireoide). Paciente: sexo feminino, 38 anos.
+Resultados:
+- Glicose em jejum: 88 mg/dL (referência 70–99 mg/dL) → NORMAL
+- Colesterol total: 172 mg/dL (referência ≤ 190 mg/dL) → NORMAL
+- HDL: 52 mg/dL (referência ≥ 40 mg/dL) → NORMAL
+- Triglicerídeos: 110 mg/dL (referência ≤ 150 mg/dL) → NORMAL
+- TSH: 2.1 µUI/mL (referência 0.4–4.0 µUI/mL) → NORMAL
+
+## Resposta
+EXPLICAÇÃO:
+O exame de check-up feito para você mostrou os seguintes resultados:
+- A glicose no sangue, quando você estava em jejum, foi de 88 mg/dL. Isso está dentro da faixa normal, que é de 70 a 99 mg/dL.
+- O colesterol total no sangue foi de 172 mg/dL, o que também está dentro da faixa normal, que é até 190 mg/dL.
+- O HDL (o "bom" colesterol) foi de 52 mg/dL, o que está dentro da faixa normal, que é de 40 mg/dL em diante.
+- Os triglicerídeos no sangue foram de 110 mg/dL, o que também está dentro da faixa normal, que é até 150 mg/dL.
+- O TSH (uma medida da tireoide) foi de 2,1 µUI/mL, o que está dentro da faixa normal, que é de 0,4 a 4,0 µUI/mL.
+
+DÚVIDAS:
+P: O que significa que o colesterol está normal?
+R: Isso significa que o nível de colesterol no seu sangue está dentro do que é considerado saudável.

@@ -1,0 +1,33 @@
+Arquivos: 25 (15 de laboratório, 10 de imagem). Uma chamada à LLM por arquivo.
+
+LABORATÓRIO, item a item:
+  corretos:   23/35
+  descartados (seguro, pede outra foto): 8/35
+  lidos errado, mas barrados pela plausibilidade (vão para a equipe): 2/35
+  ERRADOS que passariam para o paciente: 2/35   ← meta: zero
+
+Por condição (laboratório):
+  desfocada    corretos 0/7 · errados 0 · desfechos: {'ilegível (pede outra foto)': 3} · confiança OCR média 71
+  escura       corretos 6/7 · errados 0 · desfechos: {'resumo imediato': 2, 'valor implausível → equipe (sem resumo)': 1} · confiança OCR média 93
+  inclinada    corretos 6/7 · errados 0 · desfechos: {'resumo imediato': 2, 'ilegível (pede outra foto)': 1} · confiança OCR média 89
+  limpa        corretos 6/7 · errados 0 · desfechos: {'resumo imediato': 2, 'valor implausível → equipe (sem resumo)': 1} · confiança OCR média 93
+  sombra       corretos 5/7 · errados 2 · desfechos: {'ilegível (pede outra foto)': 1, 'resumo imediato': 2} · confiança OCR média 92
+
+IMAGEM (texto livre):
+  L05_desfocada.png          tipo lido: imagem       texto recuperado: 92% · nome confere: True · revisão (laudo de imagem)
+  L05_escura.png             tipo lido: imagem       texto recuperado: 100% · nome confere: True · revisão (laudo de imagem)
+  L05_inclinada.png          tipo lido: imagem       texto recuperado: 100% · nome confere: True · revisão (laudo de imagem)
+  L05_limpa.png              tipo lido: imagem       texto recuperado: 100% · nome confere: True · revisão (laudo de imagem)
+  L05_sombra.png             tipo lido: imagem       texto recuperado: 100% · nome confere: True · revisão (laudo de imagem)
+  L07_desfocada.png          tipo lido: imagem       texto recuperado: 92% · nome confere: True · revisão (laudo de imagem)
+  L07_escura.png             tipo lido: imagem       texto recuperado: 100% · nome confere: True · revisão (laudo de imagem)
+  L07_inclinada.png          tipo lido: imagem       texto recuperado: 96% · nome confere: True · revisão (laudo de imagem)
+  L07_limpa.png              tipo lido: imagem       texto recuperado: 100% · nome confere: True · revisão (laudo de imagem)
+  L07_sombra.png             tipo lido: imagem       texto recuperado: 100% · nome confere: True · revisão (laudo de imagem)
+
+ITENS ERRADOS (detalhe):
+  L04_sombra.png: Colesterol HDL esperado 52 [40, None] · lido 168 [None, 130]
+  L06_sombra.png: Potássio esperado 6.8 [3.5, 5.1] · lido 68 [None, None]
+
+Nome do paciente não conferido ou diferente: nenhum
+Tempo médio por arquivo: 4.9 s (com OCR e LLM)

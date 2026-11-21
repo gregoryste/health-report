@@ -1,0 +1,21 @@
+flowchart TD
+  classDef humano fill:#fde7c8,stroke:#b8650a,stroke-width:2px,color:#3a2200
+  classDef ia fill:#dbeafe,stroke:#1e5aa8,color:#0b2545
+  classDef regra fill:#e3f2e1,stroke:#2d6a2f,color:#123d14
+  classDef alerta fill:#fbe5e3,stroke:#b3261e,color:#4a0f0b
+
+  A1["Laudo digital<br/>(sistema de exames)"] --> R
+  A2["Foto do laudo"] --> O["OCR local → texto"]:::regra --> X["LLM estrutura em JSON<br/>(número fora do OCR é rejeitado;<br/>campo ruim = ilegível)"]:::ia --> R
+  R["Regra fixa: valores fora da faixa,<br/>prioridade e prazo de revisão"]:::regra --> M
+  M["Monta a mensagem: tom pela prioridade,<br/>definições do glossário, exemplo aprovado (E1),<br/>instruções de imagem e escore"]:::regra --> L
+  L["LLM interna escreve explicação<br/>+ 3 a 5 dúvidas antecipadas (F1)"]:::ia --> P
+  P["Pós-processamento pelo código: frases fixas<br/>(fecho, contato crítico, classificação),<br/>escores ocultados, causa/prognóstico → resposta fixa"]:::regra --> C
+  C["Checagens: omissão, números, posição,<br/>contradição com a regra, jargão, alertas"]:::regra --> V
+  V["Verificação de apoio frase a frase<br/>(2ª chamada à LLM; laudos de imagem)"]:::ia --> Q
+  Q["Rascunho na fila de revisão,<br/>ordenada por prioridade, com alertas"]:::regra --> H
+  H{"Profissional revisa"}:::humano
+  H -- "aprova ou edita" --> REG["Registro: original, versão final,<br/>revisor, tempo, tamanho da edição"]:::regra --> PUB
+  H -- "descarta (motivo obrigatório)" --> REG2["Registro do descarte"]:::regra --> DESC["Aviso genérico: será explicado na consulta"]
+  PUB["Publica no portal + aviso genérico pelo WhatsApp"]
+  R -. "valor crítico" .-> TEL["Contato ativo da equipe por telefone,<br/>no mesmo dia (não depende do clique)"]:::alerta
+  Q -. "prazo vence" .-> LEM["Lembrete → médico de referência;<br/>expirado: nunca envia o rascunho"]:::alerta

@@ -1,0 +1,53 @@
+{% extends "base.html" %}{% import "_ui.html" as ui %}
+{% block titulo %}Avisos enviados · Painel da equipe{% endblock %}
+{% block corpo %}
+{% set n_falha = avisos|rejectattr('status', 'in', ['simulado', 'enviado'])|list|length %}
+<header class="cabecalho">
+  <div>
+    <h1>Avisos enviados pelo WhatsApp</h1>
+    <div class="contexto">{{ avisos|length }} aviso(s) mais recentes · {{ n_falha }} com falha</div>
+  </div>
+</header>
+
+<div class="colunas duas">
+  <aside class="coluna lateral esq">
+    <div class="bloco">
+      <span class="sobrancelha">Resumo</span>
+      <div class="lista-dados">
+        <div class="item"><span>Avisos listados</span><b>{{ avisos|length }}</b></div>
+        <div class="item"><span>Simulados</span><b>{{ avisos|selectattr('status', 'equalto', 'simulado')|list|length }}</b></div>
+        <div class="item"><span>Enviados</span><b>{{ avisos|selectattr('status', 'equalto', 'enviado')|list|length }}</b></div>
+        <div class="item"><span>Com falha</span><b class="{{ 'critico' if n_falha }}">{{ n_falha }}</b></div>
+      </div>
+    </div>
+    <div class="bloco sep">
+      <span class="rotulo">Regra de envio (D3, 2ª revisão)</span>
+      <p class="nota-pequena">Antes da identificação (CPF + data de nascimento + número cadastrado) e do aceite do termo, só saem textos fixos da triagem e avisos genéricos; o serviço bloqueia qualquer outro texto. Conteúdo de saúde só depois do aceite.</p>
+    </div>
+  </aside>
+
+  <section class="coluna centro">
+    <div class="faixa"><span class="pilula">Mais recentes primeiro</span><span>Últimos 100</span></div>
+    <div class="superficie">
+      {% if avisos %}
+      <table class="dados">
+        <thead><tr><th>Quando</th><th>Para</th><th>Texto</th><th>Canal</th><th>Status</th></tr></thead>
+        <tbody>
+        {% for a in avisos %}
+          <tr>
+            <td class="nowrap">{{ ui.data(a.criado_em) }}<span class="sub">{{ a.criado_em[11:16] }}</span></td>
+            <td><div class="pessoa"><span class="avatar claro">{{ ui.iniciais(a.nome) if a.nome else '?' }}</span><div><b>{{ a.nome or '(não identificado)' }}</b><span class="sub">{{ a.telefone }}</span></div></div></td>
+            <td class="texto-longo">{{ a.texto }}</td>
+            <td>{{ a.canal }}</td>
+            <td>{{ ui.selo(a.status, a.status if a.status in ['simulado', 'enviado'] else 'falha') }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+        {{ ui.vazio('Nenhum aviso', 'Os avisos enviados ao paciente pelo WhatsApp aparecem aqui.', 'mensagem') }}
+      {% endif %}
+    </div>
+  </section>
+</div>
+{% endblock %}

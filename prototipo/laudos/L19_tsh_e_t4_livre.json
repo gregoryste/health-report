@@ -1,0 +1,40 @@
+{
+  "id": "L19",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "categoria": "sangue_comum",
+  "exame": "TSH e T4 livre",
+  "paciente": "Paciente Fictício 19",
+  "sexo": "F",
+  "idade": 48,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "TSH",
+      "valor": 8.2,
+      "unidade": "mUI/L",
+      "apelidos": [
+        "tsh",
+        "hormonio que estimula a tireoide"
+      ],
+      "ref_min": 0.4,
+      "ref_max": 4
+    },
+    {
+      "analito": "T4 livre",
+      "valor": 0.7,
+      "unidade": "ng/dL",
+      "apelidos": [
+        "t4 livre",
+        "hormonio da tireoide"
+      ],
+      "ref_min": 0.8,
+      "ref_max": 1.8
+    }
+  ],
+  "gabarito_alterados": [
+    "TSH",
+    "T4 livre"
+  ],
+  "_origem": "Jackson, Pacote_Tradutor_de_Laudos v1.0 (14/11/2026); original em material_jackson/2026-11-14"
+}

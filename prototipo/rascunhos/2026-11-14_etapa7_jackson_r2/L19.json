@@ -1,0 +1,82 @@
+{
+  "rascunho_id": "L19-20261114-151433",
+  "laudo_id": "L19",
+  "tipo": "laboratorio",
+  "categoria": "sangue_comum",
+  "exame": "TSH e T4 livre",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:14:33",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.3,
+  "exemplo_e1": null,
+  "explicacao": "O exame de TSH e T4 livre mostra que alguns resultados estão fora do valor esperado. O TSH, um hormônio que regula o funcionamento da tireoide, está em 8,2 mUI/L. O valor esperado (faixa de referência) é de 0,4 a 4 mUI/L. Portanto, o resultado está ACIMA da faixa de referência. O T4 livre, hormônio produzido pela tireoide, está em 0,7 ng/dL. A faixa de referência é de 0,8 a 1,8 ng/dL. Assim, o resultado está ABAIXO da faixa de referência. O exame mostra apenas esses dois resultados fora do valor esperado.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa TSH alto?",
+      "resposta": "O TSH é um hormônio que regula o funcionamento da tireoide. O exame mostra que o valor está acima do esperado."
+    },
+    {
+      "pergunta": "O que significa T4 livre baixo?",
+      "resposta": "O T4 livre é um hormônio produzido pela tireoide. O exame mostra que o valor está abaixo do esperado."
+    },
+    {
+      "pergunta": "Esses resultados podem indicar alguma doença?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Preciso fazer algum exame para confirmar esses resultados?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Esses resultados precisam de tratamento?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "TSH",
+        "origem": "regra",
+        "citado": true
+      },
+      {
+        "nome": "T4 livre",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 112.1,
+    "explicacao": 72.9,
+    "palavras": 100
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "TSH",
+      "T4 livre"
+    ],
+    "mensagem_enviada": "Exame: TSH e T4 livre. Paciente: sexo feminino, 48 anos.\nResultados:\n- TSH: 8,2 mUI/L (referência 0,4–4 mUI/L) → ACIMA da faixa, ALTERADO\n- T4 livre: 0,7 ng/dL (referência 0,8–1,8 ng/dL) → ABAIXO da faixa, ALTERADO\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- TSH: um hormônio que regula o funcionamento da tireoide\n- T4 livre: hormônio produzido pela tireoide",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de TSH e T4 livre mostra que alguns resultados estão fora do valor esperado. O TSH, um hormônio que regula o funcionamento da tireoide, está em 8,2 mUI/L. O valor esperado (faixa de referência) é de 0,4 a 4 mUI/L. Portanto, o resultado está ACIMA da faixa de referência. O T4 livre, hormônio produzido pela tireoide, está em 0,7 ng/dL. A faixa de referência é de 0,8 a 1,8 ng/dL. Assim, o resultado está ABAIXO da faixa de referência. O exame mostra apenas esses dois resultados fora do valor esperado.\n\nDÚVIDAS:\nP: O que significa TSH alto?\nR: O TSH é um hormônio que regula o funcionamento da tireoide. O exame mostra que o valor está acima do esperado.\nP: O que significa T4 livre baixo?\nR: O T4 livre é um hormônio produzido pela tireoide. O exame mostra que o valor está abaixo do esperado.\nP: Esses resultados podem indicar alguma doença?\nR: Isso será avaliado pelo médico na consulta.\nP: Preciso fazer algum exame para confirmar esses resultados?\nR: Isso será avaliado pelo médico na consulta.\nP: Esses resultados precisam de tratamento?\nR: Isso será avaliado pelo médico na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

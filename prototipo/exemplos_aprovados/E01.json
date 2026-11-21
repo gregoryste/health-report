@@ -1,0 +1,19 @@
+{
+  "id": "E01",
+  "ficticio": true,
+  "anonimizado": true,
+  "tipo": "laboratorio",
+  "categoria": "laboratorio_comum",
+  "prioridade": "alterado",
+  "exame": "Glicemia e hemoglobina glicada",
+  "palavras_chave": [
+    "glicose",
+    "glicemia",
+    "glicada",
+    "hba1c",
+    "acucar"
+  ],
+  "explicacao": "Este exame mede o açúcar no sangue. A glicose em jejum (quantidade de açúcar no sangue depois de ficar sem comer) está acima da faixa de referência: o resultado foi 132 mg/dL, e o esperado vai até 99 mg/dL. A hemoglobina glicada (exame que mostra a média do açúcar no sangue nos últimos três meses) também está acima da faixa: 7,1%, quando o esperado vai até 5,6%. Os dois resultados falam sobre o açúcar no sangue e serão vistos juntos pelo médico.",
+  "aprovado_por": "revisor fictício (exemplo do protótipo)",
+  "data_aprovacao": "2026-11-14"
+}

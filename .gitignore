@@ -1,0 +1,76 @@
+# =====================================================================
+# Tradutor de Laudos — .gitignore
+# Regra de ouro: segredos, dados de execução e material da empresa
+# parceira NUNCA entram no repositório.
+# =====================================================================
+
+# ---------- Segredos ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json
+secrets*.json
+
+# ---------- Dados de execução (bancos, logs, envios) ----------
+# Banco do protótipo, backups dele e anexos enviados pelos pacientes de teste.
+# Contêm o número de WhatsApp usado na homologação e hashes de senha.
+prototipo/dados/
+*.db
+*.db.bak*
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3
+*.log
+# Logs de avaliação que fazem parte da evidência (sem dados sensíveis)
+!prototipo/rascunhos/**/*.log
+
+# Backups do n8n: o banco guarda a chave da API do serviço e os fluxos
+# exportados trazem o e-mail da conta local. Os fluxos limpos estão em prototipo/n8n/fluxos/.
+prototipo/n8n/backup/
+
+# ---------- Material interno (fica só na máquina de quem implementa) ----------
+# Identidade visual de referência de terceiros (não pode ser publicada).
+/referencia-*/
+# Documentos de planejamento com nomes de produtos e detalhes da empresa.
+plano.md
+plano-gregory.md
+contexto.md
+responsabilidades.md
+escopos-ia-generativa-saude.md
+escopos-ia-generativa-saude.pdf
+decisoes-*.pdf
+roteiro-jackson.html
+roteiro-jackson.pdf
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+.ipynb_checkpoints/
+
+# ---------- Node (caso alguma ferramenta seja instalada) ----------
+node_modules/
+
+# ---------- Sistema operacional / editores ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+# Arquivos de trava do Office/LibreOffice
+~$*
+.~lock.*#
+
+# ---------- Claude Code (configuração local) ----------
+.claude/

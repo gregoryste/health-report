@@ -1,0 +1,12 @@
+{
+  "id": "L13",
+  "ficticio": true,
+  "tipo": "imagem",
+  "exame": "Ultrassonografia de rins",
+  "paciente": "Paciente Fictício 13",
+  "sexo": "F",
+  "idade": 33,
+  "data_coleta": "2026-11-14",
+  "texto": "Rins com dimensões e espessura do parênquima preservadas. Coluna de Bertin proeminente no rim esquerdo, com continuidade e ecogenicidade semelhantes às do córtex renal, compatível com variante anatômica. Ausência de massas, cálculos e hidronefrose.",
+  "gabarito_alterados": []
+}

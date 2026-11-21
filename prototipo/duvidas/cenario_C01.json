@@ -1,0 +1,26 @@
+{
+ "id": "C01",
+ "ficticio": true,
+ "paciente": "Paciente Fictício C01",
+ "idade": 52,
+ "sexo": "F",
+ "exames": "Perfil lipídico, glicemia e hemoglobina glicada, TSH e ultrassonografia de tireoide",
+ "explicacao_aprovada": "Estes exames avaliam as gorduras do sangue, o açúcar no sangue, a tireoide e o aspecto da tireoide no ultrassom. O colesterol LDL (um tipo de gordura do sangue, conhecido como colesterol ruim) está acima da faixa de referência: o resultado foi 162 mg/dL, e o esperado vai até 130 mg/dL. O HDL, o colesterol total e os triglicerídeos estão dentro do esperado. A glicose em jejum (a quantidade de açúcar no sangue depois de um período sem comer) está dentro do esperado: 94 mg/dL. A hemoglobina glicada (exame que mostra a média do açúcar no sangue nos últimos meses) também está dentro do esperado: 5,4%. O TSH (um hormônio que regula o funcionamento da tireoide) está um pouco acima da faixa: 4,6 µUI/mL, quando o esperado vai até 4,0 µUI/mL. É uma alteração pequena, que o médico vai avaliar junto com os outros resultados na consulta. O ultrassom mostrou um nódulo (uma pequena área com aspecto diferente do tecido ao redor) de 0,5 cm no lado direito da tireoide. O laudo também traz uma classificação, que o médico vai explicar na consulta. Converse com o seu médico sobre estes resultados.",
+ "duvidas_aprovadas": [
+  {
+   "pergunta": "O que é o colesterol LDL?",
+   "resposta": "É um tipo de gordura do sangue, conhecido como colesterol ruim. No seu exame, ele está acima da faixa de referência."
+  },
+  {
+   "pergunta": "O que é a tireoide?",
+   "resposta": "É uma glândula que fica na frente do pescoço."
+  },
+  {
+   "pergunta": "O nódulo é perigoso?",
+   "resposta": "Isso será avaliado pelo médico na consulta."
+  }
+ ],
+ "duvidas_liberadas": true,
+ "revisor": "revisor fictício",
+ "aprovado_em": "2026-11-14"
+}

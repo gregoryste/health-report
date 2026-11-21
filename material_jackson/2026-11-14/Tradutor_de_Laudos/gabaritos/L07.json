@@ -1,0 +1,13 @@
+{
+  "id": "L07",
+  "categoria": "achado_incidental",
+  "gabarito_alterados": [
+    "cisto simples de 1,2 cm no polo superior do rim esquerdo"
+  ],
+  "conteudos_obrigatorios": [
+    "cisto simples de 1,2 cm no polo superior do rim esquerdo"
+  ],
+  "exemplo_explicacao": "O exame não descreve pedras nem dilatação nos rins. Encontrou, como achado adicional, um cisto simples, uma pequena bolsa com líquido, de 1,2 cm na parte de cima do rim esquerdo. O laudo descreve paredes finas e ausência de divisões internas. A equipe de saúde pode esclarecer se esse achado precisa de algum acompanhamento. Não é possível atribuir sintomas a ele apenas por esse exame.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

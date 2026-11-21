@@ -1,0 +1,30 @@
+# qwen2.5vl:7b · L02
+
+## Entrada
+Exame: Check-up (glicose, lipídios, tireoide). Paciente: sexo feminino, 38 anos.
+Resultados:
+- Glicose em jejum: 88 mg/dL (referência 70–99 mg/dL) → NORMAL
+- Colesterol total: 172 mg/dL (referência ≤ 190 mg/dL) → NORMAL
+- HDL: 52 mg/dL (referência ≥ 40 mg/dL) → NORMAL
+- Triglicerídeos: 110 mg/dL (referência ≤ 150 mg/dL) → NORMAL
+- TSH: 2.1 µUI/mL (referência 0.4–4.0 µUI/mL) → NORMAL
+
+## Resposta
+EXPLICAÇÃO:
+O seu check-up foi normal. A glicose em jejum, colesterol total, HDL, triglicerídeos e TSH estão todos dentro da faixa de referência, o que indica que não há alterações significativas em relação a esses parâmetros.
+
+DÚVIDAS:
+P: O que isso significa para o meu estilo de vida?
+R: Mantenha-se atento à dieta e ao exercício.
+
+P: Preciso fazer mais exames?
+R: Não, os resultados estão dentro do normal.
+
+P: Posso comer mais gorduras?
+R: É melhor evitar alimentos muito gordurosos.
+
+P: Posso beber álcool?
+R: Use com moderação, se for o caso.
+
+P: Quando devo voltar para o check-up?
+R: Faça o próximo em 12 meses.

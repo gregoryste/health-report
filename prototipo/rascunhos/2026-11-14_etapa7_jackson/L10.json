@@ -1,0 +1,76 @@
+{
+  "rascunho_id": "L10-20261114-150515",
+  "laudo_id": "L10",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Radiografia de tórax",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:05:15",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.1,
+  "exemplo_e1": null,
+  "explicacao": "O exame de raio-x do tórax mostra um espessamento peribrônquico bilateral. Isso significa que há um aumento na espessura do tecido ao redor dos brônquios (tubos que levam o ar para os pulmões) em ambos os lados do tórax.\n\nO laudo também informa que não há consolidações focais (áreas de pulmão que estão mais densas que o normal) nem derrame pleural (líquido no espaço entre o pulmão e a parede do tórax). A silhueta cardíaca (a imagem do coração no raio-x) tem dimensões normais.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é peribrônquico?",
+      "resposta": "Peribrônquico significa ao redor dos brônquios, que são os tubos que levam o ar para os pulmões."
+    },
+    {
+      "pergunta": "O que significa \"espessamento\"?",
+      "resposta": "Espessamento quer dizer que o tecido ficou mais grosso do que o normal."
+    },
+    {
+      "pergunta": "O espessamento é grave?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que são consolidações focais?",
+      "resposta": "Consolidações focais são áreas do pulmão que aparecem mais densas no raio-x."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "discreto espessamento peribrônquico bilateral",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "peribronquico"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Discreto espessamento peribrônquico bilateral'.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"Paráfrase do espessamento peribrônquico e explicação do que são brônquios, ambos presentes no laudo.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Ausência de consolidações focais e de derrame pleural'.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Silhueta cardíaca de dimensões preservadas'.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"Paráfrase de 'peribrônquico' e explicação do que são brônquios, ambos presentes no laudo.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"Paráfrase de 'espessamento'.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma 'Ausência de consolidações focais'.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": -0.8,
+    "explicacao": 72.3,
+    "palavras": 92
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [],
+    "mensagem_enviada": "Exame: Radiografia de tórax. Paciente: sexo masculino, 42 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nDiscreto espessamento peribrônquico bilateral. Ausência de consolidações focais e de derrame pleural. Silhueta cardíaca de dimensões preservadas.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de raio-x do tórax mostra um espessamento peribrônquico bilateral. Isso significa que há um aumento na espessura do tecido ao redor dos brônquios (tubos que levam o ar para os pulmões) em ambos os lados do tórax.\n\nO laudo também informa que não há consolidações focais (áreas de pulmão que estão mais densas que o normal) nem derrame pleural (líquido no espaço entre o pulmão e a parede do tórax). A silhueta cardíaca (a imagem do coração no raio-x) tem dimensões normais.\n\nDÚVIDAS:\nP: O que é peribrônquico?\nR: Peribrônquico significa ao redor dos brônquios, que são os tubos que levam o ar para os pulmões.\nP: O que significa \"espessamento\"?\nR: Espessamento quer dizer que o tecido ficou mais grosso do que o normal.\nP: O espessamento é grave?\nR: Isso será avaliado pelo médico na consulta.\nP: O que são consolidações focais?\nR: Consolidações focais são áreas do pulmão que aparecem mais densas no raio-x.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

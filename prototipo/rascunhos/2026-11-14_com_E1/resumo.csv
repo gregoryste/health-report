@@ -1,0 +1,5 @@
+laudo,categoria,prioridade,exemplo_e1,omitidos,suavizacao,alertas,jargao_proibido,jargao_sem_explicacao,flesch_laudo,flesch_explicacao,palavras,n_duvidas,sem_apoio,tempo_s
+L01,laboratorio_comum,alterado,E02,,,cita classificação que o laudo não tem,,,62.5,73.6,143,5,,4.5
+L02,laboratorio_comum,normal,E01,,,"cita classificação que o laudo não tem; contradiz a regra: Colesterol total está normal, mas o texto diz alterado; contradiz a regra: Glicose em jejum está normal, mas o texto diz alterado; número fora do laudo: 8",,hdl; tsh,90.9,67.6,97,5,,3.2
+L03,valor_critico,critico,E04,,,cita classificação que o laudo não tem,,sodio,91.2,74.0,146,5,,4.3
+L04,imagem,alterado,E03,,,,,vascularizacao,39.2,59.7,75,5,,3.3

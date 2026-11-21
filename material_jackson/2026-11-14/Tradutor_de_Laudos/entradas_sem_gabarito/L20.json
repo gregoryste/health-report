@@ -1,0 +1,11 @@
+{
+  "id": "L20",
+  "ficticio": true,
+  "tipo": "imagem",
+  "exame": "Radiografia de coluna lombar",
+  "paciente": "Paciente Fictício 20",
+  "sexo": "M",
+  "idade": 63,
+  "data_coleta": "2026-11-14",
+  "texto": "Osteófitos marginais anteriores em L3 e L4. Discreta redução do espaço discal L4-L5. Alinhamento vertebral preservado. Ausência de fraturas identificáveis pelo método."
+}

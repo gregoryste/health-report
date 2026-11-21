@@ -1,0 +1,75 @@
+{
+  "rascunho_id": "L06-20261114-151227",
+  "laudo_id": "L06",
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Potássio sérico",
+  "prioridade": "critico",
+  "prazo_revisao": "mesmo dia + ligação",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:12:27",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.1,
+  "exemplo_e1": null,
+  "explicacao": "O exame de potássio sérico mostra que o seu nível de potássio está alto, em 6,8 mEq/L. A faixa de referência é de 3,5 a 5,1 mEq/L. O resultado está ACIMA da faixa e é considerado CRÍTICO.\n\nO potássio é um sal mineral do sangue, importante para os músculos e o coração. Um nível alto de potássio pode ser causado por diversos fatores e precisa ser investigado. O resultado crítico indica que é preciso atenção imediata. O médico irá avaliar o resultado e solicitar exames adicionais, se necessário, para entender o que está acontecendo.\n\nHá um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa potássio?",
+      "resposta": "Potássio é um sal mineral do sangue, importante para os músculos e o coração."
+    },
+    {
+      "pergunta": "Por que o resultado está marcado como crítico?",
+      "resposta": "O resultado está ACIMA da faixa de referência e é considerado crítico, o que indica que é preciso atenção imediata."
+    },
+    {
+      "pergunta": "O que pode estar causando o potássio alto?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Preciso me preocupar?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Potássio",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "cita causa"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 87.6,
+    "explicacao": 62.5,
+    "palavras": 122
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Há um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Potássio"
+    ],
+    "mensagem_enviada": "Exame: Potássio sérico. Paciente: sexo masculino, 68 anos.\nResultados:\n- Potássio: 6,8 mEq/L (referência 3,5–5,1 mEq/L) → ACIMA da faixa, CRÍTICO\nTom: há um resultado crítico. Seja claro e sério, sem alarmar e sem descrever consequências para a saúde.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Potássio: um sal mineral do sangue, importante para os músculos e o coração",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de potássio sérico mostra que o seu nível de potássio está alto, em 6,8 mEq/L. A faixa de referência é de 3,5 a 5,1 mEq/L. O resultado está ACIMA da faixa e é considerado CRÍTICO.\n\nO potássio é um sal mineral do sangue, importante para os músculos e o coração. Um nível alto de potássio pode ser causado por diversos fatores e precisa ser investigado. O resultado crítico indica que é preciso atenção imediata. O médico irá avaliar o resultado e solicitar exames adicionais, se necessário, para entender o que está acontecendo.\n\nDÚVIDAS:\nP: O que significa potássio?\nR: Potássio é um sal mineral do sangue, importante para os músculos e o coração.\nP: Por que o resultado está marcado como crítico?\nR: O resultado está ACIMA da faixa de referência e é considerado crítico, o que indica que é preciso atenção imediata.\nP: O que pode estar causando o potássio alto?\nR: Isso será avaliado pelo médico na consulta.\nP: Preciso me preocupar?\nR: Isso será avaliado pelo médico na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "L01",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "categoria": "laboratorio_comum",
+  "exame": "Hemograma",
+  "paciente": "Paciente Fictício 01",
+  "sexo": "M",
+  "idade": 54,
+  "data_coleta": "2026-11-10",
+  "itens": [
+    {"analito": "Hemoglobina", "valor": 10.2, "unidade": "g/dL", "ref_min": 13.5, "ref_max": 17.5, "critico_min": 7.0, "critico_max": 20.0,
+     "apelidos": ["hemoglobina"]},
+    {"analito": "VCM", "valor": 72, "unidade": "fL", "ref_min": 80, "ref_max": 100,
+     "apelidos": ["vcm", "volume corpuscular", "tamanho das hemacias", "tamanho dos globulos vermelhos"]},
+    {"analito": "Leucócitos", "valor": 12800, "unidade": "/mm³", "ref_min": 4000, "ref_max": 11000, "critico_min": 2000, "critico_max": 30000,
+     "apelidos": ["leucocitos", "globulos brancos", "celulas de defesa"]},
+    {"analito": "Plaquetas", "valor": 230000, "unidade": "/mm³", "ref_min": 150000, "ref_max": 450000, "critico_min": 50000, "critico_max": 1000000,
+     "apelidos": ["plaquetas"]}
+  ],
+  "gabarito_alterados": ["Hemoglobina", "VCM", "Leucócitos"]
+}

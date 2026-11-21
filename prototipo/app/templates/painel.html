@@ -1,0 +1,115 @@
+{% extends "base.html" %}{% import "_ui.html" as ui %}
+{% block titulo %}Revisão de laudos · Painel da equipe{% endblock %}
+{% block corpo %}
+{% set n_criticos = rascunhos|selectattr('prioridade', 'equalto', 'critico')|list|length %}
+{% set n_sinais = rascunhos|selectattr('n_alertas')|list|length %}
+{% set n_lidos = publicadas|selectattr('lido_em')|list|length %}
+<header class="cabecalho">
+  <div>
+    <h1>Revisão de laudos</h1>
+    <div class="contexto">{{ rascunhos|length }} rascunho(s) aguardando · {{ alertas|length }} alerta(s) aberto(s) · crítico primeiro (D6)</div>
+  </div>
+  <div class="acoes">
+    <a class="btn secundario" href="/painel/registro">Registro de aprovações</a>
+    <a class="btn tinta" href="/painel/fila">Abrir fila de triagem{% if n_fila %} · {{ n_fila }}{% endif %}</a>
+  </div>
+</header>
+
+<div class="colunas">
+  <aside class="coluna lateral esq">
+    <div class="bloco">
+      <span class="sobrancelha">Resumo</span>
+      <div class="lista-dados">
+        <div class="item"><span>Aguardando revisão</span><b>{{ rascunhos|length }}</b></div>
+        <div class="item"><span>Críticos</span><b class="{{ 'critico' if n_criticos }}">{{ n_criticos }}</b></div>
+        <div class="item"><span>Com sinais de atenção</span><b>{{ n_sinais }}</b></div>
+        <div class="item"><span>Fila de triagem</span><b>{{ n_fila }}</b></div>
+        <div class="item"><span>Publicados (últimos 10)</span><b>{{ publicadas|length }}</b></div>
+      </div>
+    </div>
+    <div class="bloco sep">
+      <span class="sobrancelha">Leitura pelo paciente</span>
+      <div class="metrica">{{ n_lidos }}<small>de {{ publicadas|length }} publicados já lidos</small></div>
+    </div>
+    <div class="bloco sep">
+      <span class="rotulo">Regra de revisão</span>
+      <p class="nota-pequena">Aprovação individual, nunca em lote. Nada vai ao paciente sem aprovação.</p>
+    </div>
+    <form class="bloco sep" method="post" action="/painel/rotinas">
+      <span class="sobrancelha">Rotinas (D6)</span>
+      <p class="nota-pequena">Prazos de aprovação e lembretes de leitura. Na produção rodam sozinhas todo dia (n8n); aqui dá para adiantar o relógio para a demo.</p>
+      <div class="campo"><label for="dias">Simular dias à frente</label><input type="number" name="dias" id="dias" value="0" min="0" max="30"></div>
+      <button class="btn secundario largo">{{ ui.icone('relogio-volta', 15) }}Rodar rotinas</button>
+    </form>
+  </aside>
+
+  <section class="coluna centro">
+    <div class="faixa">
+      <span class="pilula">Ordenar: risco, crítico primeiro</span>
+      <span>Mostrando {{ rascunhos|length }} rascunho(s)</span>
+    </div>
+    <div class="superficie">
+      {% if rascunhos %}
+      <table class="dados">
+        <thead><tr><th>Prioridade</th><th>Paciente</th><th>Exame</th><th>Prazo</th><th>Sinais</th><th class="dir">Ação</th></tr></thead>
+        <tbody>
+        {% for r in rascunhos %}
+          <tr>
+            <td>{{ ui.selo(r.prioridade) }}</td>
+            <td><div class="pessoa"><span class="avatar claro">{{ ui.iniciais(r.nome) }}</span><div><b>{{ r.nome }}</b><span class="sub">{{ r.laudo_id }}</span></div></div></td>
+            <td>{{ r.exame }}<span class="sub">{{ 'Imagem' if r.tipo == 'imagem' else 'Laboratório' }}</span></td>
+            <td>{{ r.prazo }}</td>
+            <td>{% if r.n_alertas %}<span class="selo alterado">{{ r.n_alertas }} sinal(is)</span>{% else %}<span class="meta">—</span>{% endif %}</td>
+            <td class="dir"><a class="btn tinta pequeno" href="/painel/rascunho/{{ r.rascunho_id }}">Revisar</a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+        {{ ui.vazio('Nenhum rascunho aguardando', 'Todos os laudos recebidos já foram revisados. Novos rascunhos aparecem aqui ordenados por risco.') }}
+      {% endif %}
+    </div>
+
+    <div class="titulo-secao"><span>Publicados recentemente</span><span class="meta">{{ n_lidos }} de {{ publicadas|length }} lidos</span></div>
+    <div class="superficie">
+      {% if publicadas %}
+      <table class="dados">
+        <thead><tr><th>Paciente</th><th>Exame</th><th>Revisor</th><th>Publicado</th><th>Leitura</th><th class="dir"></th></tr></thead>
+        <tbody>
+        {% for p in publicadas %}
+          <tr>
+            <td><div class="pessoa"><span class="avatar claro">{{ ui.iniciais(p.nome) }}</span><b>{{ p.nome }}</b></div></td>
+            <td>{{ p.exame }}</td>
+            <td class="nowrap">{{ p.revisor }}</td>
+            <td class="nowrap">{{ ui.data(p.publicado_em) }}<span class="sub">{{ p.publicado_em[11:16] }}</span></td>
+            <td>{% if p.lido_em %}<span class="selo ok">{{ ui.icone('check', 12) }}Lido {{ p.lido_em[11:16] }}</span>{% else %}<span class="selo neutro">Ainda não</span>{% endif %}</td>
+            <td class="dir"><a class="btn secundario pequeno" href="/painel/publicado/{{ p.token }}">Ver detalhes</a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+        {{ ui.vazio('Nada publicado ainda', 'Os laudos aprovados aparecem aqui, com a confirmação de leitura do paciente.', 'documento') }}
+      {% endif %}
+    </div>
+  </section>
+
+  <aside class="coluna lateral dir">
+    <div class="titulo-bloco"><span class="titulo-forte">{{ ui.icone('brilho', 15) }}Alertas</span><span class="meta">{{ alertas|length }} aberto(s)</span></div>
+    {% for a in alertas %}
+      {#- falhas técnicas (envio, orquestração) em âmbar, como prazo: não são alerta clínico -#}
+      {% set tom = 'critico' if a.tipo in ['urgencia', 'contato_ativo', 'identificacao'] else ('atencao' if a.tipo in ['prazo_vencido', 'falha_envio', 'falha_orquestracao'] else 'sugestao') %}
+      <div class="sinal {{ tom }}">
+        <span class="sobre">{{ ui.rotulo(a.tipo) }}</span>
+        <p>{{ a.descricao }}</p>
+        <div class="rodape">
+          <span class="meta">{{ ui.icone('relogio', 13) }}{{ a.criado_em[11:16] }}</span>
+          <form method="post" action="/painel/alerta/{{ a.id }}"><button class="btn pequeno contorno-{{ tom }}">Marcar como resolvido</button></form>
+        </div>
+      </div>
+    {% else %}
+      {{ ui.vazio('Nada pendente por aqui', 'Sem urgências, prazos vencidos ou bloqueios de identificação.') }}
+    {% endfor %}
+  </aside>
+</div>
+{% endblock %}

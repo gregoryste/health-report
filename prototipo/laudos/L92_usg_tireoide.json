@@ -1,0 +1,16 @@
+{
+  "id": "L92",
+  "ficticio": true,
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de tireoide",
+  "paciente": "Paciente Fictício 04",
+  "sexo": "F",
+  "idade": 39,
+  "data_coleta": "2026-11-12",
+  "achado_critico": false,
+  "texto": "ULTRASSONOGRAFIA DA TIREOIDE\nTécnica: exame realizado com transdutor linear de alta frequência, complementado com Doppler colorido.\nTireoide tópica, de contornos regulares e dimensões normais.\nLobo direito: 4,8 x 1,6 x 1,5 cm. Lobo esquerdo: 4,6 x 1,5 x 1,4 cm. Istmo: 0,3 cm. Volume total estimado: 11,2 cm³.\nParênquima de ecotextura homogênea.\nNódulo sólido, hipoecoico, de contornos regulares, medindo 0,6 x 0,5 x 0,5 cm no terço médio do lobo direito, sem calcificações, com vascularização periférica ao Doppler (ACR TI-RADS 4).\nAusência de linfonodomegalias cervicais.\nIMPRESSÃO: Nódulo sólido hipoecoico no lobo direito da tireoide, ACR TI-RADS 4, de 0,6 cm. Demais aspectos dentro da normalidade.",
+  "gabarito_alterados": [
+    {"achado": "Nódulo no lobo direito", "apelidos": ["nodulo", "caroco", "carocinho"]}
+  ]
+}

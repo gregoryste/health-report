@@ -1,0 +1,51 @@
+{
+  "rodada": "etapa 7 — laudos do Jackson (L04–L23), 1ª rodada",
+  "data": "2026-11-14T15:04:15",
+  "modelo": "gemma3:12b-it-qat",
+  "temperatura": 0.0,
+  "pausa_s": 3.0,
+  "e1_exemplos": true,
+  "verificar_apoio": "imagem",
+  "prompt_sha256": "e978f4e4bbb00be5",
+  "glossario_sha256": "548c5524b0b3b3d1",
+  "jargao_sha256": {
+    "proibidos.txt": "557a6404aed9b192",
+    "permitidos_se_explicados.txt": "03f848ae74202ab7"
+  },
+  "laudos": [
+    "L04_perfil_lipidico.json",
+    "L05_ultrassonografia_de_tireoide.json",
+    "L06_potassio_serico.json",
+    "L07_ultrassonografia_de_rins_e_vias_urinaria.json",
+    "L08_hemograma_parcial.json",
+    "L09_hemograma_parcial.json",
+    "L10_radiografia_de_torax.json",
+    "L11_glicose_plasmatica_em_jejum.json",
+    "L12_ultrassonografia_de_abdome_superior.json",
+    "L13_ultrassonografia_de_rins.json",
+    "L14_glicose_e_hemoglobina_glicada.json",
+    "L15_ultrassonografia_de_abdome_superior.json",
+    "L16_sodio_serico.json",
+    "L17_tomografia_de_abdome.json",
+    "L18_tsh_e_t4_livre.json",
+    "L19_tsh_e_t4_livre.json",
+    "L20_radiografia_de_coluna_lombar.json",
+    "L21_potassio_serico.json",
+    "L22_tomografia_de_torax.json",
+    "L23_hemograma_parcial.json"
+  ],
+  "regra": "prompt não ajustado depois de ver os resultados; mudança de prompt = nova rodada declarada",
+  "revisoes_checagens": [
+    {
+      "quando": "2026-11-14, depois da 1ª leitura",
+      "chamou_llm": false,
+      "prompt_alterado": false,
+      "o_que": [
+        "contradição: 'fora do (que é considerado) normal' não conta como 'diz normal' (falso positivo no L19)",
+        "posição: o nome do exame também vale como texto do laudo ('abdome superior', L12 e L15)",
+        "L15: apelido 'está discretamente aumentado' (falsa omissão)"
+      ],
+      "resumo_antes": "resumo_checagens_v1.csv"
+    }
+  ]
+}

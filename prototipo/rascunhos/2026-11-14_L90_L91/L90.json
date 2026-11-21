@@ -1,0 +1,105 @@
+{
+  "rascunho_id": "L90-20261114-115315",
+  "laudo_id": "L90",
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Tomografia computadorizada de abdome e pelve",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T11:53:15",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.8,
+  "exemplo_e1": null,
+  "explicacao": "O exame de tomografia do abdome e pelve mostra um cálculo de 0,4 cm no ureter (tubo que leva a urina do rim para a bexiga) esquerdo, na parte mais distante da bexiga. Esse cálculo está causando um leve aumento do tamanho do ureter antes dele.\n\nNo rim direito, foi encontrada uma pequena cisto (bolsa cheia de líquido) de 1,8 cm no polo superior. Esse tipo de cisto tem paredes finas e conteúdo uniforme, o que é considerado benigno.\n\nO fígado, a vesícula biliar, o pâncreas, o baço, as glândulas adrenais e a bexiga estão com aparência normal. Não foi encontrado líquido livre na cavidade abdominal.\n\nO laudo também traz uma classificação, que o médico vai explicar na consulta.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é ureter?",
+      "resposta": "É o tubo que leva a urina do rim para a bexiga."
+    },
+    {
+      "pergunta": "O que significa \"a classificação do laudo\"?",
+      "resposta": "O motivo desse resultado será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "O que é cisto renal?",
+      "resposta": "É uma bolsa cheia de líquido dentro do rim."
+    },
+    {
+      "pergunta": "O que é líquido livre na cavidade?",
+      "resposta": "É a presença de líquido fora dos órgãos, no espaço abdominal."
+    },
+    {
+      "pergunta": "O que significa \"dilatação a montante\"?",
+      "resposta": "Significa que o ureter está mais largo antes do cálculo."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Cálculo no ureter esquerdo",
+        "origem": "gabarito (teste)",
+        "citado": true
+      },
+      {
+        "nome": "Cisto no rim direito",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "fala de prognóstico",
+      "posição: 'distal' traduzido como distante/longe (no ureter, distal = perto da bexiga)"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [
+      "'distal' traduzido como distante/longe (no ureter, distal = perto da bexiga)"
+    ],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 47.2,
+    "explicacao": 62.4,
+    "palavras": 127
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "O laudo também traz uma classificação, que o médico vai explicar na consulta.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [
+      "O laudo traz uma classificação que o médico vai explicar na consulta."
+    ],
+    "duvidas_com_causa_trocadas": [
+      {
+        "pergunta": "O que significa \"Bosniak I\"?",
+        "resposta": "É uma classificação para cistos renais, indicando que são benignos."
+      }
+    ],
+    "escores_ocultados": [
+      "Bosniak I",
+      "Bosniak I"
+    ],
+    "definicoes_do_glossario": [
+      "Ureter",
+      "Terço distal do ureter",
+      "Polo superior / polo inferior (rim)",
+      "Adrenais",
+      "Vesícula biliar",
+      "Líquido livre",
+      "Cisto",
+      "Cálculo",
+      "Dilatação a montante"
+    ],
+    "mensagem_enviada": "Exame: Tomografia computadorizada de abdome e pelve. Paciente: sexo masculino, 44 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nEste laudo traz um escore ou classificação. Na explicação e nas dúvidas, não escreva o nome nem o número dele, não diga o que significa nem se o risco é alto ou baixo. Diga apenas que o laudo traz uma classificação que o médico vai explicar na consulta.\nTexto do laudo:\nTOMOGRAFIA COMPUTADORIZADA DE ABDOME E PELVE SEM CONTRASTE\nIndicação: dor lombar à esquerda.\nTécnica: aquisição helicoidal, sem administração de meio de contraste.\nFígado de dimensões normais e densidade habitual. Vesícula biliar sem cálculos radiopacos. Pâncreas, baço e adrenais sem alterações.\nRim direito de dimensões normais, com imagem cística de 1,8 cm no polo superior, de paredes finas e conteúdo homogêneo (Bosniak I).\nRim esquerdo de dimensões normais, sem cálculos. Ureter esquerdo com cálculo de 0,4 cm no terço distal, determinando discreta dilatação a montante.\nBexiga com paredes regulares. Ausência de líquido livre na cavidade.\nIMPRESSÃO: Cálculo de 0,4 cm no ureter distal esquerdo, com discreta dilatação a montante. Cisto renal simples no polo superior do rim direito (Bosniak I).",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de tomografia do abdome e pelve mostra um cálculo de 0,4 cm no ureter (tubo que leva a urina do rim para a bexiga) esquerdo, na parte mais distante da bexiga. Esse cálculo está causando um leve aumento do tamanho do ureter antes dele.\n\nNo rim direito, foi encontrada uma pequena cisto (bolsa cheia de líquido) de 1,8 cm no polo superior. Esse tipo de cisto, chamado Bosniak I, tem paredes finas e conteúdo uniforme, o que é considerado benigno.\n\nO fígado, a vesícula biliar, o pâncreas, o baço, as glândulas adrenais e a bexiga estão com aparência normal. Não foi encontrado líquido livre na cavidade abdominal.\n\nO laudo traz uma classificação que o médico vai explicar na consulta.\n\nDÚVIDAS:\nP: O que é ureter?\nR: É o tubo que leva a urina do rim para a bexiga.\nP: O que significa \"Bosniak I\"?\nR: É uma classificação para cistos renais, indicando que são benignos.\nP: O que é cisto renal?\nR: É uma bolsa cheia de líquido dentro do rim.\nP: O que é líquido livre na cavidade?\nR: É a presença de líquido fora dos órgãos, no espaço abdominal.\nP: O que significa \"dilatação a montante\"?\nR: Significa que o ureter está mais largo antes do cálculo."
+  },
+  "reprocessado_em": "2026-11-14T12:05:59"
+}

@@ -1,0 +1,75 @@
+{
+  "rascunho_id": "L16-20261114-151407",
+  "laudo_id": "L16",
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Sódio sérico",
+  "prioridade": "critico",
+  "prazo_revisao": "mesmo dia + ligação",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:14:07",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 2.9,
+  "exemplo_e1": null,
+  "explicacao": "O exame de sódio no sangue está abaixo do valor esperado. O resultado foi 118 mEq/L, e a faixa de referência é de 135 a 145 mEq/L. O resultado está marcado como CRÍTICO, o que significa que é preciso atenção imediata.\n\nO sódio é um sal mineral do sangue que ajuda a controlar a água no corpo. Quando o nível de sódio está baixo, dizemos que há sódio baixo no sangue. Esse resultado precisa ser avaliado com urgência para entender o que está acontecendo e tomar as medidas necessárias.\n\nHá um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa sódio baixo no sangue?",
+      "resposta": "Significa que o nível de sódio no seu sangue está abaixo do valor esperado."
+    },
+    {
+      "pergunta": "Por que o resultado está marcado como CRÍTICO?",
+      "resposta": "Isso indica que o resultado precisa de atenção imediata."
+    },
+    {
+      "pergunta": "O que pode estar causando isso?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Preciso fazer algum outro exame?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Sódio",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "sodio"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 101.7,
+    "explicacao": 70.9,
+    "palavras": 117
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Há um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Sódio"
+    ],
+    "mensagem_enviada": "Exame: Sódio sérico. Paciente: sexo feminino, 76 anos.\nResultados:\n- Sódio: 118 mEq/L (referência 135–145 mEq/L) → ABAIXO da faixa, CRÍTICO\nTom: há um resultado crítico. Seja claro e sério, sem alarmar e sem descrever consequências para a saúde.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Sódio: um sal mineral do sangue que ajuda a controlar a água no corpo",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de sódio no sangue está abaixo do valor esperado. O resultado foi 118 mEq/L, e a faixa de referência é de 135 a 145 mEq/L. O resultado está marcado como CRÍTICO, o que significa que é preciso atenção imediata.\n\nO sódio é um sal mineral do sangue que ajuda a controlar a água no corpo. Quando o nível de sódio está baixo, dizemos que há sódio baixo no sangue. Esse resultado precisa ser avaliado com urgência para entender o que está acontecendo e tomar as medidas necessárias.\n\nDÚVIDAS:\nP: O que significa sódio baixo no sangue?\nR: Significa que o nível de sódio no seu sangue está abaixo do valor esperado.\nP: Por que o resultado está marcado como CRÍTICO?\nR: Isso indica que o resultado precisa de atenção imediata.\nP: O que pode estar causando isso?\nR: Isso será avaliado pelo médico na consulta.\nP: Preciso fazer algum outro exame?\nR: Isso será avaliado pelo médico na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

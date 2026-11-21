@@ -1,0 +1,103 @@
+{% extends "base.html" %}{% import "_ui.html" as ui %}
+{% block titulo %}{{ pub.exame }} · {{ paciente.nome }} · Publicado{% endblock %}
+{% block corpo %}
+{% set TIPOS = {'c': 'enviada à fila de triagem', 'd': 'urgência', 'e': 'fora do escopo'} %}
+{% set n_perg = chat|selectattr('autor', 'equalto', 'paciente')|list|length %}
+<header class="cabecalho paciente">
+  <div class="cab-paciente">
+    <span class="avatar grande">{{ ui.iniciais(paciente.nome) }}</span>
+    <div>
+      <h1>{{ paciente.nome }} <small>{{ pub.exame }} · {{ pub.laudo_id }}</small></h1>
+      <div class="chips">
+        <span class="selo aprovado">{{ ui.icone('check', 12) }}Publicado {{ ui.data(pub.publicado_em) }} {{ pub.publicado_em[11:16] }}</span>
+        {% if pub.lido_em %}<span class="selo ok">Lido {{ ui.data(pub.lido_em) }} {{ pub.lido_em[11:16] }}</span>{% else %}<span class="selo neutro">Ainda não lido</span>{% endif %}
+        <span class="meta">Revisado por {{ pub.revisor }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="acoes"><a class="btn secundario" href="/painel">{{ ui.icone('seta-esq', 15) }}Voltar à lista</a></div>
+</header>
+
+<div class="colunas">
+  <aside class="coluna lateral esq">
+    <div class="bloco">
+      <span class="sobrancelha">Publicação</span>
+      <div class="lista-dados">
+        <div class="item"><span>Revisor</span><b>{{ pub.revisor }}</b></div>
+        <div class="item"><span>Publicado</span><b>{{ ui.data(pub.publicado_em) }} {{ pub.publicado_em[11:16] }}</b></div>
+        <div class="item"><span>Lido pelo paciente</span><b>{{ (ui.data(pub.lido_em) ~ ' ' ~ pub.lido_em[11:16]) if pub.lido_em else 'ainda não' }}</b></div>
+        <div class="item"><span>Lembretes de leitura</span><b>{{ pub.lembretes or 0 }}</b></div>
+        <div class="item"><span>Chat de dúvidas</span><b>{{ 'liberado' if pub.duvidas_liberadas else 'fechado' }}</b></div>
+      </div>
+    </div>
+    <div class="bloco sep">
+      <span class="sobrancelha">WhatsApp</span>
+      <div class="lista-dados">
+        <div class="item"><span>Termo aceito</span><b>{{ (ui.data(consentimento.aceito_em) ~ ' ' ~ consentimento.aceito_em[11:16]) if consentimento else 'não' }}</b></div>
+        {% if consentimento %}<div class="item"><span>Versão do termo</span><b>{{ consentimento.versao }}</b></div>
+        <div class="item"><span>Explicação enviada</span><b>{{ (ui.data(consentimento.explicacao_enviada_em) ~ ' ' ~ consentimento.explicacao_enviada_em[11:16]) if consentimento.explicacao_enviada_em else '—' }}</b></div>{% endif %}
+      </div>
+    </div>
+    <div class="bloco sep">
+      <span class="sobrancelha">Conversa</span>
+      <div class="lista-dados">
+        <div class="item"><span>Perguntas do paciente</span><b>{{ n_perg }}</b></div>
+        <div class="item"><span>Foram para a fila</span><b>{{ fila|length }}</b></div>
+        <div class="item"><span>Urgências</span><b class="{{ 'critico' if chat|selectattr('tipo', 'equalto', 'd')|list }}">{{ chat|selectattr('tipo', 'equalto', 'd')|list|length }}</b></div>
+      </div>
+    </div>
+  </aside>
+
+  <section class="coluna centro respiro">
+    <div class="nota">
+      <div class="nota-topo">
+        <div class="esq"><h2>O que o paciente recebeu</h2><span class="selo aprovado">Aprovado pela equipe</span></div>
+        <span class="meta">Somente leitura</span>
+      </div>
+      <div class="nota-corpo">
+        <div class="nota-secao">
+          <div class="lado"><span class="letra">Explicação</span><span class="legenda">Texto final, depois da revisão.</span></div>
+          <div class="conteudo texto-publicado">{% for p in paragrafos %}<p>{{ p }}</p>{% else %}<p class="nota-pequena">Sem texto.</p>{% endfor %}</div>
+        </div>
+        <div class="nota-secao">
+          <div class="lado"><span class="letra">Dúvidas</span><span class="legenda">Respostas aprovadas que o chat usa.</span></div>
+          <div class="conteudo">
+          {% for q in duvidas %}
+            <div class="duvida-aprovada"><b>{{ q.pergunta }}</b><p>{{ q.resposta }}</p></div>
+          {% else %}
+            <p class="nota-pequena">Nenhuma dúvida aprovada para este exame.</p>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <aside class="coluna lateral dir">
+    <div class="titulo-bloco"><span class="titulo-forte">{{ ui.icone('mensagem', 15) }}Conversa sobre este exame</span><span class="meta">{{ chat|length }} mensagem(ns)</span></div>
+    {% if chat %}
+    <div class="conversa">
+    {% for m in chat %}
+      <div class="bolha {{ m.autor }}">
+        <span class="quem">{{ {'paciente': 'Paciente', 'sistema': 'Chat automático', 'equipe': 'Equipe'}.get(m.autor, m.autor) }}{% if m.autor == 'sistema' and TIPOS.get(m.tipo) %} · {{ TIPOS[m.tipo] }}{% endif %}</span>
+        <p>{{ m.texto }}</p>
+        <span class="meta">{{ ui.data(m.criado_em) }} {{ m.criado_em[11:16] }}</span>
+      </div>
+    {% endfor %}
+    </div>
+    {% else %}
+      {{ ui.vazio('Sem conversa ainda', 'As perguntas do paciente sobre este exame e as respostas aparecem aqui.', 'mensagem') }}
+    {% endif %}
+    {% if fila %}
+    <div class="bloco sep">
+      <span class="sobrancelha">Na fila de triagem</span>
+      {% for f in fila %}
+      <div class="lista-dados"><div class="item"><span>“{{ f.pergunta[:60] }}{{ '…' if f.pergunta|length > 60 }}”</span>
+        {{ ui.selo(f.status, 'alterado' if f.status == 'aguardando' else ('aprovado' if f.status == 'respondido' else 'neutro')) }}</div></div>
+      {% endfor %}
+      <a class="btn secundario pequeno" href="/painel/fila">Abrir fila de triagem</a>
+    </div>
+    {% endif %}
+  </aside>
+</div>
+{% endblock %}

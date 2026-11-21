@@ -1,0 +1,62 @@
+{
+  "_sobre": "Casos de regressão: erros reais já vistos (D13). Toda mudança de prompt, modelo ou checagem roda aqui. Regras gerais para todos: sem omissão, sem suavização, sem jargão proibido, sem número fora do laudo.",
+  "casos": [
+    {
+      "laudo": "L01",
+      "erro_original": "2º caso: 'o laudo traz uma classificação' num exame de sangue",
+      "nao_contem": [
+        "classifica"
+      ],
+      "sem_alertas": [
+        "classificação que o laudo não tem",
+        "cita causa"
+      ]
+    },
+    {
+      "laudo": "L92",
+      "erro_original": "1º caso: 'TI-RADS 4 = risco baixo, requer acompanhamento'",
+      "nao_contem": [
+        "ti-rads",
+        "tirads",
+        "risco baixo",
+        "acompanhamento",
+        "benign",
+        "cancer"
+      ],
+      "sem_alertas": [
+        "interpreta escore",
+        "fala de prognóstico",
+        "posição"
+      ]
+    },
+    {
+      "laudo": "L90",
+      "erro_original": "3º caso: 'terço distal do ureter' virou 'distante da bexiga'",
+      "nao_contem": [
+        "distante",
+        "longe da bexiga",
+        "bosniak",
+        "benign"
+      ],
+      "sem_alertas": [
+        "posição",
+        "fala de prognóstico",
+        "interpreta escore"
+      ]
+    },
+    {
+      "laudo": "L91",
+      "erro_original": "tom: 'quando há um problema no fígado' num normal que assusta",
+      "nao_contem": [
+        "problema no figado",
+        "quando ha um problema",
+        "doenca",
+        "identificar o problema"
+      ],
+      "sem_alertas": [
+        "cita causa",
+        "fala de prognóstico"
+      ]
+    }
+  ]
+}

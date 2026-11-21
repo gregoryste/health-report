@@ -1,0 +1,15 @@
+{
+  "id": "L20",
+  "categoria": "imagem",
+  "gabarito_alterados": [
+    "osteófitos marginais anteriores em L3 e L4",
+    "discreta redução do espaço discal L4-L5"
+  ],
+  "conteudos_obrigatorios": [
+    "osteófitos marginais anteriores em L3 e L4",
+    "discreta redução do espaço discal L4-L5"
+  ],
+  "exemplo_explicacao": "O exame mostra pequenas saliências de osso na frente de duas vértebras da parte baixa da coluna, chamadas L3 e L4. O espaço entre L4 e L5 está um pouco reduzido. O alinhamento está preservado e não foram identificadas fraturas por esse exame. Esses achados não mostram, sozinhos, o motivo de uma dor nem definem qual tratamento é necessário.",
+  "nao_inferir": "Não determinar causa, diagnóstico, tratamento ou prazo de retorno não informado.",
+  "urgencia_esperada": "sem_urgencia_inferida_pelo_teste"
+}

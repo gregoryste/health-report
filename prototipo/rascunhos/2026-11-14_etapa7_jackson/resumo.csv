@@ -1,0 +1,21 @@
+laudo,categoria,prioridade,exemplo_e1,omitidos,suavizacao,alertas,jargao_proibido,jargao_sem_explicacao,flesch_laudo,flesch_explicacao,palavras,n_duvidas,sem_apoio,tempo_s
+L04,sangue_comum,alterado,,,,,,ldl; hdl; triglicerideos,77.1,66.7,95,5,,3.2
+L05,imagem,alterado,E03,,,frase sem apoio no laudo (verificador): 1,,,38.5,58.7,99,5,1,3.7
+L06,valor_critico,critico,,,,cita causa,,,87.6,62.5,122,4,,3.0
+L07,achado_incidental,alterado,E03,,,frase sem apoio no laudo (verificador): 3,,,38.2,66.6,84,5,3,2.8
+L08,normal_que_assusta,normal,E02,,,"contradiz a regra: Hemoglobina está normal, mas o texto diz alterado",,,52.6,84.2,93,5,,3.3
+L09,sangue_comum,alterado,E02,,,,,,30.3,62.2,134,5,,4.1
+L10,imagem,alterado,,,,,,peribronquico,-0.8,72.3,92,4,0,3.1
+L11,valor_critico,critico,,,,cita causa,,,87.6,74.8,115,4,,2.9
+L12,achado_incidental,alterado,E03,,,,,ecogenicidade,30.2,64.8,115,5,0,3.8
+L13,normal_que_assusta,alterado,,,,frase sem apoio no laudo (verificador): 4,,,23.3,64.9,81,5,4,3.0
+L14,sangue_comum,alterado,E01,,,,,,43.3,63.9,109,5,,3.3
+L15,imagem,alterado,,,,,,,22.2,48.2,102,5,0,3.4
+L16,valor_critico,critico,,,,,,sodio,101.7,70.9,117,4,,2.7
+L17,achado_incidental,alterado,,,,frase sem apoio no laudo (verificador): 5,,,26.1,62.2,78,5,5,3.2
+L18,normal_que_assusta,normal,,,,,,tsh; t4 livre,112.1,84.5,97,5,,3.2
+L19,sangue_comum,alterado,,,,,,,112.1,71.5,114,5,,3.6
+L20,imagem,alterado,,,,frase sem apoio no laudo (verificador): 7,,osteofito,26.0,60.9,93,4,7,2.9
+L21,valor_critico,critico,,,,cita causa,,,87.6,72.6,111,5,,3.1
+L22,achado_incidental,alterado,E03,,,frase sem apoio no laudo (verificador): 2,,calcificacoes,-4.6,44.6,119,5,2,5.1
+L23,normal_que_assusta,alterado,E02,,,,,,52.6,78.9,109,5,,3.8

@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% set paciente_header = 1 %}
+{% block corpo %}<main class="estreito"><form class="cartao" method="post" action="/p/{{ token }}">
+<h1>Sua mensagem da clínica</h1><p>Para proteger seus dados, confirme quem é você. Depois vamos enviar um código de acesso para o seu WhatsApp.</p>
+{% if erro == 'expirado' %}<p class="erro">O código expirou. Peça um novo.</p>{% elif erro %}<p class="erro">Data de nascimento não confere.</p>{% endif %}
+<p><label>Data de nascimento<input type="date" name="nascimento" id="nascimento" required></label></p>
+<button>Receber código</button><p class="mut pequeno">A clínica nunca pede senha, dados bancários ou pagamento por aqui.</p></form></main>{% endblock %}

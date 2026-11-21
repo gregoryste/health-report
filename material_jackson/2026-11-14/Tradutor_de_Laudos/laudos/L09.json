@@ -1,0 +1,69 @@
+{
+  "id": "L09",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "exame": "Hemograma parcial",
+  "paciente": "Paciente Fictício 09",
+  "sexo": "F",
+  "idade": 35,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Hemoglobina",
+      "valor": 10.5,
+      "unidade": "g/dL",
+      "apelidos": [
+        "hemoglobina"
+      ],
+      "ref_min": 12,
+      "ref_max": 16
+    },
+    {
+      "analito": "Hematócrito",
+      "valor": 33,
+      "unidade": "%",
+      "apelidos": [
+        "hematocrito"
+      ],
+      "ref_min": 36,
+      "ref_max": 46
+    },
+    {
+      "analito": "Volume corpuscular médio",
+      "valor": 74,
+      "unidade": "fL",
+      "apelidos": [
+        "vcm",
+        "tamanho medio das hemacias"
+      ],
+      "ref_min": 80,
+      "ref_max": 100
+    },
+    {
+      "analito": "Leucócitos",
+      "valor": 6800,
+      "unidade": "/mm³",
+      "apelidos": [
+        "leucocitos",
+        "celulas de defesa"
+      ],
+      "ref_min": 4000,
+      "ref_max": 11000
+    },
+    {
+      "analito": "Plaquetas",
+      "valor": 310000,
+      "unidade": "/mm³",
+      "apelidos": [
+        "plaquetas"
+      ],
+      "ref_min": 150000,
+      "ref_max": 450000
+    }
+  ],
+  "gabarito_alterados": [
+    "Hemoglobina",
+    "Hematócrito",
+    "Volume corpuscular médio"
+  ]
+}

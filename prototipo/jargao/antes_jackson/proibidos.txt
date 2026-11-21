@@ -1,0 +1,8 @@
+# PROVISÓRIO até chegar a lista do Jackson.
+# Critério (D5 + regra de produto): proibido é SÓ o que nunca pode aparecer na tela do paciente:
+# códigos CID, siglas de prontuário (SOAP) e escores. Termos descritivos do laudo vão em permitidos_se_explicados.txt.
+# Um item por linha. "re:rótulo::regex" é uma expressão regular aplicada ao texto original.
+re:código CID::\b[A-TV-Z]\d{2}\.\d\b
+re:sigla SOAP::\bSOAP\b
+re:escore RADS (TI-RADS, BI-RADS...)::(?i)\b(ti|bi|li|pi|lung|o)-?rads\b
+re:escore Bosniak::(?i)\bbosniak\b

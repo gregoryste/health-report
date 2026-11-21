@@ -1,0 +1,808 @@
+[
+ {
+  "arquivo": "L04_desfocada.png",
+  "laudo": "L04",
+  "condicao": "desfocada",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 73.0,
+  "segundos": 5.2,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Colesterol LDL",
+    "esperado": 168,
+    "lido": null,
+    "faixa_esperada": [
+     null,
+     130
+    ],
+    "faixa_lida": null,
+    "estado": "descartado"
+   },
+   {
+    "analito": "Colesterol HDL",
+    "esperado": 52,
+    "lido": null,
+    "faixa_esperada": [
+     40,
+     null
+    ],
+    "faixa_lida": null,
+    "estado": "descartado"
+   },
+   {
+    "analito": "Triglicerídeos",
+    "esperado": 190,
+    "lido": null,
+    "faixa_esperada": [
+     null,
+     150
+    ],
+    "faixa_lida": null,
+    "estado": "descartado"
+   }
+  ],
+  "desfecho": "ilegível (pede outra foto)"
+ },
+ {
+  "arquivo": "L04_escura.png",
+  "laudo": "L04",
+  "condicao": "escura",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 93.7,
+  "segundos": 5.7,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Colesterol LDL",
+    "esperado": 168,
+    "lido": 168,
+    "faixa_esperada": [
+     null,
+     130
+    ],
+    "faixa_lida": [
+     null,
+     130
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Colesterol HDL",
+    "esperado": 52,
+    "lido": 52,
+    "faixa_esperada": [
+     40,
+     null
+    ],
+    "faixa_lida": [
+     40,
+     null
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Triglicerídeos",
+    "esperado": 190,
+    "lido": 190,
+    "faixa_esperada": [
+     null,
+     150
+    ],
+    "faixa_lida": [
+     null,
+     150
+    ],
+    "estado": "correto"
+   }
+  ],
+  "desfecho": "resumo imediato"
+ },
+ {
+  "arquivo": "L04_inclinada.png",
+  "laudo": "L04",
+  "condicao": "inclinada",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 89.7,
+  "segundos": 5.7,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Colesterol LDL",
+    "esperado": 168,
+    "lido": 168,
+    "faixa_esperada": [
+     null,
+     130
+    ],
+    "faixa_lida": [
+     null,
+     130
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Colesterol HDL",
+    "esperado": 52,
+    "lido": 52,
+    "faixa_esperada": [
+     40,
+     null
+    ],
+    "faixa_lida": [
+     40,
+     null
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Triglicerídeos",
+    "esperado": 190,
+    "lido": 190,
+    "faixa_esperada": [
+     null,
+     150
+    ],
+    "faixa_lida": [
+     null,
+     150
+    ],
+    "estado": "correto"
+   }
+  ],
+  "desfecho": "resumo imediato"
+ },
+ {
+  "arquivo": "L04_limpa.png",
+  "laudo": "L04",
+  "condicao": "limpa",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 93.5,
+  "segundos": 5.6,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Colesterol LDL",
+    "esperado": 168,
+    "lido": 168,
+    "faixa_esperada": [
+     null,
+     130
+    ],
+    "faixa_lida": [
+     null,
+     130
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Colesterol HDL",
+    "esperado": 52,
+    "lido": 52,
+    "faixa_esperada": [
+     40,
+     null
+    ],
+    "faixa_lida": [
+     40,
+     null
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Triglicerídeos",
+    "esperado": 190,
+    "lido": 190,
+    "faixa_esperada": [
+     null,
+     150
+    ],
+    "faixa_lida": [
+     null,
+     150
+    ],
+    "estado": "correto"
+   }
+  ],
+  "desfecho": "resumo imediato"
+ },
+ {
+  "arquivo": "L04_sombra.png",
+  "laudo": "L04",
+  "condicao": "sombra",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 92.5,
+  "segundos": 5.6,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Colesterol LDL",
+    "esperado": 168,
+    "lido": 168,
+    "faixa_esperada": [
+     null,
+     130
+    ],
+    "faixa_lida": [
+     null,
+     130
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Colesterol HDL",
+    "esperado": 52,
+    "lido": 168,
+    "faixa_esperada": [
+     40,
+     null
+    ],
+    "faixa_lida": [
+     null,
+     130
+    ],
+    "estado": "ERRADO"
+   },
+   {
+    "analito": "Triglicerídeos",
+    "esperado": 190,
+    "lido": 190,
+    "faixa_esperada": [
+     null,
+     150
+    ],
+    "faixa_lida": [
+     null,
+     150
+    ],
+    "estado": "correto"
+   }
+  ],
+  "desfecho": "ilegível (pede outra foto)"
+ },
+ {
+  "arquivo": "L05_desfocada.png",
+  "laudo": "L05",
+  "condicao": "desfocada",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 83.5,
+  "segundos": 4.7,
+  "nome_confere": true,
+  "recuperacao_texto": 0.92,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L05_escura.png",
+  "laudo": "L05",
+  "condicao": "escura",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 94.3,
+  "segundos": 4.3,
+  "nome_confere": true,
+  "recuperacao_texto": 1.0,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L05_inclinada.png",
+  "laudo": "L05",
+  "condicao": "inclinada",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 91.2,
+  "segundos": 4.3,
+  "nome_confere": true,
+  "recuperacao_texto": 1.0,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L05_limpa.png",
+  "laudo": "L05",
+  "condicao": "limpa",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 94.0,
+  "segundos": 4.3,
+  "nome_confere": true,
+  "recuperacao_texto": 1.0,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L05_sombra.png",
+  "laudo": "L05",
+  "condicao": "sombra",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 94.1,
+  "segundos": 4.4,
+  "nome_confere": true,
+  "recuperacao_texto": 1.0,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L06_desfocada.png",
+  "laudo": "L06",
+  "condicao": "desfocada",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 70.9,
+  "segundos": 4.6,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Potássio",
+    "esperado": 6.8,
+    "lido": null,
+    "faixa_esperada": [
+     3.5,
+     5.1
+    ],
+    "faixa_lida": null,
+    "estado": "descartado"
+   }
+  ],
+  "desfecho": "ilegível (pede outra foto)"
+ },
+ {
+  "arquivo": "L06_escura.png",
+  "laudo": "L06",
+  "condicao": "escura",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 93.6,
+  "segundos": 4.7,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Potássio",
+    "esperado": 6.8,
+    "lido": 68,
+    "faixa_esperada": [
+     3.5,
+     5.1
+    ],
+    "faixa_lida": [
+     3.5,
+     5.1
+    ],
+    "estado": "barrado"
+   }
+  ],
+  "desfecho": "valor implausível → equipe (sem resumo)"
+ },
+ {
+  "arquivo": "L06_inclinada.png",
+  "laudo": "L06",
+  "condicao": "inclinada",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 88.4,
+  "segundos": 4.6,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Potássio",
+    "esperado": 6.8,
+    "lido": null,
+    "faixa_esperada": [
+     3.5,
+     5.1
+    ],
+    "faixa_lida": null,
+    "estado": "descartado"
+   }
+  ],
+  "desfecho": "ilegível (pede outra foto)"
+ },
+ {
+  "arquivo": "L06_limpa.png",
+  "laudo": "L06",
+  "condicao": "limpa",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 92.8,
+  "segundos": 4.8,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Potássio",
+    "esperado": 6.8,
+    "lido": 68,
+    "faixa_esperada": [
+     3.5,
+     5.1
+    ],
+    "faixa_lida": [
+     3.5,
+     5.1
+    ],
+    "estado": "barrado"
+   }
+  ],
+  "desfecho": "valor implausível → equipe (sem resumo)"
+ },
+ {
+  "arquivo": "L06_sombra.png",
+  "laudo": "L06",
+  "condicao": "sombra",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 89.7,
+  "segundos": 4.6,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Potássio",
+    "esperado": 6.8,
+    "lido": 68,
+    "faixa_esperada": [
+     3.5,
+     5.1
+    ],
+    "faixa_lida": [
+     null,
+     null
+    ],
+    "estado": "ERRADO"
+   }
+  ],
+  "desfecho": "resumo imediato"
+ },
+ {
+  "arquivo": "L07_desfocada.png",
+  "laudo": "L07",
+  "condicao": "desfocada",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 86.4,
+  "segundos": 4.6,
+  "nome_confere": true,
+  "recuperacao_texto": 0.92,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L07_escura.png",
+  "laudo": "L07",
+  "condicao": "escura",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 95.1,
+  "segundos": 4.5,
+  "nome_confere": true,
+  "recuperacao_texto": 1.0,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L07_inclinada.png",
+  "laudo": "L07",
+  "condicao": "inclinada",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 89.5,
+  "segundos": 4.5,
+  "nome_confere": true,
+  "recuperacao_texto": 0.96,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L07_limpa.png",
+  "laudo": "L07",
+  "condicao": "limpa",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 94.8,
+  "segundos": 4.4,
+  "nome_confere": true,
+  "recuperacao_texto": 1.0,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L07_sombra.png",
+  "laudo": "L07",
+  "condicao": "sombra",
+  "tipo_gabarito": "imagem",
+  "tipo_lido": "imagem",
+  "como": "OCR (foto)",
+  "confianca_ocr": 94.5,
+  "segundos": 4.3,
+  "nome_confere": true,
+  "recuperacao_texto": 1.0,
+  "desfecho": "revisão (laudo de imagem)"
+ },
+ {
+  "arquivo": "L08_desfocada.png",
+  "laudo": "L08",
+  "condicao": "desfocada",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 69.2,
+  "segundos": 4.4,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Hemoglobina",
+    "esperado": 13.2,
+    "lido": null,
+    "faixa_esperada": [
+     12,
+     16
+    ],
+    "faixa_lida": null,
+    "estado": "descartado"
+   },
+   {
+    "analito": "Leucócitos",
+    "esperado": 7100,
+    "lido": null,
+    "faixa_esperada": [
+     4000,
+     11000
+    ],
+    "faixa_lida": null,
+    "estado": "descartado"
+   },
+   {
+    "analito": "Plaquetas",
+    "esperado": 265000,
+    "lido": null,
+    "faixa_esperada": [
+     150000,
+     450000
+    ],
+    "faixa_lida": null,
+    "estado": "descartado"
+   }
+  ],
+  "desfecho": "ilegível (pede outra foto)"
+ },
+ {
+  "arquivo": "L08_escura.png",
+  "laudo": "L08",
+  "condicao": "escura",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 92.4,
+  "segundos": 5.8,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Hemoglobina",
+    "esperado": 13.2,
+    "lido": 13.2,
+    "faixa_esperada": [
+     12,
+     16
+    ],
+    "faixa_lida": [
+     12,
+     16
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Leucócitos",
+    "esperado": 7100,
+    "lido": 7100,
+    "faixa_esperada": [
+     4000,
+     11000
+    ],
+    "faixa_lida": [
+     4000,
+     11000
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Plaquetas",
+    "esperado": 265000,
+    "lido": 265000,
+    "faixa_esperada": [
+     150000,
+     450000
+    ],
+    "faixa_lida": [
+     150000,
+     450000
+    ],
+    "estado": "correto"
+   }
+  ],
+  "desfecho": "resumo imediato"
+ },
+ {
+  "arquivo": "L08_inclinada.png",
+  "laudo": "L08",
+  "condicao": "inclinada",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 88.9,
+  "segundos": 5.9,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Hemoglobina",
+    "esperado": 13.2,
+    "lido": 13.2,
+    "faixa_esperada": [
+     12,
+     16
+    ],
+    "faixa_lida": [
+     12,
+     16
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Leucócitos",
+    "esperado": 7100,
+    "lido": 7100,
+    "faixa_esperada": [
+     4000,
+     11000
+    ],
+    "faixa_lida": [
+     4000,
+     11000
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Plaquetas",
+    "esperado": 265000,
+    "lido": 265000,
+    "faixa_esperada": [
+     150000,
+     450000
+    ],
+    "faixa_lida": [
+     150000,
+     450000
+    ],
+    "estado": "correto"
+   }
+  ],
+  "desfecho": "resumo imediato"
+ },
+ {
+  "arquivo": "L08_limpa.png",
+  "laudo": "L08",
+  "condicao": "limpa",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 92.0,
+  "segundos": 5.7,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Hemoglobina",
+    "esperado": 13.2,
+    "lido": 13.2,
+    "faixa_esperada": [
+     12,
+     16
+    ],
+    "faixa_lida": [
+     12,
+     16
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Leucócitos",
+    "esperado": 7100,
+    "lido": 7100,
+    "faixa_esperada": [
+     4000,
+     11000
+    ],
+    "faixa_lida": [
+     4000,
+     11000
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Plaquetas",
+    "esperado": 265000,
+    "lido": 265000,
+    "faixa_esperada": [
+     150000,
+     450000
+    ],
+    "faixa_lida": [
+     150000,
+     450000
+    ],
+    "estado": "correto"
+   }
+  ],
+  "desfecho": "resumo imediato"
+ },
+ {
+  "arquivo": "L08_sombra.png",
+  "laudo": "L08",
+  "condicao": "sombra",
+  "tipo_gabarito": "laboratorio",
+  "tipo_lido": "laboratorio",
+  "como": "OCR (foto)",
+  "confianca_ocr": 92.5,
+  "segundos": 5.9,
+  "nome_confere": true,
+  "itens": [
+   {
+    "analito": "Hemoglobina",
+    "esperado": 13.2,
+    "lido": 13.2,
+    "faixa_esperada": [
+     12,
+     16
+    ],
+    "faixa_lida": [
+     12,
+     16
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Leucócitos",
+    "esperado": 7100,
+    "lido": 7100,
+    "faixa_esperada": [
+     4000,
+     11000
+    ],
+    "faixa_lida": [
+     4000,
+     11000
+    ],
+    "estado": "correto"
+   },
+   {
+    "analito": "Plaquetas",
+    "esperado": 265000,
+    "lido": 265000,
+    "faixa_esperada": [
+     150000,
+     450000
+    ],
+    "faixa_lida": [
+     150000,
+     450000
+    ],
+    "estado": "correto"
+   }
+  ],
+  "desfecho": "resumo imediato"
+ }
+]

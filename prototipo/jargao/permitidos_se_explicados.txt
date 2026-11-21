@@ -1,0 +1,51 @@
+# Lista do Gregory + lista do Jackson (14/11/2026). A anterior está em antes_jackson/.
+# Termos que podem aparecer, desde que explicados ao lado na primeira vez (parênteses, "que ...", aposto).
+# Exames de sangue
+hemoglobina
+hemoglobina glicada
+leucocitos
+plaquetas
+vcm
+ldl
+hdl
+tsh
+creatinina
+ureia
+potassio
+sodio
+triglicerideos
+# Laudos de imagem (termos descritivos)
+nodulo
+cisto
+istmo
+calcificacoes
+doppler
+vascularizacao
+esteatose
+hipoecoico
+hiperecoico
+isoecoico
+ecogenicidade
+ecotextura
+parenquima
+hepatomegalia
+esplenomegalia
+linfonodomegalia
+normodistendida
+# Lista do Jackson (14/11): os permitidos dele e os termos descritivos que ele marcou como proibidos.
+# Pelo critério do roteiro (proibido = só CID, SOAP e escores), descritivos podem aparecer, desde que explicados.
+hipoecoica
+anecoico
+anecoica
+litiase
+hidronefrose
+osteofito
+peribronquico
+hipercalemia
+hipocalemia
+hiponatremia
+hematocrito
+hemacias
+glicose
+t4 livre
+calcificado

@@ -1,0 +1,17 @@
+hemoglobina
+hematócrito
+hemácias
+leucócitos
+plaquetas
+LDL
+HDL
+triglicerídeos
+glicose
+hemoglobina glicada
+TSH
+T4 livre
+creatinina
+nódulo
+cisto
+esteatose
+calcificado

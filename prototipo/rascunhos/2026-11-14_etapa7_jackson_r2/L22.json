@@ -1,0 +1,98 @@
+{
+  "rascunho_id": "L22-20261114-151459",
+  "laudo_id": "L22",
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Tomografia de tórax",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:14:59",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.5,
+  "exemplo_e1": "E03",
+  "explicacao": "A tomografia do tórax (exame de imagem do peito) mostra que o pulmão direito tem um nódulo (uma pequena área com aspecto diferente do tecido ao redor) de 0,4 cm no lobo superior (a parte de cima do pulmão). Esse nódulo está completamente calcificado (tem pequenos depósitos de cálcio). Ele tem aspecto residual (com aparência de uma marca antiga). O laudo diz que não há consolidação (área do pulmão em que o ar foi substituído por líquido ou outro material), derrame pleural (acúmulo de líquido entre o pulmão e a parede do tórax) ou linfonodomegalia (linfonodos aumentados) no mediastino (a região no centro do peito, entre os dois pulmões). Os demais lobos pulmonares e estruturas estão normais.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa \"aspecto residual\"?",
+      "resposta": "Significa que o nódulo tem aparência de uma marca antiga."
+    },
+    {
+      "pergunta": "O que são calcificações?",
+      "resposta": "São pequenos depósitos de cálcio."
+    },
+    {
+      "pergunta": "O que é o mediastino?",
+      "resposta": "É a região no centro do peito, entre os dois pulmões."
+    },
+    {
+      "pergunta": "O que significa \"nódulo\"?",
+      "resposta": "É uma pequena área com aspecto diferente do tecido ao redor."
+    },
+    {
+      "pergunta": "O que é lobo superior do pulmão?",
+      "resposta": "É a parte de cima do pulmão."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "nódulo inteiramente calcificado de 0,4 cm no lobo superior direito do pulmão, de aspecto residual",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 1"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "calcificacoes"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "explicação",
+          "frase": "Os demais lobos pulmonares e estruturas estão normais.",
+          "motivo": "O laudo não menciona os demais lobos pulmonares."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona um nódulo de 0,4 cm no lobo superior direito.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o nódulo é inteiramente calcificado.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o nódulo como tendo aspecto residual.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo nega consolidações, derrame pleural e linfonodomegalias mediastinais.\"}, {\"n\": 5, \"apoio\": \"nao\", \"motivo\": \"O laudo não menciona os demais lobos pulmonares.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"Aspecto residual é definido como com aparência de uma marca antiga.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"Calcificações são definidos como pequenos depósitos de cálcio.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"Mediastino é definido como a região no centro do peito, entre os dois pulmões.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"Nódulo é definido como uma pequena área com aspecto diferente do tecido ao redor.\"}, {\"n\": 10, \"apoio\": \"sim\", \"motivo\": \"Lobo superior é definido como a parte de cima do pulmão.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": -4.6,
+    "explicacao": 54.6,
+    "palavras": 125
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Linfonodos",
+      "Linfonodomegalia",
+      "Nódulo",
+      "Calcificações",
+      "Consolidação (pulmão)",
+      "Derrame pleural",
+      "Lobo superior (pulmão)",
+      "Mediastino",
+      "Aspecto residual"
+    ],
+    "mensagem_enviada": "Exame: Tomografia de tórax. Paciente: sexo feminino, 66 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nPequeno nódulo pulmonar de 0,4 cm, inteiramente calcificado, no lobo superior direito, de aspecto residual. Ausência de consolidações, derrame pleural e linfonodomegalias mediastinais.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Linfonodos: pequenas estruturas de defesa do corpo, também chamadas de gânglios ou ínguas\n- Linfonodomegalia: linfonodos (gânglios) aumentados\n- Nódulo: uma pequena área com aspecto diferente do tecido ao redor\n- Calcificações: pequenos depósitos de cálcio\n- Consolidação (pulmão): área do pulmão em que o ar foi substituído por líquido ou outro material\n- Derrame pleural: acúmulo de líquido entre o pulmão e a parede do tórax\n- Lobo superior (pulmão): a parte de cima do pulmão\n- Mediastino: a região no centro do peito, entre os dois pulmões\n- Aspecto residual: com aparência de uma marca antiga\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nA tomografia do tórax (exame de imagem do peito) mostra que o pulmão direito tem um nódulo (uma pequena área com aspecto diferente do tecido ao redor) de 0,4 cm no lobo superior (a parte de cima do pulmão). Esse nódulo está completamente calcificado (tem pequenos depósitos de cálcio). Ele tem aspecto residual (com aparência de uma marca antiga). O laudo diz que não há consolidação (área do pulmão em que o ar foi substituído por líquido ou outro material), derrame pleural (acúmulo de líquido entre o pulmão e a parede do tórax) ou linfonodomegalia (linfonodos aumentados) no mediastino (a região no centro do peito, entre os dois pulmões). Os demais lobos pulmonares e estruturas estão normais.\n\nDÚVIDAS:\nP: O que significa \"aspecto residual\"?\nR: Significa que o nódulo tem aparência de uma marca antiga.\n\nP: O que são calcificações?\nR: São pequenos depósitos de cálcio.\n\nP: O que é o mediastino?\nR: É a região no centro do peito, entre os dois pulmões.\n\nP: O que significa \"nódulo\"?\nR: É uma pequena área com aspecto diferente do tecido ao redor.\n\nP: O que é lobo superior do pulmão?\nR: É a parte de cima do pulmão.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

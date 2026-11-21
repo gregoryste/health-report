@@ -1,0 +1,46 @@
+{
+  "id": "L23",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "exame": "Hemograma parcial",
+  "paciente": "Paciente Fictício 23",
+  "sexo": "M",
+  "idade": 30,
+  "data_coleta": "2026-11-14",
+  "itens": [
+    {
+      "analito": "Hemoglobina",
+      "valor": 15,
+      "unidade": "g/dL",
+      "apelidos": [
+        "hemoglobina"
+      ],
+      "ref_min": 13.5,
+      "ref_max": 17.5
+    },
+    {
+      "analito": "Leucócitos",
+      "valor": 7800,
+      "unidade": "/mm³",
+      "apelidos": [
+        "leucocitos",
+        "celulas de defesa"
+      ],
+      "ref_min": 4000,
+      "ref_max": 11000
+    },
+    {
+      "analito": "Plaquetas",
+      "valor": 455000,
+      "unidade": "/mm³",
+      "apelidos": [
+        "plaquetas"
+      ],
+      "ref_min": 150000,
+      "ref_max": 450000
+    }
+  ],
+  "gabarito_alterados": [
+    "Plaquetas"
+  ]
+}

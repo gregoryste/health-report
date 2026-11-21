@@ -1,0 +1,21 @@
+﻿id;categoria;exame;tipo;lote_inicial;gabarito_alterados
+L04;sangue_comum;Perfil lipídico;laboratorio;Sim;"Colesterol LDL; Triglicerídeos"
+L05;imagem;Ultrassonografia de tireoide;imagem;Sim;nódulo sólido de 0,6 cm no lobo direito da tireoide
+L06;valor_critico;Potássio sérico;laboratorio;Sim;Potássio
+L07;achado_incidental;Ultrassonografia de rins e vias urinárias;imagem;Sim;cisto simples de 1,2 cm no polo superior do rim esquerdo
+L08;normal_que_assusta;Hemograma parcial;laboratorio;Sim;Nenhum item alterado
+L09;sangue_comum;Hemograma parcial;laboratorio;Não;"Hemoglobina; Hematócrito; Volume corpuscular médio"
+L10;imagem;Radiografia de tórax;imagem;Não;discreto espessamento peribrônquico bilateral
+L11;valor_critico;Glicose plasmática em jejum;laboratorio;Não;Glicose
+L12;achado_incidental;Ultrassonografia de abdome superior;imagem;Não;cisto simples de 0,9 cm no segmento VI do fígado
+L13;normal_que_assusta;Ultrassonografia de rins;imagem;Não;Nenhum item alterado
+L14;sangue_comum;Glicose e hemoglobina glicada;laboratorio;Não;"Glicose em jejum; Hemoglobina glicada"
+L15;imagem;Ultrassonografia de abdome superior;imagem;Não;"fígado discretamente aumentado; achados sugestivos de esteatose hepática; cálculo de 0,8 cm na vesícula biliar"
+L16;valor_critico;Sódio sérico;laboratorio;Não;Sódio
+L17;achado_incidental;Tomografia de abdome;imagem;Não;Nenhum item alterado
+L18;normal_que_assusta;TSH e T4 livre;laboratorio;Não;Nenhum item alterado
+L19;sangue_comum;TSH e T4 livre;laboratorio;Não;"TSH; T4 livre"
+L20;imagem;Radiografia de coluna lombar;imagem;Não;"osteófitos marginais anteriores em L3 e L4; discreta redução do espaço discal L4-L5"
+L21;valor_critico;Potássio sérico;laboratorio;Não;Potássio
+L22;achado_incidental;Tomografia de tórax;imagem;Não;nódulo inteiramente calcificado de 0,4 cm no lobo superior direito do pulmão, de aspecto residual
+L23;normal_que_assusta;Hemograma parcial;laboratorio;Não;Plaquetas

@@ -1,0 +1,206 @@
+{
+  "id": "t2H4HUAtc1G06gz1",
+  "name": "Pista do laudo: entrada",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Pista do laudo: entrada\nO sistema de exames chama este webhook quando um laudo é liberado (D7).\n1. O serviço aplica a regra fixa, chama a LLM interna, faz as checagens e põe o rascunho na fila de revisão. Com ?efeitos=0 ele só devolve os fatos (prioridade, rascunho).\n2. **O n8n decide:** se a prioridade é crítico, pede o alerta de contato ativo (D3: ligar hoje, sem depender do paciente).\n3. Responde ao sistema de exames com os fatos.\nRegras clínicas ficam no serviço; aqui fica só o caminho (mesma tabela ROTAS do modo interno).\nNada vai ao paciente aqui: só depois da aprovação.",
+        "height": 300,
+        "width": 520
+      },
+      "id": "16bed2bc-5d12-4e0c-b3c8-8f354102f1b2",
+      "name": "Sobre este fluxo",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "laudo",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "5afc780a-bff9-4765-a106-0ec2944c26f9",
+      "name": "Laudo liberado pelo sistema de exames",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        300
+      ],
+      "webhookId": "6936d720-f820-4611-954e-6116cbab401a"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SERVICO_URL }}/api/laudos?efeitos=0",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "={{ $env.SERVICO_API_KEY }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.body) }}",
+        "options": {
+          "timeout": 120000
+        }
+      },
+      "id": "ffb60a0c-327c-45a6-a557-eeeb17a94eae",
+      "name": "Gerar rascunho (regra + LLM + checagens)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        260,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9c1d2f0e-1a11-4c55-9a01-5e7a1b2c3d4e",
+              "leftValue": "={{ $json.prioridade }}",
+              "rightValue": "critico",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "3b0e7d55-6f1e-4c7a-9a2b-1f0c2d3e4a51",
+      "name": "Prioridade é crítico?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SERVICO_URL }}/api/acoes/contato-ativo",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key",
+              "value": "={{ $env.SERVICO_API_KEY }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ rascunho_id: $json.rascunho_id }) }}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "7d4c2a19-8e3b-4f60-b1c2-5a6d7e8f9012",
+      "name": "Alerta de contato ativo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        780,
+        200
+      ],
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 2000
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify($('Gerar rascunho (regra + LLM + checagens)').first().json) }}",
+        "options": {}
+      },
+      "id": "c2e9a8b7-1d3f-4e5a-8b6c-0f1e2d3c4b5a",
+      "name": "Responder ao sistema de exames",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        1040,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Laudo liberado pelo sistema de exames": {
+      "main": [
+        [
+          {
+            "node": "Gerar rascunho (regra + LLM + checagens)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar rascunho (regra + LLM + checagens)": {
+      "main": [
+        [
+          {
+            "node": "Prioridade é crítico?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prioridade é crítico?": {
+      "main": [
+        [
+          {
+            "node": "Alerta de contato ativo",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Responder ao sistema de exames",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Alerta de contato ativo": {
+      "main": [
+        [
+          {
+            "node": "Responder ao sistema de exames",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "errorWorkflow": "Xf5ErrosOrq0001a"
+  },
+  "active": false,
+  "pinData": {}
+}

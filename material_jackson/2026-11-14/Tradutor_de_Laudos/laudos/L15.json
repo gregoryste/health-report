@@ -1,0 +1,16 @@
+{
+  "id": "L15",
+  "ficticio": true,
+  "tipo": "imagem",
+  "exame": "Ultrassonografia de abdome superior",
+  "paciente": "Paciente Fictício 15",
+  "sexo": "M",
+  "idade": 46,
+  "data_coleta": "2026-11-14",
+  "texto": "Fígado discretamente aumentado, com aumento difuso da ecogenicidade e atenuação posterior do feixe sonoro, sugestivos de esteatose hepática. Não se observam lesões focais. Vesícula biliar com cálculo móvel de 0,8 cm, sem espessamento parietal. Vias biliares não dilatadas.",
+  "gabarito_alterados": [
+    "fígado discretamente aumentado",
+    "achados sugestivos de esteatose hepática",
+    "cálculo de 0,8 cm na vesícula biliar"
+  ]
+}

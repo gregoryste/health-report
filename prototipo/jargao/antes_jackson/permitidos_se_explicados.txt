@@ -1,0 +1,34 @@
+# PROVISÓRIO até chegar a lista do Jackson.
+# Termos que podem aparecer, desde que explicados ao lado na primeira vez (parênteses, "que ...", aposto).
+# Exames de sangue
+hemoglobina
+hemoglobina glicada
+leucocitos
+plaquetas
+vcm
+ldl
+hdl
+tsh
+creatinina
+ureia
+potassio
+sodio
+triglicerideos
+# Laudos de imagem (termos descritivos)
+nodulo
+cisto
+istmo
+calcificacoes
+doppler
+vascularizacao
+esteatose
+hipoecoico
+hiperecoico
+isoecoico
+ecogenicidade
+ecotextura
+parenquima
+hepatomegalia
+esplenomegalia
+linfonodomegalia
+normodistendida

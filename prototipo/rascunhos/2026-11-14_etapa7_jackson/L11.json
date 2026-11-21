@@ -1,0 +1,77 @@
+{
+  "rascunho_id": "L11-20261114-150527",
+  "laudo_id": "L11",
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Glicose plasmática em jejum",
+  "prioridade": "critico",
+  "prazo_revisao": "mesmo dia + ligação",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:05:27",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 2.9,
+  "exemplo_e1": null,
+  "explicacao": "O exame de glicose em jejum mostra que a quantidade de açúcar no sangue está muito baixa. O resultado foi de 38 mg/dL, e o valor esperado, para pessoas que não estão em jejum, é entre 70 e 99 mg/dL. Esse resultado está ABAIXO da faixa de referência e foi marcado como CRÍTICO.\n\nA glicose em jejum é a quantidade de açúcar no sangue depois de um período sem comer. O resultado baixo pode ter várias causas, e o médico vai avaliar o que pode estar acontecendo.\n\nHá um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa o resultado estar \"crítico\"?",
+      "resposta": "Significa que o resultado está muito diferente do esperado e precisa de atenção médica."
+    },
+    {
+      "pergunta": "Por que a glicose está tão baixa?",
+      "resposta": "O médico vai avaliar o que pode estar causando esse resultado."
+    },
+    {
+      "pergunta": "Preciso fazer algum exame agora?",
+      "resposta": "Isso será avaliado pelo médico na consulta."
+    },
+    {
+      "pergunta": "Esse resultado pode ser perigoso?",
+      "resposta": "O médico vai avaliar o que significa esse resultado para você."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Glicose",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "cita causa"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 87.6,
+    "explicacao": 74.8,
+    "palavras": 115
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Há um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [
+      "É importante que você converse com o médico para entender o que significa esse resultado e quais os próximos passos."
+    ],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Glicose em jejum"
+    ],
+    "mensagem_enviada": "Exame: Glicose plasmática em jejum. Paciente: sexo feminino, 61 anos.\nResultados:\n- Glicose: 38 mg/dL (referência 70–99 mg/dL) → ABAIXO da faixa, CRÍTICO\nTom: há um resultado crítico. Seja claro e sério, sem alarmar e sem descrever consequências para a saúde.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Glicose em jejum: a quantidade de açúcar no sangue depois de um período sem comer",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de glicose em jejum mostra que a quantidade de açúcar no sangue está muito baixa. O resultado foi de 38 mg/dL, e o valor esperado, para pessoas que não estão em jejum, é entre 70 e 99 mg/dL. Esse resultado está ABAIXO da faixa de referência e foi marcado como CRÍTICO.\n\nA glicose em jejum é a quantidade de açúcar no sangue depois de um período sem comer. O resultado baixo pode ter várias causas, e o médico vai avaliar o que pode estar acontecendo. É importante que você converse com o médico para entender o que significa esse resultado e quais os próximos passos.\n\nDÚVIDAS:\nP: O que significa o resultado estar \"crítico\"?\nR: Significa que o resultado está muito diferente do esperado e precisa de atenção médica.\nP: Por que a glicose está tão baixa?\nR: O médico vai avaliar o que pode estar causando esse resultado.\nP: Preciso fazer algum exame agora?\nR: Isso será avaliado pelo médico na consulta.\nP: Esse resultado pode ser perigoso?\nR: O médico vai avaliar o que significa esse resultado para você.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

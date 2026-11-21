@@ -1,0 +1,108 @@
+{
+  "rascunho_id": "L15-20261114-151354",
+  "laudo_id": "L15",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Ultrassonografia de abdome superior",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:13:54",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 4.2,
+  "exemplo_e1": null,
+  "explicacao": "O exame de ultrassom do abdome superior mostrou que o fígado está discretamente aumentado e com a ecogenicidade aumentada (o fígado aparece mais claro no ultrassom). Também foi observada atenuação posterior do feixe sonoro (o som do ultrassom atravessa o órgão com mais dificuldade, e a imagem fica mais escura atrás dele), o que sugere esteatose hepática (acúmulo de gordura no fígado). Não foram encontradas lesões focais no fígado.\n\nA vesícula biliar (pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão) tem um cálculo (uma pedra formada por sais minerais) de 0,8 cm, que é móvel. As vias biliares (os canais que levam a bile do fígado até o intestino) não estão dilatadas.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa esteatose hepática?",
+      "resposta": "É o acúmulo de gordura no fígado."
+    },
+    {
+      "pergunta": "O que é atenuação posterior do feixe sonoro?",
+      "resposta": "É quando o som do ultrassom tem dificuldade para atravessar o fígado, e a imagem fica mais escura atrás dele."
+    },
+    {
+      "pergunta": "O que significa que o cálculo na vesícula biliar é móvel?",
+      "resposta": "Significa que ele se move dentro da vesícula biliar."
+    },
+    {
+      "pergunta": "O que são as vias biliares?",
+      "resposta": "São os canais que levam a bile do fígado até o intestino."
+    },
+    {
+      "pergunta": "O que significa que o fígado está \"discretamente aumentado\"?",
+      "resposta": "Significa que o tamanho do fígado está um pouco maior do que o normal."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "fígado discretamente aumentado",
+        "origem": "gabarito (teste)",
+        "citado": true
+      },
+      {
+        "nome": "achados sugestivos de esteatose hepática",
+        "origem": "gabarito (teste)",
+        "citado": true
+      },
+      {
+        "nome": "cálculo de 0,8 cm na vesícula biliar",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 2"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "dúvida: O que significa esteatose hepática?",
+          "frase": "É o acúmulo de gordura no fígado.",
+          "motivo": "O laudo não afirma que é o acúmulo de gordura no fígado, apenas sugere esteatose hepática."
+        },
+        {
+          "onde": "dúvida: O que significa que o fígado está \"discretamente aumentado\"?",
+          "frase": "Significa que o tamanho do fígado está um pouco maior do que o normal.",
+          "motivo": "O laudo afirma que o fígado está discretamente aumentado, mas não especifica se é maior que o normal."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o fígado está discretamente aumentado e com ecogenicidade aumentada.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma atenuação posterior do feixe sonoro, sugestivo de esteatose hepática.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que não se observam lesões focais.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que a vesícula biliar tem um cálculo móvel de 0,8 cm.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que as vias biliares não estão dilatadas.\"}, {\"n\": 6, \"apoio\": \"nao\", \"motivo\": \"O laudo não afirma que é o acúmulo de gordura no fígado, apenas sugere esteatose hepática.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma atenuação posterior do feixe sonoro, que corresponde à descrição.\"}, {\"n\": 8, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que o cálculo é móvel.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que as vias biliares são os canais que levam a bile do fígado até o intestino.\"}, {\"n\": 10, \"apoio\": \"nao\", \"motivo\": \"O laudo afirma que o fígado está discretamente aumentado, mas não especifica se é maior que o normal.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 22.2,
+    "explicacao": 48.9,
+    "palavras": 127
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Vesícula biliar",
+      "Cálculo",
+      "Ecogenicidade aumentada (fígado)",
+      "Esteatose hepática",
+      "Atenuação posterior do feixe sonoro",
+      "Vias biliares"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de abdome superior. Paciente: sexo masculino, 46 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nFígado discretamente aumentado, com aumento difuso da ecogenicidade e atenuação posterior do feixe sonoro, sugestivos de esteatose hepática. Não se observam lesões focais. Vesícula biliar com cálculo móvel de 0,8 cm, sem espessamento parietal. Vias biliares não dilatadas.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Vesícula biliar: pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão\n- Cálculo: uma pedra formada por sais minerais\n- Ecogenicidade aumentada (fígado): o fígado aparece mais claro no ultrassom\n- Esteatose hepática: acúmulo de gordura no fígado\n- Atenuação posterior do feixe sonoro: o som do ultrassom atravessa o órgão com mais dificuldade, e a imagem fica mais escura atrás dele\n- Vias biliares: os canais que levam a bile (líquido que ajuda na digestão) do fígado até o intestino",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de ultrassom do abdome superior mostrou que o fígado está discretamente aumentado e com a ecogenicidade aumentada (o fígado aparece mais claro no ultrassom). Também foi observada atenuação posterior do feixe sonoro (o som do ultrassom atravessa o órgão com mais dificuldade, e a imagem fica mais escura atrás dele), o que sugere esteatose hepática (acúmulo de gordura no fígado). Não foram encontradas lesões focais no fígado.\n\nA vesícula biliar (pequena bolsa embaixo do fígado que guarda a bile, um líquido que ajuda na digestão) tem um cálculo (uma pedra formada por sais minerais) de 0,8 cm, que é móvel. As vias biliares (os canais que levam a bile do fígado até o intestino) não estão dilatadas.\n\nDÚVIDAS:\nP: O que significa esteatose hepática?\nR: É o acúmulo de gordura no fígado.\nP: O que é atenuação posterior do feixe sonoro?\nR: É quando o som do ultrassom tem dificuldade para atravessar o fígado, e a imagem fica mais escura atrás dele.\nP: O que significa que o cálculo na vesícula biliar é móvel?\nR: Significa que ele se move dentro da vesícula biliar.\nP: O que são as vias biliares?\nR: São os canais que levam a bile do fígado até o intestino.\nP: O que significa que o fígado está \"discretamente aumentado\"?\nR: Significa que o tamanho do fígado está um pouco maior do que o normal.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

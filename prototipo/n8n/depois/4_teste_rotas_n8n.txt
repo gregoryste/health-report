@@ -1,0 +1,43 @@
+1. Modo interno (plano B: o serviço decide pela tabela ROTAS)
+  ok   laudo crítico → 1 alerta de contato ativo (repetido não duplica)
+  ok   laudo alterado → sem alerta
+  ok   dúvida d → 1 alerta de urgência
+  ok   dúvidas d e c na fila; a fora da fila
+  ok   dúvida a → só a resposta (sem código da fonte)
+  ok   envio com erro → 1 alerta de falha no envio
+  ok   envio simulado → sem alerta
+  ok   modo interno não passa pelo n8n
+2. Modo n8n (o serviço só devolve fatos; o n8n falso decide o ramo e chama as ações)
+  ok   cada chamada seguiu o ramo esperado no n8n
+  ok   alertas: igual ao modo interno
+  ok   fila: igual ao modo interno
+  ok   chat: igual ao modo interno
+  ok   avisos: igual ao modo interno
+  ok   rascunhos: igual ao modo interno
+  ok   respostas: igual ao modo interno
+3. Rotas de ação: idempotência e chave da API (banco do modo n8n)
+  ok   contato-ativo repetido → novo:false, sem alerta a mais
+  ok   urgência repetida → novo:false
+  ok   falha de envio repetida → novo:false
+  ok   falha de orquestração: 1 alerta, a repetição não duplica
+  ok   texto da falha só com a 1ª linha (sem corpo de resposta)
+  ok   rascunho inexistente → 404
+  ok   urgência sem fila_id → 422
+  ok   sem X-API-Key → 401 nas rotas da API
+4. Compatibilidade e fatos
+  ok   /api/laudos sem ?efeitos cria o alerta como antes
+  ok   /api/laudos?efeitos=0 não cria alerta
+  ok   fatos do laudo completos
+  ok   /api/duvidas?efeitos=0 não cria alerta
+  ok   fatos da dúvida completos
+5. Coerência n8n × Python: os IF/Switch dos fluxos (JSON) batem com a tabela ROTAS
+  ok   fluxos do n8n e ROTAS iguais (mesmo campo, mesmos valores, mesmos destinos)
+  ok   laudo e dúvida chamam o serviço com ?efeitos=0 (senão o alerta sairia duas vezes)
+  ok   mudar só o fluxo (d sem alerta) → o teste acusa
+  ok   mudar só a ROTAS (alterado → contato ativo) → o teste acusa
+6. Nenhuma chamada à LLM
+  ok   nucleo.chamar_interna nunca foi chamada
+
+33 verificações, 0 falhas
+TUDO OK
+exit=0

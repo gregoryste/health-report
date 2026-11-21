@@ -1,0 +1,104 @@
+{
+  "rascunho_id": "L10-20261114-151259",
+  "laudo_id": "L10",
+  "tipo": "imagem",
+  "categoria": "imagem",
+  "exame": "Radiografia de tórax",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:12:59",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 3.5,
+  "exemplo_e1": null,
+  "explicacao": "A radiografia de tórax mostra que as paredes dos brônquios (os tubos que levam o ar dentro dos pulmões) estão mais grossas do que o normal, em ambos os lados do tórax. Esse achado é chamado de espessamento peribrônquico bilateral. Não foram encontradas áreas do pulmão com líquido ou outro material (consolidação) nem acúmulo de líquido entre o pulmão e a parede do tórax (derrame pleural). O contorno do coração (silhueta cardíaca) tem tamanho dentro do esperado.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que significa \"espessamento peribrônquico\"?",
+      "resposta": "Significa que as paredes dos brônquios estão mais grossas do que o normal."
+    },
+    {
+      "pergunta": "O que é \"consolidação\"?",
+      "resposta": "É uma área do pulmão onde o ar foi substituído por líquido ou outro material."
+    },
+    {
+      "pergunta": "O que é \"derrame pleural\"?",
+      "resposta": "É acúmulo de líquido entre o pulmão e a parede do tórax."
+    },
+    {
+      "pergunta": "O que significa \"silhueta cardíaca\"?",
+      "resposta": "É o contorno do coração visto na radiografia."
+    },
+    {
+      "pergunta": "O que é \"dimensões preservadas\"?",
+      "resposta": "Significa que o tamanho do coração está dentro do esperado."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "discreto espessamento peribrônquico bilateral",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 3"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": [
+        "peribronquico"
+      ]
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "dúvida: O que é \"consolidação\"?",
+          "frase": "É uma área do pulmão onde o ar foi substituído por líquido ou outro material.",
+          "motivo": "É a definição de consolidação, não um achado do laudo."
+        },
+        {
+          "onde": "dúvida: O que é \"derrame pleural\"?",
+          "frase": "É acúmulo de líquido entre o pulmão e a parede do tórax.",
+          "motivo": "É a definição de derrame pleural, não um achado do laudo."
+        },
+        {
+          "onde": "dúvida: O que significa \"silhueta cardíaca\"?",
+          "frase": "É o contorno do coração visto na radiografia.",
+          "motivo": "É a definição de silhueta cardíaca, não um achado do laudo."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"Corresponde à definição de espessamento peribrônquico e à descrição do laudo (bilateral).\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo menciona 'Discreto espessamento peribrônquico bilateral.'\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"Corresponde à ausência de consolidações e derrame pleural descritas no laudo.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"Corresponde à descrição de dimensões preservadas da silhueta cardíaca.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"Paráfrase da definição de espessamento peribrônquico.\"}, {\"n\": 6, \"apoio\": \"nao\", \"motivo\": \"É a definição de consolidação, não um achado do laudo.\"}, {\"n\": 7, \"apoio\": \"nao\", \"motivo\": \"É a definição de derrame pleural, não um achado do laudo.\"}, {\"n\": 8, \"apoio\": \"nao\", \"motivo\": \"É a definição de silhueta cardíaca, não um achado do laudo.\"}, {\"n\": 9, \"apoio\": \"sim\", \"motivo\": \"Corresponde à definição de dimensões preservadas.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": -0.8,
+    "explicacao": 62.4,
+    "palavras": 85
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Espessamento peribrônquico",
+      "Consolidação (pulmão)",
+      "Derrame pleural",
+      "Silhueta cardíaca",
+      "Dimensões preservadas"
+    ],
+    "mensagem_enviada": "Exame: Radiografia de tórax. Paciente: sexo masculino, 42 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nDiscreto espessamento peribrônquico bilateral. Ausência de consolidações focais e de derrame pleural. Silhueta cardíaca de dimensões preservadas.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Espessamento peribrônquico: as paredes dos brônquios (os tubos que levam o ar dentro dos pulmões) estão mais grossas do que o habitual\n- Consolidação (pulmão): área do pulmão em que o ar foi substituído por líquido ou outro material\n- Derrame pleural: acúmulo de líquido entre o pulmão e a parede do tórax\n- Silhueta cardíaca: o contorno do coração visto na radiografia\n- Dimensões preservadas: tamanho dentro do esperado",
+    "resposta_bruta": "EXPLICAÇÃO:\nA radiografia de tórax mostra que as paredes dos brônquios (os tubos que levam o ar dentro dos pulmões) estão mais grossas do que o normal, em ambos os lados do tórax. Esse achado é chamado de espessamento peribrônquico bilateral. Não foram encontradas áreas do pulmão com líquido ou outro material (consolidação) nem acúmulo de líquido entre o pulmão e a parede do tórax (derrame pleural). O contorno do coração (silhueta cardíaca) tem tamanho dentro do esperado.\n\nDÚVIDAS:\nP: O que significa \"espessamento peribrônquico\"?\nR: Significa que as paredes dos brônquios estão mais grossas do que o normal.\nP: O que é \"consolidação\"?\nR: É uma área do pulmão onde o ar foi substituído por líquido ou outro material.\nP: O que é \"derrame pleural\"?\nR: É acúmulo de líquido entre o pulmão e a parede do tórax.\nP: O que significa \"silhueta cardíaca\"?\nR: É o contorno do coração visto na radiografia.\nP: O que é \"dimensões preservadas\"?\nR: Significa que o tamanho do coração está dentro do esperado.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

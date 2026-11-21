@@ -1,0 +1,99 @@
+{
+  "rascunho_id": "L07-20261114-150449",
+  "laudo_id": "L07",
+  "tipo": "imagem",
+  "categoria": "achado_incidental",
+  "exame": "Ultrassonografia de rins e vias urinárias",
+  "prioridade": "alterado",
+  "prazo_revisao": "2 dias úteis",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:04:49",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 2.8,
+  "exemplo_e1": "E03",
+  "explicacao": "O ultrassom dos rins e das vias urinárias mostra que os rins estão na posição normal e têm o tamanho adequado. Não foram encontradas pedras (litíase) nem aumento do volume (hidronefrose). Foi visto um cisto (uma pequena bolsa com líquido) no polo superior (parte de cima) do rim esquerdo, que tem 1,2 cm. O cisto é anecoico (não forma imagem escura no ultrassom), tem paredes finas e sem septações (divisões internas). A bexiga não apresenta alterações.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [
+    {
+      "pergunta": "O que é um cisto?",
+      "resposta": "É uma pequena bolsa com líquido."
+    },
+    {
+      "pergunta": "O que significa \"anecoico\"?",
+      "resposta": "Significa que o cisto não forma uma imagem escura no ultrassom."
+    },
+    {
+      "pergunta": "O que são septações?",
+      "resposta": "São divisões internas dentro do cisto."
+    },
+    {
+      "pergunta": "O que é hidronefrose?",
+      "resposta": "É o aumento do volume do rim."
+    },
+    {
+      "pergunta": "O que é litíase?",
+      "resposta": "São as pedras nos rins."
+    }
+  ],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "cisto simples de 1,2 cm no polo superior do rim esquerdo",
+        "origem": "gabarito (teste)",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "frase sem apoio no laudo (verificador): 3"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": {
+      "verificado": true,
+      "sem_apoio": [
+        {
+          "onde": "dúvida: O que são septações?",
+          "frase": "São divisões internas dentro do cisto.",
+          "motivo": "O laudo afirma que o cisto não tem septações, não divisões internas."
+        },
+        {
+          "onde": "dúvida: O que é hidronefrose?",
+          "frase": "É o aumento do volume do rim.",
+          "motivo": "O laudo afirma ausência de hidronefrose, não aumento do volume."
+        },
+        {
+          "onde": "dúvida: O que é litíase?",
+          "frase": "São as pedras nos rins.",
+          "motivo": "O laudo afirma ausência de litíase, não pedras nos rins."
+        }
+      ],
+      "resposta_bruta": "{\"frases\": [{\"n\": 1, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que os rins estão em topografia habitual e com dimensões preservadas.\"}, {\"n\": 2, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma ausência de litíase e hidronefrose.\"}, {\"n\": 3, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve um cisto no polo superior do rim esquerdo com 1,2 cm.\"}, {\"n\": 4, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o cisto como anecoico, com paredes finas e sem septações.\"}, {\"n\": 5, \"apoio\": \"sim\", \"motivo\": \"O laudo afirma que a bexiga não apresenta alterações.\"}, {\"n\": 6, \"apoio\": \"sim\", \"motivo\": \"O termo 'cisto' é definido como uma pequena bolsa com líquido.\"}, {\"n\": 7, \"apoio\": \"sim\", \"motivo\": \"O laudo descreve o cisto como anecoico.\"}, {\"n\": 8, \"apoio\": \"nao\", \"motivo\": \"O laudo afirma que o cisto não tem septações, não divisões internas.\"}, {\"n\": 9, \"apoio\": \"nao\", \"motivo\": \"O laudo afirma ausência de hidronefrose, não aumento do volume.\"}, {\"n\": 10, \"apoio\": \"nao\", \"motivo\": \"O laudo afirma ausência de litíase, não pedras nos rins.\"}]}"
+    }
+  },
+  "legibilidade": {
+    "laudo": 38.2,
+    "explicacao": 66.6,
+    "palavras": 84
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Polo superior / polo inferior (rim)",
+      "Cisto"
+    ],
+    "mensagem_enviada": "Exame: Ultrassonografia de rins e vias urinárias. Paciente: sexo masculino, 54 anos.\nTipo: laudo de imagem (texto livre).\nInstruções para este laudo de imagem: cite cada achado alterado, com o local e o tamanho quando o laudo informar, e traduza os termos técnicos. Estruturas normais: diga só que estão normais, sem repetir medidas, dimensões ou volumes.\nTexto do laudo:\nRins em topografia habitual, com dimensões preservadas. Ausência de litíase e hidronefrose. Incidentalmente, identifica-se cisto cortical simples de 1,2 cm no polo superior do rim esquerdo, anecoico, de paredes finas e sem septações. Bexiga sem alterações descritas.\nTom: há itens fora da faixa. Descreva-os com clareza e calma, sem esconder. Não suponha problemas, doenças ou causas que o laudo não mostra.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Polo superior / polo inferior (rim): a parte de cima / a parte de baixo do rim\n- Cisto: uma pequena bolsa com líquido\n\nExemplo de explicação já aprovada por um profissional, para um caso parecido de OUTRO paciente. Use como referência de tom, estrutura e nível de linguagem. Não copie dados dele.\n<<<\nO ultrassom da tireoide (glândula que fica na frente do pescoço) mostrou a glândula com tamanho e aspecto normais. No lado esquerdo da tireoide foi visto um cisto (uma pequena bolsa com líquido) de 0,4 cm. O laudo traz uma classificação que o médico vai explicar na consulta. Os gânglios do pescoço (pequenas estruturas de defesa do corpo) estão normais.\n>>>",
+    "resposta_bruta": "EXPLICAÇÃO:\nO ultrassom dos rins e das vias urinárias mostra que os rins estão na posição normal e têm o tamanho adequado. Não foram encontradas pedras (litíase) nem aumento do volume (hidronefrose). Foi visto um cisto (uma pequena bolsa com líquido) no polo superior (parte de cima) do rim esquerdo, que tem 1,2 cm. O cisto é anecoico (não forma imagem escura no ultrassom), tem paredes finas e sem septações (divisões internas). A bexiga não apresenta alterações.\n\nDÚVIDAS:\nP: O que é um cisto?\nR: É uma pequena bolsa com líquido.\nP: O que significa \"anecoico\"?\nR: Significa que o cisto não forma uma imagem escura no ultrassom.\nP: O que são septações?\nR: São divisões internas dentro do cisto.\nP: O que é hidronefrose?\nR: É o aumento do volume do rim.\nP: O que é litíase?\nR: São as pedras nos rins.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:08:31"
+}

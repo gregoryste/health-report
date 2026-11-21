@@ -1,0 +1,34 @@
+Arquivos: 25 (15 de laboratório, 10 de imagem). Uma chamada à LLM por arquivo.
+
+LABORATÓRIO, item a item:
+  corretos:   24/35
+  descartados (seguro, pede outra foto): 7/35
+  ERRADOS que passariam para o paciente: 4/35   ← meta: zero
+
+Por condição (laboratório):
+  desfocada    corretos 0/7 · errados 0 · desfechos: {'outra pessoa': 3} · confiança OCR média 71
+  escura       corretos 6/7 · errados 1 · desfechos: {'resumo imediato': 1, 'outra pessoa': 2} · confiança OCR média 93
+  inclinada    corretos 6/7 · errados 1 · desfechos: {'outra pessoa': 3} · confiança OCR média 89
+  limpa        corretos 6/7 · errados 1 · desfechos: {'resumo imediato': 1, 'outra pessoa': 2} · confiança OCR média 93
+  sombra       corretos 6/7 · errados 1 · desfechos: {'outra pessoa': 2, 'resumo imediato': 1} · confiança OCR média 92
+
+IMAGEM (texto livre):
+  L05_desfocada.png          tipo lido: imagem       texto recuperado: 92% · nome confere: False · outra pessoa
+  L05_escura.png             tipo lido: imagem       texto recuperado: 100% · nome confere: False · outra pessoa
+  L05_inclinada.png          tipo lido: imagem       texto recuperado: 100% · nome confere: False · outra pessoa
+  L05_limpa.png              tipo lido: imagem       texto recuperado: 100% · nome confere: False · outra pessoa
+  L05_sombra.png             tipo lido: imagem       texto recuperado: 100% · nome confere: False · outra pessoa
+  L07_desfocada.png          tipo lido: imagem       texto recuperado: 92% · nome confere: False · outra pessoa
+  L07_escura.png             tipo lido: imagem       texto recuperado: 100% · nome confere: False · outra pessoa
+  L07_inclinada.png          tipo lido: imagem       texto recuperado: 96% · nome confere: False · outra pessoa
+  L07_limpa.png              tipo lido: imagem       texto recuperado: 100% · nome confere: False · outra pessoa
+  L07_sombra.png             tipo lido: imagem       texto recuperado: 100% · nome confere: False · outra pessoa
+
+ITENS ERRADOS (detalhe):
+  L06_escura.png: Potássio esperado 6.8 [3.5, 5.1] · lido 68 [3.5, 5.1]
+  L06_inclinada.png: Potássio esperado 6.8 [3.5, 5.1] · lido 68 [None, None]
+  L06_limpa.png: Potássio esperado 6.8 [3.5, 5.1] · lido 68 [3.5, 5.1]
+  L06_sombra.png: Potássio esperado 6.8 [3.5, 5.1] · lido 68 [None, None]
+
+Nome do paciente não conferido ou diferente: ['L04_desfocada.png', 'L04_inclinada.png', 'L04_sombra.png', 'L05_desfocada.png', 'L05_escura.png', 'L05_inclinada.png', 'L05_limpa.png', 'L05_sombra.png', 'L06_desfocada.png', 'L06_escura.png', 'L06_inclinada.png', 'L06_limpa.png', 'L07_desfocada.png', 'L07_escura.png', 'L07_inclinada.png', 'L07_limpa.png', 'L07_sombra.png', 'L08_desfocada.png', 'L08_escura.png', 'L08_inclinada.png', 'L08_limpa.png', 'L08_sombra.png']
+Tempo médio por arquivo: 5.1 s (com OCR e LLM)

@@ -1,0 +1,23 @@
+  L04 ALERTA E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: ldl; hdl; triglicerideos] flesch 77.1→67.5 dúvidas=5 3.2s
+  L05 ALERTA E1=E03  omitidos=[] alertas=[posição: 'esquerd...' não aparece no laudo; frase sem apoio no laudo (verificador): 2] jargão=[|sem explicação: ] flesch 38.5→55.2 dúvidas=5 3.9s
+  L06 ALERTA E1=-    omitidos=[] alertas=[cita causa] jargão=[|sem explicação: ] flesch 87.6→62.5 dúvidas=4 3.1s
+  L07 OK     E1=E03  omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 38.2→68.0 dúvidas=5 3.0s
+  L08 OK     E1=E02  omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 52.6→79.5 dúvidas=5 2.8s
+  L09 OK     E1=E02  omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 30.3→62.2 dúvidas=5 4.2s
+  L10 ALERTA E1=-    omitidos=[] alertas=[frase sem apoio no laudo (verificador): 3] jargão=[|sem explicação: peribronquico] flesch -0.8→62.4 dúvidas=5 3.5s
+  L11 ALERTA E1=-    omitidos=[] alertas=[cita causa] jargão=[|sem explicação: ] flesch 87.6→63.0 dúvidas=4 2.8s
+  L12 ALERTA E1=E03  omitidos=[] alertas=[frase sem apoio no laudo (verificador): 1] jargão=[|sem explicação: ecogenicidade] flesch 30.2→58.7 dúvidas=5 3.6s
+  L13 OK     E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 23.3→63.9 dúvidas=5 3.4s
+  L14 OK     E1=E01  omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 43.3→63.9 dúvidas=5 3.3s
+  L15 ALERTA E1=-    omitidos=[] alertas=[frase sem apoio no laudo (verificador): 2] jargão=[|sem explicação: ] flesch 22.2→48.9 dúvidas=5 4.2s
+  L16 ALERTA E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: sodio] flesch 101.7→70.9 dúvidas=4 2.9s
+  L17 OK     E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 26.1→53.6 dúvidas=4 3.3s
+  L18 ALERTA E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: tsh; t4 livre] flesch 112.1→82.0 dúvidas=4 3.0s
+  L19 OK     E1=-    omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 112.1→72.9 dúvidas=5 3.3s
+  L20 ALERTA E1=-    omitidos=[] alertas=[frase sem apoio no laudo (verificador): 4] jargão=[|sem explicação: ] flesch 26.0→60.4 dúvidas=5 3.3s
+  L21 ALERTA E1=-    omitidos=[] alertas=[resposta repetida; menos de 3 dúvidas] jargão=[|sem explicação: ] flesch 87.6→72.7 dúvidas=0 2.6s
+  L22 ALERTA E1=E03  omitidos=[] alertas=[frase sem apoio no laudo (verificador): 1] jargão=[|sem explicação: calcificacoes] flesch -4.6→54.6 dúvidas=5 3.5s
+  L23 OK     E1=E02  omitidos=[] alertas=[] jargão=[|sem explicação: ] flesch 52.6→78.9 dúvidas=5 3.9s
+
+Rascunhos em /private/tmp/claude-501/-Users-gregorystein-Desktop-Unisinos-IA-ia-generativa-project/b7393ca1-2b2e-4dee-b3cc-639f088b6074/scratchpad/base/c/2026-11-14_etapa7_jackson_r2
+exit=0

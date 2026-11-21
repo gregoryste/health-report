@@ -1,0 +1,59 @@
+{
+  "rascunho_id": "L21-20261114-151453",
+  "laudo_id": "L21",
+  "tipo": "laboratorio",
+  "categoria": "valor_critico",
+  "exame": "Potássio sérico",
+  "prioridade": "critico",
+  "prazo_revisao": "mesmo dia + ligação",
+  "status": "aguardando_revisao",
+  "gerado_em": "2026-11-14T15:14:53",
+  "modelo": "gemma3:12b-it-qat",
+  "tempo_geracao_s": 2.6,
+  "exemplo_e1": null,
+  "explicacao": "O exame de Potássio sérico mostra que o seu nível de potássio está abaixo do valor esperado. O resultado foi 2,3 mEq/L, e a faixa de referência é de 3,5 a 5,1 mEq/L. Esse resultado está marcado como CRÍTICO no laudo.\n\nO potássio é um sal mineral do sangue, importante para os músculos e o coração. O valor abaixo da faixa de referência indica que há menos potássio no seu sangue do que o esperado.\n\nEXPLICAÇÃO:\nP: O que significa potássio? R: É um sal mineral do sangue, importante para os músculos e o coração. P: Por que o resultado está marcado como CRÍTICO? R: Indica que o valor está muito abaixo do esperado. P: O que isso significa para a minha saúde? R: Isso será avaliado pelo médico na consulta. P: Preciso de algum tratamento? R: Isso será avaliado pelo médico na consulta.\n\nHá um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.\n\nConverse com o seu médico sobre estes resultados.",
+  "duvidas": [],
+  "verificacao": {
+    "itens": [
+      {
+        "nome": "Potássio",
+        "origem": "regra",
+        "citado": true
+      }
+    ],
+    "omitidos": [],
+    "suavizacao": [],
+    "alertas": [
+      "resposta repetida",
+      "menos de 3 dúvidas"
+    ],
+    "jargao": {
+      "proibidos": [],
+      "sem_explicacao": []
+    },
+    "numeros_fora_do_laudo": [],
+    "posicao": [],
+    "contradicoes": [],
+    "apoio": null
+  },
+  "legibilidade": {
+    "laudo": 87.6,
+    "explicacao": 72.7,
+    "palavras": 172
+  },
+  "auditoria": {
+    "frases_fixas": [
+      "Há um resultado que precisa de atenção rápida. A equipe da clínica vai entrar em contato com você ainda hoje.",
+      "Converse com o seu médico sobre estes resultados."
+    ],
+    "frases_removidas_do_modelo": [],
+    "duvidas_com_causa_trocadas": [],
+    "escores_ocultados": [],
+    "definicoes_do_glossario": [
+      "Potássio"
+    ],
+    "mensagem_enviada": "Exame: Potássio sérico. Paciente: sexo masculino, 57 anos.\nResultados:\n- Potássio: 2,3 mEq/L (referência 3,5–5,1 mEq/L) → ABAIXO da faixa, CRÍTICO\nTom: há um resultado crítico. Seja claro e sério, sem alarmar e sem descrever consequências para a saúde.\n\nDEFINIÇÕES APROVADAS (use estas definições para explicar estes termos, com as mesmas ideias; não explique estes termos de outro jeito):\n- Potássio: um sal mineral do sangue, importante para os músculos e o coração",
+    "resposta_bruta": "EXPLICAÇÃO:\nO exame de Potássio sérico mostra que o seu nível de potássio está abaixo do valor esperado. O resultado foi 2,3 mEq/L, e a faixa de referência é de 3,5 a 5,1 mEq/L. Esse resultado está marcado como CRÍTICO no laudo.\n\nO potássio é um sal mineral do sangue, importante para os músculos e o coração. O valor abaixo da faixa de referência indica que há menos potássio no seu sangue do que o esperado.\n\nEXPLICAÇÃO:\nP: O que significa potássio?\nR: É um sal mineral do sangue, importante para os músculos e o coração.\nP: Por que o resultado está marcado como CRÍTICO?\nR: Indica que o valor está muito abaixo do esperado.\nP: O que isso significa para a minha saúde?\nR: Isso será avaliado pelo médico na consulta.\nP: Preciso de algum tratamento?\nR: Isso será avaliado pelo médico na consulta.\n"
+  },
+  "reprocessado_em": "2026-11-14T15:16:00"
+}

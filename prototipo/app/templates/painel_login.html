@@ -1,0 +1,63 @@
+{% extends "base.html" %}{% import "_ui.html" as ui %}
+{% block titulo %}Entrar · Painel da equipe{% endblock %}
+{% block corpo %}
+<div class="login">
+  <section class="login-marca">
+    <div class="login-topo">
+      <div class="nome">Clínica</div>
+      <div class="sub">Painel da equipe</div>
+    </div>
+    <div class="login-meio">
+      <h1>O laudo continua técnico.<br><span>A explicação, não.</span></h1>
+      <p>Tradução de laudos para linguagem simples com revisão da equipe: a IA propõe um rascunho, o profissional decide, e nada chega ao paciente sem aprovação.</p>
+      <div class="provas">
+        <div>{{ ui.icone('check') }}Rascunhos ordenados por risco, crítico primeiro</div>
+        <div>{{ ui.icone('check') }}Origem de cada frase visível para quem revisa</div>
+        <div>{{ ui.icone('check') }}Registro de cada aprovação, edição e descarte</div>
+      </div>
+    </div>
+    <div class="login-base">
+      <span class="forte">Protótipo <b>acadêmico</b></span>
+      <span>LGPD · dados fictícios</span>
+    </div>
+  </section>
+
+  <section class="login-lado">
+    <div class="login-ajuda"><span>Acesso só neste computador</span><b>Painel local</b></div>
+    <div class="login-centro">
+      <form class="login-form" method="post" action="/painel/login">
+        <div class="titulo">
+          <h2>Entrar</h2>
+          <p>Acesso restrito à equipe clínica.</p>
+        </div>
+        <div class="login-campos">
+          {% if sem_contas %}
+          <div class="sinal atencao">
+            <span class="sobre">Nenhuma conta cadastrada</span>
+            <p>Crie a primeira no terminal, dentro de <b>prototipo/</b>:<br><code>.venv/bin/python -m app.usuarios criar --login seu.login --nome "Seu Nome" --funcao medico</code></p>
+          </div>
+          {% endif %}
+          <div class="campo{{ ' erro' if erro }}">
+            <label for="login">Usuário</label>
+            <div class="campo-icone">{{ ui.icone('usuario') }}<input type="text" name="login" id="login" required autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="seu.login" autofocus></div>
+          </div>
+          <div class="campo{{ ' erro' if erro }}">
+            <div class="campo-topo"><label for="senha">Senha</label><span class="meta">Esqueceu? Peça a troca à coordenação</span></div>
+            <div class="campo-icone">{{ ui.icone('cadeado') }}<input type="password" name="senha" id="senha" required autocomplete="current-password">
+              <button type="button" class="acao-campo" onclick="const c=document.getElementById('senha');const v=c.type==='password';c.type=v?'text':'password';this.textContent=v?'Ocultar':'Mostrar'">Mostrar</button></div>
+            {% if erro == 'bloqueado' %}<span class="msg-erro" role="alert">{{ ui.icone('alerta', 14) }}Muitas tentativas erradas. Usuário bloqueado por 5 minutos.</span>
+            {% elif erro %}<span class="msg-erro" role="alert">{{ ui.icone('alerta', 14) }}Usuário ou senha inválidos.</span>{% endif %}
+          </div>
+          <button class="btn grande" type="submit">Entrar</button>
+          <div class="caixa-info">
+            <div class="t">{{ ui.icone('escudo', 15) }}Conta individual<span class="meta">obrigatória</span></div>
+            <p>Cada profissional entra com usuário e senha próprios. Seu nome e sua função ficam no registro de cada aprovação. Cinco tentativas erradas bloqueiam o usuário por 5 minutos.</p>
+          </div>
+        </div>
+        <div class="nota-rodape-login">{{ ui.icone('documento', 15) }}<span>O painel e a API não passam pelo túnel público: só o webhook do WhatsApp sai deste computador.</span></div>
+      </form>
+    </div>
+    <div class="login-rodape"><span>Dados fictícios · nenhum paciente real</span><span>Protótipo · IA generativa</span></div>
+  </section>
+</div>
+{% endblock %}

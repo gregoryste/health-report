@@ -1,0 +1,76 @@
+{
+  "id": "L91",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "categoria": "normal_que_assusta",
+  "exame": "Perfil hepático",
+  "paciente": "Paciente Fictício 91",
+  "sexo": "F",
+  "idade": 29,
+  "data_coleta": "2026-11-13",
+  "itens": [
+    {
+      "analito": "Bilirrubina total",
+      "valor": 1.4,
+      "unidade": "mg/dL",
+      "ref_max": 1.2,
+      "apelidos": [
+        "bilirrubina total"
+      ]
+    },
+    {
+      "analito": "Bilirrubina indireta",
+      "valor": 1.1,
+      "unidade": "mg/dL",
+      "ref_max": 0.8,
+      "apelidos": [
+        "bilirrubina indireta"
+      ]
+    },
+    {
+      "analito": "Bilirrubina direta",
+      "valor": 0.3,
+      "unidade": "mg/dL",
+      "ref_max": 0.4,
+      "apelidos": [
+        "bilirrubina direta"
+      ]
+    },
+    {
+      "analito": "AST (TGO)",
+      "valor": 28,
+      "unidade": "U/L",
+      "ref_max": 40,
+      "apelidos": [
+        "ast",
+        "tgo"
+      ]
+    },
+    {
+      "analito": "ALT (TGP)",
+      "valor": 32,
+      "unidade": "U/L",
+      "ref_max": 41,
+      "apelidos": [
+        "alt",
+        "tgp"
+      ]
+    },
+    {
+      "analito": "Gama-GT",
+      "valor": 35,
+      "unidade": "U/L",
+      "ref_min": 8,
+      "ref_max": 61,
+      "apelidos": [
+        "gama-gt",
+        "ggt",
+        "gama gt"
+      ]
+    }
+  ],
+  "gabarito_alterados": [
+    "Bilirrubina total",
+    "Bilirrubina indireta"
+  ]
+}

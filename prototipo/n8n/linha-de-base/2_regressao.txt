@@ -1,0 +1,9 @@
+  L01  PASSOU     (2º caso: 'o laudo traz uma classificação' num exame de sangue)
+  L92  PASSOU     (1º caso: 'TI-RADS 4 = risco baixo, requer acompanhamento')
+  L90  DETECTADO  (3º caso: 'terço distal do ureter' virou 'distante da bexiga')
+          - contém 'benign'
+          - alerta 'fala de prognóstico'
+  L91  PASSOU     (tom: 'quando há um problema no fígado' num normal que assusta)
+
+3 passaram, 1 detectados, 0 silenciosos, de 4 (/private/tmp/claude-501/-Users-gregorystein-Desktop-Unisinos-IA-ia-generativa-project/b7393ca1-2b2e-4dee-b3cc-639f088b6074/scratchpad/base/c/regressao_2026-11-14_1204_L92)
+exit=0

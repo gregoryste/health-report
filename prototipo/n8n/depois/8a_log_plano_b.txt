@@ -1,0 +1,4 @@
+[n8n] laudo-aprovado indisponível (…); seguindo pelo orquestrador interno
+[n8n] laudo-aprovado indisponível (…); seguindo pelo orquestrador interno
+[n8n] rotinas indisponível (…); seguindo pelo orquestrador interno
+[n8n] rotinas indisponível (…); seguindo pelo orquestrador interno

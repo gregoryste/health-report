@@ -1,0 +1,23 @@
+{
+  "versao": "1.0",
+  "criado_em": "2026-11-14",
+  "origem": "Dados inteiramente sintéticos, gerados para avaliação acadêmica",
+  "validacao_clinica": false,
+  "lote_inicial": [
+    "L04",
+    "L05",
+    "L06",
+    "L07",
+    "L08"
+  ],
+  "total_laudos": 20,
+  "categorias": {
+    "sangue_comum": 4,
+    "imagem": 4,
+    "valor_critico": 4,
+    "achado_incidental": 4,
+    "normal_que_assusta": 4
+  },
+  "limites": "As faixas são convenções do laboratório fictício para testar a comparação, não metas clínicas universais. Valores críticos têm urgência de teste previamente anotada. Não usar estes exemplos como protocolo assistencial.",
+  "contrato": "Campos do roteiro preservados. Gabaritos e metadados de avaliação nunca entram no prompt nem na base consultável pelo paciente."
+}

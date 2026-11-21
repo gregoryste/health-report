@@ -1,0 +1,24 @@
+{
+  "id": "L02",
+  "ficticio": true,
+  "tipo": "laboratorio",
+  "categoria": "laboratorio_comum",
+  "exame": "Check-up (glicose, lipídios, tireoide)",
+  "paciente": "Paciente Fictício 02",
+  "sexo": "F",
+  "idade": 38,
+  "data_coleta": "2026-11-10",
+  "itens": [
+    {"analito": "Glicose em jejum", "valor": 88, "unidade": "mg/dL", "ref_min": 70, "ref_max": 99, "critico_min": 40, "critico_max": 400,
+     "apelidos": ["glicose", "acucar no sangue", "glicemia"]},
+    {"analito": "Colesterol total", "valor": 172, "unidade": "mg/dL", "ref_min": null, "ref_max": 190,
+     "apelidos": ["colesterol total"]},
+    {"analito": "HDL", "valor": 52, "unidade": "mg/dL", "ref_min": 40, "ref_max": null,
+     "apelidos": ["hdl", "colesterol bom"]},
+    {"analito": "Triglicerídeos", "valor": 110, "unidade": "mg/dL", "ref_min": null, "ref_max": 150,
+     "apelidos": ["triglicerideos", "trigliceris"]},
+    {"analito": "TSH", "valor": 2.1, "unidade": "µUI/mL", "ref_min": 0.4, "ref_max": 4.0,
+     "apelidos": ["tsh", "tireoide"]}
+  ],
+  "gabarito_alterados": []
+}

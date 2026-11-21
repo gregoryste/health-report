@@ -1,0 +1,63 @@
+{% extends "base.html" %}{% import "_ui.html" as ui %}
+{% block titulo %}Registro de aprovações · Painel da equipe{% endblock %}
+{% block corpo %}
+{% set n_apr = linhas|selectattr('acao', 'equalto', 'aprovado')|list|length %}
+{% set n_edi = linhas|selectattr('acao', 'equalto', 'editado')|list|length %}
+{% set n_des = linhas|length - n_apr - n_edi %}
+{% set tempos = linhas|map(attribute='tempo_revisao_s')|select('number')|list %}
+<header class="cabecalho">
+  <div>
+    <h1>Registro de aprovações</h1>
+    <div class="contexto">{{ linhas|length }} registro(s) mais recentes · {{ n_apr }} aprovado(s) sem mudança · {{ n_edi }} editado(s) · {{ n_des }} descartado(s)</div>
+  </div>
+</header>
+
+<div class="colunas duas">
+  <aside class="coluna lateral esq">
+    <div class="bloco">
+      <span class="sobrancelha">Resumo</span>
+      <div class="lista-dados">
+        <div class="item"><span>Aprovados sem mudar</span><b>{{ n_apr }}</b></div>
+        <div class="item"><span>Editados</span><b>{{ n_edi }}</b></div>
+        <div class="item"><span>Descartados</span><b>{{ n_des }}</b></div>
+      </div>
+    </div>
+    {% if tempos %}
+    <div class="bloco sep">
+      <span class="sobrancelha">Tempo médio de revisão</span>
+      <div class="metrica">{{ ((tempos|sum) / (tempos|length))|round|int }} s<small>em {{ tempos|length }} revisão(ões)</small></div>
+    </div>
+    {% endif %}
+    <div class="bloco sep">
+      <span class="rotulo">Como ler</span>
+      <p class="nota-pequena">O sinal útil é o que o revisor mudou (plano, seção 5). Tamanho da edição: 0 = aprovado sem mudar; 1 = reescrito.</p>
+    </div>
+  </aside>
+
+  <section class="coluna centro">
+    <div class="faixa"><span class="pilula">Mais recentes primeiro</span><span>Últimos 50</span></div>
+    <div class="superficie">
+      {% if linhas %}
+      <table class="dados">
+        <thead><tr><th>Quando</th><th>Laudo</th><th>Ação</th><th>Revisor</th><th>Tempo</th><th>Edição</th><th>Motivo</th></tr></thead>
+        <tbody>
+        {% for l in linhas %}
+          <tr>
+            <td class="nowrap">{{ ui.data(l.registrado_em) }}<span class="sub">{{ l.registrado_em[11:16] }}</span></td>
+            <td class="forte">{{ l.laudo_id }}</td>
+            <td>{{ ui.selo(l.acao, 'aprovado' if l.acao == 'aprovado' else ('editado' if l.acao == 'editado' else 'descartado')) }}</td>
+            <td><div class="pessoa"><span class="avatar claro">{{ ui.iniciais(l.revisor) }}</span>{{ l.revisor }}</div></td>
+            <td>{{ l.tempo_revisao_s }} s</td>
+            <td>{{ l.tamanho_edicao if l.tamanho_edicao is not none else '—' }}</td>
+            <td class="texto-longo">{{ l.motivo_descarte or '' }}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+        {{ ui.vazio('Nenhum registro', 'Cada aprovação, edição ou descarte feito no painel fica registrado aqui.', 'documento') }}
+      {% endif %}
+    </div>
+  </section>
+</div>
+{% endblock %}

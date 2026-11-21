@@ -1,0 +1,26 @@
+# qwen2.5vl:7b · L01
+
+## Entrada
+Exame: Hemograma. Paciente: sexo masculino, 54 anos.
+Resultados:
+- Hemoglobina: 10.2 g/dL (referência 13.5–17.5 g/dL) → ABAIXO da faixa, ALTERADO
+- VCM: 72 fL (referência 80–100 fL) → ABAIXO da faixa, ALTERADO
+- Leucócitos: 12800 /mm³ (referência 4000–11000 /mm³) → ACIMA da faixa, ALTERADO
+- Plaquetas: 230000 /mm³ (referência 150000–450000 /mm³) → NORMAL
+
+## Resposta
+EXPLICAÇÃO:
+O hemograma mostrou que o paciente tem níveis baixos de hemoglobina e volume corpuscular médio abaixo da faixa normal, indicando possíveis anemias. Além disso, o número de leucócitos está acima do normal, o que pode sugerir infecção ou inflamação. As plaquetas estão dentro da faixa normal.
+
+DÚVIDAS:
+P: Por que minha hemoglobina está baixa?
+R: Pode ser anemia. Precisa conversar com o médico.
+
+P: Por que meu volume corpuscular médio está baixo?
+R: Também pode ser anemia. O médico explica melhor.
+
+P: Por que meu número de leucócitos está alto?
+R: Pode indicar infecção ou inflamação. O médico precisa avaliar.
+
+P: Preciso fazer algo agora?
+R: Sim, converse com o médico para entender melhor e receber orientações.

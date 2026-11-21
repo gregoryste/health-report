@@ -1,0 +1,14 @@
+{
+  "id": "L12",
+  "ficticio": true,
+  "tipo": "imagem",
+  "exame": "Ultrassonografia de abdome superior",
+  "paciente": "Paciente Fictício 12",
+  "sexo": "F",
+  "idade": 58,
+  "data_coleta": "2026-11-14",
+  "texto": "Fígado de dimensões e ecogenicidade preservadas. Pequeno cisto simples no segmento VI hepático, medindo 0,9 cm, anecoico, de paredes finas, sem septações. Vias biliares não dilatadas. Vesícula sem cálculos.",
+  "gabarito_alterados": [
+    "cisto simples de 0,9 cm no segmento VI do fígado"
+  ]
+}

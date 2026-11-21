@@ -1,0 +1,30 @@
+# n8n de TESTE (plano PLANO-N8N-DECISOES.md). Separado do real: porta 5679, volume próprio,
+# aponta para o serviço de teste na 8001. Subir de dentro de prototipo/n8n/:
+#   docker compose -f docker-compose.teste.yml --env-file ../.env up -d
+# Derrubar (o volume fica):
+#   docker compose -f docker-compose.teste.yml --env-file ../.env down
+# Só a chave da API do serviço entra no container (nada de token da LLM nem dado de paciente).
+name: n8n-teste
+services:
+  n8n-teste:
+    image: docker.n8n.io/n8nio/n8n:stable
+    container_name: n8n-teste
+    ports:
+      - "127.0.0.1:5679:5678"
+    environment:
+      - GENERIC_TIMEZONE=America/Sao_Paulo
+      - TZ=America/Sao_Paulo
+      - N8N_SECURE_COOKIE=false
+      - N8N_DIAGNOSTICS_ENABLED=false
+      - N8N_PERSONALIZATION_ENABLED=false
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
+      - SERVICO_URL=http://host.docker.internal:8001
+      - SERVICO_API_KEY=${SERVICO_API_KEY}
+    volumes:
+      - n8n_teste_dados:/home/node/.n8n
+      - ./fluxos:/fluxos:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+volumes:
+  n8n_teste_dados:
+    name: n8n_teste_dados
