@@ -1,4 +1,4 @@
-"""Prepara a cópia de cena do banco (só no scratchpad). Nada aqui toca o banco real."""
+"""Prepara a cópia de cena do banco (numa pasta temporária, ver cena.sh). Nada aqui toca o banco real."""
 import os, secrets, sys
 sys.path.insert(0, sys.argv[1])
 from app import banco, usuarios

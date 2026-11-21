@@ -1,4 +1,4 @@
-# n8n de TESTE (plano PLANO-N8N-DECISOES.md). Separado do real: porta 5679, volume próprio,
+# n8n de TESTE. Separado do real: porta 5679, volume próprio,
 # aponta para o serviço de teste na 8001. Subir de dentro de prototipo/n8n/:
 #   docker compose -f docker-compose.teste.yml --env-file ../.env up -d
 # Derrubar (o volume fica):

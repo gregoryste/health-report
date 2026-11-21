@@ -1,8 +1,8 @@
 # Fonte do vídeo de demonstração (etapa 8)
 
 Vídeo final: `../video-demo-tradutor-de-laudos.mp4` (1920×1080, 30 fps, 1 min 35 s, sem som), sem a cena 9 (avaliação) e com as pausas longas encurtadas
-(telas paradas acima de 1,6 s ficaram com 1,6 s + 45% do excedente; nenhuma animação foi cortada). A versão de 2 min 8 s, com as pausas originais, está em `../video-demo-tradutor-de-laudos_2min08.mp4`.
-Ele foi cortado com ffmpeg (0–120,3 s + 134–142 s, transição de 0,5 s). A versão gravada completa, com a avaliação, está em `../video-demo-tradutor-de-laudos_com-avaliacao.mp4`; regravar com `gravar.py` gera de novo a versão com a cena 9.
+(telas paradas acima de 1,6 s ficaram com 1,6 s + 45% do excedente; nenhuma animação foi cortada).
+Ele foi cortado com ffmpeg (0–120,3 s + 134–142 s, transição de 0,5 s). Regravar com `gravar.py` gera de novo a versão com a cena 9.
 
 - `comp/index.html` — a animação (linha do tempo em `renderAt(t)`; textos e tempos de cada cena no HTML; conversa do celular em `CONVERSA`).
 - `comp/telas/` — capturas reais do painel, feitas numa **cópia de cena** do banco (sem o P07, conta "Dra. Helena Souza", WhatsApp simulado).

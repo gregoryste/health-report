@@ -185,7 +185,6 @@ cd prototipo
 .
 ├── README.md
 ├── Enunciado.pdf                  # enunciado do trabalho
-├── artigo/                        # notas de revisão do artigo
 ├── etapa5/                        # proposta técnica: texto, custos e diagramas
 ├── etapa7/                        # resultados da avaliação (planilhas, CSVs, relatório)
 ├── etapa8/                        # vídeo de demonstração, fonte do vídeo e prints do n8n
@@ -232,6 +231,6 @@ As decisões foram registradas ao longo do trabalho (D1–D13) e são citadas no
 - **Segredos** (rota e token da LLM, chaves do WhatsApp, chave da API do serviço) ficam só em `prototipo/.env`, fora do versionamento. Use [`prototipo/.env.example`](prototipo/.env.example) como modelo.
 - **Bancos e logs de execução** (`prototipo/dados/`, `*.db`, `*.sqlite`, `*.log`) não são versionados: contêm hashes de senha e o número usado na homologação do WhatsApp.
 - **Backups do n8n** não são versionados; os fluxos limpos (que leem a chave por variável de ambiente) estão em `prototipo/n8n/fluxos/`.
-- **Documentos internos de planejamento** e a referência visual de terceiros ficam fora do repositório. Referências a `plano.md` no código e nos textos apontam para esse material local.
+- **Documentos internos de planejamento** e a referência visual de terceiros ficam fora do repositório. As decisões D1–D13 citadas no código estão resumidas na [seção 10](#10-decisões-de-projeto).
 - Todos os pacientes, laudos, CPFs e telefones do repositório são **fictícios**.
 # health-report

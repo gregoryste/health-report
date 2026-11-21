@@ -1,4 +1,4 @@
-"""Registro de aprovações (plano.md, seção 5): o sinal útil é "o que o revisor mudou".
+"""Registro de aprovações (revisão humana obrigatória, D6): o sinal útil é "o que o revisor mudou".
 
 Cada ação na tela de aprovação vira uma linha em registros/aprovacoes.jsonl com:
 rascunho original, versão final, quem revisou, tempo de revisão, ação e motivo do descarte.

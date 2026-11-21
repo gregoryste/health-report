@@ -74,3 +74,37 @@ Thumbs.db
 
 # ---------- Claude Code (configuração local) ----------
 .claude/
+
+# ---------- Rascunhos de trabalho, versões superadas e duplicatas ----------
+# (continuam no disco; só não vão para o repositório)
+# Rascunhos do artigo e notas internas de revisão (a entrega é o artigo final)
+artigo/
+etapa5/texto_tecnico.md
+# Cópia idêntica de etapa7/entrega/resultados_etapa7.md
+etapa7/resultados_etapa7.md
+# Plano de execução e logs brutos dos testes do n8n (com caminhos de sessão local);
+# a equivalência n8n × interno é coberta por prototipo/testes/teste_rotas_n8n.py
+prototipo/n8n/PLANO-N8N-DECISOES.md
+prototipo/n8n/RESULTADO-TESTES.md
+prototipo/n8n/linha-de-base/
+prototipo/n8n/depois/
+# Bases, glossário e rodadas substituídas por versões posteriores
+prototipo/base_clinica/provisoria_gregory/
+prototipo/glossario/antes_jackson/
+prototipo/saidas/2026-11-14_1128/
+prototipo/saidas/2026-11-14_1129/
+prototipo/rascunhos/2026-11-14_com_E1/
+prototipo/rascunhos/2026-11-14_com_E1_v2/
+prototipo/rascunhos/2026-11-14_sem_E1/
+prototipo/rascunhos/2026-11-14_L90_L91/
+prototipo/rascunhos/regressao_2026-11-14_1202/
+prototipo/rascunhos/regressao_2026-11-14_1204/
+prototipo/avaliacao_chatbot/2026-11-14_1213/
+# Leitura de fotos: ficam só a 1ª avaliação (simuladas) e a final (v6), citadas nos resultados
+prototipo/avaliacao_fotos/*_simuladas_v2/
+prototipo/avaliacao_fotos/*_simuladas_v3/
+prototipo/avaliacao_fotos/*_simuladas_v4/
+prototipo/avaliacao_fotos/*_simuladas_v5/
+# Versões alternativas do vídeo (fica a versão final de 1 min 35 s)
+etapa8/video-demo-tradutor-de-laudos_2min08.mp4
+etapa8/video-demo-tradutor-de-laudos_com-avaliacao.mp4

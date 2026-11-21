@@ -37,7 +37,7 @@ cd prototipo/n8n
 docker compose --env-file ../.env up -d      # sobe o n8n em http://localhost:5678
 ```
 
-**Quem decide o quê.** O serviço executa cada etapa e devolve os fatos: prioridade do laudo, tipo final da dúvida, status do envio. O n8n decide o caminho num nó IF ou Switch e chama a ação do ramo (`/api/acoes/contato-ativo`, `/api/acoes/urgencia`, `/api/acoes/falha`). As regras clínicas não saem do serviço. O desenho está no artifact "Fluxos do n8n" e em `etapa5/diagramas/4_fluxos_n8n.png`.
+**Quem decide o quê.** O serviço executa cada etapa e devolve os fatos: prioridade do laudo, tipo final da dúvida, status do envio. O n8n decide o caminho num nó IF ou Switch e chama a ação do ramo (`/api/acoes/contato-ativo`, `/api/acoes/urgencia`, `/api/acoes/falha`). As regras clínicas não saem do serviço. O desenho está em `etapa5/diagramas/4_fluxos_n8n.png`.
 
 Os 5 fluxos estão em `n8n/fluxos/`, importados e publicados no n8n real:
 
@@ -62,7 +62,7 @@ Os 5 fluxos estão em `n8n/fluxos/`, importados e publicados no n8n real:
   Depois do `publish`, o n8n leva alguns segundos para usar a versão nova.
 - Os JSON têm o `id` de cada fluxo: a reimportação **atualiza** o fluxo existente. Sem o `id`, o n8n cria uma cópia inativa (aconteceu em 14/11).
 - **Mudou um ramo? Mude também a tabela `ROTAS` em `app/servico.py`** e rode `testes/teste_rotas_n8n.py`: ele lê os JSON e falha se o n8n e a tabela deixarem de bater.
-- **Não copiar só o `database.sqlite` do n8n:** ele usa o modo WAL. Para mexer no banco, parar o n8n e levar junto (ou descartar, se for repor um banco limpo) os arquivos `database.sqlite-wal` e `-shm`; senão o n8n acusa "database disk image is malformed". Backup feito assim em `n8n/backup/2026-11-14-fase4/`.
+- **Não copiar só o `database.sqlite` do n8n:** ele usa o modo WAL. Para mexer no banco, parar o n8n e levar junto (ou descartar, se for repor um banco limpo) os arquivos `database.sqlite-wal` e `-shm`; senão o n8n acusa "database disk image is malformed".
 - **Para ver os fluxos no editor** (prints para os slides), abra http://localhost:5678 e crie a conta de administrador local na primeira vez.
 
 `ORQUESTRADOR` no `.env`:

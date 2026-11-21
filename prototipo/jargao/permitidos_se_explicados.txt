@@ -1,4 +1,4 @@
-# Lista do Gregory + lista do Jackson (14/11/2026). A anterior está em antes_jackson/.
+# Lista consolidada do grupo (14/11/2026).
 # Termos que podem aparecer, desde que explicados ao lado na primeira vez (parênteses, "que ...", aposto).
 # Exames de sangue
 hemoglobina

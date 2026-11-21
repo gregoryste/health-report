@@ -1,4 +1,4 @@
-"""Teste offline do roteamento (PLANO-N8N-DECISOES.md, 1.4). Não chama a LLM, nem a Meta, nem o n8n de verdade.
+"""Teste offline do roteamento: os ramos dos fluxos do n8n batem com a tabela ROTAS do serviço. Não chama a LLM, nem a Meta, nem o n8n de verdade.
 
   .venv/bin/python testes/teste_rotas_n8n.py
 

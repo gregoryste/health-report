@@ -1,4 +1,4 @@
-"""Regra fixa (decisão D4 do plano.md).
+"""Regra fixa (decisão D4; ver README, seção 10).
 
 1. Compara cada valor do laudo com a faixa de referência e marca alto, baixo ou crítico.
 2. Define a prioridade do laudo e o prazo de revisão médica (fail-safe do plano).
